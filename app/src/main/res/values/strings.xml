@@ -1,0 +1,65 @@
+<resources>
+    !--login--!
+    <string name="app_name">Signify</string>
+    <string name="title_activity_login">Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="welcome">Welcome</string>
+    <string name="login_to_account">Log in to your account</string>
+    <string name="new_account">New to Signify? Register here</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    !--home--!
+    <string name="hello">Hello,</string>
+    <string name="ready">ready to sign?</string>
+    <string name="username"> </string>
+
+    !--signUp--!
+    <string name="signing_up">Signing up to Signify</string>
+    <string name="enter_details">Please enter your details below</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="email">e-mail address</string>
+    <string name="password">enter password</string>
+    <string name="re_password">re-enter password</string>
+    <string name="create_account">create account</string>
+    <string name="already_account">Already have an account? Sign in here</string>
+
+    !--assessLevel--!
+    <string name="asess_ready">Ready to learn independently?</string>
+    <string name="eval">Take this quiz to check</string>
+    <string name="rate">Rate each skill below from 1 to 4, based on your current skill level. Type in a number for each on the right hand side.</string>
+    <string name="rating">1 = excellent; 2 = good; 3 = adequate; 4 = poor </string>
+    <string name="assess1">Ability to commit to completing a task once started</string>
+    <string name="assess2">Ability to self-motivate and use initiative</string>
+    <string name="assess3">Ability to use feedback to better skills</string>
+    <string name="assess4">Ability to revise work and identify weaker areas of knowledge</string>
+    <string name="assess5">Ability to self evaluate and understand task demands</string>
+    <string name="finish">Finish</string>
+
+    !--account--!
+    <string name="title">Edit your account details</string>
+    <string name="first_n">first name</string>
+    <string name="last_n">last name</string>
+    <string name="email_acc">e-mail address</string>
+    <string name="current_password">enter current password</string>
+    <string name="new_password">enter new password</string>
+    <string name="re_new_password">re-enter new password</string>
+    <string name="save_changes">save changes</string>
+    <string name="update_password">Update your password</string>
+
+    !--Introduction--!
+    <string name="intro_title">What is BSL?</string>
+    <string name="intro_para">Sign Language is a visual form of communicating using a combination of hand shapes, spatial representation, gestures, facial expression, and body language.
+        Sign Language is used mainly by Deaf people and people with hearing difficulties and
+        has been used as a method of communication among Deaf people for hundreds of years.
+        British Sign Language, known as BSL, is the main form of sign language used within the UK and has been recognised by the UK government as a minority language since 2003.
+        BSL is an independent language which is separate to spoken English, having its own grammar and syntax. It is estimated that BSL is used by around 151,000 people within the UK.</string>
+
+
+
+
+</resources>
