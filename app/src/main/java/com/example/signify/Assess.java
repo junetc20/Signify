@@ -22,7 +22,8 @@ public class Assess extends AppCompatActivity {
     EditText inputFive;
     Button finish;
 
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assess);
 

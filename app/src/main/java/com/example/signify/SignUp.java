@@ -28,7 +28,8 @@ public class SignUp extends AppCompatActivity{
     TextView signInClick;
     ImageView exitButton;
 
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
