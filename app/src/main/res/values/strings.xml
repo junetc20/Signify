@@ -51,6 +51,10 @@
     <string name="save_changes">save changes</string>
     <string name="update_password">Update your password</string>
 
+    !--Copyright--!
+    <string name="bsl_imagery">All content created by course.british-sign.co.uk</string>
+    <string name="bsl_copyright">©british-sign.co.uk</string>
+
     !--Introduction--!
     <string name="intro_title">What is BSL?</string>
     <string name="intro_para">Sign Language is a visual form of communicating using a combination of hand shapes, spatial representation, gestures, facial expression, and body language.
@@ -59,6 +63,21 @@
         British Sign Language, known as BSL, is the main form of sign language used within the UK and has been recognised by the UK government as a minority language since 2003.
         BSL is an independent language which is separate to spoken English, having its own grammar and syntax. It is estimated that BSL is used by around 151,000 people within the UK.</string>
 
+    !--Alphabet--!
+    <string name="man_alpha_title">The Manual Alphabet</string>
+    <string name="man_alpha_info">Each letter of a manual alphabet is represented by a different hand shape or hand movement.
+    Manual alphabets are used in sign language where a sign does not exist for a word, or when a signer does not know the sign for a particular word.
+    The most common use of the manual alphabet in sign language is for names of people and places that have not had a sign assigned to them.
+    In BSL the two handed manual alphabet is used. Some sign languages use a one handed alphabet (e.g. American Sign Language and Irish Sign Language).
+    A quick tip before you learn the two handed alphabet; Remember that the five fingers (on your secondary hand) represent the five Vowels:</string>
+    <string name="bsl_alpha_title">The BSL Alphabet</string>
+    <string name="bsl_alpha_info">Below is an video of the two handed manual alphabet (right handed). As with all of the signs on this course you
+    should learn to read and sign them. Practice your signing in front of a mirror to ensure you are not making any mistakes.
+    Take some time to learn the alphabet and try to get to the point where
+    you can recite the entire alphabet without looking at this video.</string>
+    <string name="practice">Time to Practice</string>
+    <string name="practice_sentence">Which sign does this image represent?</string>
+    <string name="select_sign">Select the correct sign for</string>
 
 
 
