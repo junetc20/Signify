@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Login extends AppCompatActivity {
 
     Button signInButton;
-    EditText email;
+    EditText emailInput;
     EditText password;
     TextView register;
 
@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         signInButton = (Button) findViewById(R.id.signInButton);
-        email = (EditText) findViewById(R.id.emailInput);
+        emailInput = (EditText) findViewById(R.id.emailInput);
         password = (EditText) findViewById(R.id.password);
         register = (TextView) findViewById(R.id.register);
 
@@ -36,20 +36,13 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        //Intent intent = new Intent(this, SignUp.class);
-        //startActivity(intent);
-
-        // makes login button clickable
-        // once clicked, user is sent to home page
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // if (email and password are stored on database) {
-                if(email.getText().toString().equals("") || password.getText().toString().equals("")) {
+                if(emailInput.getText().toString().equals("") || password.getText().toString().equals("")) {
                     Toast.makeText(Login.this, "Please enter both your email and password.", Toast.LENGTH_SHORT).show();
                 } else {
                     startActivity(new Intent(Login.this, Home.class));
-                    // else { show a toast saying login details are not registered }
                 }
             }
         });

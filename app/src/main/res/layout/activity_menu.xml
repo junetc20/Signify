@@ -8,15 +8,15 @@
 
     <ImageView
         android:id="@+id/exitButtonMenu"
-        tools:ignore="VectorDrawableCompat"
-        android:layout_width="33dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cross_cream" />
+        app:srcCompat="@drawable/cross_cream"
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/userGuideLink"

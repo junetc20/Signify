@@ -38,13 +38,16 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="66dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         app:srcCompat="@drawable/designs_03" />
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="180dp"
+        android:layout_width="wrap_content"
         android:layout_height="120dp"
         android:layout_marginTop="66dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,14 +128,17 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="170dp"
+        android:layout_marginEnd="199dp"
+        android:layout_marginRight="199dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/designs_01" />
 
     <Button
         android:id="@+id/level1Button"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
         android:text="COMPLETE"
         android:textSize="11sp"
@@ -146,21 +152,17 @@
         android:id="@+id/imageView13"
         android:layout_width="180dp"
         android:layout_height="120dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginLeft="212dp"
         android:layout_marginTop="170dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/designs_02" />
 
     <Button
         android:id="@+id/level2Button"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
         android:text="START"
         android:textSize="11sp"
@@ -171,8 +173,8 @@
 
     <Button
         android:id="@+id/level4Button"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
         android:text="Locked"
         android:textSize="11sp"
@@ -183,8 +185,8 @@
 
     <Button
         android:id="@+id/level3Button"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
         android:text="Locked"
         android:textSize="11sp"
@@ -195,8 +197,8 @@
 
     <Button
         android:id="@+id/level5Button"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
         android:text="Locked"
         android:textSize="12sp"
