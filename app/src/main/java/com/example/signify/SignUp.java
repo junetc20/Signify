@@ -47,25 +47,12 @@ public class SignUp extends AppCompatActivity{
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(inputFirstName.getText().toString().equals("")){
-                    Toast.makeText(SignUp.this, "Please enter your first name.", Toast.LENGTH_SHORT).show();
+                if(inputFirstName.getText().toString().equals("") || inputFirstName.getText().toString().equals("") ||
+                        (inputEmail.getText().toString().equals("") || (createPassword.getText().toString().equals("") ||
+                                (reEnterPassword.getText().toString().equals(""))))) {
+                    Toast.makeText(SignUp.this, "Please enter all details.", Toast.LENGTH_SHORT).show();
                 }
-                if (inputLastName.getText().toString().equals("")){
-                    Toast.makeText(SignUp.this, "Please enter your last name.", Toast.LENGTH_SHORT).show();
-                }
-                if (inputEmail.getText().toString().equals("")){
-                    Toast.makeText(SignUp.this, "Please enter your email address.", Toast.LENGTH_SHORT).show();
-                }
-                if (!inputEmail.getText().toString().contains("@")){
-                    Toast.makeText(SignUp.this, "Please enter a valid email address.", Toast.LENGTH_SHORT).show();
-                }
-                if (createPassword.getText().toString().equals("")){
-                    Toast.makeText(SignUp.this, "Please enter your password twice.", Toast.LENGTH_SHORT).show();
-                }
-                if (reEnterPassword.getText().toString().equals("")){
-                    Toast.makeText(SignUp.this, "Please enter your password twice.", Toast.LENGTH_SHORT).show();
-                }
-                if (!createPassword.equals(reEnterPassword)){
+                else if (!createPassword.getText().toString().equals(reEnterPassword.getText().toString())){
                     Toast.makeText(SignUp.this, "Passwords do not match. Please try again.", Toast.LENGTH_SHORT).show();
                     createPassword.setText(null);
                     reEnterPassword.setText(null);
