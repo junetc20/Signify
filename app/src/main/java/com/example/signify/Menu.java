@@ -33,5 +33,20 @@ public class Menu extends AppCompatActivity {
                 startActivity(new Intent(Menu.this, Home.class));
             }
         });
+
+        logoutLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Menu.this, Login.class));
+            }
+        });
+
+        userGuideLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Menu.this, Home.class));
+
+            }
+        });
     }
 }
