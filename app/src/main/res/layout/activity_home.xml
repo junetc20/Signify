@@ -16,7 +16,7 @@
         android:textColor="@color/background_blue"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button11"
+        app:layout_constraintBottom_toTopOf="@+id/level5Button"
         app:layout_constraintEnd_toEndOf="@+id/imageView19"
         app:layout_constraintStart_toStartOf="@+id/imageView19" />
 
@@ -53,7 +53,7 @@
         app:srcCompat="@drawable/designs_08" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/menu"
         android:layout_width="44dp"
         android:layout_height="44dp"
         android:layout_marginTop="18dp"
@@ -73,7 +73,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="36dp"
-        android:text="first name"
         android:textColor="@color/BSL_blue"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -109,13 +108,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/userAccount"
         android:layout_width="38dp"
         android:layout_height="39dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
@@ -131,7 +130,7 @@
         app:srcCompat="@drawable/designs_01" />
 
     <Button
-        android:id="@+id/level1button"
+        android:id="@+id/level1Button"
         android:layout_width="110dp"
         android:layout_height="45dp"
         android:layout_marginTop="95dp"
@@ -159,7 +158,7 @@
         app:srcCompat="@drawable/designs_02" />
 
     <Button
-        android:id="@+id/level2button"
+        android:id="@+id/level2Button"
         android:layout_width="110dp"
         android:layout_height="45dp"
         android:layout_marginTop="95dp"
@@ -171,7 +170,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
 
     <Button
-        android:id="@+id/level4button"
+        android:id="@+id/level4Button"
         android:layout_width="110dp"
         android:layout_height="45dp"
         android:layout_marginTop="95dp"
@@ -183,7 +182,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView15" />
 
     <Button
-        android:id="@+id/level3button"
+        android:id="@+id/level3Button"
         android:layout_width="110dp"
         android:layout_height="45dp"
         android:layout_marginTop="95dp"
@@ -195,7 +194,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView14" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/level5Button"
         android:layout_width="110dp"
         android:layout_height="45dp"
         android:layout_marginTop="95dp"
@@ -215,7 +214,7 @@
         android:textColor="@color/background_blue"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/level1button"
+        app:layout_constraintBottom_toTopOf="@+id/level1Button"
         app:layout_constraintEnd_toEndOf="@+id/imageView12"
         app:layout_constraintStart_toStartOf="@+id/imageView12" />
 
@@ -228,7 +227,7 @@
         android:textColor="@color/background_blue"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/level3button"
+        app:layout_constraintBottom_toTopOf="@+id/level3Button"
         app:layout_constraintEnd_toEndOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="@+id/imageView14" />
 
@@ -241,7 +240,7 @@
         android:textColor="@color/background_blue"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/level4button"
+        app:layout_constraintBottom_toTopOf="@+id/level4Button"
         app:layout_constraintEnd_toEndOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="@+id/imageView15" />
 
@@ -254,7 +253,7 @@
         android:textColor="@color/background_blue"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/level2button"
+        app:layout_constraintBottom_toTopOf="@+id/level2Button"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13" />
 

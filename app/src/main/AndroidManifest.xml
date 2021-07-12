@@ -21,6 +21,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Home" />
         <activity android:name=".SignUp" />
+        <activity android:name=".Account" />
+        <activity android:name=".Menu" />
     </application>
 
 </manifest>

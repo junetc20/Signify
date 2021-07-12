@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/cream">
 
+
     <EditText
         android:id="@+id/inputFive"
         android:layout_width="65dp"
@@ -14,7 +15,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="27dp"
         android:ems="10"
-        android:inputType="number"
+        android:digits="1234"
         app:layout_constraintStart_toEndOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/inputFour" />
 
@@ -26,7 +27,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="43dp"
         android:ems="10"
-        android:inputType="number"
+        android:digits="1234"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/inputThree" />
 
@@ -38,7 +39,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:inputType="number"
+        android:digits="1234"
         app:layout_constraintStart_toEndOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/inputTwo" />
 
@@ -285,7 +286,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="43dp"
         android:ems="10"
-        android:inputType="number"
+        android:digits="1234"
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -297,7 +298,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:inputType="number"
+        android:digits="1234"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/inputOne" />
 
@@ -313,6 +314,41 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <ImageView
+        android:id="@+id/resultNeg"
+        android:layout_width="277dp"
+        android:layout_height="275dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/assess_graphics_neg" />
+
+    <ImageView
+        android:id="@+id/resultPos"
+        android:layout_width="277dp"
+        android:layout_height="275dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/assess_graphics_pos" />
+
+    <Button
+        android:id="@+id/resultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="448dp"
+        android:text="OKAY"
+        android:visibility="invisible"
+        app:backgroundTint="@color/BSL_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

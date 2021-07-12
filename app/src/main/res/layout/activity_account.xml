@@ -7,7 +7,7 @@
     android:background="@color/cream">
 
     <EditText
-        android:id="@+id/createPassword2"
+        android:id="@+id/currentPassAcc"
         android:layout_width="365dp"
         android:layout_height="44dp"
         android:layout_marginStart="24dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <EditText
-        android:id="@+id/createPassword3"
+        android:id="@+id/newPassAcc"
         android:layout_width="365dp"
         android:layout_height="44dp"
         android:layout_marginStart="24dp"
@@ -32,10 +32,10 @@
         android:inputType="textPassword"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/currentPassAcc" />
 
     <EditText
-        android:id="@+id/createPassword4"
+        android:id="@+id/reNewPassAcc"
         android:layout_width="365dp"
         android:layout_height="44dp"
         android:layout_marginStart="24dp"
@@ -46,10 +46,10 @@
         android:inputType="textPassword"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/newPassAcc" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/saveChangesAcc"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -58,10 +58,10 @@
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail3" />
+        app:layout_constraintTop_toBottomOf="@+id/emailAcc" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/saveChangesPass"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -70,10 +70,10 @@
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createPassword4" />
+        app:layout_constraintTop_toBottomOf="@+id/reNewPassAcc" />
 
     <EditText
-        android:id="@+id/inputFirstName3"
+        android:id="@+id/firstNameAcc"
         android:layout_width="365dp"
         android:layout_height="44dp"
         android:layout_marginStart="24dp"
@@ -81,13 +81,13 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/first_name"
+        android:text=""
         android:textColor="#6A000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <EditText
-        android:id="@+id/inputLastName3"
+        android:id="@+id/lastNameAcc"
         android:layout_width="365dp"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
@@ -95,24 +95,24 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/last_name"
+        android:text=""
         android:textColor="#6A000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputFirstName3" />
+        app:layout_constraintTop_toBottomOf="@+id/firstNameAcc" />
 
     <EditText
-        android:id="@+id/inputEmail3"
+        android:id="@+id/emailAcc"
         android:layout_width="365dp"
         android:layout_height="44dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/email"
+        android:inputType="textEmailAddress"
+        android:text=""
         android:textColor="#6A000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputLastName3" />
+        app:layout_constraintTop_toBottomOf="@+id/lastNameAcc" />
 
     <TextView
         android:id="@+id/textView16"
@@ -140,10 +140,10 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/saveChangesAcc" />
 
     <ImageView
-        android:id="@+id/exitButton2"
+        android:id="@+id/exitButtonAcc"
         android:layout_width="33dp"
         android:layout_height="32dp"
         android:layout_marginStart="18dp"
