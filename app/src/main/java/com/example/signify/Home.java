@@ -14,6 +14,10 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
+
+
+        /*
         userFirstName = findViewById(R.id.userFirstName);
 
         Bundle extras = getIntent().getExtras();
@@ -21,6 +25,6 @@ public class Home extends AppCompatActivity {
         if (extras != null){
             firstName = extras.getString("username"); // insert string name for first name input on login page
             userFirstName.setText(firstName);
-        }
+        }*/
     }
 }
