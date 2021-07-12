@@ -19,6 +19,11 @@
     <string name="intro_progress">Progress: 100%</string>
     <string name="alpha_progress">Progress: 0%</string>
 
+    !--menu--!
+    <string name="help">How to use Signify</string>
+    <string name="BSL_website">Official BSL website</string>
+    <string name="Logout">Logout of Signify account</string>
+
     !--signUp--!
     <string name="signing_up">Signing up to Signify</string>
     <string name="enter_details">Please enter your details below</string>
@@ -84,7 +89,7 @@
     <string name="select_sign">Select the correct sign for</string>
 
     !--Game--!
-    <string name="correct_sign">Select the correct sign for</string>
+    <string name="correct_sign">Select the correct sign for:</string>
 
 
 
