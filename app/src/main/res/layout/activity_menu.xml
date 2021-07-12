@@ -7,7 +7,7 @@
     android:background="@color/background_blue">
 
     <ImageView
-        android:id="@+id/exitButton7"
+        android:id="@+id/exitButtonMenu"
         tools:ignore="VectorDrawableCompat"
         android:layout_width="33dp"
         android:layout_height="32dp"
@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/cross_cream" />
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/userGuideLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView33"
+        android:id="@+id/bslLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -44,10 +44,10 @@
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        app:layout_constraintTop_toBottomOf="@+id/userGuideLink" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/logoutLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -57,5 +57,5 @@
         android:textColor="@color/cream"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+        app:layout_constraintTop_toBottomOf="@+id/bslLink" />
 </androidx.constraintlayout.widget.ConstraintLayout>

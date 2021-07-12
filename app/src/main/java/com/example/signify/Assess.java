@@ -1,6 +1,7 @@
 package com.example.signify;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,9 @@ public class Assess extends AppCompatActivity {
     EditText inputFour;
     EditText inputFive;
     Button finish;
+    ImageView resultNeg;
+    ImageView resultPos;
+    Button resultButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,9 @@ public class Assess extends AppCompatActivity {
         inputFour = (EditText) findViewById(R.id.inputFour);
         inputFive = (EditText) findViewById(R.id.inputFive);
         finish = (Button) findViewById(R.id.finish);
+        resultNeg = (ImageView) findViewById(R.id.resultNeg);
+        resultPos = (ImageView) findViewById(R.id.resultPos);
+        resultButton = (Button) findViewById(R.id.resultButton);
 
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,28 +48,37 @@ public class Assess extends AppCompatActivity {
                 startActivity(new Intent(Assess.this, Home.class));
             }
         });
-        /*
 
         finish.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                if(inputOne.getText().toString().equals("") || inputOne. {
-                    Toast.makeText(Assess.this, "Please enter a value for the first skill.", Toast.LENGTH_SHORT).show();
+                if(inputOne.getText().toString().equals("") || inputTwo.getText().toString().equals("") || (inputThree.getText().toString().equals("") ||
+                        (inputFour.getText().toString().equals("") || (inputFive.getText().toString().equals(""))))){
+                    Toast.makeText(Assess.this, "Please enter a value for each skill.", Toast.LENGTH_SHORT).show();
                 }
-                if(inputTwo.getText().toString().equals("")) {
-                    Toast.makeText(Assess.this, "Please enter a value for the second skill.", Toast.LENGTH_SHORT).show();
+                else if (inputOne.getText().toString().equals("4") || inputTwo.getText().toString().equals("4") || (inputThree.getText().toString().equals("4") ||
+                        (inputFour.getText().toString().equals("4") || (inputFive.getText().toString().equals("4"))))){
+                    resultNeg.setVisibility(View.VISIBLE);
+                    resultButton.setVisibility(View.VISIBLE);
+                    resultButton.setClickable(true);
                 }
-                if(inputThree.getText().toString().equals("")) {
-                    Toast.makeText(Assess.this, "Please enter a value for the third skill.", Toast.LENGTH_SHORT).show();
-                }
-                if(inputFour.getText().toString().equals("")) {
-                    Toast.makeText(Assess.this, "Please enter a value for the fourth skill.", Toast.LENGTH_SHORT).show();
-                }
-                if(inputFive.getText().toString().equals("")) {
-                    Toast.makeText(Assess.this, "Please enter a value for the fifth skill.", Toast.LENGTH_SHORT).show();
+                else {
+                    resultPos.setVisibility(View.VISIBLE);
+                    resultButton.setVisibility(View.VISIBLE);
+                    resultButton.setClickable(true);
                 }
             }
-        }); */
+        });
+
+        resultButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Assess.this, Home.class));
+                resultPos.setVisibility(View.INVISIBLE);
+                resultNeg.setVisibility(View.INVISIBLE);
+                resultButton.setVisibility(View.GONE);
+                resultButton.setClickable(false);
+            }
+        });
     }
 }
