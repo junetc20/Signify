@@ -21,7 +21,6 @@ public class Question {
         return answerTrue;
     }
 
-
     public void setAnswerTrue(boolean answerTrue) {
         this.answerTrue = answerTrue;
     }

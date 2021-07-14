@@ -3,6 +3,7 @@ package com.example.signify;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -13,15 +14,18 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Quiz2 extends AppCompatActivity
         implements View.OnClickListener {
 
+    // Fields
     private Button falseButton;
     private Button trueButton;
     private ImageView exitButtonQuiz2;
+    private ImageView quizImage1;
     private TextView questionCountDisplay2;
     private TextView questionText;
     private int questionCount = 0;
     private int currentQuestionIndex = 0;
     private Button nextButton;
 
+    // Array to hold questions
     public Question[] questionBank = new Question[]{
             new Question(R.string.R, true),
             new Question(R.string.T, false),
@@ -33,14 +37,14 @@ public class Quiz2 extends AppCompatActivity
             new Question(R.string.L, false),
     };
 
+    // Linking this class with an activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_2);
 
         // Constructor
-        // Fields
-        ImageView quizImage1 = findViewById(R.id.quizImage1);
+        quizImage1 = findViewById(R.id.quizImage1);
         trueButton = findViewById(R.id.trueButton);
         falseButton = findViewById(R.id.falseButton);
         exitButtonQuiz2 = findViewById(R.id.exitButtonQuiz2);
@@ -51,7 +55,17 @@ public class Quiz2 extends AppCompatActivity
         trueButton.setOnClickListener(this);
         falseButton.setOnClickListener(this);
 
-        // Exit button
+        // Makes the next button invisible after being clicked
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nextButton.setVisibility(View.INVISIBLE);
+                currentQuestionIndex++;
+                updateQuestion();
+            }
+        });
+
+        // Exit button - returns to home page
         exitButtonQuiz2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,23 +74,78 @@ public class Quiz2 extends AppCompatActivity
         });
     }
 
+
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.trueButton:
-                Toast.makeText(Quiz2.this, "True", Toast.LENGTH_SHORT).show();
+                checkAnswer(true);
                 break;
 
             case R.id.falseButton:
-                Toast.makeText(Quiz2.this, "False", Toast.LENGTH_SHORT).show();
+                checkAnswer(false);
                 break;
 
             case R.id.nextButton:
-                currentQuestionIndex++;
-                questionText.setText(questionBank [currentQuestionIndex].getAnswerResId());
+                if (currentQuestionIndex < 8) {
+                    updateQuestion();
+                } else if (currentQuestionIndex == 8) {
+                    nextButton.setVisibility(View.INVISIBLE);
+                    trueButton.setVisibility(View.INVISIBLE);
+                    falseButton.setVisibility(View.INVISIBLE);
+                }
+                break;
+            }
+        }
+                /*currentQuestionIndex = (currentQuestionIndex + 1) % questionBank.length;
+                questionText.setText(questionBank[currentQuestionIndex].getAnswerResId());
+                updateQuestion();
+                break;*/
+
+    private void updateQuestion() {
+        questionText.setText(questionBank[currentQuestionIndex].getAnswerResId());
+        // setting the textview with new question
+        switch (currentQuestionIndex) {
+            case 1:
+                quizImage1.setImageResource(R.drawable.r);
+                break;
+            case 2:
+                quizImage1.setImageResource(R.drawable.h);
+                break;
+            case 3:
+                quizImage1.setImageResource(R.drawable.g);
+                break;
+            case 4:
+                quizImage1.setImageResource(R.drawable.u);
+                break;
+            case 5:
+                quizImage1.setImageResource(R.drawable.x);
+                break;
+            case 6:
+                quizImage1.setImageResource(R.drawable.q);
+                break;
+            case 7:
+                quizImage1.setImageResource(R.drawable.j);
+                break;
+            case 8:
+                quizImage1.setImageResource(R.drawable.n);
                 break;
         }
+    }
 
+    int correct = 0;
+    private void checkAnswer(boolean userChooseCorrect) {
+        boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
+        int toastMessageId;
+        if (userChooseCorrect == answerIsTrue) {
+            toastMessageId = R.string.correct_answer;
+            correct++;
+        }
+        else {
+            toastMessageId = R.string.wrong_answer;
+        }
+        Toast.makeText(Quiz2.this, toastMessageId, Toast.LENGTH_SHORT).show();
+        nextButton.setVisibility(View.VISIBLE);
     }
 }

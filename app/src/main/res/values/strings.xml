@@ -86,14 +86,14 @@
     !--Quiz--!
     <string name="practice">Time to Practice</string>
     <string name="practice_sentence">Which sign does this image represent?</string>
-    <string name="question_no"></string>
+    <string name="question_no"> </string>
 
     !--Quiz2--!
-    <string name="correct_sign">Does this image mean:</string>
+    <string name="correct_sign">This sign means</string>
     <string name="true_text">true</string>
     <string name="false_text">false</string>
     <string name="correct_answer">Correct!</string>
-    <string name="wrong_answer">Incorrect! Try again</string>
+    <string name="wrong_answer">Incorrect!</string>
 
     !--Questions--!
     <string name="R">R</string>
