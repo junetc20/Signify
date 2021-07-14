@@ -86,10 +86,25 @@
     !--Quiz--!
     <string name="practice">Time to Practice</string>
     <string name="practice_sentence">Which sign does this image represent?</string>
-    <string name="select_sign">Select the correct sign for</string>
+    <string name="question_no"></string>
 
-    !--Game--!
-    <string name="correct_sign">Select the correct sign for:</string>
+    !--Quiz2--!
+    <string name="correct_sign">Does this image mean:</string>
+    <string name="true_text">true</string>
+    <string name="false_text">false</string>
+    <string name="correct_answer">Correct!</string>
+    <string name="wrong_answer">Incorrect! Try again</string>
+
+    !--Questions--!
+    <string name="R">R</string>
+    <string name="T">T</string>
+    <string name="G">G</string>
+    <string name="U">U</string>
+    <string name="Z">Z</string>
+    <string name="Q">Q</string>
+    <string name="Y">Y</string>
+    <string name="L">L</string>
+
 
 
 
