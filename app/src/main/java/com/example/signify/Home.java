@@ -62,5 +62,14 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this, Menu.class));
             }
         });
+
+        level2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Quiz2.class));
+            }
+        });
+
+
     }
 }
