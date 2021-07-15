@@ -176,7 +176,7 @@
         android:id="@+id/completeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
+        android:layout_marginBottom="244dp"
         android:text="got it"
         android:visibility="invisible"
         app:backgroundTint="@color/BSL_blue"
