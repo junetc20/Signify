@@ -19,10 +19,13 @@ public class Quiz2 extends AppCompatActivity
     private Button trueButton;
     private ImageView exitButtonQuiz2;
     private ImageView quizImage1;
+    private ImageView resultImage;
+    private TextView resultText;
     private TextView questionCountDisplay2;
     private TextView questionText;
     private int currentQuestionIndex = 0;
     private Button nextButton;
+    private Button completeButton;
 
     // Array to hold questions
     public Question[] questionBank = new Question[]{
@@ -44,12 +47,15 @@ public class Quiz2 extends AppCompatActivity
 
         // Constructor
         quizImage1 = findViewById(R.id.quizImage1);
+        resultImage = findViewById(R.id.resultImage);
+        resultText = findViewById(R.id.resultText);
         trueButton = findViewById(R.id.trueButton);
         falseButton = findViewById(R.id.falseButton);
         exitButtonQuiz2 = findViewById(R.id.exitButtonQuiz2);
         questionCountDisplay2 = findViewById(R.id.questionCountDisplay2);
         questionText = findViewById(R.id.questionText);
         nextButton = findViewById(R.id.nextButton);
+        completeButton = findViewById(R.id.completeButton);
 
         trueButton.setOnClickListener(this);
         falseButton.setOnClickListener(this);
@@ -71,9 +77,16 @@ public class Quiz2 extends AppCompatActivity
                 startActivity(new Intent(Quiz2.this, Home.class));
             }
         });
+
+        completeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Quiz2.this, Home.class));
+            }
+        });
     }
 
-    @SuppressLint("NonConstantResourceId")
+    @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -86,46 +99,58 @@ public class Quiz2 extends AppCompatActivity
                 break;
 
             case R.id.nextButton:
-                if (currentQuestionIndex < 8) {
+                if (currentQuestionIndex < 7) {
                     updateQuestion();
-                } else if (currentQuestionIndex == 8) {
+                    break;
+                } else if (currentQuestionIndex > 7) {
                     nextButton.setVisibility(View.INVISIBLE);
                     trueButton.setVisibility(View.INVISIBLE);
                     falseButton.setVisibility(View.INVISIBLE);
+                    resultImage.setVisibility(View.VISIBLE);
+                    resultText.setVisibility(View.VISIBLE);
+                    completeButton.setVisibility(View.VISIBLE);
+                    resultText.setText(correct + " / 8");
+                    break;
                 }
-                break;
             }
         }
 
     @SuppressLint("SetTextI18n")
     private void updateQuestion() {
         questionText.setText(questionBank[currentQuestionIndex].getAnswerResId());
-        questionCountDisplay2.setText("Question " + currentQuestionIndex + " / 8");
         // setting the textview with new question
         switch (currentQuestionIndex) {
             case 0:
                 quizImage1.setImageResource(R.drawable.r);
+                questionCountDisplay2.setText("Question 1 / 8");
                 break;
             case 1:
                 quizImage1.setImageResource(R.drawable.h);
+                questionCountDisplay2.setText("Question 2 / 8");
                 break;
             case 2:
                 quizImage1.setImageResource(R.drawable.g);
+                questionCountDisplay2.setText("Question 3 / 8");
                 break;
             case 3:
                 quizImage1.setImageResource(R.drawable.u);
+                questionCountDisplay2.setText("Question 4 / 8");
                 break;
             case 4:
                 quizImage1.setImageResource(R.drawable.x);
+                questionCountDisplay2.setText("Question 5 / 8");
                 break;
             case 5:
                 quizImage1.setImageResource(R.drawable.q);
+                questionCountDisplay2.setText("Question 6 / 8");
                 break;
             case 6:
                 quizImage1.setImageResource(R.drawable.j);
+                questionCountDisplay2.setText("Question 7 / 8");
                 break;
             case 7:
                 quizImage1.setImageResource(R.drawable.n);
+                questionCountDisplay2.setText("Question 8 / 8");
                 break;
         }
     }
