@@ -59,16 +59,7 @@ public class Quiz2 extends AppCompatActivity
 
         trueButton.setOnClickListener(this);
         falseButton.setOnClickListener(this);
-
-        // Makes the next button invisible after being clicked
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nextButton.setVisibility(View.INVISIBLE);
-                currentQuestionIndex++;
-                updateQuestion();
-            }
-        });
+        nextButton.setOnClickListener(this);
 
         // Exit button - returns to home page
         exitButtonQuiz2.setOnClickListener(new View.OnClickListener() {
@@ -100,18 +91,20 @@ public class Quiz2 extends AppCompatActivity
 
             case R.id.nextButton:
                 if (currentQuestionIndex < 7) {
+                    nextButton.setVisibility(View.INVISIBLE);
+                    currentQuestionIndex++;
                     updateQuestion();
-                    break;
-                } else if (currentQuestionIndex > 7) {
+                }
+                else {
                     nextButton.setVisibility(View.INVISIBLE);
                     trueButton.setVisibility(View.INVISIBLE);
                     falseButton.setVisibility(View.INVISIBLE);
                     resultImage.setVisibility(View.VISIBLE);
                     resultText.setVisibility(View.VISIBLE);
                     completeButton.setVisibility(View.VISIBLE);
-                    resultText.setText(correct + " / 8");
-                    break;
+                    resultText.setText(correct + "/8");
                 }
+                break;
             }
         }
 
