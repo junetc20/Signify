@@ -21,7 +21,6 @@ public class Quiz2 extends AppCompatActivity
     private ImageView quizImage1;
     private TextView questionCountDisplay2;
     private TextView questionText;
-    private int questionCount = 0;
     private int currentQuestionIndex = 0;
     private Button nextButton;
 
@@ -74,7 +73,6 @@ public class Quiz2 extends AppCompatActivity
         });
     }
 
-
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
@@ -98,37 +96,35 @@ public class Quiz2 extends AppCompatActivity
                 break;
             }
         }
-                /*currentQuestionIndex = (currentQuestionIndex + 1) % questionBank.length;
-                questionText.setText(questionBank[currentQuestionIndex].getAnswerResId());
-                updateQuestion();
-                break;*/
 
+    @SuppressLint("SetTextI18n")
     private void updateQuestion() {
         questionText.setText(questionBank[currentQuestionIndex].getAnswerResId());
+        questionCountDisplay2.setText("Question " + currentQuestionIndex + " / 8");
         // setting the textview with new question
         switch (currentQuestionIndex) {
-            case 1:
+            case 0:
                 quizImage1.setImageResource(R.drawable.r);
                 break;
-            case 2:
+            case 1:
                 quizImage1.setImageResource(R.drawable.h);
                 break;
-            case 3:
+            case 2:
                 quizImage1.setImageResource(R.drawable.g);
                 break;
-            case 4:
+            case 3:
                 quizImage1.setImageResource(R.drawable.u);
                 break;
-            case 5:
+            case 4:
                 quizImage1.setImageResource(R.drawable.x);
                 break;
-            case 6:
+            case 5:
                 quizImage1.setImageResource(R.drawable.q);
                 break;
-            case 7:
+            case 6:
                 quizImage1.setImageResource(R.drawable.j);
                 break;
-            case 8:
+            case 7:
                 quizImage1.setImageResource(R.drawable.n);
                 break;
         }
