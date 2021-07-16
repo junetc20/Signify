@@ -27,6 +27,10 @@
         <activity android:name=".Quiz" />
         <activity android:name=".Alphabet1" />
         <activity android:name=".Alphabet2" />
+        <activity android:name=".Intro1" />
+        <activity android:name=".Intro2" />
+        <activity android:name=".Intro3" />
+        <activity android:name=".Intro4" />
     </application>
 
 </manifest>

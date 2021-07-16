@@ -33,19 +33,19 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         // Constructor
-        userAccount = (ImageView) findViewById(R.id.userAccount);
-        menu = (ImageButton) findViewById(R.id.menu);
-        userFirstName = (TextView) findViewById(R.id.userFirstName);
-        level1Button = (Button) findViewById(R.id.level1Button);
-        level2Button = (Button) findViewById(R.id.level2Button);
-        level3Button = (Button) findViewById(R.id.level3Button);
-        level4Button = (Button) findViewById(R.id.level4Button);
-        level5Button = (Button) findViewById(R.id.level5Button);
-        prog1 = (TextView) findViewById(R.id.prog1);
-        prog2 = (TextView) findViewById(R.id.prog2);
-        prog3 = (TextView) findViewById(R.id.prog3);
-        prog4 = (TextView) findViewById(R.id.prog4);
-        prog5 = (TextView) findViewById(R.id.prog5);
+        userAccount = findViewById(R.id.userAccount);
+        menu = findViewById(R.id.menu);
+        userFirstName = findViewById(R.id.userFirstName);
+        level1Button = findViewById(R.id.level1Button);
+        level2Button = findViewById(R.id.level2Button);
+        level3Button = findViewById(R.id.level3Button);
+        level4Button = findViewById(R.id.level4Button);
+        level5Button = findViewById(R.id.level5Button);
+        prog1 = findViewById(R.id.prog1);
+        prog2 = findViewById(R.id.prog2);
+        prog3 = findViewById(R.id.prog3);
+        prog4 = findViewById(R.id.prog4);
+        prog5 = findViewById(R.id.prog5);
 
         // When account icon is clicked, it will take user to Account activity
         userAccount.setOnClickListener(new View.OnClickListener() {
