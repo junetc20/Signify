@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="85dp"
-        android:text="Question 1 / 8"
+        android:text="Question 1 / 14"
         android:textColor="@color/cream"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

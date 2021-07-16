@@ -36,7 +36,7 @@
     <string name="already_account">Already have an account? Sign in here</string>
 
     !--AssessLevel--!
-    <string name="asess_ready">Ready to learn independently?</string>
+    <string name="assess_ready">Ready to learn independently?</string>
     <string name="eval">Take this quiz to check</string>
     <string name="rate">Rate each skill below from 1 to 4, based on your current skill level. Type in a number for each on the right hand side.</string>
     <string name="rating">1 = excellent; 2 = good; 3 = adequate; 4 = poor </string>
@@ -68,40 +68,37 @@
         <string name="intro_para1">You may already know something about sign language, but as with learning any new language, it can be useful to have at least a basic understanding of the history and culture that surrounds it.
             In this section there is a very brief background of sign language, please read it carefully.</string>
         <string name="intro_para2">Sign Language is a visual form of communicating using a combination of hand shapes, spatial representation, gestures, facial expression, and body language.
-            Sign Language is used mainly by Deaf people and people with hearing difficulties and
-            has been used as a method of communication among Deaf people for hundreds of years.</string>
+            Sign Language is used mainly by Deaf people and people with hearing difficulties and has been used as a method of communication among Deaf people for hundreds of years.</string>
         <string name="intro_para3"> British Sign Language, known as BSL, is the main form of sign language used within the UK and has been recognised by the UK government as a minority language since 2003.
             BSL is an independent language which is separate to spoken English, having its own grammar and syntax. It is estimated that BSL is used by around 151,000 people within the UK.</string>
 
         !--D/DeafPeople--!
         <string name="deaf_title">D/Deaf People</string>
-        <string name="deaf_para1">It is useful when learning BSL to understand a bit about the "Deaf world".  Deaf people (with an upper-case D) are people who have had a profound hearing loss since birth and have been raised
+        <string name="deaf_para1">It is useful when learning BSL to understand a bit about the Deaf world.  Deaf people (with an upper-case D) are people who have had a profound hearing loss since birth and have been raised
             and identify as part of the Deaf community. Deaf people usually consider BSL to be their first language and generally socialise mainly within the Deaf community.</string>
         <string name="deaf_para2">Within the Deaf world there is a lot of pride for the language and culture and many Deaf people do not see their deafness as a disability, but as just another characteristic of who they are, just
-            as they might have black hair or brown eyes. It is even possible for a person with normal hearing to be considered part of the Deaf community if their parents were Deaf and they were brought up in the Deaf world. For Deaf
-            people the word 'Deaf' is a mark of cultural identity, much like the words 'English', 'Scottish', 'Welsh', 'Irish' (etc.) rather than just a label of someone who cannot hear.</string>
+            as they might have black hair or brown eyes. For Deaf people the word Deaf is a mark of cultural identity, much like the words English, Scottish, Welsh, Irish (etc.) rather than just a label of someone who cannot hear.</string>
         <string name="deaf_para3">A deaf person (with a lower-case d) refers to somebody who has lost their hearing after they were born and/or were brought up in the hearing community. A deaf person will typically socialise in both
-            the hearing and Deaf communities. A deaf person will usually consider English (or another spoken language) to be their first language however depending on the level of hearing loss they may rely on sign language more than
-            they do on their spoken language.</string>
+            the hearing and Deaf communities.</string>
 
         !--Audism--!
         <string name="aud_title">Audism</string>
         <string name="aud_para1">Audism is an attitude whereby people who are hearing sometimes hold a negative stigma towards those who are unable to hear - similar to sexism or racism.
-            Audism assumes a limit on the abilities of what a person who is Deaf can do - treating Deafness as a disability. Audist attitudes are most often held by those who are hearing.
+            Audism assumes a limit on the abilities of what a person who is Deaf can do. Audist attitudes are most often held by those who are hearing.
             These attitudes are sometimes seen in those who are learning sign language and may think they are trying to be helpful. </string>
-        <string name="aud_para2">Audist behaviors are patronising and can be insulting - we need to avoid them.  Examples of audist behaviors include:</string>
-        <string name="aud_1">Trying to assist with communication without being asked.</string>
-        <string name="aud_2">Asking someone to write down or lipread without them requesting this as their preferred communication method.</string>
-        <string name="aud_3">Making a phone call on behalf of someone because you assume they are unable to.</string>
+    <string name="aud_para2"><b>Examples of audist behaviors include:</b></string>
+        <string name="aud_1">- Trying to assist with communication without being asked.</string>
+        <string name="aud_2">- Asking someone to write down or lipread without them requesting this as their preferred communication method.</string>
+        <string name="aud_3">- Making a phone call on behalf of someone because you assume they are unable to.</string>
         <string name="aud_para3">These are but a few examples of audist behaviours. When you are communicating with other BSL users make sure you are doing so as equals - think about how you are behaving and think carefully about whether
             your actions could be seen as audist, even though you are not intending them to be. </string>
 
         !--PrimaryHand--!
         <string name="prim_title">Your Primary Hand</string>
         <string name="prim_para1">When you are signing, one of your hands will be more active than the other. This hand is your primary hand. Before beginning to sign it is a good idea to think about which hand this will be.</string>
-        <string name="prim_para2">Initially it can be difficult to decide which hand to use, you should use whichever hand feels most comfortable.  Most people will use the same hand that they write with. Once you have chosen your primary
-            hand you should then stick to using that hand as your primary hand. If you keep on swapping while signing it can get difficult for people to read you. Each time you learn a sign you must think about which hand you are using.</string>
-        <string name="prim_para3">Please note: this version of the Signify app only shows signs from a right hand perspective.</string>
+        <string name="prim_para2">Initially it can be difficult to decide which hand to use, you should use whichever hand feels most comfortable. Most people will use the same hand that they write with. Once you have chosen your primary
+            hand you should then stick to using that hand as your primary hand. If you keep on swapping while signing, it can get difficult for people to read you. Each time you learn a sign you must think about which hand you are using.</string>
+        <string name="prim_para3"><b>Please note</b>: this version of the Signify app only shows signs from a right hand perspective.</string>
 
 
     !--Section_2_Alphabet--!
@@ -110,15 +107,13 @@
         <string name="man_alpha_info1">Each letter of a manual alphabet is represented by a different hand shape or hand movement.
         Manual alphabets are used in sign language where a sign does not exist for a word, or when a signer does not know the sign for a particular word.</string>
         <string name="man_alpha_info2"> The most common use of the manual alphabet in sign language is for names of people and places that have not had a sign assigned to them.
-        In BSL the two handed manual alphabet is used. Some sign languages use a one handed alphabet (e.g. American Sign Language and Irish Sign Language).</string>
+        In BSL, the two handed manual alphabet is used. Some sign languages use a one handed alphabet (e.g. American Sign Language and Irish Sign Language).</string>
 
         !--BSL--!
         <string name="bsl_alpha_title">The BSL Alphabet</string>
-        <string name="man_alpha_info3">A quick tip before you learn the two handed alphabet; Remember that the five fingers (on your secondary hand) represent the five Vowels:</string>
-        <string name="bsl_alpha_info">Below is a video of the two handed manual alphabet (right handed). As with all of the signs shown, you
-        should learn to read and sign them. Practice your signing in front of a mirror to ensure you are not making any mistakes.
-        Take some time to learn the alphabet and try to get to the point where
-        you can recite the entire alphabet without looking at this video.</string>
+        <string name="man_alpha_info3">A quick tip before you learn the two handed alphabet; remember that the five fingers (on your secondary hand) represent the five Vowels:</string>
+        <string name="bsl_alpha_info">Below is a video of the two handed manual alphabet (right handed). As with all of the signs shown, you should learn to read and sign them. Practice your signing in front of a mirror to ensure you are not making any mistakes.
+        Take some time to learn the alphabet and try to get to the point where you can recite the entire alphabet without looking at this video.</string>
 
         !--Quiz--!
         <string name="practice">Time to Practice</string>
@@ -141,5 +136,11 @@
         <string name="Q">Q</string>
         <string name="Y">Y</string>
         <string name="L">L</string>
+        <string name="O">O</string>
+        <string name="S">S</string>
+        <string name="I">I</string>
+        <string name="K">K</string>
+        <string name="H">H</string>
+        <string name="A">A</string>
 
 </resources>

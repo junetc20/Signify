@@ -22,6 +22,19 @@ public class Quiz extends AppCompatActivity {
     ImageView exitButtonQuiz;
     Button completeButton2;
 
+/*
+    // Array to hold questions
+    public Question[] questionBank = new Question[]{
+            new Question(R.string.R, true),
+            new Question(R.string.T, false),
+            new Question(R.string.G, true),
+            new Question(R.string.U, true),
+            new Question(R.string.Z, false),
+            new Question(R.string.Q, true),
+            new Question(R.string.Y, false),
+            new Question(R.string.L, false),
+    }; */
+
     // Linking this class with an activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,5 +68,4 @@ public class Quiz extends AppCompatActivity {
             }
         });
     }
-
 }

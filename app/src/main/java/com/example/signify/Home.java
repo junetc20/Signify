@@ -70,5 +70,13 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this, Alphabet1.class));
             }
         });
+
+        // When level 1 button is clicked, user will be taken to level 1 section
+        level1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Intro1.class));
+            }
+        });
     }
 }
