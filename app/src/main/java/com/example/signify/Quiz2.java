@@ -36,6 +36,12 @@ public class Quiz2 extends AppCompatActivity
             new Question(R.string.Q, true),
             new Question(R.string.Y, false),
             new Question(R.string.L, false),
+            new Question(R.string.O, true),
+            new Question(R.string.S, true),
+            new Question(R.string.I, false),
+            new Question(R.string.K, true),
+            new Question(R.string.H, false),
+            new Question(R.string.A, false),
     };
 
     // Linking this class with an activity
@@ -93,7 +99,7 @@ public class Quiz2 extends AppCompatActivity
                 break;
 
             case R.id.nextButton:
-                if (currentQuestionIndex < 7) {
+                if (currentQuestionIndex < 13) {
                     nextButton.setVisibility(View.INVISIBLE);
                     trueButton.setVisibility(View.VISIBLE);
                     falseButton.setVisibility(View.VISIBLE);
@@ -107,7 +113,7 @@ public class Quiz2 extends AppCompatActivity
                     resultImage.setVisibility(View.VISIBLE);
                     resultText.setVisibility(View.VISIBLE);
                     completeButton.setVisibility(View.VISIBLE);
-                    resultText.setText(correct + "/8");
+                    resultText.setText(correct + "/14");
                 }
                 break;
             }
@@ -120,35 +126,59 @@ public class Quiz2 extends AppCompatActivity
         switch (currentQuestionIndex) {
             case 0:
                 quizImage1.setImageResource(R.drawable.r);
-                questionCountDisplay2.setText("Question 1 / 8");
+                questionCountDisplay2.setText("Question 1 / 14");
                 break;
             case 1:
                 quizImage1.setImageResource(R.drawable.h);
-                questionCountDisplay2.setText("Question 2 / 8");
+                questionCountDisplay2.setText("Question 2 / 14");
                 break;
             case 2:
                 quizImage1.setImageResource(R.drawable.g);
-                questionCountDisplay2.setText("Question 3 / 8");
+                questionCountDisplay2.setText("Question 3 / 14");
                 break;
             case 3:
                 quizImage1.setImageResource(R.drawable.u);
-                questionCountDisplay2.setText("Question 4 / 8");
+                questionCountDisplay2.setText("Question 4 / 14");
                 break;
             case 4:
                 quizImage1.setImageResource(R.drawable.x);
-                questionCountDisplay2.setText("Question 5 / 8");
+                questionCountDisplay2.setText("Question 5 / 14");
                 break;
             case 5:
                 quizImage1.setImageResource(R.drawable.q);
-                questionCountDisplay2.setText("Question 6 / 8");
+                questionCountDisplay2.setText("Question 6 / 14");
                 break;
             case 6:
                 quizImage1.setImageResource(R.drawable.j);
-                questionCountDisplay2.setText("Question 7 / 8");
+                questionCountDisplay2.setText("Question 7 / 14");
                 break;
             case 7:
                 quizImage1.setImageResource(R.drawable.n);
-                questionCountDisplay2.setText("Question 8 / 8");
+                questionCountDisplay2.setText("Question 8 / 14");
+                break;
+            case 8:
+                quizImage1.setImageResource(R.drawable.o);
+                questionCountDisplay2.setText("Question 9 / 14");
+                break;
+            case 9:
+                quizImage1.setImageResource(R.drawable.s);
+                questionCountDisplay2.setText("Question 10 / 14");
+                break;
+            case 10:
+                quizImage1.setImageResource(R.drawable.u);
+                questionCountDisplay2.setText("Question 11 / 14");
+                break;
+            case 11:
+                quizImage1.setImageResource(R.drawable.k);
+                questionCountDisplay2.setText("Question 12 / 14");
+                break;
+            case 12:
+                quizImage1.setImageResource(R.drawable.t);
+                questionCountDisplay2.setText("Question 13 / 14");
+                break;
+            case 13:
+                quizImage1.setImageResource(R.drawable.p);
+                questionCountDisplay2.setText("Question 14 / 14");
                 break;
         }
     }

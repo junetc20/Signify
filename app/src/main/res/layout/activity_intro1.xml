@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="350dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/intro_para1"
+        android:textColor="@color/background_blue"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bslTitle" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="350dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/intro_para2"
+        android:textColor="@color/background_blue"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="350dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/intro_para3"
+        android:textColor="@color/background_blue"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
     <ImageView
         android:id="@+id/nextArrow3"
@@ -38,13 +77,13 @@
         app:srcCompat="@drawable/ic_baseline_clear_24" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/bslTitle"
         android:layout_width="326dp"
         android:layout_height="45dp"
         android:layout_marginStart="68dp"
         android:layout_marginLeft="68dp"
         android:layout_marginTop="16dp"
-        android:text="@string/bsl_alpha_title"
+        android:text="@string/intro_title"
         android:textColor="@color/background_blue"
         android:textSize="30sp"
         android:textStyle="bold"
