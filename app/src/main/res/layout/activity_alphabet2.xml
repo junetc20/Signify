@@ -7,8 +7,8 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="352dp"
-        android:layout_height="380dp"
+        android:layout_width="351dp"
+        android:layout_height="195dp"
         android:layout_marginTop="40dp"
         android:text="@string/bsl_alpha_info"
         android:textColor="@color/background_blue"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/nextArrow2"
         android:layout_width="43dp"
         android:layout_height="42dp"
         android:layout_marginEnd="18dp"
@@ -81,7 +81,7 @@
         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/backArrow"
         android:layout_width="43dp"
         android:layout_height="42dp"
         android:layout_marginStart="18dp"
@@ -91,15 +91,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="374dp"
-        android:layout_height="271dp"
-        android:layout_marginTop="237dp"
+    <VideoView
+        android:id="@+id/alphabetVid"
+        android:layout_width="366dp"
+        android:layout_height="265dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        app:srcCompat="@drawable/screen_shot_2021_07_12_at_10_24_40" />
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

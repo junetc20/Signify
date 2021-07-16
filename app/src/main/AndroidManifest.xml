@@ -25,6 +25,8 @@
         <activity android:name=".Menu" />
         <activity android:name=".Quiz2" />
         <activity android:name=".Quiz" />
+        <activity android:name=".Alphabet1" />
+        <activity android:name=".Alphabet2" />
     </application>
 
 </manifest>

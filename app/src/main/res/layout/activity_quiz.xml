@@ -6,6 +6,55 @@
     android:layout_height="match_parent"
     android:background="@color/background_blue">
 
+    <Button
+        android:id="@+id/completeButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="244dp"
+        android:text="got it"
+        android:visibility="invisible"
+        app:backgroundTint="@color/BSL_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/resultText2"
+        android:layout_width="wrap_content"
+        android:layout_height="93dp"
+        android:layout_marginTop="145dp"
+        android:textColor="@color/BSL_blue"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <ImageView
+        android:id="@+id/exitButtonQuiz"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cross_cream" />
+
+    <ImageView
+        android:id="@+id/resultImage2"
+        android:layout_width="261dp"
+        android:layout_height="398dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438"
+        app:srcCompat="@drawable/quiz_end_graphic1" />
+
     <TextView
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
@@ -46,17 +95,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/exitButtonQuiz"
-        android:layout_width="33dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cross_cream" />
 
     <TextView
         android:id="@+id/textView23"
