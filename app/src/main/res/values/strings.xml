@@ -72,13 +72,13 @@
 
     !--Alphabet--!
     <string name="man_alpha_title">The Manual Alphabet</string>
-    <string name="man_alpha_info">Each letter of a manual alphabet is represented by a different hand shape or hand movement.
-    Manual alphabets are used in sign language where a sign does not exist for a word, or when a signer does not know the sign for a particular word.
-    The most common use of the manual alphabet in sign language is for names of people and places that have not had a sign assigned to them.
-    In BSL the two handed manual alphabet is used. Some sign languages use a one handed alphabet (e.g. American Sign Language and Irish Sign Language).
-    A quick tip before you learn the two handed alphabet; Remember that the five fingers (on your secondary hand) represent the five Vowels:</string>
+    <string name="man_alpha_info1">Each letter of a manual alphabet is represented by a different hand shape or hand movement.
+    Manual alphabets are used in sign language where a sign does not exist for a word, or when a signer does not know the sign for a particular word.</string>
+    <string name="man_alpha_info2"> The most common use of the manual alphabet in sign language is for names of people and places that have not had a sign assigned to them.
+        In BSL the two handed manual alphabet is used. Some sign languages use a one handed alphabet (e.g. American Sign Language and Irish Sign Language).</string>
     <string name="bsl_alpha_title">The BSL Alphabet</string>
-    <string name="bsl_alpha_info">Below is an video of the two handed manual alphabet (right handed). As with all of the signs on this course you
+    <string name="man_alpha_info3">A quick tip before you learn the two handed alphabet; Remember that the five fingers (on your secondary hand) represent the five Vowels:</string>
+    <string name="bsl_alpha_info">Below is a video of the two handed manual alphabet (right handed). As with all of the signs shown, you
     should learn to read and sign them. Practice your signing in front of a mirror to ensure you are not making any mistakes.
     Take some time to learn the alphabet and try to get to the point where
     you can recite the entire alphabet without looking at this video.</string>

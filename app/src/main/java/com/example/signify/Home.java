@@ -63,13 +63,12 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        // When level 2 button is clicked, user will be taken to level 2 section
         level2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Quiz2.class));
+                startActivity(new Intent(Home.this, Alphabet1.class));
             }
         });
-
-
     }
 }

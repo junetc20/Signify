@@ -82,15 +82,21 @@ public class Quiz2 extends AppCompatActivity
         switch (v.getId()) {
             case R.id.trueButton:
                 checkAnswer(true);
+                trueButton.setVisibility(View.INVISIBLE);
+                falseButton.setVisibility(View.INVISIBLE);
                 break;
 
             case R.id.falseButton:
                 checkAnswer(false);
+                trueButton.setVisibility(View.INVISIBLE);
+                falseButton.setVisibility(View.INVISIBLE);
                 break;
 
             case R.id.nextButton:
                 if (currentQuestionIndex < 7) {
                     nextButton.setVisibility(View.INVISIBLE);
+                    trueButton.setVisibility(View.VISIBLE);
+                    falseButton.setVisibility(View.VISIBLE);
                     currentQuestionIndex++;
                     updateQuestion();
                 }
