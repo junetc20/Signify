@@ -1,21 +1,21 @@
 package com.example.signify;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Alphabet2 extends AppCompatActivity {
 
     // Fields
-    private ImageView exitButton4;
+    ImageView exitButton4;
     ImageView nextArrow2;
     ImageView backArrow;
-    // VideoView alphabetVid;
+    VideoView alphabetVid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,16 @@ public class Alphabet2 extends AppCompatActivity {
         exitButton4 = findViewById(R.id.exitButton4);
         nextArrow2 = findViewById(R.id.nextArrow2);
         backArrow = findViewById(R.id.backArrow);
-       /* alphabetVid = findViewById(R.id.alphabetVid);
 
-        alphabetVid.setVideoPath("/assets/alphabet_video.mp4");
-        alphabetVid.start(); */
+        // Make alphabet video playable
+        alphabetVid = findViewById(R.id.alphabetVid);
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.alphabet_video;
+        Uri uri = Uri.parse(videoPath);
+        alphabetVid.setVideoURI(uri);
+        MediaController mediaController = new MediaController(this);
+        alphabetVid.setMediaController(mediaController);
+        mediaController.setAnchorView(alphabetVid);
+        alphabetVid.seekTo(3);
 
         // Exit button - returns to home page
         exitButton4.setOnClickListener(new View.OnClickListener() {

@@ -1,6 +1,7 @@
 package com.example.signify;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -34,6 +35,8 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        // Logs user out of account
+        // Needs pop up warning
         logoutLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,11 +44,23 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        // Returns user to home page
+        // Opens user guide
         userGuideLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Menu.this, Home.class));
+            }
+        });
 
+        // Clicking the BSL link will open external BSL website
+        // Needs pop up warning (use yes/no switch)
+        bslLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.british-sign.co.uk/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
             }
         });
     }
