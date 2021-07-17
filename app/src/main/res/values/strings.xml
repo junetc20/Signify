@@ -101,6 +101,31 @@
         <string name="prim_para3"><b>Please note</b>: this version of the Signify app only shows signs from a right hand perspective.</string>
 
 
+        !--Quiz--!
+        <string name="practice">Time to Practice</string>
+        <string name="introQ1">How long has sign language been used as a method of communication?</string>
+            <string name="introA11">Hundreds of years</string>
+            <string name="introA12">Decades</string>
+            <string name="introA13">Since 1968</string>
+        <string name="introQ2">When did the UK government recognise sign language as a minority language?</string>
+            <string name="introA21">2001</string>
+            <string name="introA22">2002</string>
+            <string name="introA23">2003</string>
+        <string name="introQ3">How many people are estimated to use BSL within the UK?</string>
+            <string name="introA31">141,000</string>
+            <string name="introA32">280,000</string>
+            <string name="introA33">151,000</string>
+        <string name="introQ4">What is audist behaviour?</string>
+            <string name="introA41">How deaf people behave</string>
+            <string name="introA42">An attitude against those unable to hear</string>
+            <string name="introA43">Helping others when asked to</string>
+        <string name="introQ5">Why should you not switch your primary hand when signing?</string>
+            <string name="introA51">It can be difficult to understand</string>
+            <string name="introA52">You will sign incorrectly</string>
+            <string name="introA53">Trick question: you should do this</string>
+
+
+
     !--Section_2_Alphabet--!
         !--Manual--!
         <string name="man_alpha_title">The Manual Alphabet</string>
@@ -113,12 +138,7 @@
         <string name="bsl_alpha_title">The BSL Alphabet</string>
         <string name="man_alpha_info3">A quick tip before you learn the two handed alphabet; remember that the five fingers (on your secondary hand) represent the five Vowels:</string>
         <string name="bsl_alpha_info">Below is a video of the two handed manual alphabet (right handed). As with all of the signs shown, you should learn to read and sign them. Practice your signing in front of a mirror to ensure you are not making any mistakes.
-        Take some time to learn the alphabet and try to get to the point where you can recite the entire alphabet without looking at this video.</string>
-
-        !--Quiz--!
-        <string name="practice">Time to Practice</string>
-        <string name="practice_sentence">Which sign does this image represent?</string>
-        <string name="question_no"> </string>
+        Take some time to learn the alphabet and try to get to the point where you can recite the entire alphabet without looking at this video. Please click on the video below to show the play button.</string>
 
         !--Quiz2--!
         <string name="correct_sign">This sign means</string>
