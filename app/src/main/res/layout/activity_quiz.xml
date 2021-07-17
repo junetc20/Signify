@@ -7,6 +7,19 @@
     android:background="@color/background_blue">
 
     <Button
+        android:id="@+id/nextButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="NEXT"
+        android:visibility="invisible"
+        app:backgroundTint="@color/purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/completeButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,18 +68,6 @@
         app:layout_constraintVertical_bias="0.438"
         app:srcCompat="@drawable/quiz_end_graphic1" />
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bsl_copyright"
-        android:textColor="@color/cream"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizImage" />
-
     <View
         android:id="@+id/view3"
         android:layout_width="362dp"
@@ -97,11 +98,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView23"
-        android:layout_width="352dp"
-        android:layout_height="88dp"
+        android:id="@+id/questionText2"
+        android:layout_width="353dp"
+        android:layout_height="249dp"
         android:layout_marginTop="34dp"
-        android:text="@string/practice_sentence"
         android:textColor="@color/cream"
         android:textSize="28sp"
         android:typeface="normal"
@@ -110,61 +110,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
-    <ImageView
-        android:id="@+id/quizImage"
-        android:layout_width="305dp"
-        android:layout_height="261dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="183dp" />
-
     <Button
         android:id="@+id/answer1"
-        android:layout_width="142dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="24dp"
-        android:textSize="30sp"
-        app:backgroundTint="@color/BSL_blue"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizImage" />
-
-    <Button
-        android:id="@+id/answer2"
-        android:layout_width="142dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:textSize="30sp"
+        android:layout_width="346dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizImage" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText2" />
 
     <Button
         android:id="@+id/answer3"
-        android:layout_width="142dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="24dp"
-        android:textSize="30sp"
-        app:backgroundTint="@color/BSL_blue"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answer1" />
-
-    <Button
-        android:id="@+id/answer4"
-        android:layout_width="142dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:textSize="30sp"
+        android:layout_width="346dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answer2" />
+
+    <Button
+        android:id="@+id/answer2"
+        android:layout_width="346dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        app:backgroundTint="@color/BSL_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer1" />
 
     <TextView
         android:id="@+id/questionCountDisplay"
@@ -176,20 +153,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizImage"
-        app:layout_constraintVertical_bias="0.86" />
-
-    <Button
-        android:id="@+id/nextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="384dp"
-        android:text="NEXT"
-        android:visibility="invisible"
-        app:backgroundTint="@color/purple"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
