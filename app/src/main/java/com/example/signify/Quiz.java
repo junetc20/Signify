@@ -1,6 +1,5 @@
 package com.example.signify;
 
-  import android.annotation.SuppressLint;
   import android.content.Intent;
   import android.os.Bundle;
   import android.view.View;
@@ -13,7 +12,7 @@ package com.example.signify;
 
 public class Quiz extends AppCompatActivity {
 
-    private MultipleChoiceQ questionLibrary = new MultipleChoiceQ();
+    MultipleChoiceQ questionLibrary = new MultipleChoiceQ();
 
     // Fields
     private Button answer1;
@@ -43,37 +42,40 @@ public class Quiz extends AppCompatActivity {
         questionText2 = findViewById(R.id.questionText2);
         resultText2 = findViewById(R.id.resultText2);
 
-        updateQuestion();
+        exitButtonQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Quiz.this, Home.class));
+            }
+        });
 
         nextButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-               nextButton2.setVisibility(View.INVISIBLE);
+                updateQuestion();
+                nextButton2.setVisibility(View.INVISIBLE);
                 answer1.setVisibility(View.VISIBLE);
                 answer2.setVisibility(View.VISIBLE);
                 answer3.setVisibility(View.VISIBLE);
-                updateQuestion();
             }
-            });
+        });
 
         // Making answer 1 clickable
         answer1.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 if (answer1.getText() == answer) {
                     score = score + 1;
                     updateScore(score);
                     Toast.makeText(Quiz.this, "correct!", Toast.LENGTH_SHORT).show();
-                    answer1.setVisibility(View.INVISIBLE);
-                    answer2.setVisibility(View.INVISIBLE);
-                    answer3.setVisibility(View.INVISIBLE);
-                    nextButton2.setVisibility(View.VISIBLE);
                 }
                 else {
                     Toast.makeText(Quiz.this, "incorrect!", Toast.LENGTH_SHORT).show();
-                    answer1.setVisibility(View.INVISIBLE);
-                    answer2.setVisibility(View.INVISIBLE);
-                    answer3.setVisibility(View.INVISIBLE);
-                    nextButton2.setVisibility(View.VISIBLE);
                 }
+                answer1.setVisibility(View.INVISIBLE);
+                answer2.setVisibility(View.INVISIBLE);
+                answer3.setVisibility(View.INVISIBLE);
+                nextButton2.setVisibility(View.VISIBLE);
             }
         });
 
@@ -84,18 +86,14 @@ public class Quiz extends AppCompatActivity {
                     score = score + 1;
                     updateScore(score);
                     Toast.makeText(Quiz.this, "correct!", Toast.LENGTH_SHORT).show();
-                    answer1.setVisibility(View.INVISIBLE);
-                    answer2.setVisibility(View.INVISIBLE);
-                    answer3.setVisibility(View.INVISIBLE);
-                    nextButton2.setVisibility(View.VISIBLE);
                 }
                 else {
                     Toast.makeText(Quiz.this, "incorrect!", Toast.LENGTH_SHORT).show();
-                    answer1.setVisibility(View.INVISIBLE);
-                    answer2.setVisibility(View.INVISIBLE);
-                    answer3.setVisibility(View.INVISIBLE);
-                    nextButton2.setVisibility(View.VISIBLE);
                 }
+                answer1.setVisibility(View.INVISIBLE);
+                answer2.setVisibility(View.INVISIBLE);
+                answer3.setVisibility(View.INVISIBLE);
+                nextButton2.setVisibility(View.VISIBLE);
             }
         });
 
@@ -106,18 +104,14 @@ public class Quiz extends AppCompatActivity {
                     score = score + 1;
                     updateScore(score);
                     Toast.makeText(Quiz.this, "correct!", Toast.LENGTH_SHORT).show();
-                    answer1.setVisibility(View.INVISIBLE);
-                    answer2.setVisibility(View.INVISIBLE);
-                    answer3.setVisibility(View.INVISIBLE);
-                    nextButton2.setVisibility(View.VISIBLE);
                 }
                 else {
                     Toast.makeText(Quiz.this, "incorrect!", Toast.LENGTH_SHORT).show();
-                    answer1.setVisibility(View.INVISIBLE);
-                    answer2.setVisibility(View.INVISIBLE);
-                    answer3.setVisibility(View.INVISIBLE);
-                    nextButton2.setVisibility(View.VISIBLE);
                 }
+                answer1.setVisibility(View.INVISIBLE);
+                answer2.setVisibility(View.INVISIBLE);
+                answer3.setVisibility(View.INVISIBLE);
+                nextButton2.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -132,7 +126,7 @@ public class Quiz extends AppCompatActivity {
         currentQuestionNumber++;
     }
 
-    private void updateScore(int point) {
+    private void updateScore(int score) {
         resultText2.setText(score);
     }
 }

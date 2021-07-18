@@ -108,7 +108,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        tools:text="@string/introQ1" />
 
     <Button
         android:id="@+id/answer1"
@@ -119,7 +120,8 @@
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionText2" />
+        app:layout_constraintTop_toBottomOf="@+id/questionText2"
+        tools:text="@string/introA11" />
 
     <Button
         android:id="@+id/answer3"
@@ -130,7 +132,8 @@
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answer2" />
+        app:layout_constraintTop_toBottomOf="@+id/answer2"
+        tools:text="@string/introA13" />
 
     <Button
         android:id="@+id/answer2"
@@ -141,7 +144,8 @@
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answer1" />
+        app:layout_constraintTop_toBottomOf="@+id/answer1"
+        tools:text="@string/introA12" />
 
     <TextView
         android:id="@+id/questionCountDisplay"
