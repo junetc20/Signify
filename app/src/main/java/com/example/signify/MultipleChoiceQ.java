@@ -2,14 +2,14 @@ package com.example.signify;
 
 public class MultipleChoiceQ {
 
-    private static String[] questions =  {
+    private static final String[] questions =  {
             "How long has sign language been used as a method of communication?",
             "When did the UK government recognise sign language as a minority language?",
             "How many people are estimated to use BSL within the UK?",
             "What is audist behaviour?",
             "Why should you not switch your primary hand when signing?"
     };
-    private static String[][] answers = {
+    private static final String[][] answers = {
             {"Hundreds of years", "Decades", "Since 1968"},
             {"2001", "2002", "2003"},
             {"146,000", "280,000", "151,000"},
@@ -18,7 +18,7 @@ public class MultipleChoiceQ {
 
     };
 
-    private static String[] correctAnswers = {
+    private static final String[] correctAnswers = {
             "Hundreds of years", "2003", "151,000", "An attitude against those unable to hear", "It can be difficult to understand"};
 
     public static String getQuestion(int x) {
