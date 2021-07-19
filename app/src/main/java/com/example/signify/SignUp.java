@@ -63,15 +63,21 @@ public class SignUp extends AppCompatActivity{
                         if (checkEmail == true) {
                             Boolean insert = db.insert(newFName, newLName, newEmail, newPassword);
                             if (insert == true) {
-                                Toast.makeText(SignUp.this, "You have registered successfully.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignUp.this, "You have registered successfully.", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(SignUp.this, Home.class));
                             }
-                            else {
-                                Toast.makeText(SignUp.this, "This email already exists in this system. Please try logging in.", Toast.LENGTH_LONG).show();
+                        }
+                        else {
+                            Toast.makeText(SignUp.this, "This email already exists in this system. Please try logging in.", Toast.LENGTH_SHORT).show();
+                            inputFirstName.setText(null);
+                            inputLastName.setText(null);
+                            inputEmail.setText(null);
+                            createPassword.setText(null);
+                            reEnterPassword.setText(null);
                         }
                     }
-                    }
                     else {
-                        Toast.makeText(SignUp.this, "Passwords do not match. Please try again.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(SignUp.this, "Passwords do not match. Please try again.", Toast.LENGTH_SHORT).show();
                         createPassword.setText(null);
                         reEnterPassword.setText(null);
                     }
