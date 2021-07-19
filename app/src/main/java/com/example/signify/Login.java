@@ -16,6 +16,7 @@ public class Login extends AppCompatActivity {
     EditText emailInput;
     EditText password;
     TextView register;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class Login extends AppCompatActivity {
         emailInput = (EditText) findViewById(R.id.emailInput);
         password = (EditText) findViewById(R.id.password);
         register = (TextView) findViewById(R.id.register);
+        db = new DatabaseHelper(this);
 
         // makes registration link clickable
         // once clicked, user is sent to sign up page
@@ -36,13 +38,24 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        // Check that user input matches details within db
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String email = emailInput.getText().toString();
+                String pass = password.getText().toString();
+                Boolean checkLoginDetails = db.checkLoginDetails(email, pass);
                 if(emailInput.getText().toString().equals("") || password.getText().toString().equals("")) {
                     Toast.makeText(Login.this, "Please enter both your email and password.", Toast.LENGTH_SHORT).show();
                 } else {
-                    startActivity(new Intent(Login.this, Home.class));
+                    if(checkLoginDetails==true) {
+                        Toast.makeText(Login.this, "Successful login.", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(Login.this, "Incorrect email or password. Please try again.", Toast.LENGTH_SHORT).show();
+                        emailInput.setText(null);
+                        password.setText(null);
+                    }
                 }
             }
         });
