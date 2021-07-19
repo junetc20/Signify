@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SignUp extends AppCompatActivity{
 
     //fields
+    DatabaseHelper db;
     EditText inputFirstName;
     EditText inputLastName;
     EditText inputEmail;
@@ -34,6 +35,7 @@ public class SignUp extends AppCompatActivity{
         setContentView(R.layout.activity_signup);
 
         //constructor
+        db = new DatabaseHelper(this);
         inputFirstName = (EditText) findViewById(R.id.inputFirstName);
         inputLastName = (EditText) findViewById(R.id.inputLastName);
         inputEmail = (EditText) findViewById(R.id.inputEmail);
@@ -47,18 +49,32 @@ public class SignUp extends AppCompatActivity{
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(inputFirstName.getText().toString().equals("") || inputFirstName.getText().toString().equals("") ||
-                        (inputEmail.getText().toString().equals("") || (createPassword.getText().toString().equals("") ||
-                                (reEnterPassword.getText().toString().equals(""))))) {
-                    Toast.makeText(SignUp.this, "Please enter all details.", Toast.LENGTH_SHORT).show();
-                }
-                else if (!createPassword.getText().toString().equals(reEnterPassword.getText().toString())){
-                    Toast.makeText(SignUp.this, "Passwords do not match. Please try again.", Toast.LENGTH_SHORT).show();
-                    createPassword.setText(null);
-                    reEnterPassword.setText(null);
+                String newFName = inputFirstName.getText().toString();
+                String newLName = inputLastName.getText().toString();
+                String newEmail = inputEmail.getText().toString();
+                String newPassword = createPassword.getText().toString();
+                String reNewPassword = reEnterPassword.getText().toString();
+                if (newFName.equals("") || newLName.equals("") || newEmail.equals("") || newPassword.equals("") || reNewPassword.equals("")) {
+                    Toast.makeText(SignUp.this, "Please fill in all details.", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    startActivity(new Intent(SignUp.this, Assess.class));
+                    if (newPassword.equals(reNewPassword)) {
+                        Boolean checkEmail = db.checkEmail(newEmail);
+                        if (checkEmail == true) {
+                            Boolean insert = db.insert(newFName, newLName, newEmail, newPassword);
+                            if (insert == true) {
+                                Toast.makeText(SignUp.this, "You have registered successfully.", Toast.LENGTH_LONG).show();
+                            }
+                            else {
+                                Toast.makeText(SignUp.this, "This email already exists in this system. Please try logging in.", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    }
+                    else {
+                        Toast.makeText(SignUp.this, "Passwords do not match. Please try again.", Toast.LENGTH_LONG).show();
+                        createPassword.setText(null);
+                        reEnterPassword.setText(null);
+                    }
                 }
             }
         });
