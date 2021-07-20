@@ -7,19 +7,6 @@
     android:background="@color/cream"
     tools:context=".Home">
 
-    <TextView
-        android:id="@+id/prog5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:text="@string/intro_progress"
-        android:textColor="@color/background_blue"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/level5Button"
-        app:layout_constraintEnd_toEndOf="@+id/imageView19"
-        app:layout_constraintStart_toStartOf="@+id/imageView19" />
-
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="180dp"
@@ -44,16 +31,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         app:srcCompat="@drawable/designs_03" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_marginTop="66dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14"
-        app:srcCompat="@drawable/designs_08" />
 
     <ImageButton
         android:id="@+id/menu"
@@ -194,18 +171,6 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="@+id/imageView14"
         app:layout_constraintTop_toTopOf="@+id/imageView14" />
-
-    <Button
-        android:id="@+id/level5Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="95dp"
-        android:text="Locked"
-        android:textSize="12sp"
-        app:backgroundTint="@color/background_blue"
-        app:layout_constraintEnd_toEndOf="@+id/imageView19"
-        app:layout_constraintStart_toStartOf="@+id/imageView19"
-        app:layout_constraintTop_toTopOf="@+id/imageView19" />
 
     <TextView
         android:id="@+id/prog1"

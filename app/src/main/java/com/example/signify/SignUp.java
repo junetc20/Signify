@@ -49,22 +49,21 @@ public class SignUp extends AppCompatActivity{
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String newFName = inputFirstName.getText().toString();
-                String newLName = inputLastName.getText().toString();
-                String newEmail = inputEmail.getText().toString();
-                String newPassword = createPassword.getText().toString();
+                String firstName = inputFirstName.getText().toString();
+                String lastName = inputLastName.getText().toString();
+                String emailAdd = inputEmail.getText().toString();
+                String password = createPassword.getText().toString();
                 String reNewPassword = reEnterPassword.getText().toString();
-                if (newFName.equals("") || newLName.equals("") || newEmail.equals("") || newPassword.equals("") || reNewPassword.equals("")) {
+                if (firstName.equals("") || lastName.equals("") || emailAdd.equals("") || password.equals("") || reNewPassword.equals("")) {
                     Toast.makeText(SignUp.this, "Please fill in all details.", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    if (newPassword.equals(reNewPassword)) {
-                        boolean checkEmail;
-                        checkEmail = db.checkEmail(newEmail);
+                    if (password.equals(reNewPassword)) {
+                        boolean checkEmail = db.checkEmail(emailAdd);
                         if (checkEmail) {
-                            db.insert(newEmail, newFName, newLName, newPassword);
-                            Toast.makeText(SignUp.this, "You have registered successfully.", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(SignUp.this, Home.class));
+                            db.insert(emailAdd, firstName, lastName, password);
+                                Toast.makeText(SignUp.this, "You have registered successfully.", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(SignUp.this, Home.class));
                         }
                         else {
                             Toast.makeText(SignUp.this, "This email already exists in this system. Please try logging in.", Toast.LENGTH_SHORT).show();

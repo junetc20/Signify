@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Account extends AppCompatActivity {
 
     // Fields
+    DatabaseHelper db;
     ImageView exitButtonAcc;
     EditText firstNameAcc;
     EditText lastNameAcc;
@@ -28,6 +29,7 @@ public class Account extends AppCompatActivity {
         setContentView(R.layout.activity_account);
 
         // Constructor
+        db = new DatabaseHelper(this);
         exitButtonAcc = (ImageView) findViewById(R.id.exitButtonAcc);
         firstNameAcc = (EditText) findViewById(R.id.firstNameAcc);
         lastNameAcc = (EditText) findViewById(R.id.lastNameAcc);
@@ -44,7 +46,19 @@ public class Account extends AppCompatActivity {
                 startActivity(new Intent(Account.this, Home.class));
             }
         });
+
+        saveChangesAcc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String newFName = firstNameAcc.getText().toString();
+                String newLName = lastNameAcc.getText().toString();
+                String newEmail = emailAcc.getText().toString();
+
+                Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
+                if (updateData == true) {
+
+                }
+            }
+        });
     }
-
-
 }

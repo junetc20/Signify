@@ -45,6 +45,7 @@ public class Login extends AppCompatActivity {
                 String email = emailInput.getText().toString();
                 String pass = password.getText().toString();
                 Boolean checkLoginDetails = db.checkLoginDetails(email, pass);
+
                 if(emailInput.getText().toString().equals("") || password.getText().toString().equals("")) {
                     Toast.makeText(Login.this, "Please enter both your email and password.", Toast.LENGTH_SHORT).show();
                 } else {

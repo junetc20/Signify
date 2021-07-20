@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public DatabaseHelper(@Nullable Context context) {
+    public DatabaseHelper(Context context) {
         super(context, "Login.db", null, 1);
     }
 
@@ -27,32 +27,59 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // inserting in database
-    public boolean insert(String firstName, String lastName, String email, String password) {
+    public boolean insert(String emailAdd, String firstName, String lastName, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("email", email);
-        contentValues.put("first_name", firstName);
-        contentValues.put("last_name", lastName);
+        contentValues.put("email", emailAdd);
+        contentValues.put("firstName", firstName);
+        contentValues.put("lastName", lastName);
         contentValues.put("password", password);
-        long ins = db.insert("user", null, contentValues);
-        if(ins==-1) {
+        long res = db.insert("user", null, contentValues);
+        return res != -1;
+    }
+
+    public Boolean updateUserData(String emailAdd, String firstName, String lastName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("firstName", firstName);
+        contentValues.put("lastName", lastName);
+        Cursor cursor = db.rawQuery("Select * from user where email = ?", new String[] {emailAdd});
+        if(cursor.getCount()>0) {
+            long res = db.update("user", contentValues, "email=?", new String[]{emailAdd});
+            if (res == -1) {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
             return false;
         }
-        else {
-            return true;
+    }
+
+
+    public Boolean deleteUserData(String emailAdd, String firstName, String lastName, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from user where email = ?", new String[] {emailAdd});
+        if(cursor.getCount()>0) {
+            long res = db.delete("user", "email=?", new String[]{emailAdd});
+            return res != -1;
+        } else {
+            return false;
         }
     }
+
+    public Cursor getUserData(String emailAdd, String firstName, String lastName, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from user", null);
+        return cursor;
+    }
+
     // Check if email exists already
-    public boolean checkEmail(String email) {
+    public Boolean checkEmail(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
         @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{email});
-        if(cursor.getCount()>0) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return cursor.getCount() <= 0;
     }
     // Check email and password input at login screen
     public boolean checkLoginDetails(String email, String password) {
@@ -67,4 +94,3 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 }
-

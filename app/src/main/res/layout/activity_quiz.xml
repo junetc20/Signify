@@ -23,7 +23,7 @@
         android:id="@+id/completeButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="244dp"
+        android:layout_marginBottom="212dp"
         android:text="got it"
         android:visibility="invisible"
         app:backgroundTint="@color/BSL_blue"
@@ -31,19 +31,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/resultText2"
-        android:layout_width="wrap_content"
-        android:layout_height="93dp"
-        android:layout_marginTop="145dp"
-        android:textColor="@color/BSL_blue"
-        android:textSize="70sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <ImageView
         android:id="@+id/exitButtonQuiz"
@@ -54,7 +41,8 @@
         android:layout_marginTop="22dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cross_cream" />
+        app:srcCompat="@drawable/cross_cream"
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageView
         android:id="@+id/resultImage2"
@@ -66,7 +54,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.438"
-        app:srcCompat="@drawable/quiz_end_graphic1" />
+        app:srcCompat="@drawable/quiz_end_graphic1"
+        tools:ignore="VectorDrawableCompat"/>
 
     <View
         android:id="@+id/view3"
@@ -105,47 +94,50 @@
         android:textColor="@color/cream"
         android:textSize="28sp"
         android:typeface="normal"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22"
-        tools:text="@string/introQ1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <Button
         android:id="@+id/answer1"
         android:layout_width="346dp"
         android:layout_height="70dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/cream"
         android:textSize="16sp"
+        android:visibility="visible"
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionText2"
-        tools:text="@string/introA11" />
+        app:layout_constraintTop_toBottomOf="@+id/questionText2" />
 
     <Button
         android:id="@+id/answer3"
         android:layout_width="346dp"
         android:layout_height="70dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/cream"
         android:textSize="16sp"
+        android:visibility="visible"
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answer2"
-        tools:text="@string/introA13" />
+        app:layout_constraintTop_toBottomOf="@+id/answer2" />
 
     <Button
         android:id="@+id/answer2"
         android:layout_width="346dp"
         android:layout_height="70dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/cream"
         android:textSize="16sp"
+        android:visibility="visible"
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answer1"
-        tools:text="@string/introA12" />
+        app:layout_constraintTop_toBottomOf="@+id/answer1" />
 
     <TextView
         android:id="@+id/questionCountDisplay"
@@ -158,5 +150,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/resultText2"
+        android:layout_width="wrap_content"
+        android:layout_height="93dp"
+        android:layout_marginTop="164dp"
+        android:textColor="@color/BSL_blue"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

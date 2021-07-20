@@ -9,6 +9,7 @@ public class MultipleChoiceQ {
             "What is audist behaviour?",
             "Why should you not switch your primary hand when signing?"
     };
+
     private static final String[][] answers = {
             {"Hundreds of years", "Decades", "Since 1968"},
             {"2001", "2002", "2003"},
@@ -42,8 +43,8 @@ public class MultipleChoiceQ {
     }
 
     public static String getCorrectAns(int x) {
-        String answer = correctAnswers[x];
-        return answer;
+        String answers = correctAnswers[x];
+        return answers;
     }
 
 }

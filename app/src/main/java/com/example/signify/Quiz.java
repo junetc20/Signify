@@ -1,5 +1,6 @@
 package com.example.signify;
 
+  import android.annotation.SuppressLint;
   import android.content.Intent;
   import android.os.Bundle;
   import android.view.View;
@@ -25,13 +26,14 @@ public class Quiz extends AppCompatActivity {
     private TextView questionText2;
     private String answer;
     private int currentQuestionNumber = 0;
-    private int score = 0;
     private TextView resultText2;
+    private ImageView resultImage2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        // Constructor
         answer1 = findViewById(R.id.answer1);
         answer2 = findViewById(R.id.answer2);
         answer3 = findViewById(R.id.answer3);
@@ -41,7 +43,15 @@ public class Quiz extends AppCompatActivity {
         completeButton2 = findViewById(R.id.completeButton2);
         questionText2 = findViewById(R.id.questionText2);
         resultText2 = findViewById(R.id.resultText2);
+        resultImage2 = findViewById(R.id.resultImage2);
 
+        //Setting initial question up when quiz is opened
+        questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));
+        answer1.setText(MultipleChoiceQ.getChoice1(currentQuestionNumber));
+        answer2.setText(MultipleChoiceQ.getChoice2(currentQuestionNumber));
+        answer3.setText(MultipleChoiceQ.getChoice3(currentQuestionNumber));
+
+        // Exit button returns user to home when clicked
         exitButtonQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,14 +59,37 @@ public class Quiz extends AppCompatActivity {
             }
         });
 
-        nextButton2.setOnClickListener(new View.OnClickListener() {
+        // Exit button returns user to home when clicked
+        completeButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateQuestion();
-                nextButton2.setVisibility(View.INVISIBLE);
-                answer1.setVisibility(View.VISIBLE);
-                answer2.setVisibility(View.VISIBLE);
-                answer3.setVisibility(View.VISIBLE);
+                startActivity(new Intent(Quiz.this, Home.class));
+            }
+        });
+
+        // Next button updates text views so that the next question appears
+        nextButton2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View v) {
+                if (currentQuestionNumber < 4) {
+                    updateQuestion();
+                    nextButton2.setVisibility(View.INVISIBLE);
+                    answer1.setVisibility(View.VISIBLE);
+                    answer2.setVisibility(View.VISIBLE);
+                    answer3.setVisibility(View.VISIBLE);
+                }
+                else {
+                    nextButton2.setVisibility(View.INVISIBLE);
+                    answer1.setVisibility(View.INVISIBLE);
+                    answer2.setVisibility(View.INVISIBLE);
+                    answer3.setVisibility(View.INVISIBLE);
+                    questionText2.setVisibility(View.INVISIBLE);
+                    resultImage2.setVisibility(View.VISIBLE);
+                    completeButton2.setVisibility(View.VISIBLE);
+                    resultText2.setVisibility(View.VISIBLE);
+                    resultText2.setText(score + "/5");
+                }
             }
         });
 
@@ -65,8 +98,7 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (answer1.getText() == answer) {
-                    score = score + 1;
-                    updateScore(score);
+                    score++;
                     Toast.makeText(Quiz.this, "correct!", Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -83,8 +115,7 @@ public class Quiz extends AppCompatActivity {
         answer2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (answer2.getText() == answer) {
-                    score = score + 1;
-                    updateScore(score);
+                    score++;
                     Toast.makeText(Quiz.this, "correct!", Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -101,8 +132,7 @@ public class Quiz extends AppCompatActivity {
         answer3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (answer3.getText() == answer) {
-                    score = score + 1;
-                    updateScore(score);
+                    score++;
                     Toast.makeText(Quiz.this, "correct!", Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -116,17 +146,15 @@ public class Quiz extends AppCompatActivity {
         });
     }
 
+    //
+    int score = 0;
     private void updateQuestion() {
+        currentQuestionNumber++;
         questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));
         answer1.setText(MultipleChoiceQ.getChoice1(currentQuestionNumber));
         answer2.setText(MultipleChoiceQ.getChoice2(currentQuestionNumber));
         answer3.setText(MultipleChoiceQ.getChoice3(currentQuestionNumber));
 
         answer = MultipleChoiceQ.getCorrectAns(currentQuestionNumber);
-        currentQuestionNumber++;
-    }
-
-    private void updateScore(int score) {
-        resultText2.setText(score);
     }
 }
