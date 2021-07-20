@@ -18,7 +18,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create table user(email text primary key, password text)");
+        db.execSQL("Create table user(email text primary key, firstName text, lastName text, password text)");
     }
 
     @Override
@@ -30,9 +30,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean insert(String firstName, String lastName, String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
+        contentValues.put("email", email);
         contentValues.put("first_name", firstName);
         contentValues.put("last_name", lastName);
-        contentValues.put("email", email);
         contentValues.put("password", password);
         long ins = db.insert("user", null, contentValues);
         if(ins==-1) {
@@ -43,7 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
     // Check if email exists already
-    public Boolean checkEmail(String email) {
+    public boolean checkEmail(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
         @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{email});
@@ -55,8 +55,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
     // Check email and password input at login screen
-    public Boolean checkLoginDetails(String email, String password) {
+    public boolean checkLoginDetails(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
+        @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("select * from user where email=? and password=?", new String[]{email, password});
         if (cursor.getCount()>0) {
             return true;
