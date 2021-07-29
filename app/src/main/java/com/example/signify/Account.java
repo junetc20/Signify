@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -55,10 +56,17 @@ public class Account extends AppCompatActivity {
                 String newEmail = emailAcc.getText().toString();
 
                 Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
-                if (updateData == true) {
-
+                if (updateData) {
+                    firstNameAcc.setText(newFName);
+                    lastNameAcc.setText(newLName);
+                    emailAcc.setText(newEmail);
+                    Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
                 }
             }
+
         });
     }
 }

@@ -43,7 +43,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("firstName", firstName);
         contentValues.put("lastName", lastName);
-        Cursor cursor = db.rawQuery("Select * from user where email = ?", new String[] {emailAdd});
+        contentValues.put("email", emailAdd);
+        Cursor cursor = db.rawQuery("Select * from user where email=?", new String[] {emailAdd});
         if(cursor.getCount()>0) {
             long res = db.update("user", contentValues, "email=?", new String[]{emailAdd});
             if (res == -1) {
@@ -71,6 +72,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Cursor getUserData(String emailAdd, String firstName, String lastName, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select * from user", null);
+        return cursor;
+    }
+
+    public Cursor getUserFName(String firstName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select firstName from user", null);
         return cursor;
     }
 

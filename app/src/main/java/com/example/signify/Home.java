@@ -3,6 +3,7 @@ package com.example.signify;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 public class Home extends AppCompatActivity {
 
     // Fields
+    DatabaseHelper db;
     ImageView userAccount;
     ImageButton menu;
     TextView userFirstName;
@@ -20,12 +22,10 @@ public class Home extends AppCompatActivity {
     Button level2Button;
     Button level3Button;
     Button level4Button;
-    Button level5Button;
     TextView prog1;
     TextView prog2;
     TextView prog3;
     TextView prog4;
-    TextView prog5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         // Constructor
+        db = new DatabaseHelper(this);
         userAccount = findViewById(R.id.userAccount);
         menu = findViewById(R.id.menu);
         userFirstName = findViewById(R.id.userFirstName);
@@ -40,12 +41,10 @@ public class Home extends AppCompatActivity {
         level2Button = findViewById(R.id.level2Button);
         level3Button = findViewById(R.id.level3Button);
         level4Button = findViewById(R.id.level4Button);
-        level5Button = findViewById(R.id.level5Button);
         prog1 = findViewById(R.id.prog1);
         prog2 = findViewById(R.id.prog2);
         prog3 = findViewById(R.id.prog3);
         prog4 = findViewById(R.id.prog4);
-        prog5 = findViewById(R.id.prog5);
 
         // When account icon is clicked, it will take user to Account activity
         userAccount.setOnClickListener(new View.OnClickListener() {
@@ -78,5 +77,15 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this, Intro1.class));
             }
         });
+
+        // Sets first name at top of screen
+            String name = userFirstName.getText().toString();
+            db.getUserFName(name);
+            userFirstName.setText(name);
+
+            /*
+            Cursor cursor = cursor.toString();
+            cursor.moveToFirst();
+            userFirstName.setText(cursor.getString(0)); */
     }
 }
