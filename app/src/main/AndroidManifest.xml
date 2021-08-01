@@ -24,13 +24,19 @@
         <activity android:name=".Account" />
         <activity android:name=".Menu" />
         <activity android:name=".Quiz2" />
-        <activity android:name=".Quiz" />
+        <activity android:name=".Quiz1" />
         <activity android:name=".Alphabet1" />
         <activity android:name=".Alphabet2" />
         <activity android:name=".Intro1" />
         <activity android:name=".Intro2" />
         <activity android:name=".Intro3" />
         <activity android:name=".Intro4" />
+        <activity android:name=".Numbers1" />
+        <activity android:name=".Numbers2" />
+        <activity android:name=".Numbers3" />
+        <activity android:name=".Numbers4" />
+        <activity android:name=".Numbers5" />
+        <activity android:name=".Numbers6" />
     </application>
 
 </manifest>

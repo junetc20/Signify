@@ -165,6 +165,40 @@
         <string name="K">K</string>
         <string name="H">H</string>
         <string name="A">A</string>
-    <string name="start">START</string>
+
+    !--Section_3_Numbers--!
+        !--1_to_10--!
+        <string name="no_title_one">Numbers 1 to 10</string>
+        <string name="ten_text">The video below shows you to sign the BSL signs for numbers 1 to 5.
+            These signs are fairly easy to remember because they just involve holding up fingers on your primary hand.</string>
+        <string name="ten_text_two">The next video shows the signs for numbers 6 to 10. These can be done by using your
+            hand vertically or by using both hands, but the most common method is using your hand horizontally as shown here.</string>
+
+        !--11_to_20--!
+        <string name="no_title_two">Numbers 11 to 20</string>
+        <string name="twenty_text">Below is a video for numbers 11 to 20.</string>
+        <string name="twenty_text_two">Move on once you can sign each number 11 to 20 without having to watch the video while you do it.</string>
+
+        !--21_to_40--!
+        <string name="no_title_three">Numbers 21 to 40</string>
+        <string name="forty_text">All numbers from here onwards are based on the numbers previously learned.
+            Below is a video for numbers 21 to 30.</string>
+        <string name="forty_text_two">Below is a video for numbers 31 to 40.</string>
+
+        !--41_to_60--!
+        <string name="no_title_four">Numbers 41 to 60</string>
+        <string name="sixty_text">Below is a video for numbers 41 to 50.</string>
+        <string name="sixty_text_two">Below is a video for numbers 51 to 60.</string>
+
+        !--61_to_80--!
+        <string name="no_title_five">Numbers 61 to 80</string>
+        <string name="eighty_text">Below is a video for numbers 61 to 70.</string>
+        <string name="eighty_text_two">Below is a video for numbers 71 to 80.</string>
+
+        !--81_to_100--!
+        <string name="no_title_six">Numbers 81 to 100</string>
+        <string name="hundred_text">Below is a video for numbers 81 to 90.</string>
+        <string name="hundred_text_two">Below is a video for numbers 91 to 100.</string>
+    <string name="hundred_text_three"><b>Can you count all the way to 100?</b></string>
 
 </resources>

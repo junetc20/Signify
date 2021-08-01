@@ -29,6 +29,7 @@ public class Home extends AppCompatActivity {
     TextView prog3;
     TextView prog4;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,33 +80,36 @@ public class Home extends AppCompatActivity {
             int count = 0;
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Intro1.class));
-                count++;
-                if (count > 0) {
-                    level1Button.setText(R.string.cont);
-                }
             }
         });
+
+            if (level1Button.getText().toString().equals("REVISIT")) {
+                level2Button.setClickable(true);
+                level2Button.setText(R.string.start);
+                level2Button.setBackgroundColor(R.color.BSL_blue);
+            }
+
+            if (level1Button.isPressed()) {
+                level1Button.setText(R.string.cont);
+            }
 
         // When level 2 button is clicked, user will be taken to level 2 section
         level2Button.setOnClickListener(new View.OnClickListener() {
             int count = 0;
-            @SuppressLint("ResourceAsColor")
             public void onClick(View v) {
-                if (level1Button.getText().toString().equals("REVISIT")) {
-                    level2Button.setClickable(true);
-                    level2Button.setText(R.string.start);
-                    level2Button.setBackgroundColor(R.color.BSL_blue);
-                    startActivity(new Intent(Home.this, Alphabet1.class));
-                    count++;
-                    if (count > 0) {
-                        level2Button.setText(R.string.cont);
-                    }
-                }
-                else {
-                    level2Button.setClickable(false);
-                }
+                startActivity(new Intent(Home.this, Alphabet1.class));
             }
         });
+
+        if (level2Button.getText().toString().equals("REVISIT")) {
+            level3Button.setClickable(true);
+            level3Button.setText(R.string.start);
+            level3Button.setBackgroundColor(R.color.BSL_blue);
+        }
+
+        if (level2Button.isPressed()) {
+            level2Button.setText(R.string.cont);
+        }
 
         // When level 3 button is clicked, user will be taken to level 3 section
         level3Button.setOnClickListener(new View.OnClickListener() {
@@ -113,43 +117,32 @@ public class Home extends AppCompatActivity {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-                if (level2Button.getText().toString().equals("REVISIT")) {
-                    level3Button.setClickable(true);
-                    level3Button.setText(R.string.start);
-                    level3Button.setBackgroundColor(R.color.BSL_blue);
                     startActivity(new Intent(Home.this, Alphabet1.class)); //change class
-                    count++;
-                    if (count > 0) {
-                        level3Button.setText(R.string.cont);
-                    }
                 }
-                else {
-                    level3Button.setClickable(false);
-                }
-            }
         });
+
+        if (level3Button.getText().toString().equals("REVISIT")) {
+            level4Button.setClickable(true);
+            level4Button.setText(R.string.start);
+            level4Button.setBackgroundColor(R.color.BSL_blue);
+        }
+
+        if (level3Button.isPressed()) {
+            level3Button.setText(R.string.cont);
+        }
 
         // When level 4 button is clicked, user will be taken to level 4 section
         level4Button.setOnClickListener(new View.OnClickListener() {
             int count = 0;
-            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-                if (level3Button.getText().toString().equals("REVISIT")) {
-                    level4Button.setClickable(true);
-                    level4Button.setText(R.string.start);
-                    level4Button.setBackgroundColor(R.color.BSL_blue);
                     startActivity(new Intent(Home.this, Alphabet1.class)); //change class
-                    count++;
-                    if (count > 0) {
-                        level4Button.setText(R.string.cont);
-                    }
                 }
-                else {
-                    level4Button.setClickable(false);
-                }
-            }
         });
+
+        if (level4Button.isPressed()) {
+            level4Button.setText(R.string.cont);
+        }
 
     }
 }
