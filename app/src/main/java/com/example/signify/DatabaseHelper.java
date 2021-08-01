@@ -6,7 +6,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.TextView;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(Context context) {
@@ -41,14 +40,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("firstName", firstName);
         contentValues.put("lastName", lastName);
         contentValues.put("email", emailAdd);
+        @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{emailAdd});
         if (cursor.getCount() > 0) {
             long res = db.update("user", contentValues, "email=?", new String[]{emailAdd});
-            if (res == -1) {
-                return false;
-            } else {
-                return true;
-            }
+            return res != -1;
         } else {
             return false;
         }
@@ -56,6 +52,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Boolean deleteUserData(String emailAdd, String firstName, String lastName, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
+        @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("Select * from user where email = ?", new String[]{emailAdd});
         if (cursor.getCount() > 0) {
             long res = db.delete("user", "email=?", new String[]{emailAdd});
@@ -77,17 +74,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    // Retrieve first name
-    public String getUserFName() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        String fName;
-        try (Cursor cursor = db.rawQuery("Select firstName from user", null)) {
-            cursor.moveToFirst();
-            fName = cursor.getString(cursor.getColumnIndex("firstName"));
-        }
-        return fName;
-    }
-
     // Check if email exists already
     public Boolean checkEmail(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -101,11 +87,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("select * from user where email=? and password=?", new String[]{email, password});
-        if (cursor.getCount()>0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return cursor.getCount() > 0;
     }
 }

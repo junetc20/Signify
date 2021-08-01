@@ -1,16 +1,12 @@
 package com.example.signify;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Assess extends AppCompatActivity {
@@ -31,16 +27,16 @@ public class Assess extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assess);
 
-        exitButton = (ImageView) findViewById(R.id.exitButton);
-        inputOne = (EditText) findViewById(R.id.inputOne);
-        inputTwo = (EditText) findViewById(R.id.inputTwo);
-        inputThree = (EditText) findViewById(R.id.inputThree);
-        inputFour = (EditText) findViewById(R.id.inputFour);
-        inputFive = (EditText) findViewById(R.id.inputFive);
-        finish = (Button) findViewById(R.id.finish);
-        resultNeg = (ImageView) findViewById(R.id.resultNeg);
-        resultPos = (ImageView) findViewById(R.id.resultPos);
-        resultButton = (Button) findViewById(R.id.resultButton);
+        exitButton = findViewById(R.id.exitButton);
+        inputOne = findViewById(R.id.inputOne);
+        inputTwo = findViewById(R.id.inputTwo);
+        inputThree = findViewById(R.id.inputThree);
+        inputFour = findViewById(R.id.inputFour);
+        inputFive = findViewById(R.id.inputFive);
+        finish = findViewById(R.id.finish);
+        resultNeg = findViewById(R.id.resultNeg);
+        resultPos = findViewById(R.id.resultPos);
+        resultButton = findViewById(R.id.resultButton);
 
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override

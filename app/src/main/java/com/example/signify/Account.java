@@ -31,15 +31,15 @@ public class Account extends AppCompatActivity {
 
         // Constructor
         db = new DatabaseHelper(this);
-        exitButtonAcc = (ImageView) findViewById(R.id.exitButtonAcc);
-        firstNameAcc = (EditText) findViewById(R.id.firstNameAcc);
-        lastNameAcc = (EditText) findViewById(R.id.lastNameAcc);
-        emailAcc = (EditText) findViewById(R.id.emailAcc);
-        currentPassAcc = (EditText) findViewById(R.id.currentPassAcc);
-        newPassAcc = (EditText) findViewById(R.id.newPassAcc);
-        reNewPassAcc = (EditText) findViewById(R.id.reNewPassAcc);
-        saveChangesAcc = (Button) findViewById(R.id.saveChangesAcc);
-        saveChangesPass = (Button) findViewById(R.id.saveChangesPass);
+        exitButtonAcc = findViewById(R.id.exitButtonAcc);
+        firstNameAcc = findViewById(R.id.firstNameAcc);
+        lastNameAcc = findViewById(R.id.lastNameAcc);
+        emailAcc = findViewById(R.id.emailAcc);
+        currentPassAcc = findViewById(R.id.currentPassAcc);
+        newPassAcc = findViewById(R.id.newPassAcc);
+        reNewPassAcc = findViewById(R.id.reNewPassAcc);
+        saveChangesAcc = findViewById(R.id.saveChangesAcc);
+        saveChangesPass = findViewById(R.id.saveChangesPass);
 
         exitButtonAcc.setOnClickListener(new View.OnClickListener() {
             @Override

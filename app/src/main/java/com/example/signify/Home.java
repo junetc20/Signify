@@ -77,7 +77,6 @@ public class Home extends AppCompatActivity {
 
         // When level 1 button is clicked, user will be taken to level 1 section
         level1Button.setOnClickListener(new View.OnClickListener() {
-            int count = 0;
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Intro1.class));
             }
@@ -95,7 +94,6 @@ public class Home extends AppCompatActivity {
 
         // When level 2 button is clicked, user will be taken to level 2 section
         level2Button.setOnClickListener(new View.OnClickListener() {
-            int count = 0;
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Alphabet1.class));
             }
@@ -113,11 +111,10 @@ public class Home extends AppCompatActivity {
 
         // When level 3 button is clicked, user will be taken to level 3 section
         level3Button.setOnClickListener(new View.OnClickListener() {
-            int count = 0;
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-                    startActivity(new Intent(Home.this, Alphabet1.class)); //change class
+                    startActivity(new Intent(Home.this, Numbers1.class));
                 }
         });
 
@@ -133,7 +130,6 @@ public class Home extends AppCompatActivity {
 
         // When level 4 button is clicked, user will be taken to level 4 section
         level4Button.setOnClickListener(new View.OnClickListener() {
-            int count = 0;
             @Override
             public void onClick(View v) {
                     startActivity(new Intent(Home.this, Alphabet1.class)); //change class

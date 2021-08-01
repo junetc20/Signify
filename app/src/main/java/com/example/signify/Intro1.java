@@ -15,7 +15,7 @@ public class Intro1 extends AppCompatActivity {
     ImageView exitButton2;
     ImageView nextArrow3;
     TextView prog1;
-    int count = 0;
+    // int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +41,10 @@ public class Intro1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Intro1.this, Intro2.class));
-                count++;
+                /* count++;
                 if(count == 1) {
                     prog1.setText("Progress: 20%");
-                }
-                else {
-
-                }
+                } */
             }
         });
     }

@@ -23,10 +23,10 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         // Constructor
-        exitButtonMenu = (ImageView) findViewById(R.id.exitButtonMenu);
-        userGuideLink = (TextView) findViewById(R.id.userGuideLink);
-        bslLink = (TextView) findViewById(R.id.bslLink);
-        logoutLink = (TextView) findViewById(R.id.logoutLink);
+        exitButtonMenu = findViewById(R.id.exitButtonMenu);
+        userGuideLink = findViewById(R.id.userGuideLink);
+        bslLink = findViewById(R.id.bslLink);
+        logoutLink = findViewById(R.id.logoutLink);
 
         exitButtonMenu.setOnClickListener(new View.OnClickListener() {
             @Override

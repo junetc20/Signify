@@ -1,9 +1,6 @@
 package com.example.signify;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,9 +8,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SignUp extends AppCompatActivity{
@@ -36,14 +30,14 @@ public class SignUp extends AppCompatActivity{
 
         //constructor
         db = new DatabaseHelper(this);
-        inputFirstName = (EditText) findViewById(R.id.inputFirstName);
-        inputLastName = (EditText) findViewById(R.id.inputLastName);
-        inputEmail = (EditText) findViewById(R.id.inputEmail);
-        createPassword = (EditText) findViewById(R.id.createPassword);
-        reEnterPassword = (EditText) findViewById(R.id.reEnterPassword);
-        createAccount = (Button) findViewById(R.id.createAccount);
-        signInClick = (TextView) findViewById(R.id.signInClick);
-        exitButton = (ImageView) findViewById(R.id.exitButton);
+        inputFirstName = findViewById(R.id.inputFirstName);
+        inputLastName = findViewById(R.id.inputLastName);
+        inputEmail = findViewById(R.id.inputEmail);
+        createPassword = findViewById(R.id.createPassword);
+        reEnterPassword = findViewById(R.id.reEnterPassword);
+        createAccount = findViewById(R.id.createAccount);
+        signInClick = findViewById(R.id.signInClick);
+        exitButton = findViewById(R.id.exitButton);
 
         // Create account if all conditions are met
         createAccount.setOnClickListener(new View.OnClickListener() {
@@ -98,5 +92,5 @@ public class SignUp extends AppCompatActivity{
                 startActivity(new Intent(SignUp.this, Login.class));
             }
         });
-    } // Need to link this user data to database
+    }
 }
