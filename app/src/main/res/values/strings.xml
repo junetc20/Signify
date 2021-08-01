@@ -15,9 +15,12 @@
     !--Home--!
     <string name="hello">Hello,</string>
     <string name="ready">ready to sign?</string>
-    <string name="username"> </string>
     <string name="intro_progress">Progress: 100%</string>
     <string name="alpha_progress">Progress: 0%</string>
+    <string name="start">START</string>
+    <string name="cont">CONTINUE</string>
+    <string name="revisit">REVISIT</string>
+
 
     !--Menu--!
     <string name="help">How to use Signify</string>
@@ -162,5 +165,6 @@
         <string name="K">K</string>
         <string name="H">H</string>
         <string name="A">A</string>
+    <string name="start">START</string>
 
 </resources>

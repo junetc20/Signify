@@ -2,6 +2,7 @@ package com.example.signify;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
 
@@ -17,11 +19,11 @@ public class Home extends AppCompatActivity {
     DatabaseHelper db;
     ImageView userAccount;
     ImageButton menu;
-    TextView userFirstName;
     Button level1Button;
     Button level2Button;
     Button level3Button;
     Button level4Button;
+    TextView firstName;
     TextView prog1;
     TextView prog2;
     TextView prog3;
@@ -34,9 +36,9 @@ public class Home extends AppCompatActivity {
 
         // Constructor
         db = new DatabaseHelper(this);
+        Cursor cursor = db.firstName();
         userAccount = findViewById(R.id.userAccount);
         menu = findViewById(R.id.menu);
-        userFirstName = findViewById(R.id.userFirstName);
         level1Button = findViewById(R.id.level1Button);
         level2Button = findViewById(R.id.level2Button);
         level3Button = findViewById(R.id.level3Button);
@@ -45,6 +47,16 @@ public class Home extends AppCompatActivity {
         prog2 = findViewById(R.id.prog2);
         prog3 = findViewById(R.id.prog3);
         prog4 = findViewById(R.id.prog4);
+        firstName = findViewById(R.id.textView4);
+
+        // Setting textview to show first name from database
+        // DOESN'T WORK
+        if(cursor.getCount() == 1) {
+            firstName.setText(cursor.getString(cursor.getColumnIndex("firstName")));
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
+        }
 
         // When account icon is clicked, it will take user to Account activity
         userAccount.setOnClickListener(new View.OnClickListener() {
@@ -62,30 +74,82 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        // When level 2 button is clicked, user will be taken to level 2 section
-        level2Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this, Alphabet1.class));
-            }
-        });
-
         // When level 1 button is clicked, user will be taken to level 1 section
         level1Button.setOnClickListener(new View.OnClickListener() {
-            @Override
+            int count = 0;
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Intro1.class));
+                count++;
+                if (count > 0) {
+                    level1Button.setText(R.string.cont);
+                }
             }
         });
 
-        // Sets first name at top of screen
-            String name = userFirstName.getText().toString();
-            db.getUserFName(name);
-            userFirstName.setText(name);
+        // When level 2 button is clicked, user will be taken to level 2 section
+        level2Button.setOnClickListener(new View.OnClickListener() {
+            int count = 0;
+            @SuppressLint("ResourceAsColor")
+            public void onClick(View v) {
+                if (level1Button.getText().toString().equals("REVISIT")) {
+                    level2Button.setClickable(true);
+                    level2Button.setText(R.string.start);
+                    level2Button.setBackgroundColor(R.color.BSL_blue);
+                    startActivity(new Intent(Home.this, Alphabet1.class));
+                    count++;
+                    if (count > 0) {
+                        level2Button.setText(R.string.cont);
+                    }
+                }
+                else {
+                    level2Button.setClickable(false);
+                }
+            }
+        });
 
-            /*
-            Cursor cursor = cursor.toString();
-            cursor.moveToFirst();
-            userFirstName.setText(cursor.getString(0)); */
+        // When level 3 button is clicked, user will be taken to level 3 section
+        level3Button.setOnClickListener(new View.OnClickListener() {
+            int count = 0;
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                if (level2Button.getText().toString().equals("REVISIT")) {
+                    level3Button.setClickable(true);
+                    level3Button.setText(R.string.start);
+                    level3Button.setBackgroundColor(R.color.BSL_blue);
+                    startActivity(new Intent(Home.this, Alphabet1.class)); //change class
+                    count++;
+                    if (count > 0) {
+                        level3Button.setText(R.string.cont);
+                    }
+                }
+                else {
+                    level3Button.setClickable(false);
+                }
+            }
+        });
+
+        // When level 4 button is clicked, user will be taken to level 4 section
+        level4Button.setOnClickListener(new View.OnClickListener() {
+            int count = 0;
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                if (level3Button.getText().toString().equals("REVISIT")) {
+                    level4Button.setClickable(true);
+                    level4Button.setText(R.string.start);
+                    level4Button.setBackgroundColor(R.color.BSL_blue);
+                    startActivity(new Intent(Home.this, Alphabet1.class)); //change class
+                    count++;
+                    if (count > 0) {
+                        level4Button.setText(R.string.cont);
+                    }
+                }
+                else {
+                    level4Button.setClickable(false);
+                }
+            }
+        });
+
     }
 }

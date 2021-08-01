@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Quiz2 extends AppCompatActivity
         implements View.OnClickListener {
 
+    //quiz for section 2
+
     // Fields
     private Button falseButton;
     private Button trueButton;
@@ -25,6 +27,7 @@ public class Quiz2 extends AppCompatActivity
     private int currentQuestionIndex = 0;
     private Button nextButton;
     private Button completeButton;
+    Button level2Button;
 
     // Array to hold questions
     public Question[] questionBank = new Question[]{
@@ -61,6 +64,7 @@ public class Quiz2 extends AppCompatActivity
         questionText = findViewById(R.id.questionText);
         nextButton = findViewById(R.id.nextButton);
         completeButton = findViewById(R.id.completeButton);
+        level2Button = findViewById(R.id.level2Button);
 
         trueButton.setOnClickListener(this);
         falseButton.setOnClickListener(this);
@@ -82,7 +86,7 @@ public class Quiz2 extends AppCompatActivity
         });
     }
 
-    @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
+    @SuppressLint({"NonConstantResourceId", "SetTextI18n", "ResourceAsColor"})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -114,6 +118,8 @@ public class Quiz2 extends AppCompatActivity
                     resultText.setVisibility(View.VISIBLE);
                     completeButton.setVisibility(View.VISIBLE);
                     resultText.setText(correct + "/14");
+                    level2Button.setText(R.string.revisit);
+                    level2Button.setBackgroundColor(R.color.purple);
                 }
                 break;
             }

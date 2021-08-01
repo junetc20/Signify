@@ -13,6 +13,8 @@ package com.example.signify;
 
 public class Quiz extends AppCompatActivity {
 
+    // quiz for section 1
+
     MultipleChoiceQ questionLibrary = new MultipleChoiceQ();
 
     // Fields
@@ -28,6 +30,7 @@ public class Quiz extends AppCompatActivity {
     private int currentQuestionNumber = 0;
     private TextView resultText2;
     private ImageView resultImage2;
+    Button level1Button;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +47,7 @@ public class Quiz extends AppCompatActivity {
         questionText2 = findViewById(R.id.questionText2);
         resultText2 = findViewById(R.id.resultText2);
         resultImage2 = findViewById(R.id.resultImage2);
+        level1Button = findViewById(R.id.level1Button);
 
         //Setting initial question up when quiz is opened
         questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));
@@ -69,7 +73,7 @@ public class Quiz extends AppCompatActivity {
 
         // Next button updates text views so that the next question appears
         nextButton2.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
+            @SuppressLint({"SetTextI18n", "ResourceAsColor"})
             @Override
             public void onClick(View v) {
                 if (currentQuestionNumber < 4) {
@@ -89,6 +93,8 @@ public class Quiz extends AppCompatActivity {
                     completeButton2.setVisibility(View.VISIBLE);
                     resultText2.setVisibility(View.VISIBLE);
                     resultText2.setText(score + "/5");
+                    level1Button.setText(R.string.revisit);
+                    level1Button.setBackgroundColor(R.color.purple);
                 }
             }
         });
