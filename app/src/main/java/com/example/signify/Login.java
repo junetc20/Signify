@@ -23,10 +23,10 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        signInButton = (Button) findViewById(R.id.signInButton);
-        emailInput = (EditText) findViewById(R.id.emailInput);
-        password = (EditText) findViewById(R.id.password);
-        register = (TextView) findViewById(R.id.register);
+        signInButton = findViewById(R.id.signInButton);
+        emailInput = findViewById(R.id.emailInput);
+        password = findViewById(R.id.password);
+        register = findViewById(R.id.register);
         db = new DatabaseHelper(this);
 
         // makes registration link clickable
@@ -44,12 +44,13 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String email = emailInput.getText().toString();
                 String pass = password.getText().toString();
-                Boolean checkLoginDetails = db.checkLoginDetails(email, pass);
+                boolean checkLoginDetails = db.checkLoginDetails(email, pass);
 
                 if(emailInput.getText().toString().equals("") || password.getText().toString().equals("")) {
                     Toast.makeText(Login.this, "Please enter both your email and password.", Toast.LENGTH_SHORT).show();
-                } else {
-                    if(checkLoginDetails==true) {
+                }
+                else {
+                     if(checkLoginDetails == true) {
                         Toast.makeText(Login.this, "Successful login.", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(Login.this, Home.class));
                     }

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
@@ -27,7 +26,7 @@ public class Numbers1 extends AppCompatActivity {
         // Constructor
         exitButton8 = findViewById(R.id.exitButton8);
         nextArrow7 = findViewById(R.id.nextArrow7);
-
+/*
         // Make first number video playable
         noVideo1 = findViewById(R.id.videoView);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_one;
@@ -47,6 +46,7 @@ public class Numbers1 extends AppCompatActivity {
         noVideo2.setMediaController(mediaController2);
         mediaController2.setAnchorView(noVideo2);
         noVideo2.seekTo(3);
+ */
 
         // Exit button - returns to home page
         exitButton8.setOnClickListener(new View.OnClickListener() {

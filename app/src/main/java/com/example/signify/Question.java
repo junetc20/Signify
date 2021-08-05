@@ -13,16 +13,8 @@ public class Question {
         return answerResId;
     }
 
-    public void setAnswerResId(int answerResId) {
-        this.answerResId = answerResId;
-    }
-
     public boolean isAnswerTrue() {
         return answerTrue;
-    }
-
-    public void setAnswerTrue(boolean answerTrue) {
-        this.answerTrue = answerTrue;
     }
 }
 
