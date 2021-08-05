@@ -2,6 +2,7 @@ package com.example.signify;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class Home extends AppCompatActivity {
     TextView prog3;
     TextView prog4;
 
+    @SuppressLint({"ResourceAsColor", "Range"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,37 +108,35 @@ public class Home extends AppCompatActivity {
                     startActivity(new Intent(Home.this, Alphabet1.class)); //change class
                 }
         });
-    }
-}
 
-/*
- * if (level1Button.getText().toString().equals("REVISIT")) {
-                level2Button.setClickable(true);
-                level2Button.setText(R.string.start);
-                level2Button.setBackgroundColor(R.color.BSL_blue);
-            }
+        if (level1Button.getText().toString().equals("REVISIT")) {
+            level2Button.setClickable(true);
+            level2Button.setText(R.string.start);
+            level2Button.setBackgroundColor(R.color.BSL_blue);
+        }
+        if (level1Button.isPressed()) {
+            level1Button.setText(R.string.cont);
+        }
 
-            if (level1Button.isPressed()) {
-                level1Button.setText(R.string.cont);
-            }
-
- if (level2Button.getText().toString().equals("REVISIT")) {
+        if (level2Button.getText().toString().equals("REVISIT")) {
             level3Button.setClickable(true);
             level3Button.setText(R.string.start);
             level3Button.setBackgroundColor(R.color.BSL_blue);
         }
-
         if (level2Button.isPressed()) {
             level2Button.setText(R.string.cont);
         }
 
- if (level3Button.getText().toString().equals("REVISIT")) {
+        if (level3Button.getText().toString().equals("REVISIT")) {
             level4Button.setClickable(true);
             level4Button.setText(R.string.start);
             level4Button.setBackgroundColor(R.color.BSL_blue);
         }
 
-         if (level3Button.isPressed()) {
+        if (level3Button.isPressed()) {
             level3Button.setText(R.string.cont);
         }
-       */
+    }
+}
+
+
