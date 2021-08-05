@@ -1,6 +1,8 @@
 package com.example.signify;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +26,7 @@ public class Account extends AppCompatActivity {
     Button saveChangesAcc;
     Button saveChangesPass;
 
+    @SuppressLint("Range")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,7 @@ public class Account extends AppCompatActivity {
 
         // Constructor
         db = new DatabaseHelper(this);
+        Cursor cursor = db.getUserData();
         exitButtonAcc = findViewById(R.id.exitButtonAcc);
         firstNameAcc = findViewById(R.id.firstNameAcc);
         lastNameAcc = findViewById(R.id.lastNameAcc);
@@ -41,13 +45,19 @@ public class Account extends AppCompatActivity {
         saveChangesAcc = findViewById(R.id.saveChangesAcc);
         saveChangesPass = findViewById(R.id.saveChangesPass);
 
+        // Setting textEdits to current data in database
+        firstNameAcc.setText(cursor.getString(cursor.getColumnIndex("firstName")));
+        lastNameAcc.setText(cursor.getString(cursor.getColumnIndex("lastName")));
+        emailAcc.setText(cursor.getString(cursor.getColumnIndex("email")));
+
         exitButtonAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Account.this, Home.class));
             }
         });
-/*
+
+        // Updates first name, last name and email data
         saveChangesAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,12 +71,18 @@ public class Account extends AppCompatActivity {
                     lastNameAcc.setText(newLName);
                     emailAcc.setText(newEmail);
                     Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
                 }
             }
+        });
 
-        }); */
+        // Checks that passwords match
+        saveChangesPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }

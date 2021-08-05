@@ -50,15 +50,12 @@
         android:id="@+id/textView4"
         android:layout_width="272dp"
         android:layout_height="41dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
         android:layout_marginTop="36dp"
-        android:text="@string/hello"
-        android:textColor="@color/background_blue"
+        android:textColor="@color/BSL_blue"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="112dp" />
 
     <TextView
         android:id="@+id/textView6"
@@ -213,5 +210,19 @@
         app:layout_constraintBottom_toTopOf="@+id/level2Button"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13" />
+
+    <TextView
+        android:id="@+id/textView69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/hello"
+        android:textColor="@color/background_blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -67,7 +67,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Cursor getUserData(String emailAdd, String firstName, String lastName, String password) {
+    public Cursor getUserData() {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select * from user", null);
         return cursor;
