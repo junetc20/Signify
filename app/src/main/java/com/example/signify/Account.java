@@ -47,7 +47,7 @@ public class Account extends AppCompatActivity {
                 startActivity(new Intent(Account.this, Home.class));
             }
         });
-
+/*
         saveChangesAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +67,6 @@ public class Account extends AppCompatActivity {
                 }
             }
 
-        });
+        }); */
     }
 }

@@ -31,7 +31,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("lastName", lastName);
         contentValues.put("password", password);
         long res = db.insert("user", null, contentValues);
-        return res != -1;
+        if(res == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     public Boolean updateUserData(String emailAdd, String firstName, String lastName) {
@@ -44,7 +49,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{emailAdd});
         if (cursor.getCount() > 0) {
             long res = db.update("user", contentValues, "email=?", new String[]{emailAdd});
-            return res != -1;
+            return res > -1;
         } else {
             return false;
         }
@@ -56,7 +61,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("Select * from user where email = ?", new String[]{emailAdd});
         if (cursor.getCount() > 0) {
             long res = db.delete("user", "email=?", new String[]{emailAdd});
-            return res != -1;
+            return res > -1;
         } else {
             return false;
         }
@@ -69,24 +74,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public Cursor firstName() {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select firstName from user", null);
         return cursor;
     }
 
     // Check if email exists already
-    public Boolean checkEmail(String email) {
+    public boolean checkEmail(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
-        @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{email});
-        return cursor.getCount() <= 0;
+        if (cursor.getCount() > 0) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     // Check email and password input at login screen
     public boolean checkLoginDetails(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
-        @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("select * from user where email=? and password=?", new String[]{email, password});
-        return cursor.getCount() > 0;
+        if (cursor.getCount() > 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

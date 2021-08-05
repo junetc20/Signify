@@ -50,7 +50,7 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(Login.this, "Please enter both your email and password.", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    if(checkLoginDetails) {
+                     if(checkLoginDetails == true) {
                         Toast.makeText(Login.this, "Successful login.", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(Login.this, Home.class));
                     }

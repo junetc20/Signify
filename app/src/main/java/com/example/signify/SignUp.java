@@ -53,11 +53,11 @@ public class SignUp extends AppCompatActivity{
                 }
                 else {
                     if (password.equals(reNewPassword)) {
-                        boolean checkEmail = db.checkEmail(emailAdd);
-                        if (checkEmail) {
+                       boolean checkEmail = db.checkEmail(emailAdd);
+                        if (checkEmail == true) {
                             db.insert(emailAdd, firstName, lastName, password);
                                 Toast.makeText(SignUp.this, "You have registered successfully.", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(SignUp.this, Home.class));
+                                startActivity(new Intent(SignUp.this, Assess.class));
                         }
                         else {
                             Toast.makeText(SignUp.this, "This email already exists in this system. Please try logging in.", Toast.LENGTH_SHORT).show();

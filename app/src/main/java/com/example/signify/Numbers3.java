@@ -29,6 +29,7 @@ public class Numbers3 extends AppCompatActivity {
         nextArrow9 = findViewById(R.id.nextArrow9);
         backArrow6 = findViewById(R.id.backArrow6);
 
+        /*
         // Make fourth number video playable
         noVideo4 = findViewById(R.id.videoView4);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_four;
@@ -48,6 +49,7 @@ public class Numbers3 extends AppCompatActivity {
         noVideo5.setMediaController(mediaController2);
         mediaController2.setAnchorView(noVideo5);
         noVideo5.seekTo(3);
+        */
 
         // Exit button - returns to home page
         exitButton10.setOnClickListener(new View.OnClickListener() {
