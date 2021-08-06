@@ -16,6 +16,7 @@ public class Menu extends AppCompatActivity {
     TextView userGuideLink;
     TextView bslLink;
     TextView logoutLink;
+    TextView surveyLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,9 @@ public class Menu extends AppCompatActivity {
         userGuideLink = findViewById(R.id.userGuideLink);
         bslLink = findViewById(R.id.bslLink);
         logoutLink = findViewById(R.id.logoutLink);
+        surveyLink = findViewById(R.id.surveyLink);
 
+        // Exits user from this activity and back to home page
         exitButtonMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +39,7 @@ public class Menu extends AppCompatActivity {
         });
 
         // Logs user out of account
-        // Needs pop up warning
+        // Needs pop up warning (use yes/no switch)
         logoutLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +64,14 @@ public class Menu extends AppCompatActivity {
                 Uri uri = Uri.parse("https://www.british-sign.co.uk/");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+            }
+        });
+
+        // Clicking survey link will open Assess activity
+        surveyLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Menu.this, Assess.class));
             }
         });
     }
