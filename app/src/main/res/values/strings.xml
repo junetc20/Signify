@@ -25,7 +25,8 @@
     !--Menu--!
     <string name="help">How to use Signify</string>
     <string name="BSL_website">Official BSL website</string>
-    <string name="Logout">Logout of Signify account</string>
+    <string name="Logout">Logout</string>
+    <string name="Survey_link">Independent survey</string>
 
     !--SignUp--!
     <string name="signing_up">Signing up to Signify</string>

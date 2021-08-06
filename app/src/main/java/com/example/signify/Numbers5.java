@@ -28,7 +28,7 @@ public class Numbers5 extends AppCompatActivity {
         exitButton12 = findViewById(R.id.exitButton12);
         nextArrow12 = findViewById(R.id.nextArrow12);
         backArrow8 = findViewById(R.id.backArrow8);
-/*
+
         // Make eighth number video playable
         noVideo8 = findViewById(R.id.videoView8);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_eight;
@@ -48,7 +48,7 @@ public class Numbers5 extends AppCompatActivity {
         noVideo9.setMediaController(mediaController2);
         mediaController2.setAnchorView(noVideo9);
         noVideo9.seekTo(3);
- */
+
         // Exit button - returns to home page
         exitButton12.setOnClickListener(new View.OnClickListener() {
             @Override
