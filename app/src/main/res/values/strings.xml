@@ -104,7 +104,6 @@
             hand you should then stick to using that hand as your primary hand. If you keep on swapping while signing, it can get difficult for people to read you. Each time you learn a sign you must think about which hand you are using.</string>
         <string name="prim_para3"><b>Please note</b>: this version of the Signify app only shows signs from a right hand perspective.</string>
 
-
         !--Quiz--!
         <string name="practice">Time to Practice</string>
         <string name="introQ1">How long has sign language been used as a method of communication?</string>
@@ -127,8 +126,6 @@
             <string name="introA51">It can be difficult to understand</string>
             <string name="introA52">You will sign incorrectly</string>
             <string name="introA53">Trick question: you should do this</string>
-
-
 
     !--Section_2_Alphabet--!
         !--Manual--!
@@ -200,18 +197,73 @@
         <string name="no_title_six">Numbers 81 to 100</string>
         <string name="hundred_text">Below is a video for numbers 81 to 90.</string>
         <string name="hundred_text_two">Below is a video for numbers 91 to 100.</string>
-    <string name="hundred_text_three"><b>Can you count all the way to 100?</b></string>
+        <string name="hundred_text_three"><b>Can you count all the way to 100?</b></string>
 
         !--Quiz3--!
-    <string name="fifteen">15</string>
-    <string name="eleven">11</string>
-    <string name="thirty_three">33</string>
-    <string name="fifty">50</string>
-    <string name="twelve">12</string>
-    <string name="forty_two">42</string>
-    <string name="thirty_two">32</string>
-    <string name="twenty_six">26</string>
-    <string name="got_it">Got it</string>
+        <string name="fifteen">15</string>
+        <string name="eleven">11</string>
+        <string name="thirty_three">33</string>
+        <string name="fifty">50</string>
+        <string name="twelve">12</string>
+        <string name="forty_two">42</string>
+        <string name="thirty_two">32</string>
+        <string name="twenty_six">26</string>
+        <string name="got_it">Got it</string>
 
+    !--Section_4_Introductions--!
+        <string name="Introductions">Introductions</string>
+        <string name="Intro_title_two">Positives and Negatives</string>
+        <string name="Intro_title_three">Facial Expressions</string>
+        <string name="Intro_title_four">Body Language</string>
+        <string name="Intro_title_five">Lip Pattern</string>
+        <string name="Intro_title_six">Summary</string>
+        <string name="Intro_para">In this lesson you will be learning how to start putting signs
+            together to make phrases that you will be able to use in conversation with other BSL users.
+            We will start with some simple single sign phrases:</string>
+        <string name="Hello">Hello</string>
+        <string name="Bye">Bye</string>
+        <string name="Intro_para_two">When you get the chance to watch someone signing try to be
+            aware of the context of signs being used; even if you are unable to follow the whole conversation
+            this can be really helpful for picking out the meanings of key signs.</string>
+        <string name="good">I am feeling good</string>
+        <string name="not_good">I am not feeling good</string>
+        <string name="Intro_para_three">Did you notice how the sign for I am feeling good involved a sign with
+            your thumb extended? Likewise the sign for Im not feeling good involved extended little fingers.
+            This is a common feature of BSL where a thumbs up is often used to show something as positive or
+            good and the little fingers are used to show something negative or bad. This is not true all of the
+            time but as a general rule is something to keep your eye out for.</string>
+        <string name="Intro_para_four">Facial expression is used all of the time in sign language. It is facial
+            expression that allows BSL to be such a dynamic, expressive, multi-dimensional language. As you begin
+            to use sign language more and more you will soon discover that facial expression can completely change
+            the meaning of a sign. The two signs how are you? and I am feeling good both contain the same hand
+            movement however it is the signers facial expression that defines them (as well as context). By raising
+            your eyebrows and showing a questioning facial expression you are changing the sign from I am feeling good
+            to how are you? (or more literally, are you feeling good?).</string>
+        <string name="Intro_para_five">When you are reading a signer you should mostly be focusing on their face rather than
+            the hands. This is because the subtleties of the language are found in the facial expression (and body language).
+            If you are watching the hands you may get completely the wrong message because you missed the facial expression.
+            It is also easier to communicate with somebody when you have eye contact.</string>
+        <string name="Intro_para_six">If you have ever spent any time watching somebody signing, or have seen BSL interpreters
+            translating television programmes, you have probably noticed how body language is a very important part of this language.
+            Just as with facial expression, body language can add emphasis to a sign or even change its meaning completely. This can
+            be seen when you compare the signs I am feeling good and I am not feeling good. By leaning forward a little, slouching your
+            shoulders, and slightly puffing your cheeks for I am not feeling good you can give the message that you are feeling really terrible,
+            you can vary your body language, as you can with your facial expression, to change the meaning of the sign to suit the message that
+            you want to sign.</string>
+        <string name="Intro_para_seven">People often think that lip-reading and sign language are two completely different methods of communication
+            but this is not true. In British Sign Language lip patterns are used to give an extra clue and to confirm the meaning of some signs.
+            Once you become more proficient at signing you will become familiar with which signs require lip patterns and which ones do not.</string>
+        <string name="Intro_para_eight">Lip-reading is especially important when you have a sign that has got more than one meaning. This can be
+            illustrated with the signs please, and thank you. Although both signs have the same hand movement, they can be distinguished by their
+            different lip patterns. This is easy to read because of the different number of syllables in the two words. Of course context would also
+            play a major factor in this.</string>
+        <string name="Intro_para_nine">You should be getting the picture by now that sign language is so much more than just a series of hand signals. 
+            British Sign Language is a very expressive, dynamic, and free flowing language in which facial expression and body language are just as 
+            important as the signs themselves. To sign without facial expression and good body language is similar to speaking with a very dull monotone voice.</string>
+        <string name="Intro_para_ten">The term that is used to group facial expression and body language is <b>non-manual features</b>. Because signing requires the use of 
+            non-manual features much more than spoken languages do, it is important that you really practice them so that they become more natural to use. </string>
+        <string name="Intro_para_eleven">Try sitting in front of a mirror and see how many different facial expressions you can come up with. Another good way to
+            practice your non-manual features is by playing charades. Non-manual features may be difficult for some people initially but the more you use them the
+            easier they will become.</string>
 
 </resources>
