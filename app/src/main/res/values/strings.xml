@@ -210,8 +210,8 @@
         <string name="twenty_six">26</string>
         <string name="got_it">Got it</string>
 
-    !--Section_4_Introductions--!
-        <string name="Introductions">Introductions</string>
+    !--Section_4_Conversation--!
+        <string name="Conversation">Conversation</string>
         <string name="Intro_title_two">Positives and Negatives</string>
         <string name="Intro_title_three">Facial Expressions</string>
         <string name="Intro_title_four">Body Language</string>
