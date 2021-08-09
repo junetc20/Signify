@@ -5,13 +5,24 @@
     android:layout_width="match_parent"
              android:layout_height="match_parent">
 
-    <VideoView
-        android:id="@+id/videoView14"
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
         android:layout_width="413dp"
         android:layout_height="171dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView87" />
+        app:layout_constraintTop_toBottomOf="@+id/textView87">
+
+        <VideoView
+            android:id="@+id/videoView14"
+            android:layout_width="413dp"
+            android:layout_height="171dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView87" />
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/textView87"
@@ -31,14 +42,14 @@
         android:id="@+id/textView80"
         android:layout_width="350dp"
         android:layout_height="210dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/Intro_para_three"
         android:textColor="@color/background_blue"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView14" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3" />
 
     <ImageView
         android:id="@+id/nextArrow15"
