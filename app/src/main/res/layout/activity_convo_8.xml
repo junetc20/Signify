@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView19" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3" />
 
     <TextView
         android:id="@+id/textView99"
@@ -31,13 +31,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView98" />
 
-    <VideoView
-        android:id="@+id/videoView19"
+    <FrameLayout
+        android:id="@+id/frameLayout3"
         android:layout_width="413dp"
         android:layout_height="171dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView97" />
+        app:layout_constraintTop_toBottomOf="@+id/textView97">
+
+        <VideoView
+            android:id="@+id/videoView19"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"/>
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/textView97"

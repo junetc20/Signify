@@ -128,11 +128,8 @@
         <VideoView
             android:id="@+id/videoView10"
             android:layout_width="500dp"
-            android:layout_height="220dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView66" />
+            android:layout_height="220dp"/>
+
     </FrameLayout>
 
     <FrameLayout
@@ -145,11 +142,8 @@
         <VideoView
             android:id="@+id/videoView11"
             android:layout_width="500dp"
-            android:layout_height="220dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView67" />
+            android:layout_height="220dp"/>
+
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

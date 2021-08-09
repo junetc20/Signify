@@ -5,21 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <VideoView
-        android:id="@+id/videoView17"
+    <FrameLayout
+        android:id="@+id/frameLayout6"
         android:layout_width="413dp"
         android:layout_height="171dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView91" />
+        app:layout_constraintTop_toBottomOf="@+id/textView91">
 
-    <VideoView
-        android:id="@+id/videoView18"
+        <VideoView
+            android:id="@+id/videoView17"
+            android:layout_width="413dp"
+            android:layout_height="171dp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout7"
         android:layout_width="413dp"
         android:layout_height="171dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView92" />
+        app:layout_constraintTop_toBottomOf="@+id/textView92">
+
+        <VideoView
+            android:id="@+id/videoView18"
+            android:layout_width="413dp"
+            android:layout_height="171dp"/>
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/textView91"

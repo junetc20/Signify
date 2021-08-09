@@ -49,7 +49,7 @@ public class Account extends AppCompatActivity {
         firstNameAcc.setText(cursor.getString(cursor.getColumnIndex("firstName")));
         lastNameAcc.setText(cursor.getString(cursor.getColumnIndex("lastName")));
         emailAcc.setText(cursor.getString(cursor.getColumnIndex("email")));
-/*
+
         exitButtonAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
