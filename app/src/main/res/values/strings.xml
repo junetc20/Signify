@@ -222,11 +222,16 @@
             We will start with some simple single sign phrases:</string>
         <string name="Hello">Hello</string>
         <string name="Bye">Bye</string>
+        <string name="How">How are you?</string>
         <string name="Intro_para_two">When you get the chance to watch someone signing try to be
             aware of the context of signs being used; even if you are unable to follow the whole conversation
             this can be really helpful for picking out the meanings of key signs.</string>
         <string name="good">I am feeling good</string>
         <string name="not_good">I am not feeling good</string>
+        <string name="please">Please</string>
+        <string name="thank_you">Thank you</string>
+        <string name="meet">Nice to meet you</string>
+        <string name="Intro_title_seven">More Signs</string>
         <string name="Intro_para_three">Did you notice how the sign for I am feeling good involved a sign with
             your thumb extended? Likewise the sign for Im not feeling good involved extended little fingers.
             This is a common feature of BSL where a thumbs up is often used to show something as positive or
