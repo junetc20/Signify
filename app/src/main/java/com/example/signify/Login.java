@@ -10,6 +10,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the login screen of Signify.
+ * Users can use this screen to login to their Signify account.
+ * This is the first screen shown to users.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Login extends AppCompatActivity {
 
     Button signInButton;
@@ -23,14 +32,19 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        /**
+         * Constructor for objects of class Login.
+         */
         signInButton = findViewById(R.id.signInButton);
         emailInput = findViewById(R.id.emailInput);
         password = findViewById(R.id.password);
         register = findViewById(R.id.register);
         db = new DatabaseHelper(this);
 
-        // makes registration link clickable
-        // once clicked, user is sent to sign up page
+        /**
+         * Set the view from clicking register.
+         * @param v the onClickListener View.
+         */
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +52,10 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        // Check that user input matches details within db
+        /**
+         * Set the view from clicking signInButton.
+         * @param v the onClickListener View.
+         */
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

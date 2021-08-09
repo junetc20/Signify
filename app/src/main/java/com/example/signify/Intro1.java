@@ -15,8 +15,8 @@ public class Intro1 extends AppCompatActivity {
     ImageView exitButton2;
     ImageView nextArrow3;
     TextView prog1;
-    // int count = 0;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +26,7 @@ public class Intro1 extends AppCompatActivity {
         exitButton2 = findViewById(R.id.exitButton2);
         nextArrow3 = findViewById(R.id.nextArrow3);
         prog1 = findViewById(R.id.prog1);
+        prog1.setText(R.string.Twenty);
 
         // Exit button - returns to home page
         exitButton2.setOnClickListener(new View.OnClickListener() {
@@ -37,14 +38,9 @@ public class Intro1 extends AppCompatActivity {
 
         // Next arrow - takes user to Intro 2
         nextArrow3.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Intro1.this, Intro2.class));
-                /* count++;
-                if(count == 1) {
-                    prog1.setText("Progress: 20%");
-                } */
             }
         });
     }

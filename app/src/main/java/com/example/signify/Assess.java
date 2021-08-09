@@ -9,6 +9,14 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the assess screen of Signify.
+ * Users can use this screen to check their skills before starting their independent learning.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Assess extends AppCompatActivity {
 
     ImageView exitButton;
@@ -27,6 +35,9 @@ public class Assess extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assess);
 
+        /**
+         * Constructor for objects of class Assess.
+         */
         exitButton = findViewById(R.id.exitButton);
         inputOne = findViewById(R.id.inputOne);
         inputTwo = findViewById(R.id.inputTwo);
@@ -38,6 +49,10 @@ public class Assess extends AppCompatActivity {
         resultPos = findViewById(R.id.resultPos);
         resultButton = findViewById(R.id.resultButton);
 
+        /**
+         * Set the view from clicking exitButton.
+         * @param v the onClickListener View.
+         */
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +60,10 @@ public class Assess extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking finish.
+         * @param v the onClickListener View.
+         */
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +85,10 @@ public class Assess extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking resultButton.
+         * @param v the onClickListener View.
+         */
         resultButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

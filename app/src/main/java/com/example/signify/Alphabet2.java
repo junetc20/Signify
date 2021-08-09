@@ -9,9 +9,16 @@ import android.widget.MediaController;
 import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the second screen within the second learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Alphabet2 extends AppCompatActivity {
 
-    // Fields
     ImageView exitButton4;
     ImageView nextArrow2;
     ImageView backArrow;
@@ -22,7 +29,9 @@ public class Alphabet2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabet2);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Alphabet2.
+         */
         exitButton4 = findViewById(R.id.exitButton4);
         nextArrow2 = findViewById(R.id.nextArrow2);
         backArrow = findViewById(R.id.backArrow);
@@ -37,7 +46,10 @@ public class Alphabet2 extends AppCompatActivity {
         mediaController.setAnchorView(alphabetVid);
         alphabetVid.seekTo(3);
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButton4.
+         * @param v the onClickListener View.
+         */
         exitButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +57,10 @@ public class Alphabet2 extends AppCompatActivity {
             }
         });
 
-        // Next arrow - takes user to Quiz 2
+        /**
+         * Set the view from clicking nextArrow2.
+         * @param v the onClickListener View.
+         */
         nextArrow2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +68,10 @@ public class Alphabet2 extends AppCompatActivity {
             }
         });
 
-        // Back arrow - takes user to Alphabet 1
+        /**
+         * Set the view from clicking backArrow.
+         * @param v the onClickListener View.
+         */
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

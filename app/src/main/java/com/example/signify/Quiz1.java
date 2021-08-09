@@ -33,6 +33,7 @@ public class Quiz1 extends AppCompatActivity {
     private ImageView resultImage2;
     Button level1Button;
     int score = 0;
+    TextView prog1;
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public class Quiz1 extends AppCompatActivity {
         resultText2 = findViewById(R.id.resultText2);
         resultImage2 = findViewById(R.id.resultImage2);
         level1Button = findViewById(R.id.level1Button);
+        prog1 = findViewById(R.id.prog1);
 
         //Setting initial question up when quiz is opened
         questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));
@@ -77,6 +79,7 @@ public class Quiz1 extends AppCompatActivity {
 
         // Next button updates text views so that the next question appears
         nextButton2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
                 if (currentQuestionNumber < 4) {
@@ -96,6 +99,9 @@ public class Quiz1 extends AppCompatActivity {
                     completeButton2.setVisibility(View.VISIBLE);
                     resultText2.setVisibility(View.VISIBLE);
                     resultText2.setText(score + "/5");
+                    level1Button.setBackgroundColor(R.color.purple);
+                    level1Button.setText(R.string.revisit);
+                    prog1.setText(R.string.Hundred);
                 }
             }
         });

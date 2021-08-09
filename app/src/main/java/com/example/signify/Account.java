@@ -12,9 +12,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the account screen of Signify.
+ * Users can use this screen to view and update their account details.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Account extends AppCompatActivity {
 
-    // Fields
     DatabaseHelper db;
     ImageView exitButtonAcc;
     EditText firstNameAcc;
@@ -32,7 +39,9 @@ public class Account extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Account.
+         */
         db = new DatabaseHelper(this);
         Cursor cursor = db.getUserData();
         exitButtonAcc = findViewById(R.id.exitButtonAcc);
@@ -50,6 +59,10 @@ public class Account extends AppCompatActivity {
         lastNameAcc.setText(cursor.getString(cursor.getColumnIndex("lastName")));
         emailAcc.setText(cursor.getString(cursor.getColumnIndex("email")));
 
+        /**
+         * Set the view from clicking exitButtonAcc.
+         * @param v the onClickListener View.
+         */
         exitButtonAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +70,10 @@ public class Account extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking saveChangesAcc.
+         * @param v the onClickListener View.
+         */
         // Updates first name, last name and email data
         saveChangesAcc.setOnClickListener(new View.OnClickListener() {
             @Override

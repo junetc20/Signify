@@ -271,4 +271,12 @@
             practice your non-manual features is by playing charades. Non-manual features may be difficult for some people initially but the more you use them the
             easier they will become.</string>
 
+    !--Progress--!
+        <string name="Twenty">Progress: 20%</string>
+        <string name="Forty">Progress: 40%</string>
+        <string name="Sixty">Progress: 60%</string>
+        <string name="Eighty">Progress: 80%</string>
+        <string name="Hundred">Progress: 100%</string>
+
+
 </resources>

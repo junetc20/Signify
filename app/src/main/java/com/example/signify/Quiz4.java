@@ -31,7 +31,7 @@ public class Quiz4 extends AppCompatActivity
     private int currentQuestionIndex = 0;
     private Button nextButton4;
     private Button completeButton4;
-    Button level2Button;
+    Button level4Button;
 
     // Array to hold questions
     public Question[] questionBank = new Question[]{
@@ -59,6 +59,7 @@ public class Quiz4 extends AppCompatActivity
         questionText4 = findViewById(R.id.questionText4);
         nextButton4 = findViewById(R.id.nextButton4);
         completeButton4 = findViewById(R.id.completeButton4);
+        level4Button = findViewById(R.id.level4Button);
 
         trueButton3.setOnClickListener(this);
         falseButton3.setOnClickListener(this);
@@ -98,7 +99,7 @@ public class Quiz4 extends AppCompatActivity
                 break;
 
             case R.id.nextButton:
-                if (currentQuestionIndex < 7) {
+                if (currentQuestionIndex < 5) {
                     nextButton4.setVisibility(View.INVISIBLE);
                     trueButton3.setVisibility(View.VISIBLE);
                     falseButton3.setVisibility(View.VISIBLE);
@@ -112,9 +113,9 @@ public class Quiz4 extends AppCompatActivity
                     resultImage4.setVisibility(View.VISIBLE);
                     resultText3.setVisibility(View.VISIBLE);
                     completeButton4.setVisibility(View.VISIBLE);
-                    resultText3.setText(correct + "/8");
-                    level2Button.setText(R.string.revisit);
-                    level2Button.setBackgroundColor(R.color.purple);
+                    resultText3.setText(correct + "/6");
+                    level4Button.setText(R.string.revisit);
+                    level4Button.setBackgroundColor(R.color.purple);
                 }
                 break;
         }
@@ -135,7 +136,7 @@ public class Quiz4 extends AppCompatActivity
                 quizVideo1.setMediaController(mediaController);
                 mediaController.setAnchorView(quizVideo1);
                 quizVideo1.seekTo(3);
-                questionCountDisplay4.setText("Question 1 / 7");
+                questionCountDisplay4.setText("Question 1 / 6");
                 break;
             case 1:
                 String videoPath1 = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_six;
@@ -145,7 +146,7 @@ public class Quiz4 extends AppCompatActivity
                 quizVideo1.setMediaController(mediaController1);
                 mediaController1.setAnchorView(quizVideo1);
                 quizVideo1.seekTo(3);
-                questionCountDisplay4.setText("Question 2 / 7");
+                questionCountDisplay4.setText("Question 2 / 6");
                 break;
             case 2:
                 String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_eight;
@@ -155,7 +156,7 @@ public class Quiz4 extends AppCompatActivity
                 quizVideo1.setMediaController(mediaController2);
                 mediaController2.setAnchorView(quizVideo1);
                 quizVideo1.seekTo(3);
-                questionCountDisplay4.setText("Question 3 / 7");
+                questionCountDisplay4.setText("Question 3 / 6");
                 break;
             case 3:
                 String videoPath3 = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_four;
@@ -165,7 +166,7 @@ public class Quiz4 extends AppCompatActivity
                 quizVideo1.setMediaController(mediaController3);
                 mediaController3.setAnchorView(quizVideo1);
                 quizVideo1.seekTo(3);
-                questionCountDisplay4.setText("Question 4 / 7");
+                questionCountDisplay4.setText("Question 4 / 6");
                 break;
             case 4:
                 String videoPath4 = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_six;
@@ -175,7 +176,7 @@ public class Quiz4 extends AppCompatActivity
                 quizVideo1.setMediaController(mediaController4);
                 mediaController4.setAnchorView(quizVideo1);
                 quizVideo1.seekTo(3);
-                questionCountDisplay4.setText("Question 5 / 7");
+                questionCountDisplay4.setText("Question 5 / 6");
                 break;
             case 5:
                 String videoPath5 = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_three;
@@ -185,7 +186,7 @@ public class Quiz4 extends AppCompatActivity
                 quizVideo1.setMediaController(mediaController5);
                 mediaController5.setAnchorView(quizVideo1);
                 quizVideo1.seekTo(3);
-                questionCountDisplay4.setText("Question 6 / 7");
+                questionCountDisplay4.setText("Question 6 / 6");
                 break;
         }
     }
@@ -204,6 +205,4 @@ public class Quiz4 extends AppCompatActivity
         Toast.makeText(Quiz4.this, toastMessageId, Toast.LENGTH_SHORT).show();
         nextButton4.setVisibility(View.VISIBLE);
     }
-
-
 }

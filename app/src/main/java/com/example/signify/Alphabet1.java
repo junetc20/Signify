@@ -8,9 +8,16 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the first screen within the second learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Alphabet1 extends AppCompatActivity {
 
-    // Fields
     ImageView exitButton3;
     ImageView nextArrow;
     Button beginButton2;
@@ -21,13 +28,18 @@ public class Alphabet1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabet1);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Alphabet1.
+         */
         exitButton3 = findViewById(R.id.exitButton3);
         nextArrow = findViewById(R.id.nextArrow);
         beginButton2 = findViewById(R.id.beginButton2);
         learningOutcomes2 = findViewById(R.id.learningOutcomes2);
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButton3.
+         * @param v the onClickListener View.
+         */
         exitButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +47,10 @@ public class Alphabet1 extends AppCompatActivity {
             }
         });
 
-        // Next arrow - takes user to Alphabet 2
+        /**
+         * Set the view from clicking nextArrow.
+         * @param v the onClickListener View.
+         */
             nextArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +58,10 @@ public class Alphabet1 extends AppCompatActivity {
             }
         });
 
-        // Begin button - closes learning outcomes
+        /**
+         * Set the view from clicking beginButton2.
+         * @param v the onClickListener View.
+         */
         beginButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
