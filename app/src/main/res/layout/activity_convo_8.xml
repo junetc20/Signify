@@ -41,11 +41,8 @@
 
         <VideoView
             android:id="@+id/videoView19"
-            android:layout_width="413dp"
-            android:layout_height="171dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView97" />
+            android:layout_width="match_parent"
+            android:layout_height="178dp"/>
 
     </FrameLayout>
 

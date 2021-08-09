@@ -51,10 +51,7 @@
         <VideoView
             android:id="@+id/videoView15"
             android:layout_width="413dp"
-            android:layout_height="171dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView81" />
+            android:layout_height="171dp"/>
 
     </FrameLayout>
 
@@ -70,11 +67,7 @@
         <VideoView
             android:id="@+id/videoView16"
             android:layout_width="413dp"
-            android:layout_height="171dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView82" />
+            android:layout_height="171dp"/>
 
     </FrameLayout>
 
