@@ -1,9 +1,11 @@
 package com.example.signify;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +15,9 @@ public class Intro2 extends AppCompatActivity {
     ImageView exitButton5;
     ImageView nextArrow4;
     ImageView backArrow2;
+    TextView prog1;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,8 @@ public class Intro2 extends AppCompatActivity {
         exitButton5 = findViewById(R.id.exitButton5);
         nextArrow4 = findViewById(R.id.nextArrow4);
         backArrow2 = findViewById(R.id.backArrow2);
+        prog1 = findViewById(R.id.prog1);
+        prog1.setText(R.string.Forty);
 
         // Exit button - returns to home page
         exitButton5.setOnClickListener(new View.OnClickListener() {

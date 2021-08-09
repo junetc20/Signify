@@ -9,9 +9,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the menu screen of Signify.
+ * Users can use this screen to access app functions and logout.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Menu extends AppCompatActivity {
 
-    // Fields
     ImageView exitButtonMenu;
     TextView userGuideLink;
     TextView bslLink;
@@ -23,14 +30,19 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Menu.
+         */
         exitButtonMenu = findViewById(R.id.exitButtonMenu);
         userGuideLink = findViewById(R.id.userGuideLink);
         bslLink = findViewById(R.id.bslLink);
         logoutLink = findViewById(R.id.logoutLink);
         surveyLink = findViewById(R.id.surveyLink);
 
-        // Exits user from this activity and back to home page
+        /**
+         * Set the view from clicking exitButtonMenu.
+         * @param v the onClickListener View.
+         */
         exitButtonMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,8 +50,10 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        // Logs user out of account
-        // Needs pop up warning (use yes/no switch)
+        /**
+         * Set the view from clicking logoutLink.
+         * @param v the onClickListener View.
+         */
         logoutLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,8 +61,10 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        // Returns user to home page
-        // Opens user guide
+        /**
+         * Set the view from clicking userGuideLink.
+         * @param v the onClickListener View.
+         */
         userGuideLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,8 +73,10 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        // Clicking the BSL link will open external BSL website
-        // Needs pop up warning (use yes/no switch)
+        /**
+         * Set the view from clicking bslLink.
+         * @param v the onClickListener View.
+         */
         bslLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +86,10 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        // Clicking survey link will open Assess activity
+        /**
+         * Set the view from clicking surveyLink.
+         * @param v the onClickListener View.
+         */
         surveyLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

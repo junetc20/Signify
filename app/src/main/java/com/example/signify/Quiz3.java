@@ -31,7 +31,7 @@ public class Quiz3 extends AppCompatActivity
     private int currentQuestionIndex = 0;
     private Button nextButton3;
     private Button completeButton3;
-    Button level2Button;
+    Button level3Button;
 
     // Array to hold questions
     public Question[] questionBank = new Question[]{
@@ -61,6 +61,7 @@ public class Quiz3 extends AppCompatActivity
         questionText3 = findViewById(R.id.questionText3);
         nextButton3 = findViewById(R.id.nextButton3);
         completeButton3 = findViewById(R.id.completeButton3);
+        level3Button = findViewById(R.id.level3Button);
 
         trueButton2.setOnClickListener(this);
         falseButton2.setOnClickListener(this);
@@ -115,8 +116,8 @@ public class Quiz3 extends AppCompatActivity
                         resultText3.setVisibility(View.VISIBLE);
                         completeButton3.setVisibility(View.VISIBLE);
                         resultText3.setText(correct + "/8");
-                        level2Button.setText(R.string.revisit);
-                        level2Button.setBackgroundColor(R.color.purple);
+                        level3Button.setText(R.string.revisit);
+                        level3Button.setBackgroundColor(R.color.purple);
                     }
                     break;
             }

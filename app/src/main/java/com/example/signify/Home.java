@@ -13,9 +13,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * A class that represents the home screen of Signify.
+ * Users can use this screen to access all other sections of the app.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Home extends AppCompatActivity {
 
-    // Fields
     DatabaseHelper db;
     ImageView userAccount;
     ImageButton menu;
@@ -24,10 +31,6 @@ public class Home extends AppCompatActivity {
     Button level3Button;
     Button level4Button;
     TextView firstName;
-    TextView prog1;
-    TextView prog2;
-    TextView prog3;
-    TextView prog4;
 
     @SuppressLint({"ResourceAsColor", "Range"})
     @Override
@@ -35,7 +38,9 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Home.
+         */
         db = new DatabaseHelper(this);
         Cursor cursor = db.firstName();
         userAccount = findViewById(R.id.userAccount);
@@ -44,11 +49,25 @@ public class Home extends AppCompatActivity {
         level2Button = findViewById(R.id.level2Button);
         level3Button = findViewById(R.id.level3Button);
         level4Button = findViewById(R.id.level4Button);
-        prog1 = findViewById(R.id.prog1);
-        prog2 = findViewById(R.id.prog2);
-        prog3 = findViewById(R.id.prog3);
-        prog4 = findViewById(R.id.prog4);
         firstName = findViewById(R.id.textView4);
+
+        if (level1Button.getText().toString().equals("REVISIT")) {
+            level2Button.setClickable(true);
+            level2Button.setText(R.string.start);
+            level2Button.setBackgroundColor(R.color.BSL_blue);
+        }
+
+        if (level2Button.getText().toString().equals("REVISIT")) {
+            level3Button.setClickable(true);
+            level3Button.setText(R.string.start);
+            level3Button.setBackgroundColor(R.color.BSL_blue);
+        }
+
+        if (level3Button.getText().toString().equals("REVISIT")) {
+            level4Button.setClickable(true);
+            level4Button.setText(R.string.start);
+            level4Button.setBackgroundColor(R.color.BSL_blue);
+        }
 
         // Setting textview to show first name from database
         // Showing as no data
@@ -61,6 +80,10 @@ public class Home extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
         }
 
+        /**
+         * Set the view from clicking userAccount.
+         * @param v the onClickListener View.
+         */
         // When account icon is clicked, it will take user to Account activity
         userAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +92,10 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking menu.
+         * @param v the onClickListener View.
+         */
         // When menu icon is clicked, it will take user to Menu activity
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,65 +104,57 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking level1Button.
+         * @param v the onClickListener View.
+         */
         // When level 1 button is clicked, user will be taken to level 1 section
         level1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Intro1.class));
+                level1Button.setText(R.string.cont);
             }
         });
 
+        /**
+         * Set the view from clicking level2Button.
+         * @param v the onClickListener View.
+         */
         // When level 2 button is clicked, user will be taken to level 2 section
         level2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Alphabet1.class));
+                level2Button.setText(R.string.cont);
             }
         });
 
+        /**
+         * Set the view from clicking level3Button.
+         * @param v the onClickListener View.
+         */
         // When level 3 button is clicked, user will be taken to level 3 section
         level3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    startActivity(new Intent(Home.this, Numbers1.class));
-                }
+                startActivity(new Intent(Home.this, Numbers1.class));
+                level3Button.setText(R.string.cont);
+            }
         });
 
+        /**
+         * Set the view from clicking level4Button.
+         * @param v the onClickListener View.
+         */
         // When level 4 button is clicked, user will be taken to level 4 section
         level4Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    startActivity(new Intent(Home.this, Convo1.class));
-                }
+                startActivity(new Intent(Home.this, Convo1.class));
+                level4Button.setText(R.string.cont);
+            }
         });
-
-        if (level1Button.getText().toString().equals("REVISIT")) {
-            level2Button.setClickable(true);
-            level2Button.setText(R.string.start);
-            level2Button.setBackgroundColor(R.color.BSL_blue);
-        }
-        if (level1Button.isPressed()) {
-            level1Button.setText(R.string.cont);
-        }
-
-        if (level2Button.getText().toString().equals("REVISIT")) {
-            level3Button.setClickable(true);
-            level3Button.setText(R.string.start);
-            level3Button.setBackgroundColor(R.color.BSL_blue);
-        }
-        if (level2Button.isPressed()) {
-            level2Button.setText(R.string.cont);
-        }
-
-        if (level3Button.getText().toString().equals("REVISIT")) {
-            level4Button.setClickable(true);
-            level4Button.setText(R.string.start);
-            level4Button.setBackgroundColor(R.color.BSL_blue);
-        }
-
-        if (level3Button.isPressed()) {
-            level3Button.setText(R.string.cont);
-        }
     }
 }
 

@@ -10,22 +10,30 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the sixth screen within the fourth learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Convo6 extends AppCompatActivity {
 
-    // Fields
     ImageView exitButton19;
     VideoView videoView17;
     VideoView videoView18;
     ImageView nextArrow18;
     ImageView backArrow14;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convo_6);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Convo6.
+         */
         exitButton19 = findViewById(R.id.exitButton19);
         nextArrow18 = findViewById(R.id.nextArrow18);
         backArrow14 = findViewById(R.id.backArrow14);
@@ -48,6 +56,10 @@ public class Convo6 extends AppCompatActivity {
         mediaController1.setAnchorView(videoView18);
         videoView18.seekTo(3);
 
+        /**
+         * Set the view from clicking exitButton19.
+         * @param v the onClickListener View.
+         */
         exitButton19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +67,10 @@ public class Convo6 extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking nextArrow18.
+         * @param v the onClickListener View.
+         */
         nextArrow18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,6 +78,10 @@ public class Convo6 extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking backArrow14.
+         * @param v the onClickListener View.
+         */
         backArrow14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

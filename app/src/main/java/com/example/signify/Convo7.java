@@ -7,9 +7,16 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the seventh screen within the fourth learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Convo7 extends AppCompatActivity {
 
-    // Fields
     ImageView exitButton20;
     ImageView nextArrow19;
     ImageView backArrow15;
@@ -19,11 +26,17 @@ public class Convo7 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convo_7);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Convo7.
+         */
         exitButton20 = findViewById(R.id.exitButton20);
         nextArrow19 = findViewById(R.id.nextArrow19);
         backArrow15 = findViewById(R.id.backArrow15);
 
+        /**
+         * Set the view from clicking exitButton20.
+         * @param v the onClickListener View.
+         */
         exitButton20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,6 +44,10 @@ public class Convo7 extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking nextArrow19.
+         * @param v the onClickListener View.
+         */
         nextArrow19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,6 +55,10 @@ public class Convo7 extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking backArrow15.
+         * @param v the onClickListener View.
+         */
         backArrow15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

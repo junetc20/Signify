@@ -11,21 +11,29 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the first screen within the fourth learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Convo1 extends AppCompatActivity {
 
-    // Fields
     ImageView exitButton14;
     VideoView videoView12;
     VideoView videoView13;
     ImageView nextArrow13;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convo_1);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Convo1.
+         */
         exitButton14 = findViewById(R.id.exitButton14);
         nextArrow13 = findViewById(R.id.nextArrow13);
 
@@ -47,6 +55,10 @@ public class Convo1 extends AppCompatActivity {
         mediaController1.setAnchorView(videoView13);
         videoView13.seekTo(3);
 
+        /**
+         * Set the view from clicking exitButton14.
+         * @param v the onClickListener View.
+         */
         exitButton14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +66,10 @@ public class Convo1 extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking nextArrow13.
+         * @param v the onClickListener View.
+         */
         nextArrow13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
