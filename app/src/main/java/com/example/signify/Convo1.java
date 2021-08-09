@@ -1,2 +1,7 @@
-package com.example.signify;public class Convo1 {
+package com.example.signify;
+
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Convo1 extends AppCompatActivity {
 }

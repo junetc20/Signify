@@ -3,45 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-             android:layout_height="match_parent">
-
-    <VideoView
-        android:id="@+id/videoView14"
-        android:layout_width="413dp"
-        android:layout_height="171dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView87" />
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView87"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/not_good"
-        android:textColor="@color/background_blue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bslTitle10" />
-
-    <TextView
-        android:id="@+id/textView80"
+        android:id="@+id/textView89"
         android:layout_width="350dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/Intro_para_three"
+        android:layout_height="380dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/Intro_para_six"
         android:textColor="@color/background_blue"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView14" />
+        app:layout_constraintTop_toBottomOf="@+id/bslTitle12" />
 
     <ImageView
-        android:id="@+id/nextArrow15"
+        android:id="@+id/nextArrow17"
+        tools:ignore="VectorDrawableCompat"
         android:layout_width="43dp"
         android:layout_height="42dp"
         android:layout_marginEnd="18dp"
@@ -49,11 +28,10 @@
         android:layout_marginBottom="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
-        tools:ignore="VectorDrawableCompat" />
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
-        android:id="@+id/backArrow11"
+        android:id="@+id/backArrow13"
         android:layout_width="43dp"
         android:layout_height="42dp"
         android:layout_marginStart="18dp"
@@ -64,7 +42,7 @@
         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24" />
 
     <TextView
-        android:id="@+id/textView84"
+        android:id="@+id/textView88"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
@@ -75,7 +53,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/exitButton16"
+        android:id="@+id/exitButton18"
         tools:ignore="VectorDrawableCompat"
         android:layout_width="33dp"
         android:layout_height="32dp"
@@ -86,8 +64,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_clear_24" />
 
+    <TextView
+        android:id="@+id/bslTitle12"
+        android:layout_width="326dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Intro_title_four"
+        android:textColor="@color/background_blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <View
-        android:id="@+id/view25"
+        android:id="@+id/view27"
         android:layout_width="362dp"
         android:layout_height="2dp"
         android:layout_marginStart="8dp"
@@ -98,20 +90,6 @@
         android:background="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/bslTitle10"
-        android:layout_width="326dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/Intro_title_two"
-        android:textColor="@color/background_blue"
-        android:textSize="27sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

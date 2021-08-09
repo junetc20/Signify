@@ -3,57 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:layout_height="match_parent">
 
     <VideoView
-        android:id="@+id/videoView14"
+        android:id="@+id/videoView17"
         android:layout_width="413dp"
         android:layout_height="171dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView87" />
+        app:layout_constraintTop_toBottomOf="@+id/textView91" />
+
+    <VideoView
+        android:id="@+id/videoView18"
+        android:layout_width="413dp"
+        android:layout_height="171dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView92" />
 
     <TextView
-        android:id="@+id/textView87"
+        android:id="@+id/textView91"
         android:layout_width="300dp"
         android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/not_good"
+        android:layout_marginTop="45dp"
+        android:text="@string/please"
         android:textColor="@color/background_blue"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bslTitle10" />
+        app:layout_constraintTop_toBottomOf="@+id/bslTitle13" />
 
     <TextView
-        android:id="@+id/textView80"
-        android:layout_width="350dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/Intro_para_three"
+        android:id="@+id/textView92"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/thank_you"
         android:textColor="@color/background_blue"
-        android:textSize="17sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView14" />
+        app:layout_constraintTop_toBottomOf="@+id/videoView17" />
 
     <ImageView
-        android:id="@+id/nextArrow15"
-        android:layout_width="43dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:layout_marginBottom="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
-        tools:ignore="VectorDrawableCompat" />
-
-    <ImageView
-        android:id="@+id/backArrow11"
+        android:id="@+id/backArrow14"
         android:layout_width="43dp"
         android:layout_height="42dp"
         android:layout_marginStart="18dp"
@@ -63,8 +60,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24" />
 
+    <ImageView
+        android:id="@+id/nextArrow18"
+        tools:ignore="VectorDrawableCompat"
+        android:layout_width="43dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
     <TextView
-        android:id="@+id/textView84"
+        android:id="@+id/textView90"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
@@ -75,7 +84,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/exitButton16"
+        android:id="@+id/exitButton19"
         tools:ignore="VectorDrawableCompat"
         android:layout_width="33dp"
         android:layout_height="32dp"
@@ -87,7 +96,7 @@
         app:srcCompat="@drawable/ic_baseline_clear_24" />
 
     <View
-        android:id="@+id/view25"
+        android:id="@+id/view28"
         android:layout_width="362dp"
         android:layout_height="2dp"
         android:layout_marginStart="8dp"
@@ -102,15 +111,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/bslTitle10"
+        android:id="@+id/bslTitle13"
         android:layout_width="326dp"
         android:layout_height="45dp"
         android:layout_marginStart="68dp"
         android:layout_marginLeft="68dp"
         android:layout_marginTop="16dp"
-        android:text="@string/Intro_title_two"
+        android:text="@string/Intro_title_seven"
         android:textColor="@color/background_blue"
-        android:textSize="27sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
