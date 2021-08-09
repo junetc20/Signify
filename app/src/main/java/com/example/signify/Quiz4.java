@@ -1,4 +1,6 @@
 package com.example.signify;
 
-public class Quiz4 {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Quiz4 extends AppCompatActivity {
 }
