@@ -93,19 +93,19 @@ public class Quiz3 extends AppCompatActivity
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.trueButton:
+                case R.id.trueButton2:
                     checkAnswer(true);
                     trueButton2.setVisibility(View.INVISIBLE);
                     falseButton2.setVisibility(View.INVISIBLE);
                     break;
 
-                case R.id.falseButton:
+                case R.id.falseButton2:
                     checkAnswer(false);
                     trueButton2.setVisibility(View.INVISIBLE);
                     falseButton2.setVisibility(View.INVISIBLE);
                     break;
 
-                case R.id.nextButton:
+                case R.id.nextButton3:
                     if (currentQuestionIndex < 7) {
                         nextButton3.setVisibility(View.INVISIBLE);
                         trueButton2.setVisibility(View.VISIBLE);
