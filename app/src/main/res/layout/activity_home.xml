@@ -99,6 +99,7 @@
         android:layout_marginTop="95dp"
         android:text="START"
         android:textSize="12sp"
+        android:visibility="invisible"
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView12"
         app:layout_constraintHorizontal_bias="0.506"
@@ -124,6 +125,7 @@
         android:clickable="false"
         android:text="LOCKED"
         android:textSize="12sp"
+        android:visibility="invisible"
         app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
@@ -136,6 +138,7 @@
         android:layout_marginTop="95dp"
         android:clickable="false"
         android:text="Locked"
+        android:visibility="invisible"
         android:textSize="12sp"
         app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView15"
@@ -149,6 +152,7 @@
         android:layout_marginTop="95dp"
         android:clickable="false"
         android:text="Locked"
+        android:visibility="invisible"
         android:textSize="12sp"
         app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView14"
@@ -220,5 +224,75 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/howTo1"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/howto_1" />
+
+    <ImageView
+        android:id="@+id/howTo2"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473"
+        app:srcCompat="@drawable/howto_2" />
+
+    <ImageView
+        android:id="@+id/exitButton20"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="146dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_clear_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/nextButtonHelp"
+        android:layout_width="75sp"
+        android:layout_height="40dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="97dp"
+        android:layout_marginTop="477dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginRight="115dp"
+        android:text="NEXT"
+        android:textSize="12sp"
+        app:backgroundTint="@color/BSL_blue"
+        app:layout_constraintEnd_toEndOf="@+id/howTo1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/howTo1"
+        app:layout_constraintTop_toTopOf="@+id/howTo1" />
+
+    <Button
+        android:id="@+id/doneButtonHelp"
+        android:layout_width="75sp"
+        android:layout_height="40dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="97dp"
+        android:layout_marginTop="477dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginRight="115dp"
+        android:text="DONE"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:backgroundTint="@color/BSL_blue"
+        app:layout_constraintEnd_toEndOf="@+id/howTo1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/howTo1"
+        app:layout_constraintTop_toTopOf="@+id/howTo1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
