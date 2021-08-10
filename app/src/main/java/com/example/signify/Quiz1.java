@@ -11,6 +11,14 @@ package com.example.signify;
 
   import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the account screen of Signify.
+ * Users can use this screen to view and update their account details.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Quiz1 extends AppCompatActivity {
 
     // quiz for section 1
@@ -33,7 +41,6 @@ public class Quiz1 extends AppCompatActivity {
     private ImageView resultImage2;
     Button level1Button;
     int score = 0;
-    TextView prog1;
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +59,6 @@ public class Quiz1 extends AppCompatActivity {
         resultText2 = findViewById(R.id.resultText2);
         resultImage2 = findViewById(R.id.resultImage2);
         level1Button = findViewById(R.id.level1Button);
-        prog1 = findViewById(R.id.prog1);
 
         //Setting initial question up when quiz is opened
         questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));
@@ -99,9 +105,6 @@ public class Quiz1 extends AppCompatActivity {
                     completeButton2.setVisibility(View.VISIBLE);
                     resultText2.setVisibility(View.VISIBLE);
                     resultText2.setText(score + "/5");
-                    level1Button.setBackgroundColor(R.color.purple);
-                    level1Button.setText(R.string.revisit);
-                    prog1.setText(R.string.Hundred);
                 }
             }
         });

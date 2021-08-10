@@ -14,7 +14,6 @@ public class Intro3 extends AppCompatActivity {
     ImageView exitButton6;
     ImageView nextArrow5;
     ImageView backArrow3;
-    TextView prog1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +24,6 @@ public class Intro3 extends AppCompatActivity {
         exitButton6 = findViewById(R.id.exitButton6);
         nextArrow5 = findViewById(R.id.nextArrow5);
         backArrow3 = findViewById(R.id.backArrow3);
-        prog1 = findViewById(R.id.prog1);
-        prog1.setText(R.string.Sixty);
 
         // Exit button - returns to home page
         exitButton6.setOnClickListener(new View.OnClickListener() {

@@ -14,7 +14,6 @@ public class Intro1 extends AppCompatActivity {
     //Fields
     ImageView exitButton2;
     ImageView nextArrow3;
-    TextView prog1;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -25,8 +24,6 @@ public class Intro1 extends AppCompatActivity {
         // Constructor
         exitButton2 = findViewById(R.id.exitButton2);
         nextArrow3 = findViewById(R.id.nextArrow3);
-        prog1 = findViewById(R.id.prog1);
-        prog1.setText(R.string.Twenty);
 
         // Exit button - returns to home page
         exitButton2.setOnClickListener(new View.OnClickListener() {

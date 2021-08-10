@@ -118,8 +118,6 @@ public class Quiz2 extends AppCompatActivity
                     resultText.setVisibility(View.VISIBLE);
                     completeButton.setVisibility(View.VISIBLE);
                     resultText.setText(correct + "/14");
-                    level2Button.setText(R.string.revisit);
-                    level2Button.setBackgroundColor(R.color.purple);
                 }
                 break;
             }

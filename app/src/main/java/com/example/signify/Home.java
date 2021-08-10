@@ -50,7 +50,7 @@ public class Home extends AppCompatActivity {
         level3Button = findViewById(R.id.level3Button);
         level4Button = findViewById(R.id.level4Button);
         firstName = findViewById(R.id.textView4);
-
+/*
         if (level1Button.getText().toString().equals("REVISIT")) {
             level2Button.setClickable(true);
             level2Button.setText(R.string.start);
@@ -69,6 +69,7 @@ public class Home extends AppCompatActivity {
             level4Button.setBackgroundColor(R.color.BSL_blue);
         }
 
+ */
         if(cursor.getCount() > 0) {
             while (cursor.moveToNext()) {
                 firstName.setText(cursor.getString(cursor.getColumnIndex("firstName")));
