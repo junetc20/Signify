@@ -8,9 +8,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the fourth screen within the first learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Intro4 extends AppCompatActivity {
 
-    //Fields
     ImageView exitButton7;
     ImageView nextArrow6;
     ImageView backArrow4;
@@ -20,12 +27,17 @@ public class Intro4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro4);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Intro4.
+         */
         exitButton7 = findViewById(R.id.exitButton7);
         nextArrow6 = findViewById(R.id.nextArrow6);
         backArrow4 = findViewById(R.id.backArrow4);
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButton7.
+         * @param v the onClickListener View.
+         */
         exitButton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +45,10 @@ public class Intro4 extends AppCompatActivity {
             }
         });
 
-        // Next arrow - takes user to Intro 4
+        /**
+         * Set the view from clicking nextArrow6.
+         * @param v the onClickListener View.
+         */
         nextArrow6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +56,10 @@ public class Intro4 extends AppCompatActivity {
             }
         });
 
-        // Back arrow - takes user to Intro 2
+        /**
+         * Set the view from clicking backArrow4.
+         * @param v the onClickListener View.
+         */
         backArrow4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -22,7 +22,7 @@ public class Numbers4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers2);
+        setContentView(R.layout.activity_numbers4);
 
         // Constructor
         exitButton11 = findViewById(R.id.exitButton11);

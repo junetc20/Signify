@@ -88,7 +88,7 @@ public class Account extends AppCompatActivity {
                 String newLName = lastNameAcc.getText().toString();
                 String newEmail = emailAcc.getText().toString();
 
-               /* Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
+               Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
                 if (updateData) {
                     firstNameAcc.setText(newFName);
                     lastNameAcc.setText(newLName);
@@ -97,7 +97,6 @@ public class Account extends AppCompatActivity {
                 } else {
                     Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
                 }
-            } */
             }
 
         /*
@@ -105,10 +104,11 @@ public class Account extends AppCompatActivity {
         saveChangesPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (newPassAcc.equals(reNewPassAcc)) {
+                if (newPassAcc.equals(reNewPassAcc) && !(newPassAcc.equals(""))) {
+
                 }
             }
-        }); */
+        } */
         });
     }
 }
