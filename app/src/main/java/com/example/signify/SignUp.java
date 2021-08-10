@@ -10,9 +10,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the sign up screen within Signify.
+ * Users can use this screen to create an account.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class SignUp extends AppCompatActivity{
 
-    //fields
     DatabaseHelper db;
     EditText inputFirstName;
     EditText inputLastName;
@@ -28,7 +35,9 @@ public class SignUp extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        //constructor
+        /**
+         * Constructor for objects of class SignUp.
+         */
         db = new DatabaseHelper(this);
         inputFirstName = findViewById(R.id.inputFirstName);
         inputLastName = findViewById(R.id.inputLastName);
@@ -39,7 +48,11 @@ public class SignUp extends AppCompatActivity{
         signInClick = findViewById(R.id.signInClick);
         exitButton = findViewById(R.id.exitButton);
 
-        // Create account if all conditions are met
+        /**
+         * Set the view from clicking createAccount.
+         * Add user details into database.
+         * @param v the onClickListener View.
+         */
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,7 +90,10 @@ public class SignUp extends AppCompatActivity{
             }
         });
 
-        // Open login screen if user already has an account
+        /**
+         * Set the view from clicking signInClick.
+         * @param v the onClickListener View.
+         */
         signInClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +101,10 @@ public class SignUp extends AppCompatActivity{
             }
         });
 
-        // Open login screen if user wants to exit signUp screen
+        /**
+         * Set the view from clicking exitButton.
+         * @param v the onClickListener View.
+         */
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

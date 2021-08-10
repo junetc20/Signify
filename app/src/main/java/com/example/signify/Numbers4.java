@@ -10,9 +10,16 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the fourth screen within the third learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Numbers4 extends AppCompatActivity {
 
-    // Fields
     VideoView noVideo6;
     VideoView noVideo7;
     ImageView exitButton11;
@@ -24,12 +31,13 @@ public class Numbers4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers2);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Numbers4.
+         */
         exitButton11 = findViewById(R.id.exitButton11);
         nextArrow10 = findViewById(R.id.nextArrow10);
         backArrow7 = findViewById(R.id.backArrow7);
 
-        // Make sixth number video playable
         noVideo6 = findViewById(R.id.videoView6);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_six;
         Uri uri = Uri.parse(videoPath);
@@ -39,7 +47,6 @@ public class Numbers4 extends AppCompatActivity {
         mediaController.setAnchorView(noVideo6);
         noVideo6.seekTo(3);
 
-        // Make seventh number video playable
         noVideo7 = findViewById(R.id.videoView7);
         String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.no_video_seven;
         Uri uri2 = Uri.parse(videoPath2);
@@ -49,8 +56,10 @@ public class Numbers4 extends AppCompatActivity {
         mediaController2.setAnchorView(noVideo7);
         noVideo7.seekTo(3);
 
-
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButton11.
+         * @param v the onClickListener View.
+         */
         exitButton11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +67,10 @@ public class Numbers4 extends AppCompatActivity {
             }
         });
 
-        // Next arrow - takes user to Numbers 5 screen
+        /**
+         * Set the view from clicking nextArrow10.
+         * @param v the onClickListener View.
+         */
         nextArrow10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +78,10 @@ public class Numbers4 extends AppCompatActivity {
             }
         });
 
-        // Back arrow - takes user to Numbers 3 screen
+        /**
+         * Set the view from clicking backArrow7.
+         * @param v the onClickListener View.
+         */
         backArrow7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

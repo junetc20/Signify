@@ -10,9 +10,16 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the eighth screen within the fourth learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Convo8 extends AppCompatActivity {
 
-    // Fields
     ImageView exitButton21;
     VideoView videoView19;
     ImageView nextArrow20;
@@ -24,7 +31,9 @@ public class Convo8 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convo_8);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Convo8.
+         */
         exitButton21 = findViewById(R.id.exitButton21);
         nextArrow20 = findViewById(R.id.nextArrow20);
         backArrow16 = findViewById(R.id.backArrow16);
@@ -38,6 +47,10 @@ public class Convo8 extends AppCompatActivity {
         mediaController.setAnchorView(videoView19);
         videoView19.seekTo(3);
 
+        /**
+         * Set the view from clicking exitButton21.
+         * @param v the onClickListener View.
+         */
         exitButton21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +58,10 @@ public class Convo8 extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking nextArrow20.
+         * @param v the onClickListener View.
+         */
         nextArrow20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +69,10 @@ public class Convo8 extends AppCompatActivity {
             }
         });
 
+        /**
+         * Set the view from clicking backArrow16.
+         * @param v the onClickListener View.
+         */
         backArrow16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

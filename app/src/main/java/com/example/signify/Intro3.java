@@ -8,9 +8,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the third screen within the first learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Intro3 extends AppCompatActivity {
 
-    //Fields
     ImageView exitButton6;
     ImageView nextArrow5;
     ImageView backArrow3;
@@ -21,14 +28,19 @@ public class Intro3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro3);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Intro3.
+         */
         exitButton6 = findViewById(R.id.exitButton6);
         nextArrow5 = findViewById(R.id.nextArrow5);
         backArrow3 = findViewById(R.id.backArrow3);
         prog1 = findViewById(R.id.prog1);
         prog1.setText(R.string.Sixty);
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButton6.
+         * @param v the onClickListener View.
+         */
         exitButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +48,10 @@ public class Intro3 extends AppCompatActivity {
             }
         });
 
-        // Next arrow - takes user to Intro 4
+        /**
+         * Set the view from clicking nextArrow5.
+         * @param v the onClickListener View.
+         */
         nextArrow5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +59,10 @@ public class Intro3 extends AppCompatActivity {
             }
         });
 
-        // Back arrow - takes user to Intro 2
+        /**
+         * Set the view from clicking backArrow3.
+         * @param v the onClickListener View.
+         */
         backArrow3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
