@@ -69,8 +69,6 @@ public class Home extends AppCompatActivity {
             level4Button.setBackgroundColor(R.color.BSL_blue);
         }
 
-        // Setting textview to show first name from database
-        // Showing as no data
         if(cursor.getCount() > 0) {
             while (cursor.moveToNext()) {
                 firstName.setText(cursor.getString(cursor.getColumnIndex("firstName")));
@@ -84,7 +82,6 @@ public class Home extends AppCompatActivity {
          * Set the view from clicking userAccount.
          * @param v the onClickListener View.
          */
-        // When account icon is clicked, it will take user to Account activity
         userAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,7 +93,6 @@ public class Home extends AppCompatActivity {
          * Set the view from clicking menu.
          * @param v the onClickListener View.
          */
-        // When menu icon is clicked, it will take user to Menu activity
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,7 +104,6 @@ public class Home extends AppCompatActivity {
          * Set the view from clicking level1Button.
          * @param v the onClickListener View.
          */
-        // When level 1 button is clicked, user will be taken to level 1 section
         level1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,7 +116,6 @@ public class Home extends AppCompatActivity {
          * Set the view from clicking level2Button.
          * @param v the onClickListener View.
          */
-        // When level 2 button is clicked, user will be taken to level 2 section
         level2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,7 +128,6 @@ public class Home extends AppCompatActivity {
          * Set the view from clicking level3Button.
          * @param v the onClickListener View.
          */
-        // When level 3 button is clicked, user will be taken to level 3 section
         level3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,7 +140,6 @@ public class Home extends AppCompatActivity {
          * Set the view from clicking level4Button.
          * @param v the onClickListener View.
          */
-        // When level 4 button is clicked, user will be taken to level 4 section
         level4Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

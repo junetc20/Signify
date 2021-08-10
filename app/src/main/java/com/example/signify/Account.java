@@ -54,10 +54,16 @@ public class Account extends AppCompatActivity {
         saveChangesAcc = findViewById(R.id.saveChangesAcc);
         saveChangesPass = findViewById(R.id.saveChangesPass);
 
-        // Setting textEdits to current data in database
+        if(cursor.getCount() > 0) {
+            while (cursor.moveToNext()) {
         firstNameAcc.setText(cursor.getString(cursor.getColumnIndex("firstName")));
         lastNameAcc.setText(cursor.getString(cursor.getColumnIndex("lastName")));
         emailAcc.setText(cursor.getString(cursor.getColumnIndex("email")));
+            }
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
+        }
 
         /**
          * Set the view from clicking exitButtonAcc.
@@ -82,7 +88,7 @@ public class Account extends AppCompatActivity {
                 String newLName = lastNameAcc.getText().toString();
                 String newEmail = emailAcc.getText().toString();
 
-                Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
+               /* Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
                 if (updateData) {
                     firstNameAcc.setText(newFName);
                     lastNameAcc.setText(newLName);
@@ -91,8 +97,8 @@ public class Account extends AppCompatActivity {
                 } else {
                     Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
                 }
+            } */
             }
-        });
 
         /*
         // Checks that passwords match
@@ -100,9 +106,9 @@ public class Account extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (newPassAcc.equals(reNewPassAcc)) {
-
                 }
             }
         }); */
+        });
     }
 }
