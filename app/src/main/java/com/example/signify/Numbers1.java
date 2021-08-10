@@ -10,9 +10,16 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the first screen within the third learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Numbers1 extends AppCompatActivity {
 
-    // Fields
     VideoView noVideo1;
     VideoView noVideo2;
     ImageView exitButton8;
@@ -23,11 +30,12 @@ public class Numbers1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers1);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Numbers1.
+         */
         exitButton8 = findViewById(R.id.exitButton8);
         nextArrow7 = findViewById(R.id.nextArrow7);
 
-        // Make first number video playable
         noVideo1 = findViewById(R.id.videoView);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_one;
         Uri uri = Uri.parse(videoPath);
@@ -37,7 +45,6 @@ public class Numbers1 extends AppCompatActivity {
         mediaController.setAnchorView(noVideo1);
         noVideo1.seekTo(3);
 
-        // Make second number video playable
         noVideo2 = findViewById(R.id.videoView2);
         String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.no_video_two;
         Uri uri2 = Uri.parse(videoPath2);
@@ -47,8 +54,10 @@ public class Numbers1 extends AppCompatActivity {
         mediaController2.setAnchorView(noVideo2);
         noVideo2.seekTo(3);
 
-
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButton8.
+         * @param v the onClickListener View.
+         */
         exitButton8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +65,10 @@ public class Numbers1 extends AppCompatActivity {
             }
         });
 
-        // Next arrow - takes user to Numbers 2 screen
+        /**
+         * Set the view from clicking nextArrow7.
+         * @param v the onClickListener View.
+         */
         nextArrow7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

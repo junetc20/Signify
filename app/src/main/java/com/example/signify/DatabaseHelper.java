@@ -7,22 +7,48 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+/**
+ * A subclass of the SQLiteOpenHelper class.
+ * It represents the SQLite database for the Signify app.
+ *
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(Context context) {
         super(context, "Login.db", null, 1);
     }
 
+    /**
+     * Create the SQLite database.
+     * @param db the SQLiteDatabase.
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user(email text primary key, firstName text, lastName text, password text)");
     }
 
+    /**
+     * Upgrade the SQLite database.
+     * @param db the SQLiteDatabase.
+     * @param oldVersion the number of the old version.
+     * @param newVersion the number of the new version.
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists user");
     }
 
-    // inserting in database
+    /**
+     * Insert data into the SQLite database.
+     * @return has data been inserted into the database?
+     * @param emailAdd the user's email.
+     * @param firstName the user's first name.
+     * @param lastName the user's last name.
+     * @param password the user's password.
+     */
     public boolean insert(String emailAdd, String firstName, String lastName, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -39,6 +65,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * Update data in the SQLite database.
+     * @return has data been updated in the database?
+     * @param firstName the user's first name.
+     * @param lastName the user's last name.
+     * @param emailAdd the user's email.
+     */
     public Boolean updateUserData(String emailAdd, String firstName, String lastName) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -55,6 +88,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * Delete user data from the SQLite database.
+     * @return has data been deleted from the database?
+     * @param emailAdd the user's email.
+     * @param firstName the user's first name.
+     * @param lastName the user's last name.
+     * @param password the user's password.
+     */
+  
     public Boolean updateUserPassword(String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -81,19 +123,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * Collect all user data from database.
+     * @return all user data from cursor.
+     */
     public Cursor getUserData() {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select * from user", null);
         return cursor;
     }
 
+    /**
+     * Collect user first name from database.
+     * @return user first name from cursor.
+     */
     public Cursor firstName() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select firstName from user", null);
         return cursor;
     }
 
-    // Check if email exists already
+    /**
+     * Check if email exists in database.
+     * @return does email already exist in database?
+     * @param email the user's email.
+     */
     public boolean checkEmail(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{email});
@@ -105,6 +159,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * Check if email and password exist in database.
+     * @return does this user already exist in database?
+     * @param email the user's email.
+     * @param password the user's password.
+     */
     // Check email and password input at login screen
     public boolean checkLoginDetails(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
