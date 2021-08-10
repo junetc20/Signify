@@ -25,8 +25,10 @@
         <activity android:name=".SignUp" />
         <activity android:name=".Account" />
         <activity android:name=".Menu" />
+        <activity android:name=".Quiz1" />
         <activity android:name=".Quiz2" />
-        <activity android:name=".Quiz1" /> <activity android:name=".Quiz3" /> <activity android:name=".Quiz4" />
+        <activity android:name=".Quiz3" />
+        <activity android:name=".Quiz4" />
         <activity android:name=".Alphabet1" />
         <activity android:name=".Alphabet2" />
         <activity android:name=".Intro1" />
@@ -40,7 +42,13 @@
         <activity android:name=".Numbers5" />
         <activity android:name=".Numbers6" />
         <activity android:name=".Convo1" />
-        <activity android:name=".Convo2" /> <activity android:name=".Convo3" /> <activity android:name=".Convo4" /> <activity android:name=".Convo5" /> <activity android:name=".Convo6" /> <activity android:name=".Convo7" /> <activity android:name=".Convo8" />
+        <activity android:name=".Convo2" />
+        <activity android:name=".Convo3" />
+        <activity android:name=".Convo4" />
+        <activity android:name=".Convo5" />
+        <activity android:name=".Convo6" />
+        <activity android:name=".Convo7" />
+        <activity android:name=".Convo8" />
     </application>
 
 </manifest>

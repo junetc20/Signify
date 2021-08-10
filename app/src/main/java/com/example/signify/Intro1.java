@@ -9,9 +9,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the first screen within the first learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Intro1 extends AppCompatActivity {
 
-    //Fields
     ImageView exitButton2;
     ImageView nextArrow3;
 
@@ -21,11 +28,16 @@ public class Intro1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro1);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Intro1.
+         */
         exitButton2 = findViewById(R.id.exitButton2);
         nextArrow3 = findViewById(R.id.nextArrow3);
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButton2.
+         * @param v the onClickListener View.
+         */
         exitButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +45,10 @@ public class Intro1 extends AppCompatActivity {
             }
         });
 
-        // Next arrow - takes user to Intro 2
+        /**
+         * Set the view from clicking nextArrow3.
+         * @param v the onClickListener View.
+         */
         nextArrow3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

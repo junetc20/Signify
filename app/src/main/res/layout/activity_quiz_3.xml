@@ -20,6 +20,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView70" />
 
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="411dp"
+        android:layout_height="242dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText3">
+
+        <VideoView
+            android:id="@+id/quizVideo"
+            android:layout_width="411dp"
+            android:layout_height="242dp"
+            android:layout_marginTop="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/questionText3" />
+
+    </FrameLayout>
+
     <ImageView
         android:id="@+id/exitButtonQuiz3"
         android:layout_width="33dp"
@@ -97,7 +118,7 @@
         android:id="@+id/questionCountDisplay3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="85dp"
         android:text="Question 1 / 8"
         android:textColor="@color/cream"
         android:textSize="20sp"
@@ -124,7 +145,7 @@
         android:id="@+id/completeButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="220dp"
+        android:layout_marginBottom="200dp"
         android:text="@string/got_it"
         android:visibility="invisible"
         app:backgroundTint="@color/BSL_blue"
@@ -177,7 +198,7 @@
         android:id="@+id/nextButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="120dp"
         android:text="NEXT"
         android:visibility="invisible"
         app:backgroundTint="@color/purple"
@@ -185,27 +206,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <FrameLayout
-        android:id="@+id/frameLayout2"
-        android:layout_width="411dp"
-        android:layout_height="242dp"
-        android:layout_marginTop="9dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionText3">
-
-        <VideoView
-            android:id="@+id/quizVideo"
-            android:layout_width="411dp"
-            android:layout_height="242dp"
-            android:layout_marginTop="9dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/questionText3" />
-
-    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

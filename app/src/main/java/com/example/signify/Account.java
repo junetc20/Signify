@@ -80,35 +80,68 @@ public class Account extends AppCompatActivity {
          * Set the view from clicking saveChangesAcc.
          * @param v the onClickListener View.
          */
-        // Updates first name, last name and email data
+        // Not updating database
         saveChangesAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String newFName = firstNameAcc.getText().toString();
                 String newLName = lastNameAcc.getText().toString();
                 String newEmail = emailAcc.getText().toString();
+                Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
 
-               /* Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
-                if (updateData) {
-                    firstNameAcc.setText(newFName);
-                    lastNameAcc.setText(newLName);
-                    emailAcc.setText(newEmail);
+                if (updateData == true) {
                     Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                else {
                     Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
                 }
-            } */
             }
+        });
 
-        /*
-        // Checks that passwords match
+        /**
+         * Set the view from clicking saveChangesPass.
+         * @param v the onClickListener View.
+         */
+        // Not updating database
         saveChangesPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (newPassAcc.equals(reNewPassAcc)) {
+                String currentPass = currentPassAcc.getText().toString();
+                String newPass = newPassAcc.getText().toString();
+                String reNewPass = reNewPassAcc.getText().toString();
+                Boolean updatePass = db.updateUserPassword(currentPass);
+
+                if (updatePass) {
+                    if (!newPass.equals(reNewPass)) {
+                        Toast.makeText(Account.this, "Passwords do not match.", Toast.LENGTH_SHORT).show();
+                        currentPassAcc.setText(null);
+                        newPassAcc.setText(null);
+                        reNewPassAcc.setText(null);
+                        }
+                    else if (newPass.equals(currentPass)) {
+                        Toast.makeText(Account.this, "The new password chosen matches the current password.", Toast.LENGTH_SHORT).show();
+                        currentPassAcc.setText(null);
+                        newPassAcc.setText(null);
+                        reNewPassAcc.setText(null);
+                    }
+                    else if (newPass.equals("") || (currentPass.equals(""))) {
+                        Toast.makeText(Account.this, "Please fill in all password sections.", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
+                        currentPassAcc.setText(null);
+                        newPassAcc.setText(null);
+                        reNewPassAcc.setText(null);
+                    }
+                }
+                else {
+                    Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
+                    currentPassAcc.setText(null);
+                    newPassAcc.setText(null);
+                    reNewPassAcc.setText(null);
+
                 }
             }
-        }); */
         });
     }
 }

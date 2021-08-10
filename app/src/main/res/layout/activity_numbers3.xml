@@ -105,33 +105,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:layout_width="500dp"
+        android:layout_width="420dp"
         android:layout_height="200dp"
         android:layout_marginTop="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView60">
+        app:layout_constraintTop_toBottomOf="@+id/textView60"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView4"
-            android:layout_width="500dp"
-            android:layout_height="match_parent"/>
+            android:layout_width="420dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center" />
 
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="500dp"
+        android:layout_width="420dp"
         android:layout_height="200dp"
         android:layout_marginTop="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView61"
-        tools:layout_editor_absoluteX="-45dp">
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView5"
-            android:layout_width="500dp"
-            android:layout_height="match_parent"/>
+            android:layout_width="420dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center" />
 
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

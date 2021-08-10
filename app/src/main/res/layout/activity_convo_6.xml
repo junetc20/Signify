@@ -6,24 +6,11 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/frameLayout6"
-        android:layout_width="413dp"
-        android:layout_height="171dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView91">
-
-        <VideoView
-            android:id="@+id/videoView17"
-            android:layout_width="413dp"
-            android:layout_height="171dp"/>
-
-    </FrameLayout>
-
-    <FrameLayout
         android:id="@+id/frameLayout7"
         android:layout_width="413dp"
         android:layout_height="171dp"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView92">
@@ -31,37 +18,13 @@
         <VideoView
             android:id="@+id/videoView18"
             android:layout_width="413dp"
-            android:layout_height="171dp"/>
+            android:layout_height="171dp"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="328dp" />
 
     </FrameLayout>
-
-    <TextView
-        android:id="@+id/textView91"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="45dp"
-        android:text="@string/please"
-        android:textColor="@color/background_blue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bslTitle13" />
-
-    <TextView
-        android:id="@+id/textView92"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="70dp"
-        android:text="@string/thank_you"
-        android:textColor="@color/background_blue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView17" />
 
     <ImageView
         android:id="@+id/backArrow14"
@@ -137,4 +100,58 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView92"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="66dp"
+        android:text="@string/thank_you"
+        android:textColor="@color/background_blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout6" />
+
+    <TextView
+        android:id="@+id/textView91"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="41dp"
+        android:text="@string/please"
+        android:textColor="@color/background_blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bslTitle13" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout6"
+        android:layout_width="413dp"
+        android:layout_height="171dp"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView91">
+
+        <VideoView
+            android:id="@+id/videoView17"
+            android:layout_width="413dp"
+            android:layout_height="171dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:foregroundGravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/textView91"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </FrameLayout>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

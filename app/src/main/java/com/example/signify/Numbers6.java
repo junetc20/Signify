@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Numbers6 extends AppCompatActivity {
 
-    // Fields
     VideoView noVideo10;
     VideoView noVideo11;
     ImageView exitButton13;
@@ -22,7 +21,7 @@ public class Numbers6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers2);
+        setContentView(R.layout.activity_numbers6);
 
         // Constructor
         exitButton13 = findViewById(R.id.exitButton13);
@@ -40,7 +39,7 @@ public class Numbers6 extends AppCompatActivity {
         noVideo10.seekTo(3);
 
         // Make ninth number video playable
-        noVideo11 = findViewById(R.id.videoView9);
+        noVideo11 = findViewById(R.id.videoView11);
         String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.no_video_eleven;
         Uri uri2 = Uri.parse(videoPath2);
         noVideo11.setVideoURI(uri2);
@@ -61,7 +60,7 @@ public class Numbers6 extends AppCompatActivity {
         nextArrow11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Numbers6.this, Numbers6.class)); // Change to quiz3
+                startActivity(new Intent(Numbers6.this, Quiz3.class));
             }
         });
 

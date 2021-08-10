@@ -55,6 +55,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    public Boolean updateUserPassword(String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("password", password);
+        @SuppressLint("Recycle")
+        Cursor cursor = db.rawQuery("Select * from user where password=?", new String[]{password});
+        if (cursor.getCount() > 0) {
+            long res = db.update("user", contentValues, "password=?", new String[]{password});
+            return res > -1;
+        } else {
+            return false;
+        }
+    }
+
     public Boolean deleteUserData(String emailAdd, String firstName, String lastName, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         @SuppressLint("Recycle")
