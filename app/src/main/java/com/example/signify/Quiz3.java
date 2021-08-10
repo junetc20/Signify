@@ -23,7 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 
 public class Quiz3 extends AppCompatActivity
-    implements View.OnClickListener {
+        implements View.OnClickListener {
 
     private Button falseButton2;
     private Button trueButton2;
@@ -99,105 +99,104 @@ public class Quiz3 extends AppCompatActivity
         });
     }
 
-        @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.trueButton2:
-                    checkAnswer(true);
+    @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.trueButton2:
+                checkAnswer(true);
+                trueButton2.setVisibility(View.INVISIBLE);
+                falseButton2.setVisibility(View.INVISIBLE);
+                break;
+
+            case R.id.falseButton2:
+                checkAnswer(false);
+                trueButton2.setVisibility(View.INVISIBLE);
+                falseButton2.setVisibility(View.INVISIBLE);
+                break;
+
+            case R.id.nextButton3:
+                if (currentQuestionIndex < 7) {
+                    nextButton3.setVisibility(View.INVISIBLE);
+                    trueButton2.setVisibility(View.VISIBLE);
+                    falseButton2.setVisibility(View.VISIBLE);
+                    currentQuestionIndex++;
+                    updateQuestion();
+                } else {
+                    nextButton3.setVisibility(View.INVISIBLE);
                     trueButton2.setVisibility(View.INVISIBLE);
                     falseButton2.setVisibility(View.INVISIBLE);
-                    break;
-
-                case R.id.falseButton2:
-                    checkAnswer(false);
-                    trueButton2.setVisibility(View.INVISIBLE);
-                    falseButton2.setVisibility(View.INVISIBLE);
-                    break;
-
-                case R.id.nextButton3:
-                    if (currentQuestionIndex < 7) {
-                        nextButton3.setVisibility(View.INVISIBLE);
-                        trueButton2.setVisibility(View.VISIBLE);
-                        falseButton2.setVisibility(View.VISIBLE);
-                        currentQuestionIndex++;
-                        updateQuestion();
-                    }
-                    else {
-                        nextButton3.setVisibility(View.INVISIBLE);
-                        trueButton2.setVisibility(View.INVISIBLE);
-                        falseButton2.setVisibility(View.INVISIBLE);
-                        resultImage3.setVisibility(View.VISIBLE);
-                        resultText3.setVisibility(View.VISIBLE);
-                        completeButton3.setVisibility(View.VISIBLE);
-                        resultText3.setText(correct + "/8");
-                    }
-                    break;
-            }
-        }
-
-        // Update question
-        @SuppressLint("SetTextI18n")
-        private void updateQuestion() {
-            // setting the textview with new question
-            questionText3.setText(questionBank[currentQuestionIndex].getAnswerResId());
-            switch (currentQuestionIndex) {
-                // Updating video content and question count display when the question changes
-                case 0:
-                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_one));
-                    quizVideo.start();
-                    questionCountDisplay3.setText("Question 1 / 8");
-                    break;
-                case 1:
-                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_two));
-                    quizVideo.start();
-                    questionCountDisplay3.setText("Question 2 / 8");
-                    break;
-                case 2:
-                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_three));
-                    quizVideo.start();
-                    questionCountDisplay3.setText("Question 3 / 8");
-                    break;
-                case 3:
-                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_four));
-                    quizVideo.start();
-                    questionCountDisplay3.setText("Question 4 / 8");
-                    break;
-                case 4:
-                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_five));
-                    quizVideo.start();
-                    questionCountDisplay3.setText("Question 5 / 8");
-                    break;
-                case 5:
-                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_six));
-                    quizVideo.start();
-                    questionCountDisplay3.setText("Question 6 / 8");
-                    break;
-                case 6:
-                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_seven));
-                    quizVideo.start();
-                    questionCountDisplay3.setText("Question 7 / 8");
-                    break;
-                case 7:
-                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_eight));
-                    quizVideo.start();
-                    questionCountDisplay3.setText("Question 8 / 8");
-                    break;
-            }
-        }
-
-        int correct = 0;
-        private void checkAnswer(boolean userChooseCorrect) {
-            boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
-            int toastMessageId;
-            if (userChooseCorrect == answerIsTrue) {
-                toastMessageId = R.string.correct_answer;
-                correct++;
-            }
-            else {
-                toastMessageId = R.string.wrong_answer;
-            }
-            Toast.makeText(Quiz3.this, toastMessageId, Toast.LENGTH_SHORT).show();
-            nextButton3.setVisibility(View.VISIBLE);
+                    resultImage3.setVisibility(View.VISIBLE);
+                    resultText3.setVisibility(View.VISIBLE);
+                    completeButton3.setVisibility(View.VISIBLE);
+                    resultText3.setText(correct + "/8");
+                }
+                break;
         }
     }
+
+    // Update question
+    @SuppressLint("SetTextI18n")
+    private void updateQuestion() {
+        // setting the textview with new question
+        questionText3.setText(questionBank[currentQuestionIndex].getAnswerResId());
+        switch (currentQuestionIndex) {
+            // Updating video content and question count display when the question changes
+            case 0:
+                quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_one));
+                quizVideo.start();
+                questionCountDisplay3.setText("Question 1 / 8");
+                break;
+            case 1:
+                quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_two));
+                quizVideo.start();
+                questionCountDisplay3.setText("Question 2 / 8");
+                break;
+            case 2:
+                quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_three));
+                quizVideo.start();
+                questionCountDisplay3.setText("Question 3 / 8");
+                break;
+            case 3:
+                quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_four));
+                quizVideo.start();
+                questionCountDisplay3.setText("Question 4 / 8");
+                break;
+            case 4:
+                quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_five));
+                quizVideo.start();
+                questionCountDisplay3.setText("Question 5 / 8");
+                break;
+            case 5:
+                quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_six));
+                quizVideo.start();
+                questionCountDisplay3.setText("Question 6 / 8");
+                break;
+            case 6:
+                quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_seven));
+                quizVideo.start();
+                questionCountDisplay3.setText("Question 7 / 8");
+                break;
+            case 7:
+                quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_eight));
+                quizVideo.start();
+                questionCountDisplay3.setText("Question 8 / 8");
+                break;
+        }
+    }
+
+    int correct = 0;
+
+    private void checkAnswer(boolean userChooseCorrect) {
+        boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
+        int toastMessageId;
+        if (userChooseCorrect == answerIsTrue) {
+            toastMessageId = R.string.correct_answer;
+            correct++;
+        } else {
+            toastMessageId = R.string.wrong_answer;
+        }
+        Toast.makeText(Quiz3.this, toastMessageId, Toast.LENGTH_SHORT).show();
+        nextButton3.setVisibility(View.VISIBLE);
+    }
+}

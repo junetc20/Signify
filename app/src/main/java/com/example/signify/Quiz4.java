@@ -120,8 +120,7 @@ public class Quiz4 extends AppCompatActivity
                     falseButton3.setVisibility(View.VISIBLE);
                     currentQuestionIndex++;
                     updateQuestion();
-                }
-                else {
+                } else {
                     nextButton4.setVisibility(View.INVISIBLE);
                     trueButton3.setVisibility(View.INVISIBLE);
                     falseButton3.setVisibility(View.INVISIBLE);
@@ -175,14 +174,14 @@ public class Quiz4 extends AppCompatActivity
     }
 
     int correct = 0;
+
     private void checkAnswer(boolean userChooseCorrect) {
         boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
         int toastMessageId;
         if (userChooseCorrect == answerIsTrue) {
             toastMessageId = R.string.correct_answer;
             correct++;
-        }
-        else {
+        } else {
             toastMessageId = R.string.wrong_answer;
         }
         Toast.makeText(Quiz4.this, toastMessageId, Toast.LENGTH_SHORT).show();
