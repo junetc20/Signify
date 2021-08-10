@@ -10,9 +10,16 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the third screen within the second learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Numbers3 extends AppCompatActivity {
 
-    // Fields
     VideoView noVideo4;
     VideoView noVideo5;
     ImageView exitButton10;
@@ -24,7 +31,9 @@ public class Numbers3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers3);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Numbers3.
+         */
         exitButton10 = findViewById(R.id.exitButton10);
         nextArrow9 = findViewById(R.id.nextArrow9);
         backArrow6 = findViewById(R.id.backArrow6);
@@ -51,7 +60,10 @@ public class Numbers3 extends AppCompatActivity {
         noVideo5.seekTo(3);
 
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButton10.
+         * @param v the onClickListener View.
+         */
         exitButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +71,10 @@ public class Numbers3 extends AppCompatActivity {
             }
         });
 
-        // Next arrow - takes user to Numbers 4 screen
+        /**
+         * Set the view from clicking nextArrow9.
+         * @param v the onClickListener View.
+         */
         nextArrow9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,7 +82,10 @@ public class Numbers3 extends AppCompatActivity {
             }
         });
 
-        // Back arrow - takes user to Numbers 2 screen
+        /**
+         * Set the view from clicking backArrow6.
+         * @param v the onClickListener View.
+         */
         backArrow6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

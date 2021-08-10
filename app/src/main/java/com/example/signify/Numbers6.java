@@ -10,6 +10,14 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the sixth screen within the second learning section of Signify.
+ * Users can use this screen to view learning concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Numbers6 extends AppCompatActivity {
 
     VideoView noVideo10;
@@ -23,7 +31,9 @@ public class Numbers6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers6);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Numbers6.
+         */
         exitButton13 = findViewById(R.id.exitButton13);
         nextArrow11 = findViewById(R.id.nextArrow11);
         backArrow9 = findViewById(R.id.backArrow9);
@@ -48,7 +58,10 @@ public class Numbers6 extends AppCompatActivity {
         mediaController2.setAnchorView(noVideo11);
         noVideo11.seekTo(3);
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButton13.
+         * @param v the onClickListener View.
+         */
         exitButton13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +69,10 @@ public class Numbers6 extends AppCompatActivity {
             }
         });
 
-        // Next arrow - takes user to Numbers 6 screen
+        /**
+         * Set the view from clicking nextArrow11.
+         * @param v the onClickListener View.
+         */
         nextArrow11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +80,10 @@ public class Numbers6 extends AppCompatActivity {
             }
         });
 
-        // Back arrow - takes user to Numbers 4 screen
+        /**
+         * Set the view from clicking backArrow9.
+         * @param v the onClickListener View.
+         */
         backArrow9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

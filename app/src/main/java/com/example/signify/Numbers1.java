@@ -41,6 +41,7 @@ public class Numbers1 extends AppCompatActivity {
         beginButton3 = findViewById(R.id.beginButton4);
         learningOutcomes3 = findViewById(R.id.learningOutcomes3);
 
+        // Make first number video playable
         noVideo1 = findViewById(R.id.videoView);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_one;
         Uri uri = Uri.parse(videoPath);
@@ -50,6 +51,7 @@ public class Numbers1 extends AppCompatActivity {
         mediaController.setAnchorView(noVideo1);
         noVideo1.seekTo(3);
 
+        // Make second number video playable
         noVideo2 = findViewById(R.id.videoView2);
         String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.no_video_two;
         Uri uri2 = Uri.parse(videoPath2);
