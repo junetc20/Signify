@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Numbers6 extends AppCompatActivity {
 
-    // Fields
     VideoView noVideo10;
     VideoView noVideo11;
     ImageView exitButton13;
@@ -61,7 +60,7 @@ public class Numbers6 extends AppCompatActivity {
         nextArrow11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Numbers6.this, Numbers6.class)); // Change to quiz3
+                startActivity(new Intent(Numbers6.this, Quiz3.class));
             }
         });
 
