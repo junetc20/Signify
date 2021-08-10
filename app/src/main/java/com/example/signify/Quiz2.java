@@ -103,7 +103,7 @@ public class Quiz2 extends AppCompatActivity
                 break;
 
             case R.id.nextButton:
-                if (currentQuestionIndex < 7) {
+                if (currentQuestionIndex < 13) {
                     nextButton.setVisibility(View.INVISIBLE);
                     trueButton.setVisibility(View.VISIBLE);
                     falseButton.setVisibility(View.VISIBLE);
@@ -117,9 +117,7 @@ public class Quiz2 extends AppCompatActivity
                     resultImage.setVisibility(View.VISIBLE);
                     resultText.setVisibility(View.VISIBLE);
                     completeButton.setVisibility(View.VISIBLE);
-                    resultText.setText(correct + "/8");
-                    level2Button.setText(R.string.revisit);
-                    level2Button.setBackgroundColor(R.color.purple);
+                    resultText.setText(correct + "/14");
                 }
                 break;
             }

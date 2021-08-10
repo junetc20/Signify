@@ -51,7 +51,6 @@ public class Quiz3 extends AppCompatActivity
         setContentView(R.layout.activity_quiz_3);
 
         // Constructor
-        quizVideo = findViewById(R.id.quizVideo);
         resultImage3 = findViewById(R.id.resultImage3);
         resultText3 = findViewById(R.id.resultText3);
         trueButton2 = findViewById(R.id.trueButton2);
@@ -116,8 +115,6 @@ public class Quiz3 extends AppCompatActivity
                         resultText3.setVisibility(View.VISIBLE);
                         completeButton3.setVisibility(View.VISIBLE);
                         resultText3.setText(correct + "/8");
-                        level3Button.setText(R.string.revisit);
-                        level3Button.setBackgroundColor(R.color.purple);
                     }
                     break;
             }
@@ -131,6 +128,7 @@ public class Quiz3 extends AppCompatActivity
             switch (currentQuestionIndex) {
                 // Updating video content and question count display when the question changes
                 case 0:
+                    quizVideo = findViewById(R.id.quizVideo);
                     String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_one;
                     Uri uri = Uri.parse(videoPath);
                     quizVideo.setVideoURI(uri);
@@ -141,6 +139,7 @@ public class Quiz3 extends AppCompatActivity
                     questionCountDisplay3.setText("Question 1 / 8");
                     break;
                 case 1:
+                    quizVideo = findViewById(R.id.quizVideo);
                     String videoPath1 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_two;
                     Uri uri1 = Uri.parse(videoPath1);
                     quizVideo.setVideoURI(uri1);
@@ -151,6 +150,7 @@ public class Quiz3 extends AppCompatActivity
                     questionCountDisplay3.setText("Question 2 / 8");
                     break;
                 case 2:
+                    quizVideo = findViewById(R.id.quizVideo);
                     String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_three;
                     Uri uri2 = Uri.parse(videoPath2);
                     quizVideo.setVideoURI(uri2);
@@ -161,6 +161,7 @@ public class Quiz3 extends AppCompatActivity
                     questionCountDisplay3.setText("Question 3 / 8");
                     break;
                 case 3:
+                    quizVideo = findViewById(R.id.quizVideo);
                     String videoPath3 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_four;
                     Uri uri3 = Uri.parse(videoPath3);
                     quizVideo.setVideoURI(uri3);
@@ -171,6 +172,7 @@ public class Quiz3 extends AppCompatActivity
                     questionCountDisplay3.setText("Question 4 / 8");
                     break;
                 case 4:
+                    quizVideo = findViewById(R.id.quizVideo);
                     String videoPath4 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_five;
                     Uri uri4 = Uri.parse(videoPath4);
                     quizVideo.setVideoURI(uri4);
@@ -181,6 +183,7 @@ public class Quiz3 extends AppCompatActivity
                     questionCountDisplay3.setText("Question 5 / 8");
                     break;
                 case 5:
+                    quizVideo = findViewById(R.id.quizVideo);
                     String videoPath5 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_six;
                     Uri uri5 = Uri.parse(videoPath5);
                     quizVideo.setVideoURI(uri5);
@@ -191,6 +194,7 @@ public class Quiz3 extends AppCompatActivity
                     questionCountDisplay3.setText("Question 6 / 8");
                     break;
                 case 6:
+                    quizVideo = findViewById(R.id.quizVideo);
                     String videoPath6 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_seven;
                     Uri uri6 = Uri.parse(videoPath6);
                     quizVideo.setVideoURI(uri6);
@@ -201,6 +205,7 @@ public class Quiz3 extends AppCompatActivity
                     questionCountDisplay3.setText("Question 7 / 8");
                     break;
                 case 7:
+                    quizVideo = findViewById(R.id.quizVideo);
                     String videoPath7 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_eight;
                     Uri uri7 = Uri.parse(videoPath7);
                     quizVideo.setVideoURI(uri7);
