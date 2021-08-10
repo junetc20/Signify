@@ -82,7 +82,10 @@ public class Quiz3 extends AppCompatActivity
         mediaController.setAnchorView(quizVideo);
         quizVideo.seekTo(3);
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButtonQuiz3.
+         * @param v the onClickListener View.
+         */
         exitButtonQuiz3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,7 +93,10 @@ public class Quiz3 extends AppCompatActivity
             }
         });
 
-        // Complete button - returns to home page
+        /**
+         * Set the view from clicking completeButton3.
+         * @param v the onClickListener View.
+         */
         completeButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,6 +105,10 @@ public class Quiz3 extends AppCompatActivity
         });
     }
 
+    /**
+     * Set the view from clicking trueButton2, falseButton2 or nextButton3.
+     * @param v the onClickListener View.
+     */
     @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
     @Override
     public void onClick(View v) {
