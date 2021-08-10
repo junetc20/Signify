@@ -4,8 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +21,8 @@ public class Intro1 extends AppCompatActivity {
 
     ImageView exitButton2;
     ImageView nextArrow3;
+    ImageView learningOutcomes1;
+    Button beginButton2;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -33,6 +35,8 @@ public class Intro1 extends AppCompatActivity {
          */
         exitButton2 = findViewById(R.id.exitButton2);
         nextArrow3 = findViewById(R.id.nextArrow3);
+        learningOutcomes1 = findViewById(R.id.learningOutcomes1);
+        beginButton2 = findViewById(R.id.beginButton4);
 
         /**
          * Set the view from clicking exitButton2.
@@ -53,6 +57,18 @@ public class Intro1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Intro1.this, Intro2.class));
+            }
+        });
+
+        /**
+         * Set the view from clicking beginButton2.
+         * @param v the onClickListener View.
+         */
+        beginButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                learningOutcomes1.setVisibility(View.INVISIBLE);
+                beginButton2.setVisibility(View.INVISIBLE);
             }
         });
     }

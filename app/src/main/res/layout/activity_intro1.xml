@@ -117,7 +117,7 @@
         app:srcCompat="@drawable/lo_1" />
 
     <Button
-        android:id="@+id/beginButton2"
+        android:id="@+id/beginButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
