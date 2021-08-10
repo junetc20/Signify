@@ -94,7 +94,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:layout_width="500dp"
+        android:layout_width="420dp"
         android:layout_height="171dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="122dp"
@@ -105,13 +105,15 @@
 
         <VideoView
             android:id="@+id/videoView"
-            android:layout_width="500dp"
-            android:layout_height="match_parent" />
+            android:layout_width="420dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center" />
 
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="500dp"
+        android:layout_width="420dp"
         android:layout_height="171dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="28dp"
@@ -122,8 +124,10 @@
 
         <VideoView
             android:id="@+id/videoView2"
-            android:layout_width="500dp"
-            android:layout_height="match_parent" />
+            android:layout_width="420dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center" />
 
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
