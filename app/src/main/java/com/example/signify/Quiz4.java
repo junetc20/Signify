@@ -14,12 +14,17 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the quiz for the fourth learning section of Signify.
+ * Users can use this screen to test knowledge of learned concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Quiz4 extends AppCompatActivity
         implements View.OnClickListener {
 
-    // Quiz for section 4
-
-    // Fields
     private Button falseButton3;
     private Button trueButton3;
     private ImageView exitButtonQuiz4;
@@ -31,7 +36,7 @@ public class Quiz4 extends AppCompatActivity
     private int currentQuestionIndex = 0;
     private Button nextButton4;
     private Button completeButton4;
-    Button level4Button;
+    private Button level4Button;
 
     // Array to hold questions
     public Question[] questionBank = new Question[]{
@@ -48,7 +53,9 @@ public class Quiz4 extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_4);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Quiz4.
+         */
         resultImage4 = findViewById(R.id.resultImage4);
         resultText3 = findViewById(R.id.resultText3);
         trueButton3 = findViewById(R.id.trueButton3);

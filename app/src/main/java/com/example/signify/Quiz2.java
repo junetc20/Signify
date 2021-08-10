@@ -10,12 +10,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the quiz for the second learning section of Signify.
+ * Users can use this screen to test knowledge of learned concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Quiz2 extends AppCompatActivity
         implements View.OnClickListener {
 
-    //quiz for section 2
-
-    // Fields
     private Button falseButton;
     private Button trueButton;
     private ImageView exitButtonQuiz2;
@@ -27,7 +32,7 @@ public class Quiz2 extends AppCompatActivity
     private int currentQuestionIndex = 0;
     private Button nextButton;
     private Button completeButton;
-    Button level2Button;
+    private Button level2Button;
 
     // Array to hold questions
     public Question[] questionBank = new Question[]{
@@ -53,7 +58,9 @@ public class Quiz2 extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_2);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Quiz2.
+         */
         quizImage1 = findViewById(R.id.quizImage1);
         resultImage = findViewById(R.id.resultImage);
         resultText = findViewById(R.id.resultText);

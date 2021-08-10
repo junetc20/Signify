@@ -12,8 +12,8 @@ package com.example.signify;
   import androidx.appcompat.app.AppCompatActivity;
 
 /**
- * A class that represents the account screen of Signify.
- * Users can use this screen to view and update their account details.
+ * A class that represents the quiz for the first learning section of Signify.
+ * Users can use this screen to test knowledge of learned concepts.
  *
  * @author June Caldwell
  * @version 0.1 (01.08.21)
@@ -21,11 +21,9 @@ package com.example.signify;
 
 public class Quiz1 extends AppCompatActivity {
 
-    // quiz for section 1
 
     MultipleChoiceQ questionLibrary = new MultipleChoiceQ();
 
-    // Fields
     private Button answer1;
     private Button answer2;
     private Button answer3;
@@ -35,11 +33,11 @@ public class Quiz1 extends AppCompatActivity {
     private Button completeButton2;
     private TextView questionText2;
     private String answer;
-    private int questionCount = 1;
-    private int currentQuestionNumber = 0;
+    int questionCount = 1;
+    int currentQuestionNumber = 0;
     private TextView resultText2;
     private ImageView resultImage2;
-    Button level1Button;
+    private Button level1Button;
     int score = 0;
 
     @SuppressLint("SetTextI18n")
@@ -47,7 +45,9 @@ public class Quiz1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_1);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Quiz1.
+         */
         answer1 = findViewById(R.id.answer1);
         answer2 = findViewById(R.id.answer2);
         answer3 = findViewById(R.id.answer3);
@@ -67,7 +67,10 @@ public class Quiz1 extends AppCompatActivity {
         answer3.setText(MultipleChoiceQ.getChoice3(currentQuestionNumber));
         questionCountDisplay.setText("Question " + questionCount + "/5");
 
-        // Exit button returns user to home when clicked
+        /**
+         * Set the view from clicking exitButtonQuiz.
+         * @param v the onClickListener View.
+         */
         exitButtonQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +78,10 @@ public class Quiz1 extends AppCompatActivity {
             }
         });
 
-        // Exit button returns user to home when clicked
+        /**
+         * Set the view from clicking completeButton2.
+         * @param v the onClickListener View.
+         */
         completeButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +89,10 @@ public class Quiz1 extends AppCompatActivity {
             }
         });
 
-        // Next button updates text views so that the next question appears
+        /**
+         * Set the view from clicking nextButton2.
+         * @param v the onClickListener View.
+         */
         nextButton2.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
             @Override
@@ -109,7 +118,10 @@ public class Quiz1 extends AppCompatActivity {
             }
         });
 
-        // Making answer 1 clickable
+        /**
+         * Set the view from clicking answer1.
+         * @param v the onClickListener View.
+         */
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,7 +139,10 @@ public class Quiz1 extends AppCompatActivity {
             }
         });
 
-        // Making answer 2 clickable
+        /**
+         * Set the view from clicking answer2.
+         * @param v the onClickListener View.
+         */
         answer2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (answer2.getText() == answer) {
@@ -144,7 +159,10 @@ public class Quiz1 extends AppCompatActivity {
             }
         });
 
-        // Making answer 3 clickable
+        /**
+         * Set the view from clicking answer3.
+         * @param v the onClickListener View.
+         */
         answer3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (answer3.getText() == answer) {
@@ -162,6 +180,9 @@ public class Quiz1 extends AppCompatActivity {
         });
     }
 
+    /**
+     * Update fields when function is called.
+     */
     @SuppressLint("SetTextI18n")
     private void updateQuestion() {
         currentQuestionNumber++;
