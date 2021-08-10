@@ -94,32 +94,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:layout_width="500dp"
+        android:layout_width="420dp"
         android:layout_height="171dp"
         android:layout_marginTop="1dp"
+        android:layout_marginBottom="122dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView29"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24">
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView"
-            android:layout_width="500dp"
-            android:layout_height="171dp"/>
+            android:layout_width="420dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center" />
 
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="500dp"
+        android:layout_width="420dp"
         android:layout_height="171dp"
         android:layout_marginTop="1dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView29">
+        app:layout_constraintTop_toBottomOf="@+id/textView29"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView2"
-            android:layout_width="500dp"
-            android:layout_height="171dp"/>
+            android:layout_width="420dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center" />
 
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -106,17 +106,21 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="488dp"
+        android:layout_width="420dp"
         android:layout_height="238dp"
         android:layout_marginTop="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView58">
+        app:layout_constraintTop_toBottomOf="@+id/textView58"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView3"
-            android:layout_width="488dp"
-            android:layout_height="238dp"/>
+            android:layout_width="420dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center" />
 
     </FrameLayout>
 

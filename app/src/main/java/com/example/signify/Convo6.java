@@ -38,7 +38,7 @@ public class Convo6 extends AppCompatActivity {
         nextArrow18 = findViewById(R.id.nextArrow18);
         backArrow14 = findViewById(R.id.backArrow14);
 
-        videoView17 = findViewById(R.id.videoView17);
+        videoView17 = findViewById(R.id.videoView18);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_six;
         Uri uri = Uri.parse(videoPath);
         videoView17.setVideoURI(uri);
@@ -47,7 +47,7 @@ public class Convo6 extends AppCompatActivity {
         mediaController.setAnchorView(videoView17);
         videoView17.seekTo(3);
 
-        videoView18 = findViewById(R.id.videoView18);
+        videoView18 = findViewById(R.id.videoView17);
         String videoPath1 = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_seven;
         Uri uri1 = Uri.parse(videoPath1);
         videoView18.setVideoURI(uri1);

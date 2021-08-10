@@ -35,13 +35,14 @@
         android:id="@+id/textView68"
         android:layout_width="260dp"
         android:layout_height="30dp"
+        android:layout_marginTop="20dp"
         android:text="@string/hundred_text_three"
         android:textColor="@color/background_blue"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="631dp" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout4" />
 
 
     <ImageView
@@ -118,31 +119,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:layout_width="500dp"
+        android:layout_width="420dp"
         android:layout_height="220dp"
         android:layout_marginTop="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView66">
+        app:layout_constraintTop_toBottomOf="@+id/textView66"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView10"
-            android:layout_width="500dp"
-            android:layout_height="220dp"/>
+            android:layout_width="420dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center"/>
 
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="500dp"
+        android:id="@+id/frameLayout4"
+        android:layout_width="420dp"
         android:layout_height="220dp"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView67">
 
         <VideoView
             android:id="@+id/videoView11"
-            android:layout_width="500dp"
-            android:layout_height="220dp"/>
+            android:layout_width="420dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center" />
 
     </FrameLayout>
 

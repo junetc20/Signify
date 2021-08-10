@@ -17,9 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Quiz3 extends AppCompatActivity
     implements View.OnClickListener {
 
-    // Quiz for section 3
-
-    // Fields
     private Button falseButton2;
     private Button trueButton2;
     private ImageView exitButtonQuiz3;
@@ -51,7 +48,6 @@ public class Quiz3 extends AppCompatActivity
         setContentView(R.layout.activity_quiz_3);
 
         // Constructor
-        quizVideo = findViewById(R.id.quizVideo);
         resultImage3 = findViewById(R.id.resultImage3);
         resultText3 = findViewById(R.id.resultText3);
         trueButton2 = findViewById(R.id.trueButton2);
@@ -66,6 +62,15 @@ public class Quiz3 extends AppCompatActivity
         trueButton2.setOnClickListener(this);
         falseButton2.setOnClickListener(this);
         nextButton3.setOnClickListener(this);
+
+        quizVideo = findViewById(R.id.quizVideo);
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_one;
+        Uri uri = Uri.parse(videoPath);
+        quizVideo.setVideoURI(uri);
+        MediaController mediaController = new MediaController(this);
+        quizVideo.setMediaController(mediaController);
+        mediaController.setAnchorView(quizVideo);
+        quizVideo.seekTo(3);
 
         // Exit button - returns to home page
         exitButtonQuiz3.setOnClickListener(new View.OnClickListener() {
@@ -84,23 +89,23 @@ public class Quiz3 extends AppCompatActivity
         });
     }
 
-        @SuppressLint({"NonConstantResourceId", "SetTextI18n", "ResourceAsColor"})
+        @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.trueButton:
+                case R.id.trueButton2:
                     checkAnswer(true);
                     trueButton2.setVisibility(View.INVISIBLE);
                     falseButton2.setVisibility(View.INVISIBLE);
                     break;
 
-                case R.id.falseButton:
+                case R.id.falseButton2:
                     checkAnswer(false);
                     trueButton2.setVisibility(View.INVISIBLE);
                     falseButton2.setVisibility(View.INVISIBLE);
                     break;
 
-                case R.id.nextButton:
+                case R.id.nextButton3:
                     if (currentQuestionIndex < 7) {
                         nextButton3.setVisibility(View.INVISIBLE);
                         trueButton2.setVisibility(View.VISIBLE);
@@ -116,8 +121,6 @@ public class Quiz3 extends AppCompatActivity
                         resultText3.setVisibility(View.VISIBLE);
                         completeButton3.setVisibility(View.VISIBLE);
                         resultText3.setText(correct + "/8");
-                        level3Button.setText(R.string.revisit);
-                        level3Button.setBackgroundColor(R.color.purple);
                     }
                     break;
             }
@@ -131,83 +134,43 @@ public class Quiz3 extends AppCompatActivity
             switch (currentQuestionIndex) {
                 // Updating video content and question count display when the question changes
                 case 0:
-                    String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_one;
-                    Uri uri = Uri.parse(videoPath);
-                    quizVideo.setVideoURI(uri);
-                    MediaController mediaController = new MediaController(this);
-                    quizVideo.setMediaController(mediaController);
-                    mediaController.setAnchorView(quizVideo);
-                    quizVideo.seekTo(3);
+                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_one));
+                    quizVideo.start();
                     questionCountDisplay3.setText("Question 1 / 8");
                     break;
                 case 1:
-                    String videoPath1 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_two;
-                    Uri uri1 = Uri.parse(videoPath1);
-                    quizVideo.setVideoURI(uri1);
-                    MediaController mediaController1 = new MediaController(this);
-                    quizVideo.setMediaController(mediaController1);
-                    mediaController1.setAnchorView(quizVideo);
-                    quizVideo.seekTo(3);
+                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_two));
+                    quizVideo.start();
                     questionCountDisplay3.setText("Question 2 / 8");
                     break;
                 case 2:
-                    String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_three;
-                    Uri uri2 = Uri.parse(videoPath2);
-                    quizVideo.setVideoURI(uri2);
-                    MediaController mediaController2 = new MediaController(this);
-                    quizVideo.setMediaController(mediaController2);
-                    mediaController2.setAnchorView(quizVideo);
-                    quizVideo.seekTo(3);
+                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_three));
+                    quizVideo.start();
                     questionCountDisplay3.setText("Question 3 / 8");
                     break;
                 case 3:
-                    String videoPath3 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_four;
-                    Uri uri3 = Uri.parse(videoPath3);
-                    quizVideo.setVideoURI(uri3);
-                    MediaController mediaController3 = new MediaController(this);
-                    quizVideo.setMediaController(mediaController3);
-                    mediaController3.setAnchorView(quizVideo);
-                    quizVideo.seekTo(3);
+                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_four));
+                    quizVideo.start();
                     questionCountDisplay3.setText("Question 4 / 8");
                     break;
                 case 4:
-                    String videoPath4 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_five;
-                    Uri uri4 = Uri.parse(videoPath4);
-                    quizVideo.setVideoURI(uri4);
-                    MediaController mediaController4 = new MediaController(this);
-                    quizVideo.setMediaController(mediaController4);
-                    mediaController4.setAnchorView(quizVideo);
-                    quizVideo.seekTo(3);
+                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_five));
+                    quizVideo.start();
                     questionCountDisplay3.setText("Question 5 / 8");
                     break;
                 case 5:
-                    String videoPath5 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_six;
-                    Uri uri5 = Uri.parse(videoPath5);
-                    quizVideo.setVideoURI(uri5);
-                    MediaController mediaController5 = new MediaController(this);
-                    quizVideo.setMediaController(mediaController5);
-                    mediaController5.setAnchorView(quizVideo);
-                    quizVideo.seekTo(3);
+                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_six));
+                    quizVideo.start();
                     questionCountDisplay3.setText("Question 6 / 8");
                     break;
                 case 6:
-                    String videoPath6 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_seven;
-                    Uri uri6 = Uri.parse(videoPath6);
-                    quizVideo.setVideoURI(uri6);
-                    MediaController mediaController6 = new MediaController(this);
-                    quizVideo.setMediaController(mediaController6);
-                    mediaController6.setAnchorView(quizVideo);
-                    quizVideo.seekTo(3);
+                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_seven));
+                    quizVideo.start();
                     questionCountDisplay3.setText("Question 7 / 8");
                     break;
                 case 7:
-                    String videoPath7 = "android.resource://" + getPackageName() + "/" + R.raw.no_assess_eight;
-                    Uri uri7 = Uri.parse(videoPath7);
-                    quizVideo.setVideoURI(uri7);
-                    MediaController mediaController7 = new MediaController(this);
-                    quizVideo.setMediaController(mediaController7);
-                    mediaController7.setAnchorView(quizVideo);
-                    quizVideo.seekTo(3);
+                    quizVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.no_assess_eight));
+                    quizVideo.start();
                     questionCountDisplay3.setText("Question 8 / 8");
                     break;
             }

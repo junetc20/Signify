@@ -29,7 +29,7 @@ public class Numbers3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers2);
+        setContentView(R.layout.activity_numbers3);
 
         /**
          * Constructor for objects of class Numbers3.

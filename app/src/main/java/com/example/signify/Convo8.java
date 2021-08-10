@@ -25,7 +25,6 @@ public class Convo8 extends AppCompatActivity {
     ImageView nextArrow20;
     ImageView backArrow16;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

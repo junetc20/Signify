@@ -12,6 +12,8 @@
         <entry key="..\:/Users/Kieran/Desktop/Signify/app/src/main/res/layout/activity_quiz_2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/Desktop/Signify/app/src/main/res/layout/activity_quiz_3.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/Desktop/Signify/app/src/main/res/layout/activity_quiz_4.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_account.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_alphabet1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_alphabet2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_convo_1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_convo_2.xml" value="0.25416666666666665" />
@@ -25,11 +27,12 @@
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_numbers1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_numbers2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_numbers3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_numbers3.xml" value="0.1" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_numbers4.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_numbers5.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_numbers6.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_quiz_1.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_quiz_2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_quiz_3.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kieran/StudioProjects/Signify/app/src/main/res/layout/activity_quiz_4.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_account.xml" value="0.21354166666666666" />
@@ -38,7 +41,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="16" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
