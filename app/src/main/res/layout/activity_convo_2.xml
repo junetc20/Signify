@@ -46,12 +46,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView81"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="246dp">
+        tools:layout_editor_absoluteY="246dp"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView15"
             android:layout_width="413dp"
-            android:layout_height="171dp"/>
+            android:layout_height="171dp"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center"/>
 
     </FrameLayout>
 
@@ -62,12 +66,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView82"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="246dp">
+        tools:layout_editor_absoluteY="246dp"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView16"
             android:layout_width="413dp"
-            android:layout_height="171dp"/>
+            android:layout_height="171dp"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center"/>
 
     </FrameLayout>
 

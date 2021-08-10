@@ -12,12 +12,16 @@
         android:layout_height="171dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView87">
+        app:layout_constraintTop_toBottomOf="@+id/textView87"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView14"
             android:layout_width="413dp"
-            android:layout_height="171dp"/>
+            android:layout_height="171dp"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center"/>
 
     </FrameLayout>
 

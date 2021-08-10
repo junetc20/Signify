@@ -108,12 +108,16 @@
         app:layout_constraintBottom_toTopOf="@+id/textView20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21">
+        app:layout_constraintTop_toBottomOf="@+id/textView21"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/alphabetVid"
             android:layout_width="457dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center"/>
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

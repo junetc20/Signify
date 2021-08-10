@@ -101,7 +101,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView29"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24">
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView"
@@ -120,7 +122,9 @@
         app:layout_constraintBottom_toTopOf="@+id/textView23"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView29">
+        app:layout_constraintTop_toBottomOf="@+id/textView29"
+        android:layout_gravity="center_horizontal"
+        android:foregroundGravity="center">
 
         <VideoView
             android:id="@+id/videoView2"
