@@ -37,8 +37,10 @@ public class Quiz1 extends AppCompatActivity {
     int currentQuestionNumber = 0;
     private TextView resultText2;
     private ImageView resultImage2;
-    private Button level1Button;
     int score = 0;
+    Home level1Button;
+    Home level2Button;
+    Home prog1;
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +60,6 @@ public class Quiz1 extends AppCompatActivity {
         questionText2 = findViewById(R.id.questionText2);
         resultText2 = findViewById(R.id.resultText2);
         resultImage2 = findViewById(R.id.resultImage2);
-        level1Button = findViewById(R.id.level1Button);
 
         //Setting initial question up when quiz is opened
         questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));

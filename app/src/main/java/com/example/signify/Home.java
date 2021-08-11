@@ -36,6 +36,10 @@ public class Home extends AppCompatActivity {
     Button nextButtonHelp;
     Button doneButtonHelp;
     ImageView exitButtonHelp;
+    TextView prog1;
+    TextView prog2;
+    TextView prog3;
+    TextView prog4;
 
 
     @SuppressLint({"ResourceAsColor", "Range"})
@@ -61,25 +65,11 @@ public class Home extends AppCompatActivity {
         nextButtonHelp = findViewById(R.id.nextButtonHelp);
         doneButtonHelp = findViewById(R.id.doneButtonHelp);
         exitButtonHelp = findViewById(R.id.exitButton20);
-/*
-        if (level1Button.getText().toString().equals("REVISIT")) {
-            level2Button.setClickable(true);
-            level2Button.setText(R.string.start);
-            level2Button.setBackgroundColor(R.color.BSL_blue);
-        }
+        prog1 = findViewById(R.id.prog1);
+        prog2 = findViewById(R.id.prog2);
+        prog3 = findViewById(R.id.prog3);
+        prog4 = findViewById(R.id.prog4);
 
-        if (level2Button.getText().toString().equals("REVISIT")) {
-            level3Button.setClickable(true);
-            level3Button.setText(R.string.start);
-            level3Button.setBackgroundColor(R.color.BSL_blue);
-        }
-
-        if (level3Button.getText().toString().equals("REVISIT")) {
-            level4Button.setClickable(true);
-            level4Button.setText(R.string.start);
-            level4Button.setBackgroundColor(R.color.BSL_blue);
-        }
- */
         if(cursor.getCount() > 0) {
             while (cursor.moveToNext()) {
                 firstName.setText(cursor.getString(cursor.getColumnIndex("firstName")));

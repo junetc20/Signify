@@ -42,7 +42,7 @@ public class Quiz4 extends AppCompatActivity
     public Question[] questionBank = new Question[]{
             new Question(R.string.not_good, false),
             new Question(R.string.please, true),
-            new Question(R.string.meet, true),
+            new Question(R.string.meet, false),
             new Question(R.string.good, true),
             new Question(R.string.thank_you, false),
             new Question(R.string.How, true),
@@ -72,7 +72,7 @@ public class Quiz4 extends AppCompatActivity
         nextButton4.setOnClickListener(this);
 
         quizVideo1 = findViewById(R.id.quizVideo1);
-        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_four;
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.convo_good;
         Uri uri = Uri.parse(videoPath);
         quizVideo1.setVideoURI(uri);
         MediaController mediaController = new MediaController(this);
@@ -151,32 +151,32 @@ public class Quiz4 extends AppCompatActivity
         switch (currentQuestionIndex) {
             // Updating video content and question count display when the question changes
             case 0:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_four));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_good));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 1 / 6");
                 break;
             case 1:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_six));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_please));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 2 / 6");
                 break;
             case 2:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_eight));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_not_good));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 3 / 6");
                 break;
             case 3:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_four));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_good));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 4 / 6");
                 break;
             case 4:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_six));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_please));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 5 / 6");
                 break;
             case 5:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_three));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_how_you));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 6 / 6");
                 break;
