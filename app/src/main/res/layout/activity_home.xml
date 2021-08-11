@@ -126,7 +126,7 @@
         android:text="LOCKED"
         android:textSize="12sp"
         android:visibility="invisible"
-        app:backgroundTint="@color/buttons_colour_change"
+        app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
@@ -140,7 +140,7 @@
         android:text="Locked"
         android:visibility="invisible"
         android:textSize="12sp"
-        app:backgroundTint="@color/buttons_colour_change"
+        app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="@+id/imageView15"
         app:layout_constraintTop_toTopOf="@+id/imageView15" />
@@ -154,7 +154,7 @@
         android:text="Locked"
         android:visibility="invisible"
         android:textSize="12sp"
-        app:backgroundTint="@color/buttons_colour_change"
+        app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="@+id/imageView14"
         app:layout_constraintTop_toTopOf="@+id/imageView14" />

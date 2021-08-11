@@ -1,5 +1,6 @@
 package com.example.signify;
 
+import androidx.annotation.ColorRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -40,6 +41,11 @@ public class Home extends AppCompatActivity {
     TextView prog2;
     TextView prog3;
     TextView prog4;
+    int count = 0;
+    int countOne = 0;
+    int countTwo = 0;
+    int countThree = 0;
+    int countFour = 0;
 
 
     @SuppressLint({"ResourceAsColor", "Range"})
@@ -47,6 +53,7 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        count++;
 
         /**
          * Constructor for objects of class Home.
@@ -77,6 +84,59 @@ public class Home extends AppCompatActivity {
         }
         else{
             Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
+        }
+
+        // Stop help popups from appearing after first instance.
+        if(count > 1) {
+            howTo1.setVisibility(View.GONE);
+            howTo2.setVisibility(View.GONE);
+            nextButtonHelp.setVisibility(View.GONE);
+            doneButtonHelp.setVisibility(View.GONE);
+            exitButtonHelp.setVisibility(View.GONE);
+            level1Button.setVisibility(View.VISIBLE);
+            level2Button.setVisibility(View.VISIBLE);
+            level3Button.setVisibility(View.VISIBLE);
+            level4Button.setVisibility(View.VISIBLE);
+        }
+
+        // Changes text and color of level1Button on create.
+        if(countOne > 1) {
+            level1Button.setText(R.string.cont);
+            level1Button.setBackgroundColor(R.color.BSL_blue);
+        }
+        else {
+            level1Button.setText(R.string.start);
+            level1Button.setBackgroundColor(R.color.BSL_blue);
+        }
+
+        // Changes text and color of level2Button on create.
+        if(countTwo > 1) {
+            level2Button.setText(R.string.cont);
+            level2Button.setBackgroundColor(R.color.BSL_blue);
+        }
+        else {
+            level2Button.setText(R.string.locked);
+            level2Button.setBackgroundColor(R.color.background_blue);
+        }
+
+        // Changes text and color of level3Button on create.
+        if(countThree > 1) {
+            level3Button.setText(R.string.cont);
+            level3Button.setBackgroundColor(R.color.BSL_blue);
+        }
+        else {
+            level3Button.setText(R.string.locked);
+            level3Button.setBackgroundColor(R.color.background_blue);
+        }
+
+        // Changes text and color of level4Button on create.
+        if(countFour > 1) {
+            level4Button.setText(R.string.cont);
+            level4Button.setBackgroundColor(R.color.BSL_blue);
+        }
+        else {
+            level4Button.setText(R.string.locked);
+            level4Button.setBackgroundColor(R.color.background_blue);
         }
 
         /**
@@ -157,11 +217,13 @@ public class Home extends AppCompatActivity {
          * Set the view from clicking level1Button.
          * @param v the onClickListener View.
          */
+
         level1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Intro1.class));
                 level1Button.setText(R.string.cont);
+                countOne++;
             }
         });
 
@@ -174,6 +236,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Alphabet1.class));
                 level2Button.setText(R.string.cont);
+                countTwo++;
             }
         });
 
@@ -186,6 +249,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Numbers1.class));
                 level3Button.setText(R.string.cont);
+                countThree++;
             }
         });
 
@@ -198,6 +262,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Convo1.class));
                 level4Button.setText(R.string.cont);
+                countFour++;
             }
         });
     }
