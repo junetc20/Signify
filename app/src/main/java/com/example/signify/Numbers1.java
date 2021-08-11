@@ -11,8 +11,8 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * A class that represents the first screen within the second learning section of Signify.
+
+ * A class that represents the first screen within the third learning section of Signify.
  * Users can use this screen to view learning concepts.
  *
  * @author June Caldwell
@@ -41,7 +41,6 @@ public class Numbers1 extends AppCompatActivity {
         beginButton3 = findViewById(R.id.beginButton4);
         learningOutcomes3 = findViewById(R.id.learningOutcomes3);
 
-        // Make first number video playable
         noVideo1 = findViewById(R.id.videoView);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_one;
         Uri uri = Uri.parse(videoPath);
@@ -51,7 +50,6 @@ public class Numbers1 extends AppCompatActivity {
         mediaController.setAnchorView(noVideo1);
         noVideo1.seekTo(3);
 
-        // Make second number video playable
         noVideo2 = findViewById(R.id.videoView2);
         String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.no_video_two;
         Uri uri2 = Uri.parse(videoPath2);
