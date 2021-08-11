@@ -10,8 +10,8 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * A class that represents the third screen within the second learning section of Signify.
+
+ * A class that represents the third screen within the third learning section of Signify.
  * Users can use this screen to view learning concepts.
  *
  * @author June Caldwell
@@ -38,8 +38,6 @@ public class Numbers3 extends AppCompatActivity {
         nextArrow9 = findViewById(R.id.nextArrow9);
         backArrow6 = findViewById(R.id.backArrow6);
 
-
-        // Make fourth number video playable
         noVideo4 = findViewById(R.id.videoView4);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_four;
         Uri uri = Uri.parse(videoPath);
@@ -49,7 +47,6 @@ public class Numbers3 extends AppCompatActivity {
         mediaController.setAnchorView(noVideo4);
         noVideo4.seekTo(3);
 
-        // Make fifth number video playable
         noVideo5 = findViewById(R.id.videoView5);
         String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.no_video_five;
         Uri uri2 = Uri.parse(videoPath2);
@@ -58,7 +55,6 @@ public class Numbers3 extends AppCompatActivity {
         noVideo5.setMediaController(mediaController2);
         mediaController2.setAnchorView(noVideo5);
         noVideo5.seekTo(3);
-
 
         /**
          * Set the view from clicking exitButton10.

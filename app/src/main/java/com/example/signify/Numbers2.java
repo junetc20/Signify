@@ -10,8 +10,8 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * A class that represents the second screen within the second learning section of Signify.
+
+ * A class that represents the second screen within the third learning section of Signify.
  * Users can use this screen to view learning concepts.
  *
  * @author June Caldwell
@@ -37,7 +37,6 @@ public class Numbers2 extends AppCompatActivity {
         nextArrow8 = findViewById(R.id.nextArrow8);
         backArrow5 = findViewById(R.id.backArrow5);
 
-        // Make third number video playable
         noVideo3 = findViewById(R.id.videoView3);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_three;
         Uri uri = Uri.parse(videoPath);
