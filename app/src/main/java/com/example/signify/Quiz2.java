@@ -8,14 +8,20 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+/**
+ * A class that represents the quiz for the second learning section of Signify.
+ * Users can use this screen to test knowledge of learned concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
 
 public class Quiz2 extends AppCompatActivity
         implements View.OnClickListener {
 
-    //quiz for section 2
-
-    // Fields
     private Button falseButton;
     private Button trueButton;
     private ImageView exitButtonQuiz2;
@@ -27,7 +33,7 @@ public class Quiz2 extends AppCompatActivity
     private int currentQuestionIndex = 0;
     private Button nextButton;
     private Button completeButton;
-    Button level2Button;
+    private Button level2Button;
 
     // Array to hold questions
     public Question[] questionBank = new Question[]{
@@ -53,7 +59,9 @@ public class Quiz2 extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_2);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Quiz2.
+         */
         quizImage1 = findViewById(R.id.quizImage1);
         resultImage = findViewById(R.id.resultImage);
         resultText = findViewById(R.id.resultText);
@@ -70,7 +78,10 @@ public class Quiz2 extends AppCompatActivity
         falseButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButtonQuiz2.
+         * @param v the onClickListener View.
+         */
         exitButtonQuiz2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +89,10 @@ public class Quiz2 extends AppCompatActivity
             }
         });
 
+        /**
+         * Set the view from clicking completeButton.
+         * @param v the onClickListener View.
+         */
         completeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +101,10 @@ public class Quiz2 extends AppCompatActivity
         });
     }
 
+    /**
+     * Set the view from clicking trueButton, falseButton or nextButton.
+     * @param v the onClickListener View.
+     */
     @SuppressLint({"NonConstantResourceId", "SetTextI18n", "ResourceAsColor"})
     @Override
     public void onClick(View v) {
@@ -109,8 +128,7 @@ public class Quiz2 extends AppCompatActivity
                     falseButton.setVisibility(View.VISIBLE);
                     currentQuestionIndex++;
                     updateQuestion();
-                }
-                else {
+                } else {
                     nextButton.setVisibility(View.INVISIBLE);
                     trueButton.setVisibility(View.INVISIBLE);
                     falseButton.setVisibility(View.INVISIBLE);
@@ -120,8 +138,8 @@ public class Quiz2 extends AppCompatActivity
                     resultText.setText(correct + "/14");
                 }
                 break;
-            }
         }
+    }
 
     @SuppressLint("SetTextI18n")
     private void updateQuestion() {
@@ -188,14 +206,14 @@ public class Quiz2 extends AppCompatActivity
     }
 
     int correct = 0;
+
     private void checkAnswer(boolean userChooseCorrect) {
         boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
         int toastMessageId;
         if (userChooseCorrect == answerIsTrue) {
             toastMessageId = R.string.correct_answer;
             correct++;
-        }
-        else {
+        } else {
             toastMessageId = R.string.wrong_answer;
         }
         Toast.makeText(Quiz2.this, toastMessageId, Toast.LENGTH_SHORT).show();

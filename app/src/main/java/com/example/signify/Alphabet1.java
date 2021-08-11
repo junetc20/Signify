@@ -33,7 +33,7 @@ public class Alphabet1 extends AppCompatActivity {
          */
         exitButton3 = findViewById(R.id.exitButton3);
         nextArrow = findViewById(R.id.nextArrow);
-        beginButton2 = findViewById(R.id.beginButton2);
+        beginButton2 = findViewById(R.id.beginButton4);
         learningOutcomes2 = findViewById(R.id.learningOutcomes2);
 
         /**

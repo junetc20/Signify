@@ -26,31 +26,6 @@
 
     </FrameLayout>
 
-    <ImageView
-        android:id="@+id/resultImage4"
-        android:layout_width="261dp"
-        android:layout_height="398dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438"
-        app:srcCompat="@drawable/quiz_end_graphic1"
-        tools:ignore="VectorDrawableCompat" />
-
-    <Button
-        android:id="@+id/completeButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:text="@string/got_it"
-        android:visibility="invisible"
-        app:backgroundTint="@color/BSL_blue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/questionCountDisplay4"
@@ -204,5 +179,31 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView74" />
+
+    <ImageView
+        android:id="@+id/resultImage4"
+        android:layout_width="261dp"
+        android:layout_height="398dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438"
+        app:srcCompat="@drawable/quiz_end_graphic1"
+        tools:ignore="VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/completeButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:text="@string/got_it"
+        android:visibility="invisible"
+        app:backgroundTint="@color/BSL_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

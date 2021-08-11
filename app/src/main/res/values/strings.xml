@@ -20,6 +20,7 @@
     <string name="start">START</string>
     <string name="cont">CONTINUE</string>
     <string name="revisit">REVISIT</string>
+    <string name="locked">LOCKED</string>
 
 
     !--Menu--!
@@ -77,7 +78,7 @@
             BSL is an independent language which is separate to spoken English, having its own grammar and syntax. It is estimated that BSL is used by around 151,000 people within the UK.</string>
 
         !--D/DeafPeople--!
-        <string name="deaf_title">D/Deaf People</string>
+        <string name="deaf_title">D/deaf People</string>
         <string name="deaf_para1">It is useful when learning BSL to understand a bit about the Deaf world.  Deaf people (with an upper-case D) are people who have had a profound hearing loss since birth and have been raised
             and identify as part of the Deaf community. Deaf people usually consider BSL to be their first language and generally socialise mainly within the Deaf community.</string>
         <string name="deaf_para2">Within the Deaf world there is a lot of pride for the language and culture and many Deaf people do not see their deafness as a disability, but as just another characteristic of who they are, just

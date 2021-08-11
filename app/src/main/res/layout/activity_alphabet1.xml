@@ -127,8 +127,8 @@
 
     <ImageView
         android:id="@+id/learningOutcomes2"
-        android:layout_width="279dp"
-        android:layout_height="408dp"
+        android:layout_width="300dp"
+        android:layout_height="420dp"
         android:layout_marginBottom="180dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -137,7 +137,7 @@
         app:srcCompat="@drawable/l_o_alpha" />
 
     <Button
-        android:id="@+id/beginButton2"
+        android:id="@+id/beginButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="29dp"

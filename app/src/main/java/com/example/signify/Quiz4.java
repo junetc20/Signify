@@ -14,12 +14,17 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * A class that represents the quiz for the fourth learning section of Signify.
+ * Users can use this screen to test knowledge of learned concepts.
+ *
+ * @author June Caldwell
+ * @version 0.1 (01.08.21)
+ */
+
 public class Quiz4 extends AppCompatActivity
         implements View.OnClickListener {
 
-    // Quiz for section 4
-
-    // Fields
     private Button falseButton3;
     private Button trueButton3;
     private ImageView exitButtonQuiz4;
@@ -31,13 +36,13 @@ public class Quiz4 extends AppCompatActivity
     private int currentQuestionIndex = 0;
     private Button nextButton4;
     private Button completeButton4;
-    Button level4Button;
+    private Button level4Button;
 
     // Array to hold questions
     public Question[] questionBank = new Question[]{
             new Question(R.string.not_good, false),
             new Question(R.string.please, true),
-            new Question(R.string.meet, true),
+            new Question(R.string.meet, false),
             new Question(R.string.good, true),
             new Question(R.string.thank_you, false),
             new Question(R.string.How, true),
@@ -48,7 +53,9 @@ public class Quiz4 extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_4);
 
-        // Constructor
+        /**
+         * Constructor for objects of class Quiz4.
+         */
         resultImage4 = findViewById(R.id.resultImage4);
         resultText3 = findViewById(R.id.resultText3);
         trueButton3 = findViewById(R.id.trueButton3);
@@ -65,7 +72,7 @@ public class Quiz4 extends AppCompatActivity
         nextButton4.setOnClickListener(this);
 
         quizVideo1 = findViewById(R.id.quizVideo1);
-        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_four;
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.convo_good;
         Uri uri = Uri.parse(videoPath);
         quizVideo1.setVideoURI(uri);
         MediaController mediaController = new MediaController(this);
@@ -73,7 +80,10 @@ public class Quiz4 extends AppCompatActivity
         mediaController.setAnchorView(quizVideo1);
         quizVideo1.seekTo(3);
 
-        // Exit button - returns to home page
+        /**
+         * Set the view from clicking exitButtonQuiz4.
+         * @param v the onClickListener View.
+         */
         exitButtonQuiz4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +91,10 @@ public class Quiz4 extends AppCompatActivity
             }
         });
 
-        // Complete button - returns to home page
+        /**
+         * Set the view from clicking completeButton4.
+         * @param v the onClickListener View.
+         */
         completeButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,6 +103,10 @@ public class Quiz4 extends AppCompatActivity
         });
     }
 
+    /**
+     * Set the view from clicking trueButton3, falseButton3 or nextButton4.
+     * @param v the onClickListener View.
+     */
     @SuppressLint({"NonConstantResourceId", "SetTextI18n", "ResourceAsColor"})
     @Override
     public void onClick(View v) {
@@ -113,8 +130,7 @@ public class Quiz4 extends AppCompatActivity
                     falseButton3.setVisibility(View.VISIBLE);
                     currentQuestionIndex++;
                     updateQuestion();
-                }
-                else {
+                } else {
                     nextButton4.setVisibility(View.INVISIBLE);
                     trueButton3.setVisibility(View.INVISIBLE);
                     falseButton3.setVisibility(View.INVISIBLE);
@@ -135,32 +151,32 @@ public class Quiz4 extends AppCompatActivity
         switch (currentQuestionIndex) {
             // Updating video content and question count display when the question changes
             case 0:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_four));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_good));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 1 / 6");
                 break;
             case 1:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_six));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_please));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 2 / 6");
                 break;
             case 2:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_eight));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_not_good));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 3 / 6");
                 break;
             case 3:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_four));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_good));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 4 / 6");
                 break;
             case 4:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_six));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_please));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 5 / 6");
                 break;
             case 5:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.intro_video_three));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_how_you));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 6 / 6");
                 break;
@@ -168,14 +184,14 @@ public class Quiz4 extends AppCompatActivity
     }
 
     int correct = 0;
+
     private void checkAnswer(boolean userChooseCorrect) {
         boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
         int toastMessageId;
         if (userChooseCorrect == answerIsTrue) {
             toastMessageId = R.string.correct_answer;
             correct++;
-        }
-        else {
+        } else {
             toastMessageId = R.string.wrong_answer;
         }
         Toast.makeText(Quiz4.this, toastMessageId, Toast.LENGTH_SHORT).show();

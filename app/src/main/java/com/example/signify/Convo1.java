@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
@@ -25,6 +26,8 @@ public class Convo1 extends AppCompatActivity {
     VideoView videoView12;
     VideoView videoView13;
     ImageView nextArrow13;
+    Button beginButton4;
+    ImageView learningOutcomes4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,8 @@ public class Convo1 extends AppCompatActivity {
          */
         exitButton14 = findViewById(R.id.exitButton14);
         nextArrow13 = findViewById(R.id.nextArrow13);
+        beginButton4 = findViewById(R.id.beginButton4);
+        learningOutcomes4 = findViewById(R.id.learningOutcomes4);
 
         videoView12 = findViewById(R.id.videoView12);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.intro_video_one;
@@ -74,6 +79,18 @@ public class Convo1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Convo1.this, Convo2.class));
+            }
+        });
+
+        /**
+         * Set the view from clicking beginButton4.
+         * @param v the onClickListener View.
+         */
+        beginButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                learningOutcomes4.setVisibility(View.INVISIBLE);
+                beginButton4.setVisibility(View.INVISIBLE);
             }
         });
     }

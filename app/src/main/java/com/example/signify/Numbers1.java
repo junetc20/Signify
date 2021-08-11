@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
+
  * A class that represents the first screen within the third learning section of Signify.
  * Users can use this screen to view learning concepts.
  *
@@ -24,6 +25,8 @@ public class Numbers1 extends AppCompatActivity {
     VideoView noVideo2;
     ImageView exitButton8;
     ImageView nextArrow7;
+    Button beginButton3;
+    ImageView learningOutcomes3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class Numbers1 extends AppCompatActivity {
          */
         exitButton8 = findViewById(R.id.exitButton8);
         nextArrow7 = findViewById(R.id.nextArrow7);
+        beginButton3 = findViewById(R.id.beginButton4);
+        learningOutcomes3 = findViewById(R.id.learningOutcomes3);
 
         noVideo1 = findViewById(R.id.videoView);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_one;
@@ -73,6 +78,18 @@ public class Numbers1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Numbers1.this, Numbers2.class));
+            }
+        });
+
+        /**
+         * Set the view from clicking beginButton3.
+         * @param v the onClickListener View.
+         */
+        beginButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                learningOutcomes3.setVisibility(View.INVISIBLE);
+                beginButton3.setVisibility(View.INVISIBLE);
             }
         });
     }
