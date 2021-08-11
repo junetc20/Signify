@@ -105,7 +105,7 @@
         android:text="START"
         android:textSize="12sp"
         android:visibility="invisible"
-        app:backgroundColor="@color/BSL_blue"
+        app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView12"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="@+id/imageView12"
@@ -132,7 +132,7 @@
         android:text="LOCKED"
         android:textSize="12sp"
         android:visibility="invisible"
-        app:backgroundColor="@color/background_blue"
+        app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
@@ -146,7 +146,7 @@
         android:text="Locked"
         android:visibility="invisible"
         android:textSize="12sp"
-        app:backgroundColor="@color/background_blue"
+        app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="@+id/imageView15"
         app:layout_constraintTop_toTopOf="@+id/imageView15" />
@@ -160,7 +160,7 @@
         android:text="Locked"
         android:visibility="invisible"
         android:textSize="12sp"
-        app:backgroundColor="@color/background_blue"
+        app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="@+id/imageView14"
         app:layout_constraintTop_toTopOf="@+id/imageView14" />
@@ -232,17 +232,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/howTo1"
-        android:layout_width="300dp"
-        android:layout_height="600dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/howto_1"
-        tools:ignore="VectorDrawableCompat"/>
-
-    <ImageView
         android:id="@+id/howTo2"
         android:layout_width="300dp"
         android:layout_height="600dp"
@@ -256,6 +245,23 @@
         app:srcCompat="@drawable/howto_2"
         tools:ignore="VectorDrawableCompat"/>
 
+    <Button
+        android:id="@+id/doneButtonHelp"
+        android:layout_width="75sp"
+        android:layout_height="40dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="97dp"
+        android:layout_marginTop="477dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginRight="115dp"
+        android:text="DONE"
+        android:textSize="12sp"
+        app:backgroundTint="@color/BSL_blue"
+        app:layout_constraintEnd_toEndOf="@+id/howTo1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/howTo1"
+        app:layout_constraintTop_toTopOf="@+id/howTo1" />
+
     <ImageView
         android:id="@+id/exitButton20"
         android:layout_width="33dp"
@@ -268,6 +274,17 @@
         app:srcCompat="@drawable/ic_baseline_clear_24"
         tools:ignore="VectorDrawableCompat" />
 
+    <ImageView
+        android:id="@+id/howTo1"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/howto_1"
+        tools:ignore="VectorDrawableCompat"/>
+
     <Button
         android:id="@+id/nextButtonHelp"
         android:layout_width="75sp"
@@ -279,24 +296,6 @@
         android:layout_marginRight="115dp"
         android:text="NEXT"
         android:textSize="12sp"
-        app:backgroundTint="@color/BSL_blue"
-        app:layout_constraintEnd_toEndOf="@+id/howTo1"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/howTo1"
-        app:layout_constraintTop_toTopOf="@+id/howTo1" />
-
-    <Button
-        android:id="@+id/doneButtonHelp"
-        android:layout_width="75sp"
-        android:layout_height="40dp"
-        android:layout_marginStart="97dp"
-        android:layout_marginLeft="97dp"
-        android:layout_marginTop="477dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginRight="115dp"
-        android:text="DONE"
-        android:textSize="12sp"
-        android:visibility="invisible"
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="@+id/howTo1"
         app:layout_constraintHorizontal_bias="1.0"

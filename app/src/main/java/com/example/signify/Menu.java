@@ -24,6 +24,17 @@ public class Menu extends AppCompatActivity {
     TextView bslLink;
     TextView logoutLink;
     TextView surveyLink;
+    View howTo1;
+    View howTo2;
+    View nextButtonHelp;
+    View doneButtonHelp;
+    View exitButton20;
+    View level1Button;
+    View level2Button;
+    View level3Button;
+    View level4Button;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +49,15 @@ public class Menu extends AppCompatActivity {
         bslLink = findViewById(R.id.bslLink);
         logoutLink = findViewById(R.id.logoutLink);
         surveyLink = findViewById(R.id.surveyLink);
+        howTo1 = findViewById(R.id.howTo1);
+        howTo2 = findViewById(R.id.howTo2);
+        nextButtonHelp = findViewById(R.id.nextButtonHelp);
+        doneButtonHelp = findViewById(R.id.doneButtonHelp);
+        exitButton20 = findViewById(R.id.exitButton20);
+        level1Button = findViewById(R.id.level1Button);
+        level2Button = findViewById(R.id.level2Button);
+        level3Button = findViewById(R.id.level3Button);
+        level4Button = findViewById(R.id.level4Button);
 
         /**
          * Set the view from clicking exitButtonMenu.
@@ -69,6 +89,32 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Menu.this, Home.class));
+                howTo1.setVisibility(View.VISIBLE);
+                nextButtonHelp.setVisibility(View.VISIBLE);
+                exitButton20.setVisibility(View.VISIBLE);
+                level1Button.setVisibility(View.GONE);
+                level2Button.setVisibility(View.GONE);
+                level3Button.setVisibility(View.GONE);
+                level4Button.setVisibility(View.GONE);
+                /*
+                if (nextButtonHelp.isPressed()) {
+                    doneButtonHelp.setVisibility(View.VISIBLE);
+                    howTo2.setVisibility(View.VISIBLE);
+                    howTo1.setVisibility(View.GONE);
+                    nextButtonHelp.setVisibility(View.GONE);
+                }
+
+                if (doneButtonHelp.isPressed()) {
+                    howTo1.setVisibility(View.GONE);
+                    howTo2.setVisibility(View.GONE);
+                    nextButtonHelp.setVisibility(View.GONE);
+                    doneButtonHelp.setVisibility(View.GONE);
+                    exitButton20.setVisibility(View.GONE);
+                    level1Button.setVisibility(View.VISIBLE);
+                    level2Button.setVisibility(View.VISIBLE);
+                    level3Button.setVisibility(View.VISIBLE);
+                    level4Button.setVisibility(View.VISIBLE);
+                } */
 
             }
         });

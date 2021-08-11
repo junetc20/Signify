@@ -10,6 +10,7 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
  * A class that represents the fifth screen within the third learning section of Signify.
  * Users can use this screen to view learning concepts.
  *
