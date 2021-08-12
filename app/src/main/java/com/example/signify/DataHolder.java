@@ -18,6 +18,12 @@ public class DataHolder {
     private static boolean level3ButtonClickable = false;
     private static boolean level4ButtonClickable = false;
     private static boolean userGuideViewed = false;
+    private static int activityCount1;
+    private static int activityCount2;
+    private static int activityCount3;
+    private static int activityCount4;
+
+
 
     public static int getPercentageComplete1() {
         return percentageComplete1;
@@ -145,5 +151,37 @@ public class DataHolder {
 
     public static void setUserGuideViewed(boolean userGuideViewed) {
         DataHolder.userGuideViewed = userGuideViewed;
+    }
+
+    public static int getActivityCount1() {
+        return activityCount1;
+    }
+
+    public static void setActivityCount1(int activityCount1) {
+        DataHolder.activityCount1 = activityCount1;
+    }
+
+    public static int getActivityCount2() {
+        return activityCount2;
+    }
+
+    public static void setActivityCount2(int activityCount2) {
+        DataHolder.activityCount2 = activityCount2;
+    }
+
+    public static int getActivityCount3() {
+        return activityCount3;
+    }
+
+    public static void setActivityCount3(int activityCount3) {
+        DataHolder.activityCount3 = activityCount3;
+    }
+
+    public static int getActivityCount4() {
+        return activityCount4;
+    }
+
+    public static void setActivityCount4(int activityCount4) {
+        DataHolder.activityCount4 = activityCount4;
     }
 }

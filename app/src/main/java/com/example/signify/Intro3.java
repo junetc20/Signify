@@ -42,6 +42,7 @@ public class Intro3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Intro3.this, Home.class));
+                DataHolder.setActivityCount1(3);
             }
         });
 

@@ -68,8 +68,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     /**
      * Update data in the SQLite database.
      * @return has data been updated in the database?
-     * @param firstName the user's first name.
-     * @param lastName the user's last name.
      * @param emailAdd the user's email.
      */
     public Boolean updateUserData(String emailAdd, String firstName, String lastName) {
@@ -78,7 +76,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("firstName", firstName);
         contentValues.put("lastName", lastName);
         contentValues.put("email", emailAdd);
-        @SuppressLint("Recycle")
+        /* db.update("user", contentValues, "firstName=?", new String[]{originalFirstName});
+        db.update("user", contentValues, "lastName=?", new String[]{originalLastName});
+        db.update("user", contentValues, "email=?", new String[]{originalEmailAdd}); */
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{emailAdd});
         if (cursor.getCount() > 0) {
             long res = db.update("user", contentValues, "email=?", new String[]{emailAdd});

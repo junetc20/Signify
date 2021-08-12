@@ -271,11 +271,22 @@ public class Home extends AppCompatActivity {
         level1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Intro1.class));
-                level1Button.setText(R.string.cont);
                 DataHolder.setLevel1ButtonClicked(true);
                 if (DataHolder.getPercentageComplete1() < 10) {
                     DataHolder.setPercentageComplete1(10);
+                }
+
+                if (DataHolder.getActivityCount1() <= 1) {
+                    startActivity(new Intent(Home.this, Intro1.class));
+                }
+                else if (DataHolder.getActivityCount1() == 2) {
+                    startActivity(new Intent(Home.this, Intro2.class));
+                }
+                else if (DataHolder.getActivityCount1() == 3) {
+                    startActivity(new Intent(Home.this, Intro3.class));
+                }
+                else {
+                    startActivity(new Intent(Home.this, Intro4.class));
                 }
             }
         });
@@ -288,10 +299,16 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Alphabet1.class));
-                level2Button.setText(R.string.cont);
                 DataHolder.setLevel2ButtonClicked(true);
                 if (DataHolder.getPercentageComplete2() < 20) {
                     DataHolder.setPercentageComplete2(20);
+                }
+
+                if (DataHolder.getActivityCount2() == 2) {
+                    startActivity(new Intent(Home.this, Alphabet2.class));
+                }
+                else {
+                    startActivity(new Intent(Home.this, Alphabet1.class));
                 }
             }
         });
@@ -304,7 +321,6 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Numbers1.class));
-                level3Button.setText(R.string.cont);
                 DataHolder.setLevel3ButtonClicked(true);
                 if (DataHolder.getPercentageComplete3() < 10) {
                     DataHolder.setPercentageComplete3(10);
@@ -320,7 +336,6 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Convo1.class));
-                level4Button.setText(R.string.cont);
                 DataHolder.setLevel4ButtonClicked(true);
                 if (DataHolder.getPercentageComplete4() < 5) {
                     DataHolder.setPercentageComplete4(5);

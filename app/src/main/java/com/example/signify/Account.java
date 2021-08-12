@@ -74,10 +74,10 @@ public class Account extends AppCompatActivity {
         saveChangesAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String newFName = firstNameAcc.getText().toString();
-                String newLName = lastNameAcc.getText().toString();
-                String newEmail = emailAcc.getText().toString();
-                Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
+                String originalFName = firstNameAcc.getText().toString();
+                String originalLName = lastNameAcc.getText().toString();
+                String originalEmail = emailAcc.getText().toString();
+                Boolean updateData = db.updateUserData(originalFName, originalLName, originalEmail);
                 if (updateData) {
                     Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
                 }
