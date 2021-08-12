@@ -99,7 +99,9 @@ public class Quiz2 extends AppCompatActivity
                 startActivity(new Intent(Quiz2.this, Home.class));
                 DataHolder.setCompleteButtonClicked(true);
                 DataHolder.setLevel3ButtonClickable(true);
-                DataHolder.setPercentageComplete2(100);
+                if (DataHolder.getPercentageComplete2() < 100) {
+                    DataHolder.setPercentageComplete2(100);
+                }
             }
         });
     }

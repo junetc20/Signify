@@ -103,7 +103,9 @@ public class Quiz3 extends AppCompatActivity
                 startActivity(new Intent(Quiz3.this, Home.class));
                 DataHolder.setCompleteButton3Clicked(true);
                 DataHolder.setLevel4ButtonClickable(true);
-                DataHolder.setPercentageComplete3(100);
+                if (DataHolder.getPercentageComplete3() < 100) {
+                    DataHolder.setPercentageComplete3(100);
+                }
             }
         });
     }

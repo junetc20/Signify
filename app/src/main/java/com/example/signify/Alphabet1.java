@@ -55,6 +55,9 @@ public class Alphabet1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Alphabet1.this, Alphabet2.class));
+                if (DataHolder.getPercentageComplete2() < 40) {
+                    DataHolder.setPercentageComplete2(40);
+                }
             }
         });
 

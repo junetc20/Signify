@@ -80,6 +80,9 @@ public class Numbers1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Numbers1.this, Numbers2.class));
+                if (DataHolder.getPercentageComplete3() < 20) {
+                    DataHolder.setPercentageComplete3(20);
+                }
             }
         });
 

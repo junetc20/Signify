@@ -75,6 +75,9 @@ public class Convo6 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Convo6.this, Convo7.class));
+                if (DataHolder.getPercentageComplete4() < 35) {
+                    DataHolder.setPercentageComplete4(35);
+                }
             }
         });
 

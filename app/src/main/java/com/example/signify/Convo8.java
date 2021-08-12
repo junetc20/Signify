@@ -65,6 +65,9 @@ public class Convo8 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Convo8.this, Quiz4.class));
+                if (DataHolder.getPercentageComplete4() < 45) {
+                    DataHolder.setPercentageComplete4(45);
+                }
             }
         });
 
