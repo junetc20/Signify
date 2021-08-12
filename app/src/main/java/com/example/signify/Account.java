@@ -77,7 +77,6 @@ public class Account extends AppCompatActivity {
                 String newLName = lastNameAcc.getText().toString();
                 String newEmail = emailAcc.getText().toString();
                 Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
-
                 if (updateData) {
                     Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
                 }

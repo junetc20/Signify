@@ -91,9 +91,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     /**
      * Delete user data from the SQLite database.
      * @return has data been deleted from the database?
-     * @param emailAdd the user's email.
-     * @param firstName the user's first name.
-     * @param lastName the user's last name.
      * @param password the user's password.
      */
   

@@ -40,9 +40,6 @@ public class Quiz1 extends AppCompatActivity {
     private TextView resultText2;
     private ImageView resultImage2;
     int score = 0;
-    Home level1Button;
-    Home level2Button;
-    Home prog1;
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +60,7 @@ public class Quiz1 extends AppCompatActivity {
         resultText2 = findViewById(R.id.resultText2);
         resultImage2 = findViewById(R.id.resultImage2);
 
-        //Setting initial question up when quiz is opened
+        // Setting initial question up when quiz is opened
         questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));
         answer1.setText(MultipleChoiceQ.getChoice1(currentQuestionNumber));
         answer2.setText(MultipleChoiceQ.getChoice2(currentQuestionNumber));
@@ -88,10 +85,12 @@ public class Quiz1 extends AppCompatActivity {
         completeButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Home home = new Home();
                 startActivity(new Intent(Quiz1.this, Home.class));
-                String s = home.updateProg1();
-                s = ("Progress: 100%");
+                DataHolder.setCompleteButton2Clicked(true);
+                DataHolder.setLevel2ButtonClickable(true);
+                if (DataHolder.getPercentageComplete1() < 100) {
+                    DataHolder.setPercentageComplete1(100);
+                }
             }
         });
 

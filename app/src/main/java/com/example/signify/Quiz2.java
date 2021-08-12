@@ -97,6 +97,9 @@ public class Quiz2 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Quiz2.this, Home.class));
+                DataHolder.setCompleteButtonClicked(true);
+                DataHolder.setLevel3ButtonClickable(true);
+                DataHolder.setPercentageComplete2(100);
             }
         });
     }

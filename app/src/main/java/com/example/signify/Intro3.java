@@ -53,6 +53,9 @@ public class Intro3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Intro3.this, Intro4.class));
+                if (DataHolder.getPercentageComplete1() < 40) {
+                    DataHolder.setPercentageComplete1(40);
+                }
             }
         });
 

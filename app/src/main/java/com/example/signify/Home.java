@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -42,18 +43,13 @@ public class Home extends AppCompatActivity {
     TextView prog3;
     TextView prog4;
     int count;
-    int countOne;
-    int countTwo;
-    int countThree;
-    int countFour;
 
 
-    @SuppressLint({"ResourceAsColor", "Range"})
+    @SuppressLint({"ResourceAsColor", "Range", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        showFirstName();
 
         /**
          * Constructor for objects of class Home.
@@ -76,29 +72,46 @@ public class Home extends AppCompatActivity {
         prog3 = findViewById(R.id.prog3);
         prog4 = findViewById(R.id.prog4);
 
+        showFirstName();
+
+        // Sets prog1 text from DataHolder method
+        String s = String.valueOf(DataHolder.getPercentageComplete1());
+        prog1.setText("Progress: " + s + "%"); // TODO change this setup if all hell breaks loose
+
+        if(DataHolder.isLevel2ButtonClickable()) {
+            level2Button.setEnabled(true);
+        }
+
         // Changes text and color of level1Button on create
-        if(countOne == 1) {
+        if (DataHolder.isCompleteButton2Clicked()) {
+            level1Button.setText(R.string.revisit);
+            level1Button.setBackgroundColor(R.color.purple);
+            level2Button.setText(R.string.start);
+            level2Button.setBackgroundColor(R.color.background_blue);
+        }
+        else if (DataHolder.isLevel1ButtonClicked()) {
             level1Button.setText(R.string.cont);
             level1Button.setBackgroundColor(R.color.BSL_blue);
         }
+        else {
+            level1Button.setText(R.string.start);
+            level1Button.setBackgroundColor(R.color.BSL_blue);
+        }
 
-        // Changes text and color of level2Button on create.
-        if(countTwo == 1) {
+        // Changes text and color of level2Button on create
+        if (DataHolder.isCompleteButtonClicked())
             level2Button.setText(R.string.cont);
             level2Button.setBackgroundColor(R.color.BSL_blue);
-        }
+
 
         // Changes text and color of level3Button on create.
-        if(countThree == 1) {
             level3Button.setText(R.string.cont);
             level3Button.setBackgroundColor(R.color.BSL_blue);
-        }
+
 
         // Changes text and color of level4Button on create.
-        if(countFour == 1) {
             level4Button.setText(R.string.cont);
             level4Button.setBackgroundColor(R.color.BSL_blue);
-        }
 
         /**
          * Set the view from clicking exitButtonHelp.
@@ -186,7 +199,10 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Intro1.class));
                 level1Button.setText(R.string.cont);
-                countOne++;
+                DataHolder.setLevel1ButtonClicked(true);
+                if (DataHolder.getPercentageComplete1() < 10) {
+                    DataHolder.setPercentageComplete1(10);
+                }
             }
         });
 
@@ -199,7 +215,10 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Alphabet1.class));
                 level2Button.setText(R.string.cont);
-                countTwo++;
+                DataHolder.setLevel2ButtonClicked(true);
+                if (DataHolder.getPercentageComplete2() < 10) {
+                    DataHolder.setPercentageComplete2(10);
+                }
             }
         });
 
@@ -212,7 +231,10 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Numbers1.class));
                 level3Button.setText(R.string.cont);
-                countThree++;
+                DataHolder.setLevel3ButtonClicked(true);
+                if (DataHolder.getPercentageComplete3() < 10) {
+                    DataHolder.setPercentageComplete3(10);
+                }
             }
         });
 
@@ -225,7 +247,10 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Convo1.class));
                 level4Button.setText(R.string.cont);
-                countFour++;
+                DataHolder.setLevel4ButtonClicked(true);
+                if (DataHolder.getPercentageComplete4() < 10) {
+                    DataHolder.setPercentageComplete4(10);
+                }
             }
         });
     }
@@ -262,11 +287,6 @@ public class Home extends AppCompatActivity {
         else {
             return true;
         }
-    }
-
-    public String updateProg1() {
-        String prog1Text = prog1.getText().toString();
-        return prog1Text;
     }
 }
 
