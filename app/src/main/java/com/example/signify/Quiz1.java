@@ -1,5 +1,7 @@
 package com.example.signify;
 
+  import com.example.signify.Home;
+
   import android.annotation.SuppressLint;
   import android.content.Intent;
   import android.os.Bundle;
@@ -86,7 +88,10 @@ public class Quiz1 extends AppCompatActivity {
         completeButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Home home = new Home();
                 startActivity(new Intent(Quiz1.this, Home.class));
+                String s = home.updateProg1();
+                s = ("Progress: 100%");
             }
         });
 

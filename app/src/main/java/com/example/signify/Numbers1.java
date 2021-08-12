@@ -11,8 +11,8 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
- * A class that represents the first screen within the third learning section of Signify.
+/**
+ *  A class that represents the first screen within the third learning section of Signify.
  * Users can use this screen to view learning concepts.
  *
  * @author June Caldwell
@@ -36,6 +36,7 @@ public class Numbers1 extends AppCompatActivity {
         /**
          * Constructor for objects of class Numbers1.
          */
+        /*
         exitButton8 = findViewById(R.id.exitButton8);
         nextArrow7 = findViewById(R.id.nextArrow7);
         beginButton3 = findViewById(R.id.beginButton4);
@@ -58,6 +59,7 @@ public class Numbers1 extends AppCompatActivity {
         noVideo2.setMediaController(mediaController2);
         mediaController2.setAnchorView(noVideo2);
         noVideo2.seekTo(3);
+        */
 
         /**
          * Set the view from clicking exitButton8.

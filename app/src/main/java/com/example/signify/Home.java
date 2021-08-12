@@ -36,16 +36,16 @@ public class Home extends AppCompatActivity {
     ImageView howTo2;
     Button nextButtonHelp;
     Button doneButtonHelp;
-    ImageView exitButtonHelp;
+    ImageView exitButton20;
     TextView prog1;
     TextView prog2;
     TextView prog3;
     TextView prog4;
-    int count = 0;
-    int countOne = 0;
-    int countTwo = 0;
-    int countThree = 0;
-    int countFour = 0;
+    int count;
+    int countOne;
+    int countTwo;
+    int countThree;
+    int countFour;
 
 
     @SuppressLint({"ResourceAsColor", "Range"})
@@ -53,13 +53,12 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        count++;
+        showFirstName();
 
         /**
          * Constructor for objects of class Home.
          */
         db = new DatabaseHelper(this);
-        Cursor cursor = db.firstName();
         userAccount = findViewById(R.id.userAccount);
         menu = findViewById(R.id.menu);
         level1Button = findViewById(R.id.level1Button);
@@ -71,90 +70,53 @@ public class Home extends AppCompatActivity {
         howTo2 = findViewById(R.id.howTo2);
         nextButtonHelp = findViewById(R.id.nextButtonHelp);
         doneButtonHelp = findViewById(R.id.doneButtonHelp);
-        exitButtonHelp = findViewById(R.id.exitButton20);
+        exitButton20 = findViewById(R.id.exitButton20);
         prog1 = findViewById(R.id.prog1);
         prog2 = findViewById(R.id.prog2);
         prog3 = findViewById(R.id.prog3);
         prog4 = findViewById(R.id.prog4);
 
-        if(cursor.getCount() > 0) {
-            while (cursor.moveToNext()) {
-                firstName.setText(cursor.getString(cursor.getColumnIndex("firstName")));
-            }
-        }
-        else{
-            Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
-        }
-
-        // Stop help popups from appearing after first instance.
-        if(count > 1) {
-            howTo1.setVisibility(View.GONE);
-            howTo2.setVisibility(View.GONE);
-            nextButtonHelp.setVisibility(View.GONE);
-            doneButtonHelp.setVisibility(View.GONE);
-            exitButtonHelp.setVisibility(View.GONE);
-            level1Button.setVisibility(View.VISIBLE);
-            level2Button.setVisibility(View.VISIBLE);
-            level3Button.setVisibility(View.VISIBLE);
-            level4Button.setVisibility(View.VISIBLE);
-        }
-
-        // Changes text and color of level1Button on create.
-        if(countOne > 1) {
+        // Changes text and color of level1Button on create
+        if(countOne == 1) {
             level1Button.setText(R.string.cont);
-            level1Button.setBackgroundColor(R.color.BSL_blue);
-        }
-        else {
-            level1Button.setText(R.string.start);
             level1Button.setBackgroundColor(R.color.BSL_blue);
         }
 
         // Changes text and color of level2Button on create.
-        if(countTwo > 1) {
+        if(countTwo == 1) {
             level2Button.setText(R.string.cont);
             level2Button.setBackgroundColor(R.color.BSL_blue);
         }
-        else {
-            level2Button.setText(R.string.locked);
-            level2Button.setBackgroundColor(R.color.background_blue);
-        }
 
         // Changes text and color of level3Button on create.
-        if(countThree > 1) {
+        if(countThree == 1) {
             level3Button.setText(R.string.cont);
             level3Button.setBackgroundColor(R.color.BSL_blue);
         }
-        else {
-            level3Button.setText(R.string.locked);
-            level3Button.setBackgroundColor(R.color.background_blue);
-        }
 
         // Changes text and color of level4Button on create.
-        if(countFour > 1) {
+        if(countFour == 1) {
             level4Button.setText(R.string.cont);
             level4Button.setBackgroundColor(R.color.BSL_blue);
-        }
-        else {
-            level4Button.setText(R.string.locked);
-            level4Button.setBackgroundColor(R.color.background_blue);
         }
 
         /**
          * Set the view from clicking exitButtonHelp.
          * @param v the onClickListener View.
          */
-        exitButtonHelp.setOnClickListener(new View.OnClickListener() {
+        exitButton20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 howTo1.setVisibility(View.GONE);
                 howTo2.setVisibility(View.GONE);
                 nextButtonHelp.setVisibility(View.GONE);
                 doneButtonHelp.setVisibility(View.GONE);
-                exitButtonHelp.setVisibility(View.GONE);
+                exitButton20.setVisibility(View.GONE);
                 level1Button.setVisibility(View.VISIBLE);
                 level2Button.setVisibility(View.VISIBLE);
                 level3Button.setVisibility(View.VISIBLE);
                 level4Button.setVisibility(View.VISIBLE);
+                count++;
             }
         });
 
@@ -183,11 +145,12 @@ public class Home extends AppCompatActivity {
                 howTo2.setVisibility(View.GONE);
                 nextButtonHelp.setVisibility(View.GONE);
                 doneButtonHelp.setVisibility(View.GONE);
-                exitButtonHelp.setVisibility(View.GONE);
+                exitButton20.setVisibility(View.GONE);
                 level1Button.setVisibility(View.VISIBLE);
                 level2Button.setVisibility(View.VISIBLE);
                 level3Button.setVisibility(View.VISIBLE);
                 level4Button.setVisibility(View.VISIBLE);
+                count++;
             }
         });
 
@@ -266,6 +229,46 @@ public class Home extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Retrieves data from the firstName column of the database login.db.
+     * Inserts this retrieved data into the TextView firstName.
+     */
+    public void showFirstName() {
+        Cursor cursor = db.firstName();
+        if (cursor.getCount() > 0) {
+            while (cursor.moveToNext()) {
+                firstName.setText(cursor.getString(cursor.getColumnIndex("firstName")));
+            }
+        } else {
+            Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    // Stop help popups from appearing after first instance.
+    public boolean isHelpShown() {
+        if (count > 1) {
+            howTo1.setVisibility(View.GONE);
+            howTo2.setVisibility(View.GONE);
+            nextButtonHelp.setVisibility(View.GONE);
+            doneButtonHelp.setVisibility(View.GONE);
+            exitButton20.setVisibility(View.GONE);
+            level1Button.setVisibility(View.VISIBLE);
+            level2Button.setVisibility(View.VISIBLE);
+            level3Button.setVisibility(View.VISIBLE);
+            level4Button.setVisibility(View.VISIBLE);
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    public String updateProg1() {
+        String prog1Text = prog1.getText().toString();
+        return prog1Text;
+    }
 }
+
 
 

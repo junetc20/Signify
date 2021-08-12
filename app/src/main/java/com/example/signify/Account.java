@@ -38,12 +38,12 @@ public class Account extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+        showUserDetails();
 
         /**
          * Constructor for objects of class Account.
          */
         db = new DatabaseHelper(this);
-        Cursor cursor = db.getUserData();
         exitButtonAcc = findViewById(R.id.exitButtonAcc);
         firstNameAcc = findViewById(R.id.firstNameAcc);
         lastNameAcc = findViewById(R.id.lastNameAcc);
@@ -53,17 +53,6 @@ public class Account extends AppCompatActivity {
         reNewPassAcc = findViewById(R.id.reNewPassAcc);
         saveChangesAcc = findViewById(R.id.saveChangesAcc);
         saveChangesPass = findViewById(R.id.saveChangesPass);
-
-        if(cursor.getCount() > 0) {
-            while (cursor.moveToNext()) {
-        firstNameAcc.setText(cursor.getString(cursor.getColumnIndex("firstName")));
-        lastNameAcc.setText(cursor.getString(cursor.getColumnIndex("lastName")));
-        emailAcc.setText(cursor.getString(cursor.getColumnIndex("email")));
-            }
-        }
-        else {
-            Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
-        }
 
         /**
          * Set the view from clicking exitButtonAcc.
@@ -89,7 +78,7 @@ public class Account extends AppCompatActivity {
                 String newEmail = emailAcc.getText().toString();
                 Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
 
-                if (updateData == true) {
+                if (updateData) {
                     Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -143,5 +132,23 @@ public class Account extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    /**
+     * Retrieves data from the firstName, lastName and email columns of the database login.db.
+     * Inserts this retrieved data into the TextViews firstNameAcc, lastNameAcc and emailAcc.
+     */
+    public void showUserDetails() {
+        Cursor cursor = db.getUserData();
+        if(cursor.getCount() > 0) {
+            while (cursor.moveToNext()) {
+                firstNameAcc.setText(cursor.getString(cursor.getColumnIndex("firstName")));
+                lastNameAcc.setText(cursor.getString(cursor.getColumnIndex("lastName")));
+                emailAcc.setText(cursor.getString(cursor.getColumnIndex("email")));
+            }
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
+        }
     }
 }
