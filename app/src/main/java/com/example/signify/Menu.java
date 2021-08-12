@@ -1,5 +1,6 @@
 package com.example.signify;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -76,8 +78,29 @@ public class Menu extends AppCompatActivity {
          */
         logoutLink.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Menu.this, Login.class));
+            public void onClick(View v) {AlertDialog.Builder builder1 = new AlertDialog.Builder(Menu.this);
+                builder1.setMessage("Are you sure you want to log out of your account?");
+                builder1.setCancelable(true);
+
+                builder1.setPositiveButton(
+                        "Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                startActivity(new Intent(Menu.this, Login.class));
+                                dialog.cancel();
+                            }
+                        });
+
+                builder1.setNegativeButton(
+                        "No",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alert1 = builder1.create();
+                alert1.show();
             }
         });
 
@@ -100,9 +123,32 @@ public class Menu extends AppCompatActivity {
         bslLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.british-sign.co.uk/");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(Menu.this);
+                builder1.setMessage("This will take you to an external website. Do you want to open this?");
+                builder1.setCancelable(true);
+
+                builder1.setPositiveButton(
+                        "Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Uri uri = Uri.parse("https://www.british-sign.co.uk/");
+                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                startActivity(intent);
+                                dialog.cancel();
+                            }
+                        });
+
+                builder1.setNegativeButton(
+                        "No",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alert1 = builder1.create();
+                alert1.show();
+
             }
         });
 
@@ -116,5 +162,6 @@ public class Menu extends AppCompatActivity {
                 startActivity(new Intent(Menu.this, Assess.class));
             }
         });
+
     }
 }
