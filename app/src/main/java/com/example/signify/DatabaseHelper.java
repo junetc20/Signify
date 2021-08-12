@@ -108,18 +108,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Boolean deleteUserData(String emailAdd, String firstName, String lastName, String password) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        @SuppressLint("Recycle")
-        Cursor cursor = db.rawQuery("Select * from user where email = ?", new String[]{emailAdd});
-        if (cursor.getCount() > 0) {
-            long res = db.delete("user", "email=?", new String[]{emailAdd});
-            return res > -1;
-        } else {
-            return false;
-        }
-    }
-
     /**
      * Collect all user data from database.
      * @return all user data from cursor.

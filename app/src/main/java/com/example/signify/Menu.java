@@ -96,25 +96,6 @@ public class Menu extends AppCompatActivity {
                 level2Button.setVisibility(View.GONE);
                 level3Button.setVisibility(View.GONE);
                 level4Button.setVisibility(View.GONE);
-                /*
-                if (nextButtonHelp.isPressed()) {
-                    doneButtonHelp.setVisibility(View.VISIBLE);
-                    howTo2.setVisibility(View.VISIBLE);
-                    howTo1.setVisibility(View.GONE);
-                    nextButtonHelp.setVisibility(View.GONE);
-                }
-
-                if (doneButtonHelp.isPressed()) {
-                    howTo1.setVisibility(View.GONE);
-                    howTo2.setVisibility(View.GONE);
-                    nextButtonHelp.setVisibility(View.GONE);
-                    doneButtonHelp.setVisibility(View.GONE);
-                    exitButton20.setVisibility(View.GONE);
-                    level1Button.setVisibility(View.VISIBLE);
-                    level2Button.setVisibility(View.VISIBLE);
-                    level3Button.setVisibility(View.VISIBLE);
-                    level4Button.setVisibility(View.VISIBLE);
-                } */
 
             }
         });

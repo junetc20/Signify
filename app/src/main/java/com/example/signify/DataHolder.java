@@ -17,6 +17,10 @@ public class DataHolder {
     private static boolean level2ButtonClickable = false;
     private static boolean level3ButtonClickable = false;
     private static boolean level4ButtonClickable = false;
+    private static boolean helpExitButtonClicked = false;
+    private static boolean userGuideLinkClicked = false;
+
+
 
     public static int getPercentageComplete1() {
         return percentageComplete1;
@@ -136,5 +140,13 @@ public class DataHolder {
 
     public static void setCompleteButton4Clicked(boolean completeButton4Clicked) {
         DataHolder.completeButton4Clicked = completeButton4Clicked;
+    }
+
+    public static boolean isHelpExitButtonClicked() {
+        return helpExitButtonClicked;
+    }
+
+    public static void setHelpExitButtonClicked(boolean helpExitButtonClicked) {
+        DataHolder.helpExitButtonClicked = helpExitButtonClicked;
     }
 }
