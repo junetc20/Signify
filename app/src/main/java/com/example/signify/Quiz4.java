@@ -167,7 +167,7 @@ public class Quiz4 extends AppCompatActivity
                 questionCountDisplay4.setText("Question 2 / 6");
                 break;
             case 2:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_not_good));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_how_you));
                 quizVideo1.start();
                 questionCountDisplay4.setText("Question 3 / 6");
                 break;

@@ -88,19 +88,19 @@ public class Home extends AppCompatActivity {
 
         // Sets prog1 text from DataHolder method
         String s = String.valueOf(DataHolder.getPercentageComplete1());
-        prog1.setText("Progress: " + s + "%"); // TODO change this setup if all hell breaks loose
+        prog1.setText("Progress: " + s + "%");
 
         // Sets prog2 text from DataHolder method
         String e = String.valueOf(DataHolder.getPercentageComplete2());
-        prog2.setText("Progress: " + e + "%"); // TODO change this setup if all hell breaks loose
+        prog2.setText("Progress: " + e + "%");
 
         // Sets prog3 text from DataHolder method
         String i = String.valueOf(DataHolder.getPercentageComplete3());
-        prog3.setText("Progress: " + i + "%"); // TODO change this setup if all hell breaks loose
+        prog3.setText("Progress: " + i + "%");
 
         // Sets prog4 text from DataHolder method
         String o = String.valueOf(DataHolder.getPercentageComplete4());
-        prog4.setText("Progress: " + o + "%"); // TODO change this setup if all hell breaks loose
+        prog4.setText("Progress: " + o + "%");
 
         // Makes level2Button clickable
         if(DataHolder.isLevel2ButtonClickable()) {
@@ -120,69 +120,69 @@ public class Home extends AppCompatActivity {
         // Changes text and color of level1Button on create
         if (DataHolder.isCompleteButton2Clicked()) {
             level1Button.setText(R.string.revisit);
-            level1Button.setBackgroundColor(R.color.purple);
+            level1Button.setBackgroundColor(getResources().getColor(R.color.purple));
         }
         else if (DataHolder.isLevel1ButtonClicked()) {
             level1Button.setText(R.string.cont);
-            level1Button.setBackgroundColor(R.color.BSL_blue);
+            level1Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
         }
         else {
             level1Button.setText(R.string.start);
-            level1Button.setBackgroundColor(R.color.BSL_blue);
+            level1Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
         }
 
         // Changes text and color of level2Button on create
         if (DataHolder.isCompleteButtonClicked()) {
             level2Button.setText(R.string.revisit);
-            level2Button.setBackgroundColor(R.color.purple);
+            level2Button.setBackgroundColor(getResources().getColor(R.color.purple));
         }
         else if (DataHolder.isLevel2ButtonClicked()) {
             level2Button.setText(R.string.cont);
-            level2Button.setBackgroundColor(R.color.BSL_blue);
+            level2Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
         }
         else if (DataHolder.isCompleteButton2Clicked()) {
             level2Button.setText(R.string.start);
-            level2Button.setBackgroundColor(R.color.BSL_blue);
+            level2Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
         }
         else {
             level2Button.setText(R.string.locked);
-            level2Button.setBackgroundColor(R.color.background_blue);
+            level2Button.setBackgroundColor(getResources().getColor(R.color.background_blue));
         }
 
         // Changes text and color of level3Button on create
         if (DataHolder.isCompleteButton3Clicked()) {
             level3Button.setText(R.string.revisit);
-            level3Button.setBackgroundColor(R.color.purple);
+            level3Button.setBackgroundColor(getResources().getColor(R.color.purple));
         }
         else if (DataHolder.isLevel3ButtonClicked()) {
             level3Button.setText(R.string.cont);
-            level3Button.setBackgroundColor(R.color.BSL_blue);
+            level3Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
         }
         else if (DataHolder.isCompleteButtonClicked()) {
             level3Button.setText(R.string.start);
-            level3Button.setBackgroundColor(R.color.BSL_blue);
+            level3Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
         }
         else {
             level3Button.setText(R.string.locked);
-            level3Button.setBackgroundColor(R.color.background_blue);
+            level3Button.setBackgroundColor(getResources().getColor(R.color.background_blue));
         }
 
         // Changes text and color of level4Button on create
         if (DataHolder.isCompleteButton4Clicked()) {
             level4Button.setText(R.string.revisit);
-            level4Button.setBackgroundColor(R.color.purple);
+            level4Button.setBackgroundColor(getResources().getColor(R.color.purple));
         }
         else if (DataHolder.isLevel4ButtonClicked()) {
             level4Button.setText(R.string.cont);
-            level4Button.setBackgroundColor(R.color.BSL_blue);
+            level4Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
         }
         else if (DataHolder.isCompleteButton3Clicked()) {
             level4Button.setText(R.string.start);
-            level4Button.setBackgroundColor(R.color.BSL_blue);
+            level4Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
         }
         else {
             level4Button.setText(R.string.locked);
-            level4Button.setBackgroundColor(R.color.background_blue);
+            level4Button.setBackgroundColor(getResources().getColor(R.color.background_blue));
         }
 
         /**
