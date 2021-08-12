@@ -75,6 +75,7 @@ public class Quiz1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Quiz1.this, Home.class));
+                DataHolder.setActivityCount1(5);
             }
         });
 
@@ -91,6 +92,7 @@ public class Quiz1 extends AppCompatActivity {
                 if (DataHolder.getPercentageComplete1() < 100) {
                     DataHolder.setPercentageComplete1(100);
                 }
+                DataHolder.setActivityCount1(0);
             }
         });
 

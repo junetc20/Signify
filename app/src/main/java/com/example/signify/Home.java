@@ -285,8 +285,11 @@ public class Home extends AppCompatActivity {
                 else if (DataHolder.getActivityCount1() == 3) {
                     startActivity(new Intent(Home.this, Intro3.class));
                 }
-                else {
+                else if (DataHolder.getActivityCount1() == 4){
                     startActivity(new Intent(Home.this, Intro4.class));
+                }
+                else if (DataHolder.getActivityCount1() == 5){
+                    startActivity(new Intent(Home.this, Quiz1.class));
                 }
             }
         });
@@ -298,17 +301,19 @@ public class Home extends AppCompatActivity {
         level2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Alphabet1.class));
                 DataHolder.setLevel2ButtonClicked(true);
                 if (DataHolder.getPercentageComplete2() < 20) {
                     DataHolder.setPercentageComplete2(20);
                 }
 
-                if (DataHolder.getActivityCount2() == 2) {
+                if (DataHolder.getActivityCount2() <= 1)  {
+                    startActivity(new Intent(Home.this, Alphabet1.class));
+                }
+                else if (DataHolder.getActivityCount2() == 2) {
                     startActivity(new Intent(Home.this, Alphabet2.class));
                 }
-                else {
-                    startActivity(new Intent(Home.this, Alphabet1.class));
+                else if (DataHolder.getActivityCount2() == 3){
+                    startActivity(new Intent(Home.this, Quiz2.class));
                 }
             }
         });
@@ -324,6 +329,28 @@ public class Home extends AppCompatActivity {
                 DataHolder.setLevel3ButtonClicked(true);
                 if (DataHolder.getPercentageComplete3() < 10) {
                     DataHolder.setPercentageComplete3(10);
+                }
+
+                if (DataHolder.getActivityCount3() <= 1) {
+                    startActivity(new Intent(Home.this, Numbers1.class));
+                }
+                else if (DataHolder.getActivityCount3() == 2) {
+                    startActivity(new Intent(Home.this, Numbers2.class));
+                }
+                else if (DataHolder.getActivityCount3() == 3) {
+                    startActivity(new Intent(Home.this, Numbers3.class));
+                }
+                else if (DataHolder.getActivityCount3() == 4){
+                    startActivity(new Intent(Home.this, Numbers4.class));
+                }
+                else if (DataHolder.getActivityCount3() == 5){
+                    startActivity(new Intent(Home.this, Numbers5.class));
+                }
+                else if (DataHolder.getActivityCount3() == 6){
+                    startActivity(new Intent(Home.this, Numbers6.class));
+                }
+                else if (DataHolder.getActivityCount3() == 7){
+                    startActivity(new Intent(Home.this, Quiz3.class));
                 }
             }
         });

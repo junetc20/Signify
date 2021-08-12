@@ -54,6 +54,7 @@ public class Alphabet2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Alphabet2.this, Home.class));
+                DataHolder.setActivityCount2(2);
             }
         });
 
