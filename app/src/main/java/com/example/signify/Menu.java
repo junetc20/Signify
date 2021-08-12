@@ -78,7 +78,9 @@ public class Menu extends AppCompatActivity {
          */
         logoutLink.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
+            public void onClick(View v) {
+                // Sets alert dialog for user to confirm action
+                AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
                 builder.setMessage("Are you sure you want to log out of your account?");
                 builder.setCancelable(true);
 
@@ -123,6 +125,7 @@ public class Menu extends AppCompatActivity {
         bslLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Sets alert dialog for user to confirm action
                 AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
                 builder.setMessage("This will take you to an external website. Do you want to open this?");
                 builder.setCancelable(true);
