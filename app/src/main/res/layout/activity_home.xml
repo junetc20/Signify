@@ -114,7 +114,7 @@
         android:text="START"
         android:textSize="12sp"
         android:visibility="invisible"
-        app:backgroundColor="@color/BSL_blue"
+        app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView12"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="@+id/imageView12"
@@ -144,7 +144,7 @@
         android:text="LOCKED"
         android:textSize="12sp"
         android:visibility="invisible"
-        app:backgroundColor="@color/background_blue"
+        app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
@@ -158,7 +158,7 @@
         android:text="Locked"
         android:textSize="12sp"
         android:visibility="invisible"
-        app:backgroundColor="@color/background_blue"
+        app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="@+id/imageView15"
         app:layout_constraintTop_toTopOf="@+id/imageView15" />
@@ -172,7 +172,7 @@
         android:text="Locked"
         android:visibility="invisible"
         android:textSize="12sp"
-        app:backgroundColor="@color/background_blue"
+        app:backgroundTint="@color/background_blue"
         app:layout_constraintEnd_toEndOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="@+id/imageView14"
         app:layout_constraintTop_toTopOf="@+id/imageView14" />
@@ -262,25 +262,15 @@
         android:layout_marginTop="477dp"
         android:layout_marginEnd="115dp"
         android:layout_marginRight="115dp"
+        android:enabled="false"
         android:text="DONE"
         android:textSize="12sp"
+        android:visibility="visible"
         app:backgroundTint="@color/BSL_blue"
         app:layout_constraintEnd_toEndOf="@+id/howTo1"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/howTo1"
         app:layout_constraintTop_toTopOf="@+id/howTo1" />
-
-    <ImageView
-        android:id="@+id/exitButton20"
-        android:layout_width="33dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="84dp"
-        app:layout_constraintStart_toStartOf="@+id/howTo2"
-        app:layout_constraintTop_toTopOf="@+id/howTo2"
-        app:srcCompat="@drawable/ic_baseline_clear_24"
-        tools:ignore="VectorDrawableCompat" />
 
     <ImageView
         android:id="@+id/howTo1"
@@ -309,5 +299,17 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/howTo1"
         app:layout_constraintTop_toTopOf="@+id/howTo1" />
+
+    <ImageView
+        android:id="@+id/exitButton20"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintStart_toStartOf="@+id/howTo2"
+        app:layout_constraintTop_toTopOf="@+id/howTo2"
+        app:srcCompat="@drawable/ic_baseline_clear_24"
+        tools:ignore="VectorDrawableCompat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

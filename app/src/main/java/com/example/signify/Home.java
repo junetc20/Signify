@@ -193,6 +193,15 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DataHolder.setUserGuideViewed(true);
+                howTo1.setVisibility(View.GONE);
+                howTo2.setVisibility(View.GONE);
+                nextButtonHelp.setVisibility(View.GONE);
+                doneButtonHelp.setVisibility(View.GONE);
+                exitButton20.setVisibility(View.GONE);
+                level1Button.setVisibility(View.VISIBLE);
+                level2Button.setVisibility(View.VISIBLE);
+                level3Button.setVisibility(View.VISIBLE);
+                level4Button.setVisibility(View.VISIBLE);
             }
         });
 
@@ -205,8 +214,10 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 howTo1.setVisibility(View.GONE);
                 howTo2.setVisibility(View.VISIBLE);
+                exitButton20.setVisibility(View.VISIBLE);
                 nextButtonHelp.setVisibility(View.GONE);
                 doneButtonHelp.setVisibility(View.VISIBLE);
+                doneButtonHelp.setEnabled(true);
             }
         });
 
@@ -218,6 +229,15 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DataHolder.setUserGuideViewed(true);
+                howTo1.setVisibility(View.GONE);
+                howTo2.setVisibility(View.GONE);
+                nextButtonHelp.setVisibility(View.GONE);
+                doneButtonHelp.setVisibility(View.GONE);
+                exitButton20.setVisibility(View.GONE);
+                level1Button.setVisibility(View.VISIBLE);
+                level2Button.setVisibility(View.VISIBLE);
+                level3Button.setVisibility(View.VISIBLE);
+                level4Button.setVisibility(View.VISIBLE);
             }
         });
 

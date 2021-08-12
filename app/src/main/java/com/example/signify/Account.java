@@ -38,7 +38,6 @@ public class Account extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
-        showUserDetails();
 
         /**
          * Constructor for objects of class Account.
@@ -53,6 +52,8 @@ public class Account extends AppCompatActivity {
         reNewPassAcc = findViewById(R.id.reNewPassAcc);
         saveChangesAcc = findViewById(R.id.saveChangesAcc);
         saveChangesPass = findViewById(R.id.saveChangesPass);
+
+        showUserDetails();
 
         /**
          * Set the view from clicking exitButtonAcc.
