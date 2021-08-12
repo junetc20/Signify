@@ -41,11 +41,11 @@ public class Home extends AppCompatActivity {
     TextView prog2;
     TextView prog3;
     TextView prog4;
-    int count = 0;
-    int countOne = 0;
-    int countTwo = 0;
-    int countThree = 0;
-    int countFour = 0;
+    int count;
+    int countOne;
+    int countTwo;
+    int countThree;
+    int countFour;
 
 
     @SuppressLint({"ResourceAsColor", "Range"})
@@ -76,39 +76,26 @@ public class Home extends AppCompatActivity {
         prog3 = findViewById(R.id.prog3);
         prog4 = findViewById(R.id.prog4);
 
-        // Stop help popups from appearing after first instance.
-        if(count > 1) {
-            howTo1.setVisibility(View.GONE);
-            howTo2.setVisibility(View.GONE);
-            nextButtonHelp.setVisibility(View.GONE);
-            doneButtonHelp.setVisibility(View.GONE);
-            exitButton20.setVisibility(View.GONE);
-            level1Button.setVisibility(View.VISIBLE);
-            level2Button.setVisibility(View.VISIBLE);
-            level3Button.setVisibility(View.VISIBLE);
-            level4Button.setVisibility(View.VISIBLE);
-        }
-
         // Changes text and color of level1Button on create
-        if(countOne >= 1) {
+        if(countOne == 1) {
             level1Button.setText(R.string.cont);
             level1Button.setBackgroundColor(R.color.BSL_blue);
         }
 
         // Changes text and color of level2Button on create.
-        if(countTwo >= 1) {
+        if(countTwo == 1) {
             level2Button.setText(R.string.cont);
             level2Button.setBackgroundColor(R.color.BSL_blue);
         }
 
         // Changes text and color of level3Button on create.
-        if(countThree >= 1) {
+        if(countThree == 1) {
             level3Button.setText(R.string.cont);
             level3Button.setBackgroundColor(R.color.BSL_blue);
         }
 
         // Changes text and color of level4Button on create.
-        if(countFour >= 1) {
+        if(countFour == 1) {
             level4Button.setText(R.string.cont);
             level4Button.setBackgroundColor(R.color.BSL_blue);
         }
@@ -256,6 +243,30 @@ public class Home extends AppCompatActivity {
         } else {
             Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
         }
+    }
+
+    // Stop help popups from appearing after first instance.
+    public boolean isHelpShown() {
+        if (count > 1) {
+            howTo1.setVisibility(View.GONE);
+            howTo2.setVisibility(View.GONE);
+            nextButtonHelp.setVisibility(View.GONE);
+            doneButtonHelp.setVisibility(View.GONE);
+            exitButton20.setVisibility(View.GONE);
+            level1Button.setVisibility(View.VISIBLE);
+            level2Button.setVisibility(View.VISIBLE);
+            level3Button.setVisibility(View.VISIBLE);
+            level4Button.setVisibility(View.VISIBLE);
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    public String updateProg1() {
+        String prog1Text = prog1.getText().toString();
+        return prog1Text;
     }
 }
 

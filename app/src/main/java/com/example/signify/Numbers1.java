@@ -36,6 +36,7 @@ public class Numbers1 extends AppCompatActivity {
         /**
          * Constructor for objects of class Numbers1.
          */
+        /*
         exitButton8 = findViewById(R.id.exitButton8);
         nextArrow7 = findViewById(R.id.nextArrow7);
         beginButton3 = findViewById(R.id.beginButton4);
@@ -58,6 +59,7 @@ public class Numbers1 extends AppCompatActivity {
         noVideo2.setMediaController(mediaController2);
         mediaController2.setAnchorView(noVideo2);
         noVideo2.seekTo(3);
+        */
 
         /**
          * Set the view from clicking exitButton8.

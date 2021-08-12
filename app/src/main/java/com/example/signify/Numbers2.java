@@ -37,6 +37,7 @@ public class Numbers2 extends AppCompatActivity {
         nextArrow8 = findViewById(R.id.nextArrow8);
         backArrow5 = findViewById(R.id.backArrow5);
 
+        /*
         noVideo3 = findViewById(R.id.videoView3);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_three;
         Uri uri = Uri.parse(videoPath);
@@ -45,6 +46,7 @@ public class Numbers2 extends AppCompatActivity {
         noVideo3.setMediaController(mediaController);
         mediaController.setAnchorView(noVideo3);
         noVideo3.seekTo(3);
+        */
 
         /**
          * Set the view from clicking exitButton9.
