@@ -53,12 +53,12 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        showFirstName();
 
         /**
          * Constructor for objects of class Home.
          */
         db = new DatabaseHelper(this);
-        Cursor cursor = db.firstName();
         userAccount = findViewById(R.id.userAccount);
         menu = findViewById(R.id.menu);
         level1Button = findViewById(R.id.level1Button);
@@ -76,15 +76,6 @@ public class Home extends AppCompatActivity {
         prog3 = findViewById(R.id.prog3);
         prog4 = findViewById(R.id.prog4);
 
-        if(cursor.getCount() > 0) {
-            while (cursor.moveToNext()) {
-                firstName.setText(cursor.getString(cursor.getColumnIndex("firstName")));
-            }
-        }
-        else{
-            Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
-        }
-
         // Stop help popups from appearing after first instance.
         if(count > 1) {
             howTo1.setVisibility(View.GONE);
@@ -98,7 +89,7 @@ public class Home extends AppCompatActivity {
             level4Button.setVisibility(View.VISIBLE);
         }
 
-        // Changes text and color of level1Button on create.
+        // Changes text and color of level1Button on create
         if(countOne >= 1) {
             level1Button.setText(R.string.cont);
             level1Button.setBackgroundColor(R.color.BSL_blue);
@@ -250,6 +241,21 @@ public class Home extends AppCompatActivity {
                 countFour++;
             }
         });
+    }
+
+    /**
+     * Retrieves data from the firstName column of the database login.db.
+     * Inserts this retrieved data into the TextView firstName.
+     */
+    public void showFirstName() {
+        Cursor cursor = db.firstName();
+        if (cursor.getCount() > 0) {
+            while (cursor.moveToNext()) {
+                firstName.setText(cursor.getString(cursor.getColumnIndex("firstName")));
+            }
+        } else {
+            Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
+        }
     }
 }
 
