@@ -78,11 +78,11 @@ public class Menu extends AppCompatActivity {
          */
         logoutLink.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {AlertDialog.Builder builder1 = new AlertDialog.Builder(Menu.this);
-                builder1.setMessage("Are you sure you want to log out of your account?");
-                builder1.setCancelable(true);
+            public void onClick(View v) {AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
+                builder.setMessage("Are you sure you want to log out of your account?");
+                builder.setCancelable(true);
 
-                builder1.setPositiveButton(
+                builder.setPositiveButton(
                         "Yes",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -91,7 +91,7 @@ public class Menu extends AppCompatActivity {
                             }
                         });
 
-                builder1.setNegativeButton(
+                builder.setNegativeButton(
                         "No",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -99,8 +99,8 @@ public class Menu extends AppCompatActivity {
                             }
                         });
 
-                AlertDialog alert1 = builder1.create();
-                alert1.show();
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 
@@ -123,11 +123,11 @@ public class Menu extends AppCompatActivity {
         bslLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(Menu.this);
-                builder1.setMessage("This will take you to an external website. Do you want to open this?");
-                builder1.setCancelable(true);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
+                builder.setMessage("This will take you to an external website. Do you want to open this?");
+                builder.setCancelable(true);
 
-                builder1.setPositiveButton(
+                builder.setPositiveButton(
                         "Yes",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -138,7 +138,7 @@ public class Menu extends AppCompatActivity {
                             }
                         });
 
-                builder1.setNegativeButton(
+                builder.setNegativeButton(
                         "No",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -146,8 +146,8 @@ public class Menu extends AppCompatActivity {
                             }
                         });
 
-                AlertDialog alert1 = builder1.create();
-                alert1.show();
+                AlertDialog alert = builder.create();
+                alert.show();
 
             }
         });
