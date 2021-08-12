@@ -89,14 +89,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Menu.this, Home.class));
-                howTo1.setVisibility(View.VISIBLE);
-                nextButtonHelp.setVisibility(View.VISIBLE);
-                exitButton20.setVisibility(View.VISIBLE);
-                level1Button.setVisibility(View.GONE);
-                level2Button.setVisibility(View.GONE);
-                level3Button.setVisibility(View.GONE);
-                level4Button.setVisibility(View.GONE);
-
+                DataHolder.setUserGuideViewed(false);
             }
         });
 

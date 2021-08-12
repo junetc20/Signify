@@ -42,8 +42,6 @@ public class Home extends AppCompatActivity {
     TextView prog2;
     TextView prog3;
     TextView prog4;
-    int count;
-
 
     @SuppressLint({"ResourceAsColor", "Range", "SetTextI18n"})
     @Override
@@ -73,6 +71,20 @@ public class Home extends AppCompatActivity {
         prog4 = findViewById(R.id.prog4);
 
         showFirstName();
+
+        // Checks if userGuide has been viewed previously
+        // Hides if true
+        if(DataHolder.isUserGuideViewed()) {
+            howTo1.setVisibility(View.GONE);
+            howTo2.setVisibility(View.GONE);
+            nextButtonHelp.setVisibility(View.GONE);
+            doneButtonHelp.setVisibility(View.GONE);
+            exitButton20.setVisibility(View.GONE);
+            level1Button.setVisibility(View.VISIBLE);
+            level2Button.setVisibility(View.VISIBLE);
+            level3Button.setVisibility(View.VISIBLE);
+            level4Button.setVisibility(View.VISIBLE);
+        }
 
         // Sets prog1 text from DataHolder method
         String s = String.valueOf(DataHolder.getPercentageComplete1());
@@ -180,16 +192,7 @@ public class Home extends AppCompatActivity {
         exitButton20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                howTo1.setVisibility(View.GONE);
-                howTo2.setVisibility(View.GONE);
-                nextButtonHelp.setVisibility(View.GONE);
-                doneButtonHelp.setVisibility(View.GONE);
-                exitButton20.setVisibility(View.GONE);
-                level1Button.setVisibility(View.VISIBLE);
-                level2Button.setVisibility(View.VISIBLE);
-                level3Button.setVisibility(View.VISIBLE);
-                level4Button.setVisibility(View.VISIBLE);
-                count++;
+                DataHolder.setUserGuideViewed(true);
             }
         });
 
@@ -214,16 +217,7 @@ public class Home extends AppCompatActivity {
         doneButtonHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                howTo1.setVisibility(View.GONE);
-                howTo2.setVisibility(View.GONE);
-                nextButtonHelp.setVisibility(View.GONE);
-                doneButtonHelp.setVisibility(View.GONE);
-                exitButton20.setVisibility(View.GONE);
-                level1Button.setVisibility(View.VISIBLE);
-                level2Button.setVisibility(View.VISIBLE);
-                level3Button.setVisibility(View.VISIBLE);
-                level4Button.setVisibility(View.VISIBLE);
-                count++;
+                DataHolder.setUserGuideViewed(true);
             }
         });
 
@@ -327,25 +321,6 @@ public class Home extends AppCompatActivity {
             }
         } else {
             Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
-        }
-    }
-
-    // Stop help popups from appearing after first instance.
-    public boolean isHelpShown() {
-        if (count > 1) {
-            howTo1.setVisibility(View.GONE);
-            howTo2.setVisibility(View.GONE);
-            nextButtonHelp.setVisibility(View.GONE);
-            doneButtonHelp.setVisibility(View.GONE);
-            exitButton20.setVisibility(View.GONE);
-            level1Button.setVisibility(View.VISIBLE);
-            level2Button.setVisibility(View.VISIBLE);
-            level3Button.setVisibility(View.VISIBLE);
-            level4Button.setVisibility(View.VISIBLE);
-            return false;
-        }
-        else {
-            return true;
         }
     }
 }
