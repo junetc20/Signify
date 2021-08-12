@@ -64,6 +64,7 @@ public class Convo2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Convo2.this, Home.class));
+                DataHolder.setActivityCount4(2);
             }
         });
 

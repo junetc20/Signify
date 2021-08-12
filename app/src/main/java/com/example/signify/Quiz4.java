@@ -88,6 +88,7 @@ public class Quiz4 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Quiz4.this, Home.class));
+                DataHolder.setActivityCount4(9);
             }
         });
 
@@ -103,6 +104,7 @@ public class Quiz4 extends AppCompatActivity
                 if (DataHolder.getPercentageComplete4() < 100) {
                     DataHolder.setPercentageComplete4(100);
                 }
+                DataHolder.setActivityCount4(0);
             }
         });
     }

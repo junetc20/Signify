@@ -64,6 +64,7 @@ public class Numbers4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Numbers4.this, Home.class));
+                DataHolder.setActivityCount3(4);
             }
         });
 

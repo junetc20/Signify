@@ -90,6 +90,7 @@ public class Quiz3 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Quiz3.this, Home.class));
+                DataHolder.setActivityCount3(7);
             }
         });
 
@@ -106,6 +107,7 @@ public class Quiz3 extends AppCompatActivity
                 if (DataHolder.getPercentageComplete3() < 100) {
                     DataHolder.setPercentageComplete3(100);
                 }
+                DataHolder.setActivityCount3(0);
             }
         });
     }

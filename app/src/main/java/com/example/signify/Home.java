@@ -367,6 +367,34 @@ public class Home extends AppCompatActivity {
                 if (DataHolder.getPercentageComplete4() < 5) {
                     DataHolder.setPercentageComplete4(5);
                 }
+
+                if (DataHolder.getActivityCount4() <= 1) {
+                    startActivity(new Intent(Home.this, Convo1.class));
+                }
+                else if (DataHolder.getActivityCount4() == 2) {
+                    startActivity(new Intent(Home.this, Convo2.class));
+                }
+                else if (DataHolder.getActivityCount4() == 3) {
+                    startActivity(new Intent(Home.this, Convo3.class));
+                }
+                else if (DataHolder.getActivityCount4() == 4){
+                    startActivity(new Intent(Home.this, Convo4.class));
+                }
+                else if (DataHolder.getActivityCount4() == 5){
+                    startActivity(new Intent(Home.this, Convo5.class));
+                }
+                else if (DataHolder.getActivityCount4() == 6){
+                    startActivity(new Intent(Home.this, Convo6.class));
+                }
+                else if (DataHolder.getActivityCount4() == 7){
+                    startActivity(new Intent(Home.this, Convo7.class));
+                }
+                else if (DataHolder.getActivityCount4() == 8){
+                    startActivity(new Intent(Home.this, Convo8.class));
+                }
+                else if (DataHolder.getActivityCount4() == 9){
+                    startActivity(new Intent(Home.this, Quiz4.class));
+                }
             }
         });
     }

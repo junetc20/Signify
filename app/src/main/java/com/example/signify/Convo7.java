@@ -41,6 +41,7 @@ public class Convo7 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Convo7.this, Home.class));
+                DataHolder.setActivityCount4(7);
             }
         });
 
