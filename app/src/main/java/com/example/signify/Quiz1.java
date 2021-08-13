@@ -23,7 +23,6 @@ package com.example.signify;
 
 public class Quiz1 extends AppCompatActivity {
 
-
     MultipleChoiceQ questionLibrary = new MultipleChoiceQ();
 
     private Button answer1;
@@ -188,7 +187,7 @@ public class Quiz1 extends AppCompatActivity {
     }
 
     /**
-     * Update fields when function is called.
+     * Update fields for quiz layout when this function is called.
      */
     @SuppressLint("SetTextI18n")
     private void updateQuestion() {

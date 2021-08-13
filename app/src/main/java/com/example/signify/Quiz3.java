@@ -152,7 +152,9 @@ public class Quiz3 extends AppCompatActivity
         }
     }
 
-    // Update question
+    /**
+     * Update fields as currentQuestionIndex increases.
+     */
     @SuppressLint("SetTextI18n")
     private void updateQuestion() {
         // setting the textview with new question
@@ -202,8 +204,11 @@ public class Quiz3 extends AppCompatActivity
         }
     }
 
+    /**
+     * Check the boolean value of userChooseCorrect.
+     * @param userChooseCorrect The boolean value of userChooseCorrect.
+     */
     int correct = 0;
-
     private void checkAnswer(boolean userChooseCorrect) {
         boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
         int toastMessageId;

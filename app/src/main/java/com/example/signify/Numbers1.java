@@ -60,7 +60,6 @@ public class Numbers1 extends AppCompatActivity {
         mediaController2.setAnchorView(noVideo2);
         noVideo2.seekTo(3);
 
-
         /**
          * Set the view from clicking exitButton8.
          * @param v the onClickListener View.

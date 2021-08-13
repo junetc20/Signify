@@ -36,8 +36,6 @@ public class Menu extends AppCompatActivity {
     View level3Button;
     View level4Button;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

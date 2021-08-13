@@ -53,7 +53,6 @@ public class Quiz2 extends AppCompatActivity
             new Question(R.string.A, false),
     };
 
-    // Linking this class with an activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -148,6 +147,9 @@ public class Quiz2 extends AppCompatActivity
         }
     }
 
+    /**
+     * Update fields as currentQuestionIndex increases.
+     */
     @SuppressLint("SetTextI18n")
     private void updateQuestion() {
         questionText.setText(questionBank[currentQuestionIndex].getAnswerResId());
@@ -212,8 +214,11 @@ public class Quiz2 extends AppCompatActivity
         }
     }
 
+    /**
+     * Check the boolean value of userChooseCorrect.
+     * @param userChooseCorrect The boolean value of userChooseCorrect.
+     */
     int correct = 0;
-
     private void checkAnswer(boolean userChooseCorrect) {
         boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
         int toastMessageId;

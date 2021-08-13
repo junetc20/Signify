@@ -70,7 +70,6 @@ public class Account extends AppCompatActivity {
          * Set the view from clicking saveChangesAcc.
          * @param v the onClickListener View.
          */
-        // Not updating database
         saveChangesAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,7 +91,6 @@ public class Account extends AppCompatActivity {
          * Set the view from clicking saveChangesPass.
          * @param v the onClickListener View.
          */
-        // Not updating database
         saveChangesPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
