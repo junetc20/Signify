@@ -266,15 +266,14 @@
         android:layout_marginTop="477dp"
         android:layout_marginEnd="115dp"
         android:layout_marginRight="115dp"
-        android:enabled="false"
         android:text="DONE"
+        android:visibility="invisible"
         android:textSize="12sp"
-        android:visibility="visible"
         app:backgroundTint="@color/BSL_blue"
-        app:layout_constraintEnd_toEndOf="@+id/howTo1"
+        app:layout_constraintEnd_toEndOf="@+id/howTo2"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/howTo1"
-        app:layout_constraintTop_toTopOf="@+id/howTo1" />
+        app:layout_constraintStart_toStartOf="@+id/howTo2"
+        app:layout_constraintTop_toTopOf="@+id/howTo2" />
 
     <ImageView
         android:id="@+id/howTo1"
@@ -291,16 +290,14 @@
         android:id="@+id/nextButtonHelp"
         android:layout_width="75sp"
         android:layout_height="40dp"
-        android:layout_marginStart="97dp"
-        android:layout_marginLeft="97dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
         android:layout_marginTop="477dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginRight="115dp"
         android:text="NEXT"
         android:textSize="12sp"
         app:backgroundTint="@color/BSL_blue"
-        app:layout_constraintEnd_toEndOf="@+id/howTo1"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="@+id/howTo1"
         app:layout_constraintTop_toTopOf="@+id/howTo1" />
 

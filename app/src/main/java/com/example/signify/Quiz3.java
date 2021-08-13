@@ -45,7 +45,7 @@ public class Quiz3 extends AppCompatActivity
             new Question(R.string.thirty_three, false),
             new Question(R.string.fifty, true),
             new Question(R.string.twelve, false),
-            new Question(R.string.forty_two, false),
+            new Question(R.string.forty_two, true),
             new Question(R.string.thirty_two, false),
             new Question(R.string.twenty_six, true),
     };

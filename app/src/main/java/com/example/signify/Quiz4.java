@@ -30,7 +30,7 @@ public class Quiz4 extends AppCompatActivity
     private ImageView exitButtonQuiz4;
     private VideoView quizVideo1;
     private ImageView resultImage4;
-    private TextView resultText3;
+    private TextView resultText4;
     private TextView questionCountDisplay4;
     private TextView questionText4;
     private int currentQuestionIndex = 0;
@@ -57,7 +57,7 @@ public class Quiz4 extends AppCompatActivity
          * Constructor for objects of class Quiz4.
          */
         resultImage4 = findViewById(R.id.resultImage4);
-        resultText3 = findViewById(R.id.resultText3);
+        resultText4 = findViewById(R.id.resultText4);
         trueButton3 = findViewById(R.id.trueButton3);
         falseButton3 = findViewById(R.id.falseButton3);
         exitButtonQuiz4 = findViewById(R.id.exitButtonQuiz4);
@@ -141,9 +141,9 @@ public class Quiz4 extends AppCompatActivity
                     trueButton3.setVisibility(View.INVISIBLE);
                     falseButton3.setVisibility(View.INVISIBLE);
                     resultImage4.setVisibility(View.VISIBLE);
-                    resultText3.setVisibility(View.VISIBLE);
+                    resultText4.setVisibility(View.VISIBLE);
                     completeButton4.setVisibility(View.VISIBLE);
-                    resultText3.setText(correct + "/6");
+                    resultText4.setText(correct + "/6");
                 }
                 break;
         }

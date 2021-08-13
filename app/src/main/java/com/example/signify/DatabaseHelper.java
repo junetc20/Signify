@@ -76,7 +76,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("firstName", firstName);
         contentValues.put("lastName", lastName);
         contentValues.put("email", emailAdd);
-        Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{emailAdd});
+        Cursor cursor = db.rawQuery("Select * from user where email=? and firstName=? and lastName=?", new String[]{emailAdd});
         if (cursor.getCount() > 0) {
             long res = db.update("user", contentValues, "email=? and firstName=? and lastName=?", new String[]{emailAdd, firstName, lastName});
             return res > -1;

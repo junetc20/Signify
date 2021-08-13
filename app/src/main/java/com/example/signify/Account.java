@@ -79,10 +79,11 @@ public class Account extends AppCompatActivity {
                 String originalEmail = emailAcc.getText().toString();
                 Boolean updateData = db.updateUserData(originalFName, originalLName, originalEmail);
                 if (updateData) {
-                    Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
+
                 }
                 else {
-                    Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

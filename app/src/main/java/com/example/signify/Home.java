@@ -217,7 +217,6 @@ public class Home extends AppCompatActivity {
                 exitButton20.setVisibility(View.VISIBLE);
                 nextButtonHelp.setVisibility(View.GONE);
                 doneButtonHelp.setVisibility(View.VISIBLE);
-                doneButtonHelp.setEnabled(true);
             }
         });
 
