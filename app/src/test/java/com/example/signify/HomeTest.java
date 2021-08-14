@@ -4,6 +4,7 @@ import junit.framework.TestCase;
 
 public class HomeTest extends TestCase {
 
-    public void testOnCreate() {
+    public void testShowFirstName() {
+
     }
 }
