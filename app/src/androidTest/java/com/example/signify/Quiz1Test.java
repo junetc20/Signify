@@ -21,7 +21,7 @@ public class Quiz1Test extends TestCase {
 
     /**
      * Sets up test fixture.
-     * <p>
+     *
      * Called before every test case method.
      */
     public void setUp() throws Exception {
@@ -48,10 +48,9 @@ public class Quiz1Test extends TestCase {
 
     /**
      * Tears down test fixture.
-     * <p>
+     *
      * Called after every test case method.
      */
     public void tearDown() throws Exception {
     }
-
 }
