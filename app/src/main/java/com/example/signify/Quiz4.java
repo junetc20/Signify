@@ -36,7 +36,6 @@ public class Quiz4 extends AppCompatActivity
     private int currentQuestionIndex = 0;
     private Button nextButton4;
     private Button completeButton4;
-    private Button level4Button;
 
     // Array to hold questions
     public Question[] questionBank = new Question[]{
@@ -65,7 +64,6 @@ public class Quiz4 extends AppCompatActivity
         questionText4 = findViewById(R.id.questionText4);
         nextButton4 = findViewById(R.id.nextButton4);
         completeButton4 = findViewById(R.id.completeButton4);
-        level4Button = findViewById(R.id.level4Button);
 
         trueButton3.setOnClickListener(this);
         falseButton3.setOnClickListener(this);

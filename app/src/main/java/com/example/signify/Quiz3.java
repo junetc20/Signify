@@ -114,6 +114,7 @@ public class Quiz3 extends AppCompatActivity
 
     /**
      * Set the view from clicking trueButton2, falseButton2 or nextButton3.
+     *
      * @param v the onClickListener View.
      */
     @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
@@ -206,9 +207,11 @@ public class Quiz3 extends AppCompatActivity
 
     /**
      * Check the boolean value of userChooseCorrect.
+     *
      * @param userChooseCorrect The boolean value of userChooseCorrect.
      */
     int correct = 0;
+
     private void checkAnswer(boolean userChooseCorrect) {
         boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
         int toastMessageId;
