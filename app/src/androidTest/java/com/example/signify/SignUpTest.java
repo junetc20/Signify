@@ -11,14 +11,14 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
- * The test class AssessTest.
+ * The test class SignUpTest.
  * Instrumented test, which will execute on an Android device.
  *
  * @author June Caldwell
  * @version 0.1 (01.08.21)
  */
 
-public class AssessTest extends TestCase {
+public class SignUpTest extends TestCase {
 
     /**
      * Sets up test fixture.
@@ -31,19 +31,20 @@ public class AssessTest extends TestCase {
 
     /**
      * Checks that UI works correctly when user inserts data.
-     * When user selects resultButton button, finish button should be visible and clickable.
      */
     @Test
-    public void testUserInputAssess() {
-        String a = "1";
-        Espresso.onView(withId(R.id.inputOne)).perform(typeText(a));
-        Espresso.onView(withId(R.id.inputTwo)).perform(typeText(a));
-        String b = "4";
-        Espresso.onView(withId(R.id.inputThree)).perform(typeText(b));
-        Espresso.onView(withId(R.id.inputFour)).perform(typeText(a));
-        Espresso.onView(withId(R.id.inputFive)).perform(typeText(b));
-        Espresso.onView(withId(R.id.resultButton)).perform(click());
-        Espresso.onView(withId(R.id.finish)).perform(click());
+    public void testUserInputSignUp() {
+        String a = "June";
+        Espresso.onView(withId(R.id.inputFirstName)).perform(typeText(a));
+        String b = "Caldwell";
+        Espresso.onView(withId(R.id.inputLastName)).perform(typeText(b));
+        String c = "j@gmail.com";
+        Espresso.onView(withId(R.id.inputEmail)).perform(typeText(c));
+        String d = "123";
+        Espresso.onView(withId(R.id.createPassword)).perform(typeText(d));
+        String e = "123";
+        Espresso.onView(withId(R.id.reEnterPassword)).perform(typeText(e));
+        Espresso.onView(withId(R.id.createAccount)).perform(click());
     }
 
     /**
