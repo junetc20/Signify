@@ -43,7 +43,7 @@ public class Home extends AppCompatActivity {
     TextView prog3;
     TextView prog4;
 
-    @SuppressLint({"ResourceAsColor", "Range", "SetTextI18n"})
+    @SuppressLint({"SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
