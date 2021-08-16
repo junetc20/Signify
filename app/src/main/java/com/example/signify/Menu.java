@@ -1,5 +1,6 @@
 package com.example.signify;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -19,22 +21,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Menu extends AppCompatActivity {
 
-    ImageView exitButtonMenu;
-    TextView userGuideLink;
-    TextView bslLink;
-    TextView logoutLink;
-    TextView surveyLink;
-    View howTo1;
-    View howTo2;
-    View nextButtonHelp;
-    View doneButtonHelp;
-    View exitButton20;
-    View level1Button;
-    View level2Button;
-    View level3Button;
-    View level4Button;
-
-
+    private ImageView exitButtonMenu;
+    private TextView userGuideLink;
+    private TextView bslLink;
+    private TextView logoutLink;
+    private TextView surveyLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +40,6 @@ public class Menu extends AppCompatActivity {
         bslLink = findViewById(R.id.bslLink);
         logoutLink = findViewById(R.id.logoutLink);
         surveyLink = findViewById(R.id.surveyLink);
-        howTo1 = findViewById(R.id.howTo1);
-        howTo2 = findViewById(R.id.howTo2);
-        nextButtonHelp = findViewById(R.id.nextButtonHelp);
-        doneButtonHelp = findViewById(R.id.doneButtonHelp);
-        exitButton20 = findViewById(R.id.exitButton20);
-        level1Button = findViewById(R.id.level1Button);
-        level2Button = findViewById(R.id.level2Button);
-        level3Button = findViewById(R.id.level3Button);
-        level4Button = findViewById(R.id.level4Button);
 
         /**
          * Set the view from clicking exitButtonMenu.
@@ -77,7 +59,27 @@ public class Menu extends AppCompatActivity {
         logoutLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Menu.this, Login.class));
+                // Sets alert dialog for user to confirm action
+                AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
+                builder.setMessage("Are you sure you want to log out of your account?");
+                builder.setCancelable(true);
+                builder.setPositiveButton(
+                        "Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                startActivity(new Intent(Menu.this, Login.class));
+                                dialog.cancel();
+                            }
+                        });
+                builder.setNegativeButton(
+                        "No",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 
@@ -89,33 +91,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Menu.this, Home.class));
-                howTo1.setVisibility(View.VISIBLE);
-                nextButtonHelp.setVisibility(View.VISIBLE);
-                exitButton20.setVisibility(View.VISIBLE);
-                level1Button.setVisibility(View.GONE);
-                level2Button.setVisibility(View.GONE);
-                level3Button.setVisibility(View.GONE);
-                level4Button.setVisibility(View.GONE);
-                /*
-                if (nextButtonHelp.isPressed()) {
-                    doneButtonHelp.setVisibility(View.VISIBLE);
-                    howTo2.setVisibility(View.VISIBLE);
-                    howTo1.setVisibility(View.GONE);
-                    nextButtonHelp.setVisibility(View.GONE);
-                }
-
-                if (doneButtonHelp.isPressed()) {
-                    howTo1.setVisibility(View.GONE);
-                    howTo2.setVisibility(View.GONE);
-                    nextButtonHelp.setVisibility(View.GONE);
-                    doneButtonHelp.setVisibility(View.GONE);
-                    exitButton20.setVisibility(View.GONE);
-                    level1Button.setVisibility(View.VISIBLE);
-                    level2Button.setVisibility(View.VISIBLE);
-                    level3Button.setVisibility(View.VISIBLE);
-                    level4Button.setVisibility(View.VISIBLE);
-                } */
-
+                DataHolder.setUserGuideViewed(false);
             }
         });
 
@@ -126,9 +102,29 @@ public class Menu extends AppCompatActivity {
         bslLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.british-sign.co.uk/");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
+                // Sets alert dialog for user to confirm action
+                AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
+                builder.setMessage("This will take you to an external website. Do you want to open this?");
+                builder.setCancelable(true);
+                builder.setPositiveButton(
+                        "Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Uri uri = Uri.parse("https://www.british-sign.co.uk/");
+                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                startActivity(intent);
+                                dialog.cancel();
+                            }
+                        });
+                builder.setNegativeButton(
+                        "No",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 

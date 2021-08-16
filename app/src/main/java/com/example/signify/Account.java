@@ -22,23 +22,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Account extends AppCompatActivity {
 
-    DatabaseHelper db;
-    ImageView exitButtonAcc;
-    EditText firstNameAcc;
-    EditText lastNameAcc;
-    EditText emailAcc;
-    EditText currentPassAcc;
-    EditText newPassAcc;
-    EditText reNewPassAcc;
-    Button saveChangesAcc;
-    Button saveChangesPass;
+    private DatabaseHelper db;
+    private ImageView exitButtonAcc;
+    private EditText firstNameAcc;
+    private EditText lastNameAcc;
+    private EditText emailAcc;
+    private EditText currentPassAcc;
+    private EditText newPassAcc;
+    private EditText reNewPassAcc;
+    private Button saveChangesAcc;
+    private Button saveChangesPass;
 
     @SuppressLint("Range")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
-        showUserDetails();
 
         /**
          * Constructor for objects of class Account.
@@ -53,6 +52,8 @@ public class Account extends AppCompatActivity {
         reNewPassAcc = findViewById(R.id.reNewPassAcc);
         saveChangesAcc = findViewById(R.id.saveChangesAcc);
         saveChangesPass = findViewById(R.id.saveChangesPass);
+
+        showUserDetails();
 
         /**
          * Set the view from clicking exitButtonAcc.
@@ -69,20 +70,19 @@ public class Account extends AppCompatActivity {
          * Set the view from clicking saveChangesAcc.
          * @param v the onClickListener View.
          */
-        // Not updating database
         saveChangesAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String newFName = firstNameAcc.getText().toString();
-                String newLName = lastNameAcc.getText().toString();
-                String newEmail = emailAcc.getText().toString();
-                Boolean updateData = db.updateUserData(newFName, newLName, newEmail);
-
+                String originalFName = firstNameAcc.getText().toString();
+                String originalLName = lastNameAcc.getText().toString();
+                String originalEmail = emailAcc.getText().toString();
+                Boolean updateData = db.updateUserData(originalFName, originalLName, originalEmail);
                 if (updateData) {
-                    Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
+
                 }
                 else {
-                    Toast.makeText(Account.this, "No changes made.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Account.this, "Details updated successfully.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -91,7 +91,6 @@ public class Account extends AppCompatActivity {
          * Set the view from clicking saveChangesPass.
          * @param v the onClickListener View.
          */
-        // Not updating database
         saveChangesPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

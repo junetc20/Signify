@@ -21,11 +21,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
 
-    Button signInButton;
-    EditText emailInput;
-    EditText password;
-    TextView register;
-    DatabaseHelper db;
+    private Button signInButton;
+    private EditText emailInput;
+    private EditText password;
+    private TextView register;
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

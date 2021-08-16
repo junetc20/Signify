@@ -18,13 +18,13 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 0.1 (01.08.21)
  */
 
-public class Convo2 extends AppCompatActivity {
+public class Conversation2 extends AppCompatActivity {
 
-    ImageView exitButton15;
-    VideoView videoView15;
-    VideoView videoView16;
-    ImageView nextArrow14;
-    ImageView backArrow10;
+    private ImageView exitButton15;
+    private VideoView videoView15;
+    private VideoView videoView16;
+    private ImageView nextArrow14;
+    private ImageView backArrow10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class Convo2 extends AppCompatActivity {
         setContentView(R.layout.activity_convo_2);
 
         /**
-         * Constructor for objects of class Convo2.
+         * Constructor for objects of class Conversation2.
          */
         exitButton15 = findViewById(R.id.exitButton15);
         nextArrow14 = findViewById(R.id.nextArrow14);
@@ -63,7 +63,8 @@ public class Convo2 extends AppCompatActivity {
         exitButton15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo2.this, Home.class));
+                startActivity(new Intent(Conversation2.this, Home.class));
+                DataHolder.setActivityCount4(2);
             }
         });
 
@@ -74,7 +75,10 @@ public class Convo2 extends AppCompatActivity {
         nextArrow14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo2.this, Convo3.class));
+                startActivity(new Intent(Conversation2.this, Conversation3.class));
+                if (DataHolder.getPercentageComplete4() < 15) {
+                    DataHolder.setPercentageComplete4(15);
+                }
             }
         });
 
@@ -85,7 +89,7 @@ public class Convo2 extends AppCompatActivity {
         backArrow10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo2.this, Convo1.class));
+                startActivity(new Intent(Conversation2.this, Conversation1.class));
             }
         });
     }

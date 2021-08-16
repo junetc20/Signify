@@ -20,11 +20,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Numbers3 extends AppCompatActivity {
 
-    VideoView noVideo4;
-    VideoView noVideo5;
-    ImageView exitButton10;
-    ImageView nextArrow9;
-    ImageView backArrow6;
+    private VideoView noVideo4;
+    private VideoView noVideo5;
+    private ImageView exitButton10;
+    private ImageView nextArrow9;
+    private ImageView backArrow6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,6 @@ public class Numbers3 extends AppCompatActivity {
         nextArrow9 = findViewById(R.id.nextArrow9);
         backArrow6 = findViewById(R.id.backArrow6);
 
-        /*
         noVideo4 = findViewById(R.id.videoView4);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_four;
         Uri uri = Uri.parse(videoPath);
@@ -56,7 +55,6 @@ public class Numbers3 extends AppCompatActivity {
         noVideo5.setMediaController(mediaController2);
         mediaController2.setAnchorView(noVideo5);
         noVideo5.seekTo(3);
-         */
 
         /**
          * Set the view from clicking exitButton10.
@@ -66,6 +64,7 @@ public class Numbers3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Numbers3.this, Home.class));
+                DataHolder.setActivityCount3(3);
             }
         });
 
@@ -77,6 +76,9 @@ public class Numbers3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Numbers3.this, Numbers4.class));
+                if (DataHolder.getPercentageComplete3() < 40) {
+                    DataHolder.setPercentageComplete3(40);
+                }
             }
         });
 

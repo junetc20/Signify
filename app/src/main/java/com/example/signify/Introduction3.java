@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,11 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 0.1 (01.08.21)
  */
 
-public class Intro3 extends AppCompatActivity {
+public class Introduction3 extends AppCompatActivity {
 
-    ImageView exitButton6;
-    ImageView nextArrow5;
-    ImageView backArrow3;
+    private ImageView exitButton6;
+    private ImageView nextArrow5;
+    private ImageView backArrow3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ public class Intro3 extends AppCompatActivity {
         setContentView(R.layout.activity_intro3);
 
         /**
-         * Constructor for objects of class Intro3.
+         * Constructor for objects of class Introduction3.
          */
         exitButton6 = findViewById(R.id.exitButton6);
         nextArrow5 = findViewById(R.id.nextArrow5);
@@ -41,7 +40,8 @@ public class Intro3 extends AppCompatActivity {
         exitButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intro3.this, Home.class));
+                startActivity(new Intent(Introduction3.this, Home.class));
+                DataHolder.setActivityCount1(3);
             }
         });
 
@@ -52,7 +52,10 @@ public class Intro3 extends AppCompatActivity {
         nextArrow5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intro3.this, Intro4.class));
+                startActivity(new Intent(Introduction3.this, Introduction4.class));
+                if (DataHolder.getPercentageComplete1() < 40) {
+                    DataHolder.setPercentageComplete1(40);
+                }
             }
         });
 
@@ -63,7 +66,7 @@ public class Intro3 extends AppCompatActivity {
         backArrow3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intro3.this, Intro2.class));
+                startActivity(new Intent(Introduction3.this, Introduction2.class));
             }
         });
     }

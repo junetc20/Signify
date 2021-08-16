@@ -18,12 +18,12 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 0.1 (01.08.21)
  */
 
-public class Convo8 extends AppCompatActivity {
+public class Conversation8 extends AppCompatActivity {
 
-    ImageView exitButton21;
-    VideoView videoView19;
-    ImageView nextArrow20;
-    ImageView backArrow16;
+    private ImageView exitButton21;
+    private VideoView videoView19;
+    private ImageView nextArrow20;
+    private ImageView backArrow16;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class Convo8 extends AppCompatActivity {
         setContentView(R.layout.activity_convo_8);
 
         /**
-         * Constructor for objects of class Convo8.
+         * Constructor for objects of class Conversation8.
          */
         exitButton21 = findViewById(R.id.exitButton21);
         nextArrow20 = findViewById(R.id.nextArrow20);
@@ -53,7 +53,8 @@ public class Convo8 extends AppCompatActivity {
         exitButton21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo8.this, Home.class));
+                startActivity(new Intent(Conversation8.this, Home.class));
+                DataHolder.setActivityCount4(8);
             }
         });
 
@@ -64,7 +65,10 @@ public class Convo8 extends AppCompatActivity {
         nextArrow20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo8.this, Quiz4.class));
+                startActivity(new Intent(Conversation8.this, Quiz4.class));
+                if (DataHolder.getPercentageComplete4() < 45) {
+                    DataHolder.setPercentageComplete4(45);
+                }
             }
         });
 
@@ -75,7 +79,7 @@ public class Convo8 extends AppCompatActivity {
         backArrow16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo8.this, Convo7.class));
+                startActivity(new Intent(Conversation8.this, Conversation7.class));
             }
         });
     }

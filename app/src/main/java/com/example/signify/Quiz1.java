@@ -1,7 +1,5 @@
 package com.example.signify;
 
-  import com.example.signify.Home;
-
   import android.annotation.SuppressLint;
   import android.content.Intent;
   import android.os.Bundle;
@@ -23,7 +21,6 @@ package com.example.signify;
 
 public class Quiz1 extends AppCompatActivity {
 
-
     MultipleChoiceQ questionLibrary = new MultipleChoiceQ();
 
     private Button answer1;
@@ -35,14 +32,11 @@ public class Quiz1 extends AppCompatActivity {
     private Button completeButton2;
     private TextView questionText2;
     private String answer;
-    int questionCount = 1;
-    int currentQuestionNumber = 0;
+    private int questionCount = 1;
+    private int currentQuestionNumber = 0;
     private TextView resultText2;
     private ImageView resultImage2;
-    int score = 0;
-    Home level1Button;
-    Home level2Button;
-    Home prog1;
+    private int score = 0;
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,12 +57,12 @@ public class Quiz1 extends AppCompatActivity {
         resultText2 = findViewById(R.id.resultText2);
         resultImage2 = findViewById(R.id.resultImage2);
 
-        //Setting initial question up when quiz is opened
+        // Setting initial question up when quiz is opened
         questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));
         answer1.setText(MultipleChoiceQ.getChoice1(currentQuestionNumber));
         answer2.setText(MultipleChoiceQ.getChoice2(currentQuestionNumber));
         answer3.setText(MultipleChoiceQ.getChoice3(currentQuestionNumber));
-        questionCountDisplay.setText("Question " + questionCount + "/5");
+        questionCountDisplay.setText("QuizQuestions " + questionCount + "/5");
 
         /**
          * Set the view from clicking exitButtonQuiz.
@@ -78,6 +72,7 @@ public class Quiz1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Quiz1.this, Home.class));
+                DataHolder.setActivityCount1(5);
             }
         });
 
@@ -88,10 +83,13 @@ public class Quiz1 extends AppCompatActivity {
         completeButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Home home = new Home();
                 startActivity(new Intent(Quiz1.this, Home.class));
-                String s = home.updateProg1();
-                s = ("Progress: 100%");
+                DataHolder.setCompleteButton2Clicked(true);
+                DataHolder.setLevel2ButtonClickable(true);
+                if (DataHolder.getPercentageComplete1() < 100) {
+                    DataHolder.setPercentageComplete1(100);
+                }
+                DataHolder.setActivityCount1(0);
             }
         });
 
@@ -187,13 +185,13 @@ public class Quiz1 extends AppCompatActivity {
     }
 
     /**
-     * Update fields when function is called.
+     * Update fields for quiz layout when this function is called.
      */
     @SuppressLint("SetTextI18n")
-    private void updateQuestion() {
+    public void updateQuestion() {
         currentQuestionNumber++;
         questionCount++;
-        questionCountDisplay.setText("Question " + questionCount + "/5");
+        questionCountDisplay.setText("QuizQuestions " + questionCount + "/5");
         questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));
         answer1.setText(MultipleChoiceQ.getChoice1(currentQuestionNumber));
         answer2.setText(MultipleChoiceQ.getChoice2(currentQuestionNumber));

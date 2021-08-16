@@ -1,6 +1,5 @@
 package com.example.signify;
 
-import androidx.annotation.ColorRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -24,36 +23,29 @@ import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
 
-    DatabaseHelper db;
-    ImageView userAccount;
-    ImageButton menu;
-    Button level1Button;
-    Button level2Button;
-    Button level3Button;
-    Button level4Button;
-    TextView firstName;
-    ImageView howTo1;
-    ImageView howTo2;
-    Button nextButtonHelp;
-    Button doneButtonHelp;
-    ImageView exitButton20;
-    TextView prog1;
-    TextView prog2;
-    TextView prog3;
-    TextView prog4;
-    int count;
-    int countOne;
-    int countTwo;
-    int countThree;
-    int countFour;
+    private DatabaseHelper db;
+    private ImageView userAccount;
+    private ImageButton menu;
+    private Button level1Button;
+    private Button level2Button;
+    private Button level3Button;
+    private Button level4Button;
+    private TextView firstName;
+    private ImageView howTo1;
+    private ImageView howTo2;
+    private Button nextButtonHelp;
+    private Button doneButtonHelp;
+    private ImageView exitButton20;
+    private TextView prog1;
+    private TextView prog2;
+    private TextView prog3;
+    private TextView prog4;
 
-
-    @SuppressLint({"ResourceAsColor", "Range"})
+    @SuppressLint({"SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        showFirstName();
 
         /**
          * Constructor for objects of class Home.
@@ -76,28 +68,119 @@ public class Home extends AppCompatActivity {
         prog3 = findViewById(R.id.prog3);
         prog4 = findViewById(R.id.prog4);
 
+        showFirstName();
+
+        // Checks if userGuide has been viewed previously
+        // Hides if true
+        if(DataHolder.isUserGuideViewed()) {
+            howTo1.setVisibility(View.GONE);
+            howTo2.setVisibility(View.GONE);
+            nextButtonHelp.setVisibility(View.GONE);
+            doneButtonHelp.setVisibility(View.GONE);
+            exitButton20.setVisibility(View.GONE);
+            level1Button.setVisibility(View.VISIBLE);
+            level2Button.setVisibility(View.VISIBLE);
+            level3Button.setVisibility(View.VISIBLE);
+            level4Button.setVisibility(View.VISIBLE);
+        }
+
+        // Sets prog1 text from DataHolder method
+        String s = String.valueOf(DataHolder.getPercentageComplete1());
+        prog1.setText("Progress: " + s + "%");
+
+        // Sets prog2 text from DataHolder method
+        String e = String.valueOf(DataHolder.getPercentageComplete2());
+        prog2.setText("Progress: " + e + "%");
+
+        // Sets prog3 text from DataHolder method
+        String i = String.valueOf(DataHolder.getPercentageComplete3());
+        prog3.setText("Progress: " + i + "%");
+
+        // Sets prog4 text from DataHolder method
+        String o = String.valueOf(DataHolder.getPercentageComplete4());
+        prog4.setText("Progress: " + o + "%");
+
+        // Makes level2Button clickable
+        if(DataHolder.isLevel2ButtonClickable()) {
+            level2Button.setEnabled(true);
+        }
+
+        // Makes level3Button clickable
+        if(DataHolder.isLevel3ButtonClickable()) {
+            level3Button.setEnabled(true);
+        }
+
+        // Makes level4Button clickable
+        if(DataHolder.isLevel4ButtonClickable()) {
+            level4Button.setEnabled(true);
+        }
+
         // Changes text and color of level1Button on create
-        if(countOne == 1) {
+        if (DataHolder.isCompleteButton2Clicked()) {
+            level1Button.setText(R.string.revisit);
+            level1Button.setBackgroundColor(getResources().getColor(R.color.purple));
+        }
+        else if (DataHolder.isLevel1ButtonClicked()) {
             level1Button.setText(R.string.cont);
-            level1Button.setBackgroundColor(R.color.BSL_blue);
+            level1Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
+        }
+        else {
+            level1Button.setText(R.string.start);
+            level1Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
         }
 
-        // Changes text and color of level2Button on create.
-        if(countTwo == 1) {
+        // Changes text and color of level2Button on create
+        if (DataHolder.isCompleteButtonClicked()) {
+            level2Button.setText(R.string.revisit);
+            level2Button.setBackgroundColor(getResources().getColor(R.color.purple));
+        }
+        else if (DataHolder.isLevel2ButtonClicked()) {
             level2Button.setText(R.string.cont);
-            level2Button.setBackgroundColor(R.color.BSL_blue);
+            level2Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
+        }
+        else if (DataHolder.isCompleteButton2Clicked()) {
+            level2Button.setText(R.string.start);
+            level2Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
+        }
+        else {
+            level2Button.setText(R.string.locked);
+            level2Button.setBackgroundColor(getResources().getColor(R.color.background_blue));
         }
 
-        // Changes text and color of level3Button on create.
-        if(countThree == 1) {
+        // Changes text and color of level3Button on create
+        if (DataHolder.isCompleteButton3Clicked()) {
+            level3Button.setText(R.string.revisit);
+            level3Button.setBackgroundColor(getResources().getColor(R.color.purple));
+        }
+        else if (DataHolder.isLevel3ButtonClicked()) {
             level3Button.setText(R.string.cont);
-            level3Button.setBackgroundColor(R.color.BSL_blue);
+            level3Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
+        }
+        else if (DataHolder.isCompleteButtonClicked()) {
+            level3Button.setText(R.string.start);
+            level3Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
+        }
+        else {
+            level3Button.setText(R.string.locked);
+            level3Button.setBackgroundColor(getResources().getColor(R.color.background_blue));
         }
 
-        // Changes text and color of level4Button on create.
-        if(countFour == 1) {
+        // Changes text and color of level4Button on create
+        if (DataHolder.isCompleteButton4Clicked()) {
+            level4Button.setText(R.string.revisit);
+            level4Button.setBackgroundColor(getResources().getColor(R.color.purple));
+        }
+        else if (DataHolder.isLevel4ButtonClicked()) {
             level4Button.setText(R.string.cont);
-            level4Button.setBackgroundColor(R.color.BSL_blue);
+            level4Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
+        }
+        else if (DataHolder.isCompleteButton3Clicked()) {
+            level4Button.setText(R.string.start);
+            level4Button.setBackgroundColor(getResources().getColor(R.color.BSL_blue));
+        }
+        else {
+            level4Button.setText(R.string.locked);
+            level4Button.setBackgroundColor(getResources().getColor(R.color.background_blue));
         }
 
         /**
@@ -107,6 +190,7 @@ public class Home extends AppCompatActivity {
         exitButton20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DataHolder.setUserGuideViewed(true);
                 howTo1.setVisibility(View.GONE);
                 howTo2.setVisibility(View.GONE);
                 nextButtonHelp.setVisibility(View.GONE);
@@ -116,7 +200,6 @@ public class Home extends AppCompatActivity {
                 level2Button.setVisibility(View.VISIBLE);
                 level3Button.setVisibility(View.VISIBLE);
                 level4Button.setVisibility(View.VISIBLE);
-                count++;
             }
         });
 
@@ -129,6 +212,7 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 howTo1.setVisibility(View.GONE);
                 howTo2.setVisibility(View.VISIBLE);
+                exitButton20.setVisibility(View.VISIBLE);
                 nextButtonHelp.setVisibility(View.GONE);
                 doneButtonHelp.setVisibility(View.VISIBLE);
             }
@@ -141,6 +225,7 @@ public class Home extends AppCompatActivity {
         doneButtonHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DataHolder.setUserGuideViewed(true);
                 howTo1.setVisibility(View.GONE);
                 howTo2.setVisibility(View.GONE);
                 nextButtonHelp.setVisibility(View.GONE);
@@ -150,7 +235,6 @@ public class Home extends AppCompatActivity {
                 level2Button.setVisibility(View.VISIBLE);
                 level3Button.setVisibility(View.VISIBLE);
                 level4Button.setVisibility(View.VISIBLE);
-                count++;
             }
         });
 
@@ -184,9 +268,26 @@ public class Home extends AppCompatActivity {
         level1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Intro1.class));
-                level1Button.setText(R.string.cont);
-                countOne++;
+                DataHolder.setLevel1ButtonClicked(true);
+                if (DataHolder.getPercentageComplete1() < 10) {
+                    DataHolder.setPercentageComplete1(10);
+                }
+
+                if (DataHolder.getActivityCount1() <= 1) {
+                    startActivity(new Intent(Home.this, Introduction1.class));
+                }
+                else if (DataHolder.getActivityCount1() == 2) {
+                    startActivity(new Intent(Home.this, Introduction2.class));
+                }
+                else if (DataHolder.getActivityCount1() == 3) {
+                    startActivity(new Intent(Home.this, Introduction3.class));
+                }
+                else if (DataHolder.getActivityCount1() == 4){
+                    startActivity(new Intent(Home.this, Introduction4.class));
+                }
+                else if (DataHolder.getActivityCount1() == 5){
+                    startActivity(new Intent(Home.this, Quiz1.class));
+                }
             }
         });
 
@@ -197,9 +298,20 @@ public class Home extends AppCompatActivity {
         level2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Alphabet1.class));
-                level2Button.setText(R.string.cont);
-                countTwo++;
+                DataHolder.setLevel2ButtonClicked(true);
+                if (DataHolder.getPercentageComplete2() < 20) {
+                    DataHolder.setPercentageComplete2(20);
+                }
+
+                if (DataHolder.getActivityCount2() <= 1)  {
+                    startActivity(new Intent(Home.this, Alphabet1.class));
+                }
+                else if (DataHolder.getActivityCount2() == 2) {
+                    startActivity(new Intent(Home.this, Alphabet2.class));
+                }
+                else if (DataHolder.getActivityCount2() == 3){
+                    startActivity(new Intent(Home.this, Quiz2.class));
+                }
             }
         });
 
@@ -211,8 +323,32 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Numbers1.class));
-                level3Button.setText(R.string.cont);
-                countThree++;
+                DataHolder.setLevel3ButtonClicked(true);
+                if (DataHolder.getPercentageComplete3() < 10) {
+                    DataHolder.setPercentageComplete3(10);
+                }
+
+                if (DataHolder.getActivityCount3() <= 1) {
+                    startActivity(new Intent(Home.this, Numbers1.class));
+                }
+                else if (DataHolder.getActivityCount3() == 2) {
+                    startActivity(new Intent(Home.this, Numbers2.class));
+                }
+                else if (DataHolder.getActivityCount3() == 3) {
+                    startActivity(new Intent(Home.this, Numbers3.class));
+                }
+                else if (DataHolder.getActivityCount3() == 4){
+                    startActivity(new Intent(Home.this, Numbers4.class));
+                }
+                else if (DataHolder.getActivityCount3() == 5){
+                    startActivity(new Intent(Home.this, Numbers5.class));
+                }
+                else if (DataHolder.getActivityCount3() == 6){
+                    startActivity(new Intent(Home.this, Numbers6.class));
+                }
+                else if (DataHolder.getActivityCount3() == 7){
+                    startActivity(new Intent(Home.this, Quiz3.class));
+                }
             }
         });
 
@@ -223,9 +359,39 @@ public class Home extends AppCompatActivity {
         level4Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Convo1.class));
-                level4Button.setText(R.string.cont);
-                countFour++;
+                startActivity(new Intent(Home.this, Conversation1.class));
+                DataHolder.setLevel4ButtonClicked(true);
+                if (DataHolder.getPercentageComplete4() < 5) {
+                    DataHolder.setPercentageComplete4(5);
+                }
+
+                if (DataHolder.getActivityCount4() <= 1) {
+                    startActivity(new Intent(Home.this, Conversation1.class));
+                }
+                else if (DataHolder.getActivityCount4() == 2) {
+                    startActivity(new Intent(Home.this, Conversation2.class));
+                }
+                else if (DataHolder.getActivityCount4() == 3) {
+                    startActivity(new Intent(Home.this, Conversation3.class));
+                }
+                else if (DataHolder.getActivityCount4() == 4){
+                    startActivity(new Intent(Home.this, Conversation4.class));
+                }
+                else if (DataHolder.getActivityCount4() == 5){
+                    startActivity(new Intent(Home.this, Conversation5.class));
+                }
+                else if (DataHolder.getActivityCount4() == 6){
+                    startActivity(new Intent(Home.this, Conversation6.class));
+                }
+                else if (DataHolder.getActivityCount4() == 7){
+                    startActivity(new Intent(Home.this, Conversation7.class));
+                }
+                else if (DataHolder.getActivityCount4() == 8){
+                    startActivity(new Intent(Home.this, Conversation8.class));
+                }
+                else if (DataHolder.getActivityCount4() == 9){
+                    startActivity(new Intent(Home.this, Quiz4.class));
+                }
             }
         });
     }
@@ -243,30 +409,6 @@ public class Home extends AppCompatActivity {
         } else {
             Toast.makeText(getApplicationContext(), "NO DATA", Toast.LENGTH_LONG).show();
         }
-    }
-
-    // Stop help popups from appearing after first instance.
-    public boolean isHelpShown() {
-        if (count > 1) {
-            howTo1.setVisibility(View.GONE);
-            howTo2.setVisibility(View.GONE);
-            nextButtonHelp.setVisibility(View.GONE);
-            doneButtonHelp.setVisibility(View.GONE);
-            exitButton20.setVisibility(View.GONE);
-            level1Button.setVisibility(View.VISIBLE);
-            level2Button.setVisibility(View.VISIBLE);
-            level3Button.setVisibility(View.VISIBLE);
-            level4Button.setVisibility(View.VISIBLE);
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
-
-    public String updateProg1() {
-        String prog1Text = prog1.getText().toString();
-        return prog1Text;
     }
 }
 

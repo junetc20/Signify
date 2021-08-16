@@ -3,14 +3,14 @@ package com.example.signify;
 import junit.framework.TestCase;
 
 /**
- * The test class HomeTest.
+ * The test class LoginTest.
  * Unit test, which will execute on the development machine (host).
  *
  * @author June Caldwell
  * @version 0.1 (01.08.21)
  */
 
-public class HomeTest extends TestCase {
+public class LoginTest extends TestCase {
 
     /**
      * Sets up test fixture.
@@ -29,6 +29,4 @@ public class HomeTest extends TestCase {
     public void tearDown() throws Exception {
     }
 
-    public void testShowFirstName() {
-    }
 }

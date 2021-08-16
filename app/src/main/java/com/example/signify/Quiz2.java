@@ -33,27 +33,25 @@ public class Quiz2 extends AppCompatActivity
     private int currentQuestionIndex = 0;
     private Button nextButton;
     private Button completeButton;
-    private Button level2Button;
 
     // Array to hold questions
-    public Question[] questionBank = new Question[]{
-            new Question(R.string.R, true),
-            new Question(R.string.T, false),
-            new Question(R.string.G, true),
-            new Question(R.string.U, true),
-            new Question(R.string.Z, false),
-            new Question(R.string.Q, true),
-            new Question(R.string.Y, false),
-            new Question(R.string.L, false),
-            new Question(R.string.O, true),
-            new Question(R.string.S, true),
-            new Question(R.string.I, false),
-            new Question(R.string.K, true),
-            new Question(R.string.H, false),
-            new Question(R.string.A, false),
+    public QuizQuestions[] quizQuestionsBank = new QuizQuestions[]{
+            new QuizQuestions(R.string.R, true),
+            new QuizQuestions(R.string.T, false),
+            new QuizQuestions(R.string.G, true),
+            new QuizQuestions(R.string.U, true),
+            new QuizQuestions(R.string.Z, false),
+            new QuizQuestions(R.string.Q, true),
+            new QuizQuestions(R.string.Y, false),
+            new QuizQuestions(R.string.L, false),
+            new QuizQuestions(R.string.O, true),
+            new QuizQuestions(R.string.S, true),
+            new QuizQuestions(R.string.I, false),
+            new QuizQuestions(R.string.K, true),
+            new QuizQuestions(R.string.H, false),
+            new QuizQuestions(R.string.A, false),
     };
 
-    // Linking this class with an activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +70,6 @@ public class Quiz2 extends AppCompatActivity
         questionText = findViewById(R.id.questionText);
         nextButton = findViewById(R.id.nextButton);
         completeButton = findViewById(R.id.completeButton);
-        level2Button = findViewById(R.id.level2Button);
 
         trueButton.setOnClickListener(this);
         falseButton.setOnClickListener(this);
@@ -86,6 +83,7 @@ public class Quiz2 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Quiz2.this, Home.class));
+                DataHolder.setActivityCount2(3);
             }
         });
 
@@ -97,6 +95,12 @@ public class Quiz2 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Quiz2.this, Home.class));
+                DataHolder.setCompleteButtonClicked(true);
+                DataHolder.setLevel3ButtonClickable(true);
+                if (DataHolder.getPercentageComplete2() < 100) {
+                    DataHolder.setPercentageComplete2(100);
+                }
+                DataHolder.setActivityCount2(0);
             }
         });
     }
@@ -141,74 +145,80 @@ public class Quiz2 extends AppCompatActivity
         }
     }
 
+    /**
+     * Update fields as currentQuestionIndex increases.
+     */
     @SuppressLint("SetTextI18n")
-    private void updateQuestion() {
-        questionText.setText(questionBank[currentQuestionIndex].getAnswerResId());
+    public void updateQuestion() {
+        questionText.setText(quizQuestionsBank[currentQuestionIndex].getAnswerResId());
         // setting the textview with new question
         switch (currentQuestionIndex) {
             case 0:
                 quizImage1.setImageResource(R.drawable.r);
-                questionCountDisplay2.setText("Question 1 / 14");
+                questionCountDisplay2.setText("QuizQuestions 1 / 14");
                 break;
             case 1:
                 quizImage1.setImageResource(R.drawable.h);
-                questionCountDisplay2.setText("Question 2 / 14");
+                questionCountDisplay2.setText("QuizQuestions 2 / 14");
                 break;
             case 2:
                 quizImage1.setImageResource(R.drawable.g);
-                questionCountDisplay2.setText("Question 3 / 14");
+                questionCountDisplay2.setText("QuizQuestions 3 / 14");
                 break;
             case 3:
                 quizImage1.setImageResource(R.drawable.u);
-                questionCountDisplay2.setText("Question 4 / 14");
+                questionCountDisplay2.setText("QuizQuestions 4 / 14");
                 break;
             case 4:
                 quizImage1.setImageResource(R.drawable.x);
-                questionCountDisplay2.setText("Question 5 / 14");
+                questionCountDisplay2.setText("QuizQuestions 5 / 14");
                 break;
             case 5:
                 quizImage1.setImageResource(R.drawable.q);
-                questionCountDisplay2.setText("Question 6 / 14");
+                questionCountDisplay2.setText("QuizQuestions 6 / 14");
                 break;
             case 6:
                 quizImage1.setImageResource(R.drawable.j);
-                questionCountDisplay2.setText("Question 7 / 14");
+                questionCountDisplay2.setText("QuizQuestions 7 / 14");
                 break;
             case 7:
                 quizImage1.setImageResource(R.drawable.n);
-                questionCountDisplay2.setText("Question 8 / 14");
+                questionCountDisplay2.setText("QuizQuestions 8 / 14");
                 break;
             case 8:
                 quizImage1.setImageResource(R.drawable.o);
-                questionCountDisplay2.setText("Question 9 / 14");
+                questionCountDisplay2.setText("QuizQuestions 9 / 14");
                 break;
             case 9:
                 quizImage1.setImageResource(R.drawable.s);
-                questionCountDisplay2.setText("Question 10 / 14");
+                questionCountDisplay2.setText("QuizQuestions 10 / 14");
                 break;
             case 10:
                 quizImage1.setImageResource(R.drawable.u);
-                questionCountDisplay2.setText("Question 11 / 14");
+                questionCountDisplay2.setText("QuizQuestions 11 / 14");
                 break;
             case 11:
                 quizImage1.setImageResource(R.drawable.k);
-                questionCountDisplay2.setText("Question 12 / 14");
+                questionCountDisplay2.setText("QuizQuestions 12 / 14");
                 break;
             case 12:
                 quizImage1.setImageResource(R.drawable.t);
-                questionCountDisplay2.setText("Question 13 / 14");
+                questionCountDisplay2.setText("QuizQuestions 13 / 14");
                 break;
             case 13:
                 quizImage1.setImageResource(R.drawable.p);
-                questionCountDisplay2.setText("Question 14 / 14");
+                questionCountDisplay2.setText("QuizQuestions 14 / 14");
                 break;
         }
     }
 
+    /**
+     * Check the boolean value of userChooseCorrect.
+     * @param userChooseCorrect The boolean value of userChooseCorrect.
+     */
     int correct = 0;
-
-    private void checkAnswer(boolean userChooseCorrect) {
-        boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
+    public void checkAnswer(boolean userChooseCorrect) {
+        boolean answerIsTrue = quizQuestionsBank[currentQuestionIndex].isAnswerTrue();
         int toastMessageId;
         if (userChooseCorrect == answerIsTrue) {
             toastMessageId = R.string.correct_answer;

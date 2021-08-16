@@ -19,10 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Alphabet2 extends AppCompatActivity {
 
-    ImageView exitButton4;
-    ImageView nextArrow2;
-    ImageView backArrow;
-    VideoView alphabetVid;
+    private ImageView exitButton4;
+    private ImageView nextArrow2;
+    private ImageView backArrow;
+    private VideoView alphabetVid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class Alphabet2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Alphabet2.this, Home.class));
+                DataHolder.setActivityCount2(2);
             }
         });
 
@@ -65,6 +66,9 @@ public class Alphabet2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Alphabet2.this, Quiz2.class));
+                if (DataHolder.getPercentageComplete2() < 60) {
+                    DataHolder.setPercentageComplete2(60);
+                }
             }
         });
 

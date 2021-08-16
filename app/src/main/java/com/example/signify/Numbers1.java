@@ -21,12 +21,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Numbers1 extends AppCompatActivity {
 
-    VideoView noVideo1;
-    VideoView noVideo2;
-    ImageView exitButton8;
-    ImageView nextArrow7;
-    Button beginButton3;
-    ImageView learningOutcomes3;
+    private VideoView noVideo1;
+    private VideoView noVideo2;
+    private ImageView exitButton8;
+    private ImageView nextArrow7;
+    private Button beginButton4;
+    private ImageView learningOutcomes3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +36,9 @@ public class Numbers1 extends AppCompatActivity {
         /**
          * Constructor for objects of class Numbers1.
          */
-        /*
         exitButton8 = findViewById(R.id.exitButton8);
         nextArrow7 = findViewById(R.id.nextArrow7);
-        beginButton3 = findViewById(R.id.beginButton4);
+        beginButton4 = findViewById(R.id.beginButton4);
         learningOutcomes3 = findViewById(R.id.learningOutcomes3);
 
         noVideo1 = findViewById(R.id.videoView);
@@ -59,7 +58,6 @@ public class Numbers1 extends AppCompatActivity {
         noVideo2.setMediaController(mediaController2);
         mediaController2.setAnchorView(noVideo2);
         noVideo2.seekTo(3);
-        */
 
         /**
          * Set the view from clicking exitButton8.
@@ -69,6 +67,7 @@ public class Numbers1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Numbers1.this, Home.class));
+                DataHolder.setActivityCount3(1);
             }
         });
 
@@ -80,6 +79,9 @@ public class Numbers1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Numbers1.this, Numbers2.class));
+                if (DataHolder.getPercentageComplete3() < 20) {
+                    DataHolder.setPercentageComplete3(20);
+                }
             }
         });
 
@@ -87,11 +89,11 @@ public class Numbers1 extends AppCompatActivity {
          * Set the view from clicking beginButton3.
          * @param v the onClickListener View.
          */
-        beginButton3.setOnClickListener(new View.OnClickListener() {
+        beginButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 learningOutcomes3.setVisibility(View.INVISIBLE);
-                beginButton3.setVisibility(View.INVISIBLE);
+                beginButton4.setVisibility(View.INVISIBLE);
             }
         });
     }

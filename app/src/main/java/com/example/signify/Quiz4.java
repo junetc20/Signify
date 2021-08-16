@@ -30,22 +30,21 @@ public class Quiz4 extends AppCompatActivity
     private ImageView exitButtonQuiz4;
     private VideoView quizVideo1;
     private ImageView resultImage4;
-    private TextView resultText3;
+    private TextView resultText4;
     private TextView questionCountDisplay4;
     private TextView questionText4;
     private int currentQuestionIndex = 0;
     private Button nextButton4;
     private Button completeButton4;
-    private Button level4Button;
 
     // Array to hold questions
-    public Question[] questionBank = new Question[]{
-            new Question(R.string.not_good, false),
-            new Question(R.string.please, true),
-            new Question(R.string.meet, false),
-            new Question(R.string.good, true),
-            new Question(R.string.thank_you, false),
-            new Question(R.string.How, true),
+    public QuizQuestions[] quizQuestionsBank = new QuizQuestions[]{
+            new QuizQuestions(R.string.not_good, false),
+            new QuizQuestions(R.string.please, true),
+            new QuizQuestions(R.string.meet, false),
+            new QuizQuestions(R.string.good, true),
+            new QuizQuestions(R.string.thank_you, false),
+            new QuizQuestions(R.string.How, true),
     };
 
     @Override
@@ -57,7 +56,7 @@ public class Quiz4 extends AppCompatActivity
          * Constructor for objects of class Quiz4.
          */
         resultImage4 = findViewById(R.id.resultImage4);
-        resultText3 = findViewById(R.id.resultText3);
+        resultText4 = findViewById(R.id.resultText4);
         trueButton3 = findViewById(R.id.trueButton3);
         falseButton3 = findViewById(R.id.falseButton3);
         exitButtonQuiz4 = findViewById(R.id.exitButtonQuiz4);
@@ -65,7 +64,6 @@ public class Quiz4 extends AppCompatActivity
         questionText4 = findViewById(R.id.questionText4);
         nextButton4 = findViewById(R.id.nextButton4);
         completeButton4 = findViewById(R.id.completeButton4);
-        level4Button = findViewById(R.id.level4Button);
 
         trueButton3.setOnClickListener(this);
         falseButton3.setOnClickListener(this);
@@ -88,6 +86,7 @@ public class Quiz4 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Quiz4.this, Home.class));
+                DataHolder.setActivityCount4(9);
             }
         });
 
@@ -99,6 +98,11 @@ public class Quiz4 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Quiz4.this, Home.class));
+                DataHolder.setCompleteButton4Clicked(true);
+                if (DataHolder.getPercentageComplete4() < 100) {
+                    DataHolder.setPercentageComplete4(100);
+                }
+                DataHolder.setActivityCount4(0);
             }
         });
     }
@@ -135,58 +139,63 @@ public class Quiz4 extends AppCompatActivity
                     trueButton3.setVisibility(View.INVISIBLE);
                     falseButton3.setVisibility(View.INVISIBLE);
                     resultImage4.setVisibility(View.VISIBLE);
-                    resultText3.setVisibility(View.VISIBLE);
+                    resultText4.setVisibility(View.VISIBLE);
                     completeButton4.setVisibility(View.VISIBLE);
-                    resultText3.setText(correct + "/6");
+                    resultText4.setText(correct + "/6");
                 }
                 break;
         }
     }
 
-    // Update question
+    /**
+     * Update fields as currentQuestionIndex increases.
+     */
     @SuppressLint("SetTextI18n")
     private void updateQuestion() {
         // setting the textview with new question
-        questionText4.setText(questionBank[currentQuestionIndex].getAnswerResId());
+        questionText4.setText(quizQuestionsBank[currentQuestionIndex].getAnswerResId());
         switch (currentQuestionIndex) {
             // Updating video content and question count display when the question changes
             case 0:
                 quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_good));
                 quizVideo1.start();
-                questionCountDisplay4.setText("Question 1 / 6");
+                questionCountDisplay4.setText("QuizQuestions 1 / 6");
                 break;
             case 1:
                 quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_please));
                 quizVideo1.start();
-                questionCountDisplay4.setText("Question 2 / 6");
+                questionCountDisplay4.setText("QuizQuestions 2 / 6");
                 break;
             case 2:
-                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_not_good));
+                quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_how_you));
                 quizVideo1.start();
-                questionCountDisplay4.setText("Question 3 / 6");
+                questionCountDisplay4.setText("QuizQuestions 3 / 6");
                 break;
             case 3:
                 quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_good));
                 quizVideo1.start();
-                questionCountDisplay4.setText("Question 4 / 6");
+                questionCountDisplay4.setText("QuizQuestions 4 / 6");
                 break;
             case 4:
                 quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_please));
                 quizVideo1.start();
-                questionCountDisplay4.setText("Question 5 / 6");
+                questionCountDisplay4.setText("QuizQuestions 5 / 6");
                 break;
             case 5:
                 quizVideo1.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.convo_how_you));
                 quizVideo1.start();
-                questionCountDisplay4.setText("Question 6 / 6");
+                questionCountDisplay4.setText("QuizQuestions 6 / 6");
                 break;
         }
     }
 
+    /**
+     * Check the boolean value of userChooseCorrect.
+     * @param userChooseCorrect The boolean value of userChooseCorrect.
+     */
     int correct = 0;
-
     private void checkAnswer(boolean userChooseCorrect) {
-        boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
+        boolean answerIsTrue = quizQuestionsBank[currentQuestionIndex].isAnswerTrue();
         int toastMessageId;
         if (userChooseCorrect == answerIsTrue) {
             toastMessageId = R.string.correct_answer;

@@ -20,11 +20,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Numbers6 extends AppCompatActivity {
 
-    VideoView noVideo10;
-    VideoView noVideo11;
-    ImageView exitButton13;
-    ImageView nextArrow11;
-    ImageView backArrow9;
+    private VideoView noVideo10;
+    private VideoView noVideo11;
+    private ImageView exitButton13;
+    private ImageView nextArrow11;
+    private ImageView backArrow9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,6 @@ public class Numbers6 extends AppCompatActivity {
         nextArrow11 = findViewById(R.id.nextArrow11);
         backArrow9 = findViewById(R.id.backArrow9);
 
-        /*
         noVideo10 = findViewById(R.id.videoView10);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.no_video_ten;
         Uri uri = Uri.parse(videoPath);
@@ -48,8 +47,6 @@ public class Numbers6 extends AppCompatActivity {
         mediaController.setAnchorView(noVideo10);
         noVideo10.seekTo(3);
 
-
-        // Make ninth number video playable
         noVideo11 = findViewById(R.id.videoView11);
         String videoPath2 = "android.resource://" + getPackageName() + "/" + R.raw.no_video_eleven;
         Uri uri2 = Uri.parse(videoPath2);
@@ -58,7 +55,6 @@ public class Numbers6 extends AppCompatActivity {
         noVideo11.setMediaController(mediaController2);
         mediaController2.setAnchorView(noVideo11);
         noVideo11.seekTo(3);
-         */
 
         /**
          * Set the view from clicking exitButton13.
@@ -68,6 +64,7 @@ public class Numbers6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Numbers6.this, Home.class));
+                DataHolder.setActivityCount3(6);
             }
         });
 
@@ -79,6 +76,9 @@ public class Numbers6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Numbers6.this, Quiz3.class));
+                if (DataHolder.getPercentageComplete3() < 70) {
+                    DataHolder.setPercentageComplete3(70);
+                }
             }
         });
 

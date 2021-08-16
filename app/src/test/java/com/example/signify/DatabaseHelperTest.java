@@ -1,16 +1,17 @@
+
 package com.example.signify;
 
 import junit.framework.TestCase;
 
 /**
- * The test class HomeTest.
+ * The test class DatabaseHelperTest.
  * Unit test, which will execute on the development machine (host).
  *
  * @author June Caldwell
  * @version 0.1 (01.08.21)
  */
 
-public class HomeTest extends TestCase {
+public class DatabaseHelperTest extends TestCase {
 
     /**
      * Sets up test fixture.
@@ -29,6 +30,27 @@ public class HomeTest extends TestCase {
     public void tearDown() throws Exception {
     }
 
-    public void testShowFirstName() {
+    public void testOnUpgrade() {
+    }
+
+    public void testInsert() {
+    }
+
+    public void testUpdateUserData() {
+    }
+
+    public void testUpdateUserPassword() {
+    }
+
+    public void testGetUserData() {
+    }
+
+    public void testFirstName() {
+    }
+
+    public void testCheckEmail() {
+    }
+
+    public void testCheckLoginDetails() {
     }
 }
