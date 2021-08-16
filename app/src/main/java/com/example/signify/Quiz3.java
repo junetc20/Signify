@@ -114,7 +114,6 @@ public class Quiz3 extends AppCompatActivity
 
     /**
      * Set the view from clicking trueButton2, falseButton2 or nextButton3.
-     *
      * @param v the onClickListener View.
      */
     @SuppressLint({"NonConstantResourceId", "SetTextI18n"})

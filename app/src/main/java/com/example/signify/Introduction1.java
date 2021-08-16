@@ -1,6 +1,5 @@
 package com.example.signify;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +23,6 @@ public class Introduction1 extends AppCompatActivity {
     private ImageView learningOutcomes1;
     private Button beginButton2;
 
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +45,6 @@ public class Introduction1 extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Introduction1.this, Home.class));
                 DataHolder.setActivityCount1(1);
-
             }
         });
 

@@ -63,7 +63,6 @@ public class Menu extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
                 builder.setMessage("Are you sure you want to log out of your account?");
                 builder.setCancelable(true);
-
                 builder.setPositiveButton(
                         "Yes",
                         new DialogInterface.OnClickListener() {
@@ -72,7 +71,6 @@ public class Menu extends AppCompatActivity {
                                 dialog.cancel();
                             }
                         });
-
                 builder.setNegativeButton(
                         "No",
                         new DialogInterface.OnClickListener() {
@@ -80,7 +78,6 @@ public class Menu extends AppCompatActivity {
                                 dialog.cancel();
                             }
                         });
-
                 AlertDialog alert = builder.create();
                 alert.show();
             }
@@ -109,7 +106,6 @@ public class Menu extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Menu.this);
                 builder.setMessage("This will take you to an external website. Do you want to open this?");
                 builder.setCancelable(true);
-
                 builder.setPositiveButton(
                         "Yes",
                         new DialogInterface.OnClickListener() {
@@ -120,7 +116,6 @@ public class Menu extends AppCompatActivity {
                                 dialog.cancel();
                             }
                         });
-
                 builder.setNegativeButton(
                         "No",
                         new DialogInterface.OnClickListener() {
@@ -128,10 +123,8 @@ public class Menu extends AppCompatActivity {
                                 dialog.cancel();
                             }
                         });
-
                 AlertDialog alert = builder.create();
                 alert.show();
-
             }
         });
 
@@ -145,6 +138,5 @@ public class Menu extends AppCompatActivity {
                 startActivity(new Intent(Menu.this, Assess.class));
             }
         });
-
     }
 }

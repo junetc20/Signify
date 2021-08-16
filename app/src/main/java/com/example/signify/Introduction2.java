@@ -1,6 +1,5 @@
 package com.example.signify;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +21,6 @@ public class Introduction2 extends AppCompatActivity {
     private ImageView nextArrow4;
     private ImageView backArrow2;
 
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

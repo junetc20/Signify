@@ -36,7 +36,6 @@ public class Numbers1 extends AppCompatActivity {
         /**
          * Constructor for objects of class Numbers1.
          */
-
         exitButton8 = findViewById(R.id.exitButton8);
         nextArrow7 = findViewById(R.id.nextArrow7);
         beginButton4 = findViewById(R.id.beginButton4);

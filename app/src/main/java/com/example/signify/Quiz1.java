@@ -1,7 +1,5 @@
 package com.example.signify;
 
-  import com.example.signify.Home;
-
   import android.annotation.SuppressLint;
   import android.content.Intent;
   import android.os.Bundle;

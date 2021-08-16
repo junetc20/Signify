@@ -90,7 +90,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @return has data been deleted from the database?
      * @param password the user's password.
      */
-  
     public boolean updateUserPassword(String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -147,7 +146,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @param email the user's email.
      * @param password the user's password.
      */
-    // Check email and password input at login screen
     public boolean checkLoginDetails(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from user where email=? and password=?", new String[]{email, password});
