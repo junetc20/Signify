@@ -25,23 +25,23 @@ import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
 
-    DatabaseHelper db;
-    ImageView userAccount;
-    ImageButton menu;
-    Button level1Button;
-    Button level2Button;
-    Button level3Button;
-    Button level4Button;
-    TextView firstName;
-    ImageView howTo1;
-    ImageView howTo2;
-    Button nextButtonHelp;
-    Button doneButtonHelp;
-    ImageView exitButton20;
-    TextView prog1;
-    TextView prog2;
-    TextView prog3;
-    TextView prog4;
+    private DatabaseHelper db;
+    private ImageView userAccount;
+    private ImageButton menu;
+    private Button level1Button;
+    private Button level2Button;
+    private Button level3Button;
+    private Button level4Button;
+    private TextView firstName;
+    private ImageView howTo1;
+    private ImageView howTo2;
+    private Button nextButtonHelp;
+    private Button doneButtonHelp;
+    private ImageView exitButton20;
+    private TextView prog1;
+    private TextView prog2;
+    private TextView prog3;
+    private TextView prog4;
 
     @SuppressLint({"SetTextI18n"})
     @Override

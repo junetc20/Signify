@@ -20,15 +20,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SignUp extends AppCompatActivity{
 
-    DatabaseHelper db;
-    EditText inputFirstName;
-    EditText inputLastName;
-    EditText inputEmail;
-    EditText createPassword;
-    EditText reEnterPassword;
-    Button createAccount;
-    TextView signInClick;
-    ImageView exitButton;
+    private DatabaseHelper db;
+    private EditText inputFirstName;
+    private EditText inputLastName;
+    private EditText inputEmail;
+    private EditText createPassword;
+    private EditText reEnterPassword;
+    private Button createAccount;
+    private TextView signInClick;
+    private ImageView exitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

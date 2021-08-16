@@ -19,16 +19,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Assess extends AppCompatActivity {
 
-    ImageView exitButton;
-    EditText inputOne;
-    EditText inputTwo;
-    EditText inputThree;
-    EditText inputFour;
-    EditText inputFive;
-    Button finish;
-    ImageView resultNeg;
-    ImageView resultPos;
-    Button resultButton;
+    private ImageView exitButton;
+    private EditText inputOne;
+    private EditText inputTwo;
+    private EditText inputThree;
+    private EditText inputFour;
+    private EditText inputFive;
+    private Button finish;
+    private ImageView resultNeg;
+    private ImageView resultPos;
+    private Button resultButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -21,11 +21,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Menu extends AppCompatActivity {
 
-    ImageView exitButtonMenu;
-    TextView userGuideLink;
-    TextView bslLink;
-    TextView logoutLink;
-    TextView surveyLink;
+    private ImageView exitButtonMenu;
+    private TextView userGuideLink;
+    private TextView bslLink;
+    private TextView logoutLink;
+    private TextView surveyLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -18,10 +18,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Alphabet1 extends AppCompatActivity {
 
-    ImageView exitButton3;
-    ImageView nextArrow;
-    Button beginButton2;
-    ImageView learningOutcomes2;
+    private ImageView exitButton3;
+    private ImageView nextArrow;
+    private Button beginButton2;
+    private ImageView learningOutcomes2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

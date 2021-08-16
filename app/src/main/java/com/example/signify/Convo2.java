@@ -20,11 +20,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Convo2 extends AppCompatActivity {
 
-    ImageView exitButton15;
-    VideoView videoView15;
-    VideoView videoView16;
-    ImageView nextArrow14;
-    ImageView backArrow10;
+    private ImageView exitButton15;
+    private VideoView videoView15;
+    private VideoView videoView16;
+    private ImageView nextArrow14;
+    private ImageView backArrow10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

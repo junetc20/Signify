@@ -18,9 +18,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Intro4 extends AppCompatActivity {
 
-    ImageView exitButton7;
-    ImageView nextArrow6;
-    ImageView backArrow4;
+    private ImageView exitButton7;
+    private ImageView nextArrow6;
+    private ImageView backArrow4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

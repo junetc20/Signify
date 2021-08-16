@@ -17,9 +17,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Convo7 extends AppCompatActivity {
 
-    ImageView exitButton20;
-    ImageView nextArrow19;
-    ImageView backArrow15;
+    private ImageView exitButton20;
+    private ImageView nextArrow19;
+    private ImageView backArrow15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

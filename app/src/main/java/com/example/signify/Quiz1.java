@@ -38,7 +38,7 @@ public class Quiz1 extends AppCompatActivity {
     private int currentQuestionNumber = 0;
     private TextView resultText2;
     private ImageView resultImage2;
-    int score = 0;
+    private int score = 0;
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {

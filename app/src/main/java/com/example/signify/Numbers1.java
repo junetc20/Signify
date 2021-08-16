@@ -21,12 +21,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Numbers1 extends AppCompatActivity {
 
-    VideoView noVideo1;
-    VideoView noVideo2;
-    ImageView exitButton8;
-    ImageView nextArrow7;
-    Button beginButton4;
-    ImageView learningOutcomes3;
+    private VideoView noVideo1;
+    private VideoView noVideo2;
+    private ImageView exitButton8;
+    private ImageView nextArrow7;
+    private Button beginButton4;
+    private ImageView learningOutcomes3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

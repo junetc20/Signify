@@ -19,10 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Alphabet2 extends AppCompatActivity {
 
-    ImageView exitButton4;
-    ImageView nextArrow2;
-    ImageView backArrow;
-    VideoView alphabetVid;
+    private ImageView exitButton4;
+    private ImageView nextArrow2;
+    private ImageView backArrow;
+    private VideoView alphabetVid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -22,16 +22,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Account extends AppCompatActivity {
 
-    DatabaseHelper db;
-    ImageView exitButtonAcc;
-    EditText firstNameAcc;
-    EditText lastNameAcc;
-    EditText emailAcc;
-    EditText currentPassAcc;
-    EditText newPassAcc;
-    EditText reNewPassAcc;
-    Button saveChangesAcc;
-    Button saveChangesPass;
+    private DatabaseHelper db;
+    private ImageView exitButtonAcc;
+    private EditText firstNameAcc;
+    private EditText lastNameAcc;
+    private EditText emailAcc;
+    private EditText currentPassAcc;
+    private EditText newPassAcc;
+    private EditText reNewPassAcc;
+    private Button saveChangesAcc;
+    private Button saveChangesPass;
 
     @SuppressLint("Range")
     @Override
