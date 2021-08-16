@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 0.1 (01.08.21)
  */
 
-public class Convo7 extends AppCompatActivity {
+public class Conversation7 extends AppCompatActivity {
 
     private ImageView exitButton20;
     private ImageView nextArrow19;
@@ -27,7 +27,7 @@ public class Convo7 extends AppCompatActivity {
         setContentView(R.layout.activity_convo_7);
 
         /**
-         * Constructor for objects of class Convo7.
+         * Constructor for objects of class Conversation7.
          */
         exitButton20 = findViewById(R.id.exitButton20);
         nextArrow19 = findViewById(R.id.nextArrow19);
@@ -40,7 +40,7 @@ public class Convo7 extends AppCompatActivity {
         exitButton20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo7.this, Home.class));
+                startActivity(new Intent(Conversation7.this, Home.class));
                 DataHolder.setActivityCount4(7);
             }
         });
@@ -52,7 +52,7 @@ public class Convo7 extends AppCompatActivity {
         nextArrow19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo7.this, Convo8.class));
+                startActivity(new Intent(Conversation7.this, Conversation8.class));
                 if (DataHolder.getPercentageComplete4() < 40) {
                     DataHolder.setPercentageComplete4(40);
                 }
@@ -66,7 +66,7 @@ public class Convo7 extends AppCompatActivity {
         backArrow15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo7.this, Convo6.class));
+                startActivity(new Intent(Conversation7.this, Conversation6.class));
             }
         });
     }

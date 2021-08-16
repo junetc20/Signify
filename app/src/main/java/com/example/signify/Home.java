@@ -1,13 +1,11 @@
 package com.example.signify;
 
-import androidx.annotation.ColorRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -276,16 +274,16 @@ public class Home extends AppCompatActivity {
                 }
 
                 if (DataHolder.getActivityCount1() <= 1) {
-                    startActivity(new Intent(Home.this, Intro1.class));
+                    startActivity(new Intent(Home.this, Introduction1.class));
                 }
                 else if (DataHolder.getActivityCount1() == 2) {
-                    startActivity(new Intent(Home.this, Intro2.class));
+                    startActivity(new Intent(Home.this, Introduction2.class));
                 }
                 else if (DataHolder.getActivityCount1() == 3) {
-                    startActivity(new Intent(Home.this, Intro3.class));
+                    startActivity(new Intent(Home.this, Introduction3.class));
                 }
                 else if (DataHolder.getActivityCount1() == 4){
-                    startActivity(new Intent(Home.this, Intro4.class));
+                    startActivity(new Intent(Home.this, Introduction4.class));
                 }
                 else if (DataHolder.getActivityCount1() == 5){
                     startActivity(new Intent(Home.this, Quiz1.class));
@@ -361,35 +359,35 @@ public class Home extends AppCompatActivity {
         level4Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Convo1.class));
+                startActivity(new Intent(Home.this, Conversation1.class));
                 DataHolder.setLevel4ButtonClicked(true);
                 if (DataHolder.getPercentageComplete4() < 5) {
                     DataHolder.setPercentageComplete4(5);
                 }
 
                 if (DataHolder.getActivityCount4() <= 1) {
-                    startActivity(new Intent(Home.this, Convo1.class));
+                    startActivity(new Intent(Home.this, Conversation1.class));
                 }
                 else if (DataHolder.getActivityCount4() == 2) {
-                    startActivity(new Intent(Home.this, Convo2.class));
+                    startActivity(new Intent(Home.this, Conversation2.class));
                 }
                 else if (DataHolder.getActivityCount4() == 3) {
-                    startActivity(new Intent(Home.this, Convo3.class));
+                    startActivity(new Intent(Home.this, Conversation3.class));
                 }
                 else if (DataHolder.getActivityCount4() == 4){
-                    startActivity(new Intent(Home.this, Convo4.class));
+                    startActivity(new Intent(Home.this, Conversation4.class));
                 }
                 else if (DataHolder.getActivityCount4() == 5){
-                    startActivity(new Intent(Home.this, Convo5.class));
+                    startActivity(new Intent(Home.this, Conversation5.class));
                 }
                 else if (DataHolder.getActivityCount4() == 6){
-                    startActivity(new Intent(Home.this, Convo6.class));
+                    startActivity(new Intent(Home.this, Conversation6.class));
                 }
                 else if (DataHolder.getActivityCount4() == 7){
-                    startActivity(new Intent(Home.this, Convo7.class));
+                    startActivity(new Intent(Home.this, Conversation7.class));
                 }
                 else if (DataHolder.getActivityCount4() == 8){
-                    startActivity(new Intent(Home.this, Convo8.class));
+                    startActivity(new Intent(Home.this, Conversation8.class));
                 }
                 else if (DataHolder.getActivityCount4() == 9){
                     startActivity(new Intent(Home.this, Quiz4.class));

@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 0.1 (01.08.21)
  */
 
-public class Intro1 extends AppCompatActivity {
+public class Introduction1 extends AppCompatActivity {
 
     private ImageView exitButton2;
     private ImageView nextArrow3;
@@ -31,7 +31,7 @@ public class Intro1 extends AppCompatActivity {
         setContentView(R.layout.activity_intro1);
 
         /**
-         * Constructor for objects of class Intro1.
+         * Constructor for objects of class Introduction1.
          */
         exitButton2 = findViewById(R.id.exitButton2);
         nextArrow3 = findViewById(R.id.nextArrow3);
@@ -45,7 +45,7 @@ public class Intro1 extends AppCompatActivity {
         exitButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intro1.this, Home.class));
+                startActivity(new Intent(Introduction1.this, Home.class));
                 DataHolder.setActivityCount1(1);
 
             }
@@ -58,7 +58,7 @@ public class Intro1 extends AppCompatActivity {
         nextArrow3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intro1.this, Intro2.class));
+                startActivity(new Intent(Introduction1.this, Introduction2.class));
                 if (DataHolder.getPercentageComplete1() < 20) {
                     DataHolder.setPercentageComplete1(20);
                 }

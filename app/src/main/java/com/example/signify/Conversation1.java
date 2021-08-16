@@ -20,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 0.1 (01.08.21)
  */
 
-public class Convo1 extends AppCompatActivity {
+public class Conversation1 extends AppCompatActivity {
 
     private ImageView exitButton14;
     private VideoView videoView12;
@@ -35,7 +35,7 @@ public class Convo1 extends AppCompatActivity {
         setContentView(R.layout.activity_convo_1);
 
         /**
-         * Constructor for objects of class Convo1.
+         * Constructor for objects of class Conversation1.
          */
         exitButton14 = findViewById(R.id.exitButton14);
         nextArrow13 = findViewById(R.id.nextArrow13);
@@ -67,7 +67,7 @@ public class Convo1 extends AppCompatActivity {
         exitButton14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo1.this, Home.class));
+                startActivity(new Intent(Conversation1.this, Home.class));
                 DataHolder.setActivityCount4(1);
             }
         });
@@ -79,7 +79,7 @@ public class Convo1 extends AppCompatActivity {
         nextArrow13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo1.this, Convo2.class));
+                startActivity(new Intent(Conversation1.this, Conversation2.class));
                 if (DataHolder.getPercentageComplete4() < 10) {
                     DataHolder.setPercentageComplete4(10);
                 }

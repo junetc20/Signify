@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 0.1 (01.08.21)
  */
 
-public class Intro2 extends AppCompatActivity {
+public class Introduction2 extends AppCompatActivity {
 
     private ImageView exitButton5;
     private ImageView nextArrow4;
@@ -30,7 +29,7 @@ public class Intro2 extends AppCompatActivity {
         setContentView(R.layout.activity_intro2);
 
         /**
-         * Constructor for objects of class Intro2.
+         * Constructor for objects of class Introduction2.
          */
         exitButton5 = findViewById(R.id.exitButton5);
         nextArrow4 = findViewById(R.id.nextArrow4);
@@ -43,7 +42,7 @@ public class Intro2 extends AppCompatActivity {
         exitButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intro2.this, Home.class));
+                startActivity(new Intent(Introduction2.this, Home.class));
                 DataHolder.setActivityCount1(2);
             }
         });
@@ -55,7 +54,7 @@ public class Intro2 extends AppCompatActivity {
         nextArrow4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intro2.this, Intro3.class));
+                startActivity(new Intent(Introduction2.this, Introduction3.class));
                 if (DataHolder.getPercentageComplete1() < 30) {
                     DataHolder.setPercentageComplete1(30);
                 }
@@ -69,7 +68,7 @@ public class Intro2 extends AppCompatActivity {
         backArrow2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intro2.this, Intro1.class));
+                startActivity(new Intent(Introduction2.this, Introduction1.class));
             }
         });
     }

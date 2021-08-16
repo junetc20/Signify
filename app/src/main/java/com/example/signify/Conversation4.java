@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 0.1 (01.08.21)
  */
 
-public class Convo4 extends AppCompatActivity {
+public class Conversation4 extends AppCompatActivity {
 
     private ImageView exitButton17;
     private ImageView nextArrow16;
@@ -27,7 +27,7 @@ public class Convo4 extends AppCompatActivity {
         setContentView(R.layout.activity_convo_4);
 
         /**
-         * Constructor for objects of class Convo4.
+         * Constructor for objects of class Conversation4.
          */
         exitButton17 = findViewById(R.id.exitButton17);
         nextArrow16 = findViewById(R.id.nextArrow16);
@@ -40,7 +40,7 @@ public class Convo4 extends AppCompatActivity {
         exitButton17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo4.this, Home.class));
+                startActivity(new Intent(Conversation4.this, Home.class));
                 DataHolder.setActivityCount4(4);
             }
         });
@@ -52,7 +52,7 @@ public class Convo4 extends AppCompatActivity {
         nextArrow16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo4.this, Convo5.class));
+                startActivity(new Intent(Conversation4.this, Conversation5.class));
                 if (DataHolder.getPercentageComplete4() < 25) {
                     DataHolder.setPercentageComplete4(25);
                 }
@@ -66,7 +66,7 @@ public class Convo4 extends AppCompatActivity {
         backArrow12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Convo4.this, Convo3.class));
+                startActivity(new Intent(Conversation4.this, Conversation3.class));
             }
         });
     }
