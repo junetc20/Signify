@@ -7,15 +7,15 @@ package com.example.signify;
  * @version 0.1 (01.08.21)
  */
 
-public class Question {
+public class QuizQuestions {
 
     private int answerResId;
     private boolean answerTrue;
 
     /**
-     * Constructor for objects of class Question.
+     * Constructor for objects of class QuizQuestions.
      */
-    public Question(int answerResId, boolean answerTrue) {
+    public QuizQuestions(int answerResId, boolean answerTrue) {
         this.answerResId = answerResId;
         this.answerTrue = answerTrue;
     }

@@ -70,7 +70,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @return has data been updated in the database?
      * @param emailAdd the user's email.
      */
-    public Boolean updateUserData(String emailAdd, String firstName, String lastName) {
+    public boolean updateUserData(String emailAdd, String firstName, String lastName) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("firstName", firstName);
@@ -91,7 +91,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @param password the user's password.
      */
   
-    public Boolean updateUserPassword(String password) {
+    public boolean updateUserPassword(String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("password", password);

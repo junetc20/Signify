@@ -3,14 +3,14 @@ package com.example.signify;
 import junit.framework.TestCase;
 
 /**
- * The test class QuestionTest.
+ * The test class QuizQuestionsTest.
  * Unit test, which will execute on the development machine (host).
  *
  * @author June Caldwell
  * @version 0.1 (01.08.21)
  */
 
-public class QuestionTest extends TestCase {
+public class QuizQuestionsTest extends TestCase {
 
     /**
      * Sets up test fixture.

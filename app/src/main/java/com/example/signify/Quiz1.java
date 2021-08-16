@@ -34,8 +34,8 @@ public class Quiz1 extends AppCompatActivity {
     private Button completeButton2;
     private TextView questionText2;
     private String answer;
-    int questionCount = 1;
-    int currentQuestionNumber = 0;
+    private int questionCount = 1;
+    private int currentQuestionNumber = 0;
     private TextView resultText2;
     private ImageView resultImage2;
     int score = 0;
@@ -64,7 +64,7 @@ public class Quiz1 extends AppCompatActivity {
         answer1.setText(MultipleChoiceQ.getChoice1(currentQuestionNumber));
         answer2.setText(MultipleChoiceQ.getChoice2(currentQuestionNumber));
         answer3.setText(MultipleChoiceQ.getChoice3(currentQuestionNumber));
-        questionCountDisplay.setText("Question " + questionCount + "/5");
+        questionCountDisplay.setText("QuizQuestions " + questionCount + "/5");
 
         /**
          * Set the view from clicking exitButtonQuiz.
@@ -190,10 +190,10 @@ public class Quiz1 extends AppCompatActivity {
      * Update fields for quiz layout when this function is called.
      */
     @SuppressLint("SetTextI18n")
-    private void updateQuestion() {
+    public void updateQuestion() {
         currentQuestionNumber++;
         questionCount++;
-        questionCountDisplay.setText("Question " + questionCount + "/5");
+        questionCountDisplay.setText("QuizQuestions " + questionCount + "/5");
         questionText2.setText(MultipleChoiceQ.getQuestion(currentQuestionNumber));
         answer1.setText(MultipleChoiceQ.getChoice1(currentQuestionNumber));
         answer2.setText(MultipleChoiceQ.getChoice2(currentQuestionNumber));

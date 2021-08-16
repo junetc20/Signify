@@ -19,10 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Intro1 extends AppCompatActivity {
 
-    ImageView exitButton2;
-    ImageView nextArrow3;
-    ImageView learningOutcomes1;
-    Button beginButton2;
+    private ImageView exitButton2;
+    private ImageView nextArrow3;
+    private ImageView learningOutcomes1;
+    private Button beginButton2;
 
     @SuppressLint("SetTextI18n")
     @Override
