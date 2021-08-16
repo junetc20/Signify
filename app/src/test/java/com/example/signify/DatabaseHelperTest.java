@@ -11,8 +11,6 @@ import junit.framework.TestCase;
  * @version 0.1 (01.08.21)
  */
 
-// Incomplete
-
 public class DatabaseHelperTest extends TestCase {
 
     /**
